@@ -6,8 +6,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { countPublishedArticles, getLatestArticles } from "@/lib/articles";
 import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 
-export const revalidate = 300;
-
 const PER_PAGE = 12;
 
 export const metadata = buildMetadata({

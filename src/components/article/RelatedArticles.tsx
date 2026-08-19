@@ -1,4 +1,4 @@
-import type { ArticleCardData } from "@/types";
+import type { ResolvedArticle } from "@/types";
 import { TrackedLink } from "@/components/analytics/TrackedLink";
 import { Badge } from "@/components/ui/Badge";
 import { formatDate, isoDate } from "@/lib/format";
@@ -7,7 +7,7 @@ export function RelatedArticles({
   articles,
   fromSlug,
 }: {
-  articles: ArticleCardData[];
+  articles: ResolvedArticle[];
   fromSlug: string;
 }) {
   if (!articles.length) return null;
@@ -20,7 +20,7 @@ export function RelatedArticles({
       <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (
           <li
-            key={article.id}
+            key={article.slug}
             className="group rounded-card border border-line bg-white p-5 transition-shadow hover:shadow-lift"
           >
             <Badge href={`/category/${article.category.slug}`} tone="neutral">

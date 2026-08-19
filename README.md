@@ -5,22 +5,19 @@
 An independent technology publication covering AI tools, software, productivity,
 automation, how-to guides, comparisons and developer tooling.
 
-Built with Next.js (App Router), React, TypeScript, Tailwind CSS, Prisma and
-PostgreSQL. Server-rendered by default; client components only where
-interaction requires them.
+Next.js (App Router), React, TypeScript and Tailwind CSS. **No database.**
+Content lives in the repository as typed TypeScript modules, so the whole site
+builds to static HTML and deploys anywhere with no configuration.
 
 ## Getting started
 
 ```bash
 npm install
-cp .env.example .env        # then fill in DATABASE_URL and AUTH_SECRET
-npm run admin:hash          # generates ADMIN_PASSWORD_HASH for your .env
-npm run db:push             # create the schema
-npm run db:seed             # 3 authors, 24 categories, 23 articles
 npm run dev
 ```
 
-The CMS lives at `/admin` and is unlocked with the password you hashed above.
+That is the whole setup. There is no database to provision, no environment
+variables to fill in, and no seed step.
 
 ## Scripts
 
@@ -28,103 +25,88 @@ The CMS lives at `/admin` and is unlocked with the password you hashed above.
 | --- | --- |
 | `npm run dev` | Development server |
 | `npm run build` / `npm start` | Production build and server |
-| `npm test` | Content-splitting, slug, reading-time and session tests |
+| `npm test` | Content integrity, ad placement, cover art, formatting |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run lint` | ESLint |
-| `npm run db:migrate` | Create a migration (development) |
-| `npm run db:deploy` | Apply pending migrations (production) |
-| `npm run db:push` | Push the schema without a migration (local only) |
-| `npm run db:seed` | Seed authors, categories and articles |
-| `npm run db:studio` | Prisma Studio |
-| `npm run admin:hash` | Generate `ADMIN_PASSWORD_HASH` for `.env` |
 
-## Environment
+## Publishing an article
 
-Everything optional stays completely inert while unset — no placeholder ad
-boxes, no analytics calls, no verification tags.
+1. Add a file to `src/content/articles/<slug>.ts`. Copy the nearest existing
+   one — the `Article` type in `src/content/types.ts` documents every field.
+2. Add one import line to `src/content/articles/index.ts`.
+3. Drop a cover image at `public/images/articles/<slug>.webp` (1600×900) and
+   set `image` and `imageAlt`.
+4. Commit. `npm test` will tell you before you push if the category or author
+   slug does not exist, the image is missing, or the piece is too thin.
 
-| Variable | Required | Purpose |
-| --- | --- | --- |
-| `DATABASE_URL` | yes | PostgreSQL connection string |
-| `NEXT_PUBLIC_SITE_URL` | yes | Canonical URLs, sitemap, Open Graph |
-| `ADMIN_PASSWORD_HASH` | yes | CMS login, `salt:hash` from `npm run admin:hash` |
-| `AUTH_SECRET` | yes | Signs the CMS session cookie (16+ chars) |
-| `NEXT_PUBLIC_GA_ID` | no | Google Analytics; without it `track()` is a no-op |
-| `NEXT_PUBLIC_GSC_VERIFICATION` | no | Search Console meta tag |
-| `NEXT_PUBLIC_ADSENSE_CLIENT` | no | AdSense publisher id |
-| `NEXT_PUBLIC_ADSENSE_SLOT_IN_ARTICLE` | no | Slot id for the in-article unit |
-| `NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR` | no | Slot id for the sidebar unit |
-| `NEXT_PUBLIC_ADSENSE_SLOT_MOBILE` | no | Slot id for the mobile unit |
+An article dated in the future is excluded from the build, so `publishedAt` is
+also a scheduling mechanism.
+
+Adding a **section** is one entry in `src/content/categories.ts`; navigation,
+the sitemap and the homepage topic grid all follow from it. A new **author** is
+one entry in `src/content/authors.ts`.
 
 ## Structure
 
 ```
 src/
 ├── app/
-│   ├── (site)/          public pages — home, articles, categories, search, legal
-│   ├── (admin)/admin/   protected CMS
-│   ├── actions/         server actions (admin mutations, newsletter)
+│   ├── (site)/          home, articles, categories, search, authors, legal
 │   ├── api/             read-only JSON endpoints
-│   ├── sitemap.ts  robots.ts  opengraph-image.tsx  not-found.tsx
-├── components/          layout · article · home · search · ads · analytics · admin · ui
-├── lib/                 db, articles, categories, search, seo, auth, content, format
-├── config/site.ts       brand, navigation, integration ids
-├── types/               Prisma-derived shared types
-└── proxy.ts             gates /admin
-prisma/                  schema, seed script, seed content
-tests/                   node:test unit tests
+│   ├── sitemap.ts  robots.ts  not-found.tsx
+├── content/
+│   ├── articles/        one file per article, plus an explicit index
+│   ├── authors.ts  categories.ts  types.ts
+│   └── index.ts         resolves content into what the app renders
+├── components/          layout · article · home · search · ads · analytics · ui
+├── lib/                 articles, categories, search, seo, content, cover-art, format
+└── config/site.ts       brand, navigation, integration ids
+tests/                   node:test, no framework
 ```
 
-`(site)` and `(admin)` are route groups: the public chrome (header, footer,
-analytics, structured data) is applied by the site layout only, so the CMS does
-not inherit it.
+`src/content/index.ts` resolves the files once at module load and **throws on a
+bad reference** — an article pointing at a category that does not exist fails
+the build rather than rendering a broken page. That is the job a foreign key
+used to do.
 
 ## Content model
 
 `Article` carries the editorial structure directly — `quickAnswer`, `pros`,
-`cons`, plus `Faq` and `Alternative` relations — rather than burying it in the
-HTML body, so the article template and the FAQ structured data stay in sync.
+`cons`, `alternatives`, `faqs` — rather than burying it in the HTML body, so
+the article template and the FAQ structured data stay in sync.
 
-`Category` is self-referencing, so sub-topics (AI Writing, AI Video, …) need no
-extra model and new sections can be added from the CMS without a code change.
-`contentUpdatedAt` is the editorially meaningful "last reviewed" date, kept
-separate from the row's `updatedAt`.
-
-## SEO
-
-Per-page metadata, canonicals, Open Graph and Twitter cards are produced by a
-single helper (`lib/seo.ts`). Structured data covers Organization, WebSite,
-Article, BreadcrumbList, FAQPage and Person. `/sitemap.xml` and `/robots.txt`
-are generated from the database. Search result pages are `noindex` by design.
+Categories are one level deep: sections (`AI Tools`) with sub-topics
+(`AI Writing`, `AI Video`). A section page shows its own articles plus
+everything in its sub-topics.
 
 ## Images
 
-Every seeded article ships with a cover photograph in
-`public/images/articles/<slug>.webp` (1600×900, ~40 KB each), served through
-`next/image` as AVIF or WebP at the size the layout asks for. Alt text lives in
-`prisma/seed-images.ts`.
+Every article ships with a cover in `public/images/articles/<slug>.webp`
+(1600×900, ~40 KB), served through `next/image` as AVIF or WebP at the size the
+layout asks for.
 
-The photographs are illustrative — desks, objects, materials. None of them show
-a product interface, because a generated screenshot of a tool we are reviewing
-would be a fabricated record. Replace them with your own screenshots as you
-publish: upload in `/admin/media`, copy the path, paste it into the article's
-**Featured image** field.
+The photographs are illustrative — desks, objects, materials. None show a
+product interface, because a fabricated screenshot of a tool under review would
+be a fabricated record. An article with no `image` falls back to generated cover
+art (`lib/cover-art.ts`): inline SVG, deterministic from the slug, same aspect
+box, so adding a photo later shifts nothing.
 
-An article with no image falls back to generated cover art (`lib/cover-art.ts`)
-— inline SVG, deterministic from the slug, same aspect box, so adding an image
-later shifts nothing.
+## SEO
 
-Share cards are generated at request time from the same palette:
-`/share-card.png` site-wide and `/articles/<slug>/share-card.png` per article,
-both 1200×630 PNGs rendered with `next/og`.
+Per-page metadata, canonicals, Open Graph and Twitter cards come from one helper
+(`lib/seo.ts`). Structured data covers Organization, WebSite, Article,
+BreadcrumbList, FAQPage and Person. `/sitemap.xml` and `/robots.txt` are
+generated from the content files. Search results are `noindex` by design.
+
+Share cards are rendered at request time with `next/og`: `/share-card.png`
+site-wide, `/articles/<slug>/share-card.png` per article.
 
 ## Ads
 
-`components/ads/` is the only place that knows an ad network exists. Slots
-render nothing without a publisher id and a slot id, reserve their height so
-they never shift layout, are labelled, and sit on `<h2>` section boundaries so
-they never interrupt a thought. Articles are never paginated to create
-impressions.
+`components/ads/` is the only code that knows an ad network exists. Slots render
+nothing without a publisher id and a slot id, reserve their height so they never
+shift layout, are labelled, and sit only on `<h2>` section boundaries. Articles
+are never paginated to create impressions.
 
 ## Analytics
 
@@ -132,59 +114,29 @@ impressions.
 attribution (source, medium, campaign, landing page) is captured once per
 session and attached to every event, so the
 source → campaign → landing article → session → engagement chain can be
-reconstructed downstream. Revenue and traffic cost are joined outside the app
-by campaign id; nothing here fabricates revenue figures.
+reconstructed downstream. Revenue and traffic cost are joined outside the app by
+campaign id; nothing here fabricates revenue figures.
 
-## Admin auth
-
-One operator, one password. `.env` holds only a scrypt hash
-(`ADMIN_PASSWORD_HASH`), so reading the file does not hand anyone a login. A
-successful check issues an HMAC-signed session cookie signed with `AUTH_SECRET`;
-`proxy.ts` verifies it before any admin route renders, and every server action
-re-checks with `requireAdmin()`. Replace `lib/auth.ts` if the team ever needs
-individual accounts.
+Without `NEXT_PUBLIC_GA_ID`, `track()` is a no-op.
 
 ## Deploying
 
-**The build queries the database.** `generateStaticParams` prerenders every
-article, category and author page, so `DATABASE_URL` must point at a reachable
-database *at build time*, not just at runtime. A build against an unreachable
-host fails with `Can't reach database server` — that is the schema being read,
-not a runtime error.
+`npm run build` produces a fully static site. Vercel, Netlify, Cloudflare Pages,
+GitHub Pages behind a Node server, or a container — all work with no
+configuration. Set `NEXT_PUBLIC_SITE_URL` so canonicals and the sitemap use your
+real domain.
 
-### Vercel
+Publishing is a git push: the content is compiled into the build, so a new
+article means a new deployment.
 
-1. **Provision Postgres** — Vercel Postgres, Neon, Supabase, anything managed.
-   A local or private-network host will not work: Vercel's builders cannot see it.
-2. **Set the environment variables** on the project, for every environment you
-   build (Production, Preview):
+## What this deliberately does not have
 
-   | Variable | Value |
-   | --- | --- |
-   | `DATABASE_URL` | The pooled connection string from your provider |
-   | `NEXT_PUBLIC_SITE_URL` | `https://your-domain` — canonicals and sitemap use it |
-   | `AUTH_SECRET` | A fresh random string, **not** the one from local dev |
-   | `ADMIN_PASSWORD_HASH` | Output of `npm run admin:hash` |
+- **A CMS.** Articles are code. Editing from a phone means editing on GitHub.
+- **A newsletter signup.** There is nowhere to store an address, and a form that
+  silently discards one is worse than no form. The homepage points at the
+  archive instead. Wire up a provider and the CTA becomes a real signup.
+- **Comments, accounts, or anything else needing a write path.**
 
-3. **Deploy.** `vercel-build` runs `prisma migrate deploy` before `next build`,
-   so the schema is created on the first deploy. `postinstall` runs
-   `prisma generate`, which Vercel needs because it caches `node_modules`.
-4. **Seed once**, from your machine, pointed at the production database:
-
-   ```bash
-   DATABASE_URL="<production url>" npm run db:seed
-   ```
-
-   The seed upserts by slug, so it is safe to re-run — but it will overwrite
-   edits you made in the CMS to seeded articles. Run it once, then manage
-   content through `/admin`.
-
-### One thing that will not work on Vercel
-
-Media upload writes to `public/uploads` on the local filesystem. Serverless
-filesystems are ephemeral and read-only, so uploads will fail or vanish.
-`uploadMediaAction` in `src/app/actions/admin.ts` is the only function that
-touches the disk — swap it for an object-store upload (S3, R2, Vercel Blob)
-before relying on the media library in production.
-
-A container on a VPS with a persistent volume has neither problem.
+Each of those needs a database. If you add one, `src/lib/articles.ts` is the
+seam — every page reads through it and nothing above it knows where content
+comes from.

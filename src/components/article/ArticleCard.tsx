@@ -1,12 +1,12 @@
 import Link from "next/link";
-import type { ArticleCardData } from "@/types";
+import type { ResolvedArticle } from "@/types";
 import { Badge } from "@/components/ui/Badge";
 import { ArticleCover } from "@/components/article/ArticleCover";
 import { formatDate, isoDate } from "@/lib/format";
 import { cn } from "@/lib/cn";
 
 type ArticleCardProps = {
-  article: ArticleCardData;
+  article: ResolvedArticle;
   /** `feature` is the large lead card, `compact` drops the cover entirely. */
   variant?: "default" | "feature" | "compact";
   priority?: boolean;
@@ -52,8 +52,8 @@ export function ArticleCard({
     >
       <Link href={href} tabIndex={-1} aria-hidden className="block">
         <ArticleCover
-          src={article.featuredImage}
-          alt={article.featuredImageAlt}
+          src={article.image}
+          alt={article.imageAlt}
           seed={article.slug}
           priority={priority}
           sizes={

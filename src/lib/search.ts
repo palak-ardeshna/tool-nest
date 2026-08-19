@@ -1,61 +1,44 @@
-import { db } from "@/lib/db";
-import { articleCardSelect, type ArticleCardData } from "@/types";
-import { ArticleStatus, type Prisma } from "@prisma/client";
-
-export type SearchParamsInput = {
-  query: string;
-  category?: string;
-  take?: number;
-};
+import { allArticles } from "@/content";
+import type { ResolvedArticle } from "@/types";
 
 export type SearchResult = {
-  articles: ArticleCardData[];
+  articles: ResolvedArticle[];
   total: number;
 };
 
 /**
- * ponytail: ILIKE across title/excerpt/content. Simple, index-free and fine at
- * publication scale (hundreds of articles). Move to a Postgres tsvector column
- * with a GIN index if the archive grows past a few thousand rows.
+ * ponytail: substring matching over an in-memory array. At publication scale
+ * (hundreds of articles) this is well under a millisecond. Reach for a real
+ * index only if the archive grows past a few thousand pieces.
  */
-export async function searchArticles({
+export function searchArticles({
   query,
   category,
   take = 24,
-}: SearchParamsInput): Promise<SearchResult> {
-  const q = query.trim();
+}: {
+  query: string;
+  category?: string;
+  take?: number;
+}): SearchResult {
+  const q = query.trim().toLowerCase();
   if (q.length < 2) return { articles: [], total: 0 };
 
-  const where: Prisma.ArticleWhereInput = {
-    status: ArticleStatus.PUBLISHED,
-    publishedAt: { not: null },
-    OR: [
-      { title: { contains: q, mode: "insensitive" } },
-      { excerpt: { contains: q, mode: "insensitive" } },
-      { content: { contains: q, mode: "insensitive" } },
-      { tags: { some: { name: { contains: q, mode: "insensitive" } } } },
-    ],
-    ...(category
-      ? { category: { OR: [{ slug: category }, { parent: { slug: category } }] } }
-      : {}),
-  };
+  const matches = allArticles.filter((article) => {
+    if (category && article.category.slug !== category && article.category.parent !== category) {
+      return false;
+    }
+    return (
+      article.title.toLowerCase().includes(q) ||
+      article.excerpt.toLowerCase().includes(q) ||
+      article.tags.some((tag) => tag.toLowerCase().includes(q)) ||
+      article.content.toLowerCase().includes(q)
+    );
+  });
 
-  const [articles, total] = await Promise.all([
-    db.article.findMany({
-      where,
-      orderBy: [{ publishedAt: "desc" }],
-      take,
-      select: articleCardSelect,
-    }),
-    db.article.count({ where }),
-  ]);
-
-  // Title matches are the strongest signal, so float them to the top.
-  const lower = q.toLowerCase();
-  articles.sort(
-    (a, b) =>
-      Number(b.title.toLowerCase().includes(lower)) - Number(a.title.toLowerCase().includes(lower)),
+  // A title match is the strongest signal, so float those to the top.
+  const ranked = [...matches].sort(
+    (a, b) => Number(b.title.toLowerCase().includes(q)) - Number(a.title.toLowerCase().includes(q)),
   );
 
-  return { articles, total };
+  return { articles: ranked.slice(0, take), total: ranked.length };
 }

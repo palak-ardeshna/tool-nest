@@ -40,8 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Uploaded media (served from /public/uploads, keep out of git)
-/public/uploads/
-
 # Keep the sample environment file
 !.env.example

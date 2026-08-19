@@ -1,8 +1,8 @@
 import Link from "next/link";
-import type { CategoryWithChildren } from "@/types";
+import type { ResolvedCategory } from "@/types";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-export function PopularTopics({ categories }: { categories: CategoryWithChildren[] }) {
+export function PopularTopics({ categories }: { categories: ResolvedCategory[] }) {
   if (!categories.length) return null;
 
   return (
@@ -11,7 +11,7 @@ export function PopularTopics({ categories }: { categories: CategoryWithChildren
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((category) => (
           <Link
-            key={category.id}
+            key={category.slug}
             href={`/category/${category.slug}`}
             className="group rounded-card border border-line bg-white p-5 transition-colors hover:border-accent/40 hover:bg-accent-light/40"
           >

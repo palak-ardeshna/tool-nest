@@ -1,4 +1,4 @@
-type FaqItem = { id: string; question: string; answer: string };
+import type { Faq as FaqItem } from "@/types";
 
 export function Faq({ items }: { items: FaqItem[] }) {
   if (!items.length) return null;
@@ -10,7 +10,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
       </h2>
       <div className="mt-4 divide-y divide-line rounded-card border border-line bg-white">
         {items.map((item) => (
-          <details key={item.id} className="group p-4 sm:p-5">
+          <details key={item.question} className="group p-4 sm:p-5">
             <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-semibold text-ink marker:content-['']">
               {item.question}
               <span

@@ -3,11 +3,9 @@ import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { AuthorCard } from "@/components/article/AuthorCard";
 import { JsonLd } from "@/components/JsonLd";
-import { db } from "@/lib/db";
+import { authors } from "@/content";
 import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
-
-export const revalidate = 3600;
 
 export const metadata = buildMetadata({
   title: "About ToolNest",
@@ -18,9 +16,7 @@ export const metadata = buildMetadata({
 
 const crumbs = [{ label: "Home", href: "/" }, { label: "About" }];
 
-export default async function AboutPage() {
-  const authors = await db.author.findMany({ orderBy: { name: "asc" } });
-
+export default function AboutPage() {
   return (
     <Container width="reading" className="py-10 lg:py-14">
       <PageHeader
@@ -87,7 +83,7 @@ export default async function AboutPage() {
           <h2 className="text-2xl font-bold tracking-tight text-ink">The team</h2>
           <div className="mt-5 space-y-5">
             {authors.map((author) => (
-              <AuthorCard key={author.id} author={author} heading="Editorial" />
+              <AuthorCard key={author.slug} author={author} heading="Editorial" />
             ))}
           </div>
         </section>

@@ -1,4 +1,4 @@
-type Alternative = { id: string; name: string; url: string | null; note: string | null };
+import type { Alternative } from "@/types";
 
 export function Alternatives({ items }: { items: Alternative[] }) {
   if (!items.length) return null;
@@ -10,7 +10,7 @@ export function Alternatives({ items }: { items: Alternative[] }) {
       </h2>
       <ul className="mt-4 divide-y divide-line rounded-card border border-line bg-white">
         {items.map((item) => (
-          <li key={item.id} className="p-4 sm:p-5">
+          <li key={item.name} className="p-4 sm:p-5">
             <p className="font-bold text-ink">
               {item.url ? (
                 <a

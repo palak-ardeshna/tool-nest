@@ -1,16 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Author } from "@/types";
 
 type AuthorCardProps = {
-  author: {
-    name: string;
-    slug: string;
-    role: string | null;
-    bio: string | null;
-    avatar: string | null;
-    twitter: string | null;
-    website: string | null;
-  };
+  author: Author;
   heading?: string;
 };
 

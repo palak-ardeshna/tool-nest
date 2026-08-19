@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import type { Crumb, FullArticle } from "@/types";
+import type { Crumb, ResolvedArticle } from "@/types";
 import { isoDate } from "@/lib/format";
 
 export function absoluteUrl(path = "/"): string {
@@ -107,9 +107,9 @@ export function breadcrumbSchema(crumbs: Crumb[]) {
   };
 }
 
-export function articleSchema(article: FullArticle) {
+export function articleSchema(article: ResolvedArticle) {
   const url = absoluteUrl(`/articles/${article.slug}`);
-  const modified = article.contentUpdatedAt ?? article.updatedAt;
+  const modified = article.contentUpdatedAtDate ?? article.publishedAtDate;
 
   return {
     "@context": "https://schema.org",
@@ -119,11 +119,11 @@ export function articleSchema(article: FullArticle) {
     description: article.seoDescription ?? article.excerpt,
     mainEntityOfPage: url,
     url,
-    datePublished: isoDate(article.publishedAt),
+    datePublished: isoDate(article.publishedAtDate),
     dateModified: isoDate(modified),
     articleSection: article.category.name,
-    keywords: article.tags.map((tag) => tag.name).join(", "),
-    ...(article.featuredImage ? { image: [absoluteUrl(article.featuredImage)] } : {}),
+    keywords: article.tags.join(", "),
+    ...(article.image ? { image: [absoluteUrl(article.image)] } : {}),
     author: {
       "@type": "Person",
       name: article.author.name,

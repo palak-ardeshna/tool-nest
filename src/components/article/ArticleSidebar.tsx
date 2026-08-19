@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ArticleCardData } from "@/types";
+import type { ResolvedArticle } from "@/types";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { SidebarAd } from "@/components/ads/SidebarAd";
 import { adsenseClient } from "@/config/site";
@@ -9,7 +9,7 @@ import { adsenseClient } from "@/config/site";
  * related reads and an unconfigured site has no ad, and an empty 300px column
  * beside the article looks broken.
  */
-export function hasSidebarContent(articles: ArticleCardData[]): boolean {
+export function hasSidebarContent(articles: ResolvedArticle[]): boolean {
   return articles.length > 0 || Boolean(adsenseClient);
 }
 
@@ -20,7 +20,7 @@ export function ArticleSidebar({
 }: {
   categoryName: string;
   categorySlug: string;
-  articles: ArticleCardData[];
+  articles: ResolvedArticle[];
 }) {
   return (
     <aside className="lg:sticky lg:top-24">
@@ -31,7 +31,7 @@ export function ArticleSidebar({
           </h2>
           <div className="divide-y divide-line">
             {articles.map((article) => (
-              <ArticleCard key={article.id} article={article} variant="compact" />
+              <ArticleCard key={article.slug} article={article} variant="compact" />
             ))}
           </div>
           <Link

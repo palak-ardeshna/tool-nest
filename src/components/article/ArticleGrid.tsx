@@ -1,4 +1,4 @@
-import type { ArticleCardData } from "@/types";
+import type { ResolvedArticle } from "@/types";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { EmptyState } from "@/components/ui/EmptyState";
 
@@ -9,7 +9,7 @@ export function ArticleGrid({
   emptyDescription = "New guides and comparisons are published here every week.",
   priorityCount = 0,
 }: {
-  articles: ArticleCardData[];
+  articles: ResolvedArticle[];
   columns?: 2 | 3;
   emptyTitle?: string;
   emptyDescription?: string;
@@ -35,7 +35,7 @@ export function ArticleGrid({
       }
     >
       {articles.map((article, index) => (
-        <ArticleCard key={article.id} article={article} priority={index < priorityCount} />
+        <ArticleCard key={article.slug} article={article} priority={index < priorityCount} />
       ))}
     </div>
   );

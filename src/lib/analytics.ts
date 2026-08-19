@@ -18,8 +18,7 @@ export type AnalyticsEvent =
   | "scroll_depth"
   | "session_duration"
   | "related_article_click"
-  | "search"
-  | "newsletter_signup";
+  | "search";
 
 export type AnalyticsParams = Record<string, string | number | boolean | undefined>;
 

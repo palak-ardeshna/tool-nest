@@ -1,9 +1,9 @@
-import type { ArticleCardData } from "@/types";
+import type { ResolvedArticle } from "@/types";
 import { ArticleGrid } from "@/components/article/ArticleGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
 
-export function LatestArticles({ articles }: { articles: ArticleCardData[] }) {
+export function LatestArticles({ articles }: { articles: ResolvedArticle[] }) {
   return (
     <section aria-label="Latest articles">
       <SectionHeading

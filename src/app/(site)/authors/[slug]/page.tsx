@@ -4,22 +4,19 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { ArticleGrid } from "@/components/article/ArticleGrid";
 import { AuthorCard } from "@/components/article/AuthorCard";
 import { JsonLd } from "@/components/JsonLd";
-import { db } from "@/lib/db";
+import { authors, getAuthor } from "@/content";
 import { getArticlesByAuthor } from "@/lib/articles";
 import { absoluteUrl, breadcrumbSchema, buildMetadata } from "@/lib/seo";
 
-export const revalidate = 600;
-
 type PageProps = { params: Promise<{ slug: string }> };
 
-export async function generateStaticParams() {
-  const authors = await db.author.findMany({ select: { slug: true } });
+export function generateStaticParams() {
   return authors.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const author = await db.author.findUnique({ where: { slug } });
+  const author = getAuthor(slug);
   if (!author) return { title: "Author not found" };
 
   return buildMetadata({
@@ -31,10 +28,10 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function AuthorPage({ params }: PageProps) {
   const { slug } = await params;
-  const author = await db.author.findUnique({ where: { slug } });
+  const author = getAuthor(slug);
   if (!author) notFound();
 
-  const articles = await getArticlesByAuthor(author.id);
+  const articles = getArticlesByAuthor(author.slug);
   const crumbs = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
@@ -43,7 +40,7 @@ export default async function AuthorPage({ params }: PageProps) {
 
   return (
     <Container className="py-10 lg:py-14">
-      <PageHeader title={author.name} description={author.role ?? undefined} crumbs={crumbs} />
+      <PageHeader title={author.name} description={author.role} crumbs={crumbs} />
 
       <div className="mb-10 max-w-2xl">
         <AuthorCard author={author} heading="Profile" />

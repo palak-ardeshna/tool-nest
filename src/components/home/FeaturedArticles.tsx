@@ -1,9 +1,9 @@
-import type { ArticleCardData } from "@/types";
+import type { ResolvedArticle } from "@/types";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 /** Lead story plus a secondary column, the standard editorial hierarchy. */
-export function FeaturedArticles({ articles }: { articles: ArticleCardData[] }) {
+export function FeaturedArticles({ articles }: { articles: ResolvedArticle[] }) {
   if (!articles.length) return null;
   const [lead, ...rest] = articles;
 
@@ -18,7 +18,7 @@ export function FeaturedArticles({ articles }: { articles: ArticleCardData[] }) 
         {rest.length ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
             {rest.slice(0, 3).map((article) => (
-              <ArticleCard key={article.id} article={article} />
+              <ArticleCard key={article.slug} article={article} />
             ))}
           </div>
         ) : null}

@@ -1,9 +1,9 @@
-import type { FullArticle } from "@/types";
+import type { ResolvedArticle } from "@/types";
 import { Badge } from "@/components/ui/Badge";
 import { ArticleMeta } from "@/components/article/ArticleMeta";
 import { ArticleCover } from "@/components/article/ArticleCover";
 
-export function ArticleHeader({ article }: { article: FullArticle }) {
+export function ArticleHeader({ article }: { article: ResolvedArticle }) {
   return (
     <header>
       <Badge href={`/category/${article.category.slug}`}>{article.category.name}</Badge>
@@ -24,8 +24,8 @@ export function ArticleHeader({ article }: { article: FullArticle }) {
 
       <ArticleCover
         className="mt-8 rounded-card border border-line"
-        src={article.featuredImage}
-        alt={article.featuredImageAlt}
+        src={article.image}
+        alt={article.imageAlt}
         seed={article.slug}
         priority
         sizes="(max-width: 1024px) 100vw, 720px"

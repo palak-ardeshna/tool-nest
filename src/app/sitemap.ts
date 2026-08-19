@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
-import { getSitemapArticles } from "@/lib/articles";
+import { allArticles } from "@/lib/articles";
 import { getAllCategories } from "@/lib/categories";
-import { db } from "@/lib/db";
+import { authors } from "@/content";
 import { absoluteUrl } from "@/lib/seo";
 
-export const revalidate = 3600;
+type ChangeFrequency = MetadataRoute.Sitemap[number]["changeFrequency"];
 
-const staticRoutes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
+const staticRoutes: { path: string; priority: number; changeFrequency: ChangeFrequency }[] = [
   { path: "/", priority: 1, changeFrequency: "daily" },
   { path: "/articles", priority: 0.9, changeFrequency: "daily" },
   { path: "/about", priority: 0.5, changeFrequency: "yearly" },
@@ -16,35 +16,31 @@ const staticRoutes: { path: string; priority: number; changeFrequency: MetadataR
   { path: "/disclaimer", priority: 0.3, changeFrequency: "yearly" },
 ];
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [articles, categories, authors] = await Promise.all([
-    getSitemapArticles(),
-    getAllCategories(),
-    db.author.findMany({ select: { slug: true, updatedAt: true } }),
-  ]);
+export default function sitemap(): MetadataRoute.Sitemap {
+  const newest = allArticles[0]?.publishedAtDate ?? new Date();
 
   return [
     ...staticRoutes.map((route) => ({
       url: absoluteUrl(route.path),
-      lastModified: new Date(),
+      lastModified: newest,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
     })),
-    ...categories.map((category) => ({
+    ...getAllCategories().map((category) => ({
       url: absoluteUrl(`/category/${category.slug}`),
-      lastModified: category.updatedAt,
+      lastModified: newest,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
-    ...articles.map((article) => ({
+    ...allArticles.map((article) => ({
       url: absoluteUrl(`/articles/${article.slug}`),
-      lastModified: article.contentUpdatedAt ?? article.updatedAt ?? article.publishedAt ?? new Date(),
+      lastModified: article.contentUpdatedAtDate ?? article.publishedAtDate,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
     ...authors.map((author) => ({
       url: absoluteUrl(`/authors/${author.slug}`),
-      lastModified: author.updatedAt,
+      lastModified: newest,
       changeFrequency: "monthly" as const,
       priority: 0.4,
     })),

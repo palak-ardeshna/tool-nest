@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { CategoryWithChildren } from "@/types";
+import type { ResolvedCategory } from "@/types";
 import { cn } from "@/lib/cn";
 
 /** Category filter as plain links, so results stay shareable and crawl-free. */
@@ -8,7 +8,7 @@ export function SearchFilters({
   query,
   active,
 }: {
-  categories: CategoryWithChildren[];
+  categories: ResolvedCategory[];
   query: string;
   active?: string;
 }) {
@@ -17,7 +17,7 @@ export function SearchFilters({
   const href = (slug?: string) =>
     `/search?q=${encodeURIComponent(query)}${slug ? `&category=${slug}` : ""}`;
 
-  const options = [{ id: "all", name: "All topics", slug: undefined }, ...categories];
+  const options: { name: string; slug?: string }[] = [{ name: "All topics" }, ...categories];
 
   return (
     <div className="mt-6 flex flex-wrap gap-2">
@@ -25,7 +25,7 @@ export function SearchFilters({
         const isActive = option.slug === active || (!option.slug && !active);
         return (
           <Link
-            key={option.id}
+            key={option.slug ?? 'all'}
             href={href(option.slug)}
             aria-current={isActive ? "true" : undefined}
             className={cn(

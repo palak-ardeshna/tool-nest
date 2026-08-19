@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
 import { getCategoryTree } from "@/lib/categories";
+import { toApiCategory } from "@/lib/api";
 
-export async function GET() {
-  const categories = await getCategoryTree();
-  return NextResponse.json(
-    { categories },
-    { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } },
-  );
+export function GET() {
+  return NextResponse.json({ categories: getCategoryTree().map(toApiCategory) });
 }

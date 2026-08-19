@@ -1,155 +1,94 @@
-import { cache } from "react";
-import { db } from "@/lib/db";
-import { articleCardSelect, type ArticleCardData, type FullArticle } from "@/types";
-import { ArticleStatus, type Prisma } from "@prisma/client";
-
-const published: Prisma.ArticleWhereInput = {
-  status: ArticleStatus.PUBLISHED,
-  publishedAt: { not: null },
-};
-
-const byNewest: Prisma.ArticleOrderByWithRelationInput[] = [
-  { publishedAt: "desc" },
-  { createdAt: "desc" },
-];
-
-export const getLatestArticles = cache(
-  async (take = 9, skip = 0): Promise<ArticleCardData[]> =>
-    db.article.findMany({ where: published, orderBy: byNewest, take, skip, select: articleCardSelect }),
-);
-
-export const countPublishedArticles = cache(async (): Promise<number> =>
-  db.article.count({ where: published }),
-);
+import { allArticles, articlesInSection, getArticle } from "@/content";
+import type { ResolvedArticle, ResolvedCategory } from "@/types";
 
 /**
- * Editor-picked articles for the homepage. Falls back to the newest posts so the
- * homepage is never empty on a fresh install.
+ * The article data API. Pure array operations over the content files — no
+ * async, no database, no caching layer, because there is nothing to cache.
  */
-export const getFeaturedArticles = cache(async (take = 4): Promise<ArticleCardData[]> => {
-  const featured = await db.article.findMany({
-    where: { ...published, featured: true },
-    orderBy: byNewest,
-    take,
-    select: articleCardSelect,
-  });
-  if (featured.length >= take) return featured;
 
-  const filler = await db.article.findMany({
-    where: { ...published, id: { notIn: featured.map((a) => a.id) } },
-    orderBy: byNewest,
-    take: take - featured.length,
-    select: articleCardSelect,
-  });
-  return [...featured, ...filler];
-});
-
-export const getArticleBySlug = cache(async (slug: string): Promise<FullArticle | null> =>
-  db.article.findFirst({
-    where: { slug, ...published },
-    include: {
-      category: { include: { parent: true } },
-      author: true,
-      tags: true,
-      faqs: { orderBy: { position: "asc" } },
-      alternatives: { orderBy: { position: "asc" } },
-    },
-  }),
-);
-
-export const getArticlesByCategory = cache(
-  async (categoryIds: string[], take = 12, skip = 0): Promise<ArticleCardData[]> =>
-    db.article.findMany({
-      where: { ...published, categoryId: { in: categoryIds } },
-      orderBy: byNewest,
-      take,
-      skip,
-      select: articleCardSelect,
-    }),
-);
-
-export const countArticlesByCategory = cache(async (categoryIds: string[]): Promise<number> =>
-  db.article.count({ where: { ...published, categoryId: { in: categoryIds } } }),
-);
-
-/**
- * Sidebar reading list. A leaf category ("AI Image") is often too thin to fill
- * a sidebar on its own, so widen to the whole parent section ("AI Tools") when
- * the article has one.
- */
-export const getMoreInSection = cache(
-  async (
-    article: { id: string; categoryId: string; category: { parentId: string | null } },
-    take = 4,
-  ): Promise<ArticleCardData[]> => {
-    const parentId = article.category.parentId;
-
-    return db.article.findMany({
-      where: {
-        ...published,
-        id: { not: article.id },
-        ...(parentId
-          ? { OR: [{ categoryId: parentId }, { category: { parentId } }] }
-          : { OR: [{ categoryId: article.categoryId }, { category: { parentId: article.categoryId } }] }),
-      },
-      orderBy: byNewest,
-      take,
-      select: articleCardSelect,
-    });
-  },
-);
-
-export const getArticlesByAuthor = cache(async (authorId: string): Promise<ArticleCardData[]> =>
-  db.article.findMany({
-    where: { ...published, authorId },
-    orderBy: byNewest,
-    select: articleCardSelect,
-  }),
-);
-
-/**
- * Related articles: shared tags first, then same category, then newest.
- * Avoids a hand-maintained relation table while still surfacing relevant reads.
- */
-export const getRelatedArticles = cache(
-  async (article: Pick<FullArticle, "id" | "categoryId"> & { tags: { id: string }[] }, take = 3) => {
-    const exclude = { id: { not: article.id } };
-    const tagIds = article.tags.map((t) => t.id);
-    const picked: ArticleCardData[] = [];
-
-    if (tagIds.length) {
-      picked.push(
-        ...(await db.article.findMany({
-          where: { ...published, ...exclude, tags: { some: { id: { in: tagIds } } } },
-          orderBy: byNewest,
-          take,
-          select: articleCardSelect,
-        })),
-      );
-    }
-    if (picked.length < take) {
-      picked.push(
-        ...(await db.article.findMany({
-          where: {
-            ...published,
-            categoryId: article.categoryId,
-            id: { notIn: [article.id, ...picked.map((a) => a.id)] },
-          },
-          orderBy: byNewest,
-          take: take - picked.length,
-          select: articleCardSelect,
-        })),
-      );
-    }
-    return picked.slice(0, take);
-  },
-);
-
-/** Every published slug + timestamp, for the sitemap. */
-export async function getSitemapArticles() {
-  return db.article.findMany({
-    where: published,
-    orderBy: byNewest,
-    select: { slug: true, publishedAt: true, contentUpdatedAt: true, updatedAt: true },
-  });
+export function getLatestArticles(take = 9, skip = 0): ResolvedArticle[] {
+  return allArticles.slice(skip, skip + take);
 }
+
+export function countPublishedArticles(): number {
+  return allArticles.length;
+}
+
+export function getArticleBySlug(slug: string): ResolvedArticle | undefined {
+  return getArticle(slug);
+}
+
+/**
+ * Editor-picked articles for the homepage, topped up with the newest posts so
+ * the homepage is never short.
+ */
+export function getFeaturedArticles(take = 4): ResolvedArticle[] {
+  const featured = allArticles.filter((article) => article.featured);
+  if (featured.length >= take) return featured.slice(0, take);
+
+  const filler = allArticles.filter((article) => !article.featured);
+  return [...featured, ...filler].slice(0, take);
+}
+
+export function getArticlesInSection(
+  category: ResolvedCategory,
+  take?: number,
+  skip = 0,
+): ResolvedArticle[] {
+  const articles = articlesInSection(category);
+  return take === undefined ? articles.slice(skip) : articles.slice(skip, skip + take);
+}
+
+export function countArticlesInSection(category: ResolvedCategory): number {
+  return articlesInSection(category).length;
+}
+
+export function getArticlesByAuthor(authorSlug: string): ResolvedArticle[] {
+  return allArticles.filter((article) => article.author.slug === authorSlug);
+}
+
+/**
+ * Related articles: shared tags first, then the same category, then newest.
+ * Avoids a hand-maintained relation list while still surfacing relevant reads.
+ */
+export function getRelatedArticles(article: ResolvedArticle, take = 3): ResolvedArticle[] {
+  const tags = new Set(article.tags);
+  const others = allArticles.filter((candidate) => candidate.slug !== article.slug);
+
+  const scored = others
+    .map((candidate) => ({
+      article: candidate,
+      shared: candidate.tags.filter((tag) => tags.has(tag)).length,
+      sameCategory: candidate.category.slug === article.category.slug ? 1 : 0,
+    }))
+    .filter((entry) => entry.shared > 0 || entry.sameCategory > 0)
+    .sort(
+      (a, b) =>
+        b.shared - a.shared ||
+        b.sameCategory - a.sameCategory ||
+        b.article.publishedAtDate.getTime() - a.article.publishedAtDate.getTime(),
+    );
+
+  return scored.slice(0, take).map((entry) => entry.article);
+}
+
+/**
+ * Sidebar reading list. A leaf category is often too thin to fill a sidebar on
+ * its own, so widen to the whole parent section when the article has one.
+ */
+export function getMoreInSection(article: ResolvedArticle, take = 4): ResolvedArticle[] {
+  const section = article.category.parentCategory?.slug ?? article.category.slug;
+  const slugs = new Set([
+    section,
+    ...allArticles
+      .map((candidate) => candidate.category)
+      .filter((category) => category.parent === section)
+      .map((category) => category.slug),
+  ]);
+
+  return allArticles
+    .filter((candidate) => candidate.slug !== article.slug && slugs.has(candidate.category.slug))
+    .slice(0, take);
+}
+
+export { allArticles };
