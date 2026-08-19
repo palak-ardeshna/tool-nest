@@ -13,7 +13,7 @@ export const weekWithAnAiCodingAgent: Article = {
   featured: true,
   image: "/images/articles/week-with-an-ai-coding-agent.webp",
   imageAlt: "A desk at dusk with a dark monitor and a single warm lamp",
-  seoTitle: "Which Tickets to Give an AI Coding Agent (and Which Not To)",
+  seoTitle: "What to Give an AI Coding Agent",
   seoDescription:
     "A practical triage guide for AI coding agents: which backlog tickets they handle well, the failure modes to expect, why review time is the real cost, and how to measure whether an agent is actually saving your team time.",
   quickAnswer:

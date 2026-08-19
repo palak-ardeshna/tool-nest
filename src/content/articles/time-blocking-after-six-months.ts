@@ -11,7 +11,7 @@ export const timeBlockingAfterSixMonths: Article = {
   publishedAt: "2026-05-19",
   image: "/images/articles/time-blocking-after-six-months.webp",
   imageAlt: "A blank paper weekly planner with coloured blocks laid across it",
-  seoTitle: "Time Blocking That Survives a Real Week",
+  seoTitle: "Time Blocking That Actually Lasts",
   seoDescription:
     "Why strict hour-by-hour time blocking collapses, the three rules that make a looser version durable, how long a block should be, and what to do when one gets missed.",
   quickAnswer:

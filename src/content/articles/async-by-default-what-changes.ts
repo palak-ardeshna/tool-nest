@@ -11,7 +11,7 @@ export const asyncByDefaultWhatChanges: Article = {
   publishedAt: "2026-05-05",
   image: "/images/articles/async-by-default-what-changes.webp",
   imageAlt: "A quiet home desk beside a large window in bright daylight",
-  seoTitle: "Async by Default: What Actually Changes",
+  seoTitle: "Async by Default: What Changes",
   seoDescription:
     "What working asynchronously really requires — written decisions, explicit deadlines and a much higher standard of writing — and what it costs.",
   quickAnswer:

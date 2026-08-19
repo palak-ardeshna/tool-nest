@@ -11,7 +11,7 @@ export const taskManagersCompared: Article = {
   publishedAt: "2026-07-08",
   image: "/images/articles/task-managers-compared.webp",
   imageAlt: "Three slim notebooks standing side by side against a pale background",
-  seoTitle: "How to Choose a Task Manager That You Will Actually Keep",
+  seoTitle: "Choosing a Task Manager That Lasts",
   seoDescription:
     "Why feature comparisons fail to predict which task manager you will keep, the three properties that do — capture speed, overdue handling and recovery after neglect — and a two-week test you can run yourself.",
   quickAnswer:

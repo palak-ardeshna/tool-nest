@@ -13,7 +13,7 @@ export const chatgptVsClaudeForCoding: Article = {
   featured: true,
   image: "/images/articles/chatgpt-vs-claude-for-coding.webp",
   imageAlt: "Two open laptops side by side on a wooden desk, screens off",
-  seoTitle: "ChatGPT vs Claude for Coding: A 2026 Decision Guide",
+  seoTitle: "ChatGPT vs Claude for Coding (2026)",
   seoDescription:
     "A research-based comparison of ChatGPT and Claude for software work: context handling, pricing, tool integrations, published benchmark caveats, and a repeatable test you can run on your own repository.",
   quickAnswer:

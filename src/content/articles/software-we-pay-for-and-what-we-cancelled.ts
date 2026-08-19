@@ -13,7 +13,7 @@ export const softwareWePayForAndWhatWeCancelled: Article = {
   featured: true,
   image: "/images/articles/software-we-pay-for-and-what-we-cancelled.webp",
   imageAlt: "A grid of blank ceramic tiles with a few lifted and stacked aside",
-  seoTitle: "How to Audit Your Team's Software Spend in 2026",
+  seoTitle: "How to Audit Your Software Spend",
   seoDescription:
     "A step-by-step method for auditing SaaS subscriptions at a small company: how to build the list, the one question that predicts which tools survive, what to keep on principle, and how to cancel without a fight.",
   quickAnswer:

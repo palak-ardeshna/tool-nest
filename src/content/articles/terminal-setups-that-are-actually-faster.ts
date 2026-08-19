@@ -11,7 +11,7 @@ export const terminalSetupsThatAreActuallyFaster: Article = {
   publishedAt: "2026-06-16",
   image: "/images/articles/terminal-setups-that-are-actually-faster.webp",
   imageAlt: "A dark desk setup lit by a single warm rim light",
-  seoTitle: "Terminal Setups That Are Actually Faster",
+  seoTitle: "Terminal Setups That Are Faster",
   seoDescription:
     "Which terminal and shell changes measurably save time, which just add startup latency, and how to tell the difference on your own machine.",
   quickAnswer:

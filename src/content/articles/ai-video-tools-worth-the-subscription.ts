@@ -11,7 +11,7 @@ export const aiVideoToolsWorthTheSubscription: Article = {
   publishedAt: "2026-08-06",
   image: "/images/articles/ai-video-tools-worth-the-subscription.webp",
   imageAlt: "A small cinema camera on a desk beside a blank monitor",
-  seoTitle: "AI Video Tools Worth Paying For in 2026",
+  seoTitle: "AI Video Tools Worth Paying For",
   seoDescription:
     "Which AI video capabilities are worth paying for in 2026, which are one feature with a subscription attached, why per-minute pricing punishes long-form work, and how to evaluate a tool on your own footage.",
   quickAnswer:

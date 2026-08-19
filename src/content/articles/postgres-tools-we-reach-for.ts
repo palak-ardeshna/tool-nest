@@ -11,7 +11,7 @@ export const postgresToolsWeReachFor: Article = {
   publishedAt: "2026-06-11",
   image: "/images/articles/postgres-tools-we-reach-for.webp",
   imageAlt: "Frosted acrylic sheets stacked with gaps, edges catching indigo light",
-  seoTitle: "Postgres Tools Worth Setting Up in 2026",
+  seoTitle: "Postgres Tools Worth Setting Up",
   seoDescription:
     "A practical set of Postgres tools — query analysis, migrations, clients and backups — with what each one is for and when it will not help.",
   quickAnswer:

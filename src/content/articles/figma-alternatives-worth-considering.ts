@@ -11,7 +11,7 @@ export const figmaAlternativesWorthConsidering: Article = {
   publishedAt: "2026-07-11",
   image: "/images/articles/figma-alternatives-worth-considering.webp",
   imageAlt: "A graphics tablet and stylus beside an opened colour swatch fan",
-  seoTitle: "Figma Alternatives Worth Considering in 2026",
+  seoTitle: "Figma Alternatives for 2026",
   seoDescription:
     "Three credible Figma alternatives compared on the things that actually push teams to switch: price at scale, offline work, file ownership and handoff.",
   quickAnswer:

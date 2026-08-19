@@ -11,7 +11,7 @@ export const freeVsPaidAiWritingTools: Article = {
   publishedAt: "2026-07-02",
   image: "/images/articles/free-vs-paid-ai-writing-tools.webp",
   imageAlt: "Two stacks of blank paper, one taller than the other",
-  seoTitle: "Free vs Paid AI Writing Tools: What You Actually Get",
+  seoTitle: "Free vs Paid AI Writing Tools",
   seoDescription:
     "A clear breakdown of what paid AI writing tools add over free tiers — throughput, context length, and integrations — and when free is genuinely enough.",
   quickAnswer:

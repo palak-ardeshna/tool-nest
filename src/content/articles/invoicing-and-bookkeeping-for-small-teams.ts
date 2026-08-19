@@ -11,7 +11,7 @@ export const invoicingAndBookkeepingForSmallTeams: Article = {
   publishedAt: "2026-06-04",
   image: "/images/articles/invoicing-and-bookkeeping-for-small-teams.webp",
   imageAlt: "Blank paper forms fanned beside a calculator and a pen",
-  seoTitle: "Invoicing and Bookkeeping Tools for Small Teams",
+  seoTitle: "Invoicing Tools for Small Teams",
   seoDescription:
     "What actually matters when choosing invoicing and bookkeeping software at small scale — and which heavily marketed features you can safely ignore.",
   quickAnswer:

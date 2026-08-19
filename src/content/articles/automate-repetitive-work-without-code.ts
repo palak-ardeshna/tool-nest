@@ -11,7 +11,7 @@ export const automateRepetitiveWorkWithoutCode: Article = {
   publishedAt: "2026-05-30",
   image: "/images/articles/automate-repetitive-work-without-code.webp",
   imageAlt: "Three pale interlocking ceramic gears on a light surface",
-  seoTitle: "How to Automate Repetitive Work Without Code: A Practical Guide",
+  seoTitle: "Automate Repetitive Work, No Code",
   seoDescription:
     "Find the tasks worth automating, pick the right no-code tool, and avoid building automations that cost more time than they save.",
   quickAnswer:

@@ -11,7 +11,7 @@ export const noteTakingAppsForThinking: Article = {
   publishedAt: "2026-06-09",
   image: "/images/articles/note-taking-apps-for-thinking.webp",
   imageAlt: "An open blank notebook and fountain pen beside index cards",
-  seoTitle: "Note-Taking Apps for Thinking, Not Hoarding",
+  seoTitle: "Note-Taking Apps for Thinking",
   seoDescription:
     "What actually distinguishes note-taking apps once you have used one for a year — retrieval, linking, portability and the cost of switching.",
   quickAnswer:

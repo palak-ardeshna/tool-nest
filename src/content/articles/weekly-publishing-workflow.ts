@@ -11,7 +11,7 @@ export const weeklyPublishingWorkflow: Article = {
   publishedAt: "2026-05-12",
   image: "/images/articles/weekly-publishing-workflow.webp",
   imageAlt: "Printed blank pages laid out in a row across a large table",
-  seoTitle: "How to Run a Weekly Publishing Workflow",
+  seoTitle: "A Weekly Publishing Workflow",
   seoDescription:
     "A complete weekly publishing workflow: the five stages, the structure and claims checkpoints that catch most problems cheaply, why a two-article buffer is what makes the cadence survivable, and how to adapt it for one person.",
   quickAnswer:

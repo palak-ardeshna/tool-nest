@@ -12,7 +12,7 @@ export const browserExtensionsThatSaveTime: Article = {
   contentUpdatedAt: "2026-08-08",
   image: "/images/articles/browser-extensions-that-save-time.webp",
   imageAlt: "A tidy desk from above with a closed laptop and a mug",
-  seoTitle: "10 Browser Extensions That Actually Save Time (2026)",
+  seoTitle: "10 Browser Extensions That Save Time",
   seoDescription:
     "Ten types of browser extension that remove a repeated manual step, the four types that add work instead, the permissions to check before installing, and how to audit what you already have.",
   quickAnswer:

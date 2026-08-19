@@ -13,7 +13,7 @@ export const aiImageGeneratorsTested: Article = {
   featured: true,
   image: "/images/articles/ai-image-generators-tested.webp",
   imageAlt: "Photographic test prints spread across a white light table",
-  seoTitle: "How to Choose an AI Image Generator in 2026",
+  seoTitle: "How to Choose an AI Image Generator",
   seoDescription:
     "A practical framework for picking an AI image generator: the five prompts that separate the field, why consistency and inpainting matter more than raw quality, and what to check in the commercial licence before you ship.",
   quickAnswer:

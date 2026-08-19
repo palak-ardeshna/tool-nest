@@ -12,7 +12,7 @@ export const bestAiCodingToolsForReactDevelopers: Article = {
   featured: true,
   image: "/images/articles/best-ai-coding-tools-for-react-developers.webp",
   imageAlt: "Close-up of a mechanical keyboard with blank keycaps",
-  seoTitle: "Judging AI Coding Tools as a React Developer (2026)",
+  seoTitle: "AI Coding Tools for React Devs",
   seoDescription:
     "A four-task evaluation for AI coding assistants on React and Next.js: the server component boundary test that eliminates most tools, where assistants genuinely save time, and why performance work is not one of those places.",
   quickAnswer:

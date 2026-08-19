@@ -11,7 +11,7 @@ export const deployingANextjsAppFourRoutes: Article = {
   publishedAt: "2026-07-30",
   image: "/images/articles/deploying-a-nextjs-app-four-routes.webp",
   imageAlt: "Four small matte shipping containers arranged in a row",
-  seoTitle: "Deploying a Next.js App in 2026: Four Routes Compared",
+  seoTitle: "Deploying Next.js: 4 Routes Compared",
   seoDescription:
     "Four ways to deploy a Next.js app in 2026 compared on setup effort, ongoing maintenance and cost shape — plus the specific failure each route hides, including ephemeral filesystems and the missing persistent volume.",
   quickAnswer:

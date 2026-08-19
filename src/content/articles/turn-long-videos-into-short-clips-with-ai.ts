@@ -11,7 +11,7 @@ export const turnLongVideosIntoShortClipsWithAi: Article = {
   publishedAt: "2026-07-15",
   image: "/images/articles/turn-long-videos-into-short-clips-with-ai.webp",
   imageAlt: "A strip of 35mm film beside a closed clapperboard",
-  seoTitle: "How to Turn Long Videos Into Short Clips With AI: A Practical Workflow",
+  seoTitle: "Turn Long Videos Into Short Clips",
   seoDescription:
     "A step-by-step workflow for turning long-form video into short clips using AI transcription and clip detection — including the manual steps worth keeping.",
   quickAnswer:

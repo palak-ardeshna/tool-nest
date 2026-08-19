@@ -11,7 +11,7 @@ export const freeApisWorthBuildingOn: Article = {
   publishedAt: "2026-06-25",
   image: "/images/articles/free-apis-worth-building-on.webp",
   imageAlt: "Small pale cubes joined by fine indigo threads forming a network",
-  seoTitle: "Free APIs Worth Building On in 2026",
+  seoTitle: "Free APIs Worth Building On",
   seoDescription:
     "How to judge whether a free API is safe to depend on — pricing history, rate-limit clarity, deprecation policy — plus categories where the free options are genuinely solid.",
   quickAnswer:

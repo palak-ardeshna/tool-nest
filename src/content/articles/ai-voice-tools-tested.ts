@@ -12,7 +12,7 @@ export const aiVoiceToolsTested: Article = {
   contentUpdatedAt: "2026-08-19",
   image: "/images/articles/ai-voice-tools-tested.webp",
   imageAlt: "A studio condenser microphone on a boom arm against a grey backdrop",
-  seoTitle: "AI Voice Tools in 2026: Transcription, Cloning and Dubbing",
+  seoTitle: "AI Voice Tools in 2026: What Works",
   seoDescription:
     "Where AI voice tools are genuinely reliable in 2026 and where they are not, how to evaluate transcription accuracy on your own audio, and the consent and disclosure questions to settle before cloning a voice.",
   quickAnswer:

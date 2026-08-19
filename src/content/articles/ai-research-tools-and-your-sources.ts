@@ -11,7 +11,7 @@ export const aiResearchToolsAndYourSources: Article = {
   publishedAt: "2026-06-30",
   image: "/images/articles/ai-research-tools-and-your-sources.webp",
   imageAlt: "A stack of blank books beside a closed laptop and a magnifying glass",
-  seoTitle: "AI Research Tools: How Reliable Are the Citations?",
+  seoTitle: "AI Research Tools: Are Citations Safe?",
   seoDescription:
     "Fabricated citations have largely been fixed. The failure that replaced them is quieter and more dangerous: a real paper, correctly cited, summarised without the limitations its authors were careful to state.",
   quickAnswer:
