@@ -31,8 +31,9 @@ The CMS lives at `/admin` and is unlocked with the password you hashed above.
 | `npm test` | Content-splitting, slug, reading-time and session tests |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run lint` | ESLint |
-| `npm run db:push` | Push the Prisma schema (development) |
-| `npm run db:migrate` | Create a migration (production workflow) |
+| `npm run db:migrate` | Create a migration (development) |
+| `npm run db:deploy` | Apply pending migrations (production) |
+| `npm run db:push` | Push the schema without a migration (local only) |
 | `npm run db:seed` | Seed authors, categories and articles |
 | `npm run db:studio` | Prisma Studio |
 | `npm run admin:hash` | Generate `ADMIN_PASSWORD_HASH` for `.env` |
@@ -143,10 +144,47 @@ successful check issues an HMAC-signed session cookie signed with `AUTH_SECRET`;
 re-checks with `requireAdmin()`. Replace `lib/auth.ts` if the team ever needs
 individual accounts.
 
-## Deployment notes
+## Deploying
 
-- Run `npm run db:migrate` (not `db:push`) against a production database.
-- Uploaded media is written to `public/uploads`, which needs a persistent
-  volume. On ephemeral serverless storage, replace `uploadMediaAction` in
-  `src/app/actions/admin.ts` with an object-store upload — it is the only
-  function that touches the filesystem.
+**The build queries the database.** `generateStaticParams` prerenders every
+article, category and author page, so `DATABASE_URL` must point at a reachable
+database *at build time*, not just at runtime. A build against an unreachable
+host fails with `Can't reach database server` — that is the schema being read,
+not a runtime error.
+
+### Vercel
+
+1. **Provision Postgres** — Vercel Postgres, Neon, Supabase, anything managed.
+   A local or private-network host will not work: Vercel's builders cannot see it.
+2. **Set the environment variables** on the project, for every environment you
+   build (Production, Preview):
+
+   | Variable | Value |
+   | --- | --- |
+   | `DATABASE_URL` | The pooled connection string from your provider |
+   | `NEXT_PUBLIC_SITE_URL` | `https://your-domain` — canonicals and sitemap use it |
+   | `AUTH_SECRET` | A fresh random string, **not** the one from local dev |
+   | `ADMIN_PASSWORD_HASH` | Output of `npm run admin:hash` |
+
+3. **Deploy.** `vercel-build` runs `prisma migrate deploy` before `next build`,
+   so the schema is created on the first deploy. `postinstall` runs
+   `prisma generate`, which Vercel needs because it caches `node_modules`.
+4. **Seed once**, from your machine, pointed at the production database:
+
+   ```bash
+   DATABASE_URL="<production url>" npm run db:seed
+   ```
+
+   The seed upserts by slug, so it is safe to re-run — but it will overwrite
+   edits you made in the CMS to seeded articles. Run it once, then manage
+   content through `/admin`.
+
+### One thing that will not work on Vercel
+
+Media upload writes to `public/uploads` on the local filesystem. Serverless
+filesystems are ephemeral and read-only, so uploads will fail or vanish.
+`uploadMediaAction` in `src/app/actions/admin.ts` is the only function that
+touches the disk — swap it for an object-store upload (S3, R2, Vercel Blob)
+before relying on the media library in production.
+
+A container on a VPS with a persistent volume has neither problem.
