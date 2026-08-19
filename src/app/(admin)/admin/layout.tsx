@@ -20,7 +20,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
               target="_blank"
               className="text-sm font-medium text-muted hover:text-accent"
             >
-              View site &nearr;
+              View site ↗
             </Link>
             <LogoutButton />
           </div>

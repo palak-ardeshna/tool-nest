@@ -36,7 +36,7 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
             target="_blank"
             className="text-sm font-semibold text-accent hover:underline"
           >
-            View live &nearr;
+            View live ↗
           </Link>
         ) : null}
       </div>
