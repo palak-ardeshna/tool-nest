@@ -53,7 +53,6 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      site: siteConfig.twitter,
       images: [ogImage],
     },
   };
@@ -124,11 +123,12 @@ export function articleSchema(article: ResolvedArticle) {
     articleSection: article.category.name,
     keywords: article.tags.join(", "),
     ...(article.image ? { image: [absoluteUrl(article.image)] } : {}),
+    // An editorial-team byline, not a named individual: asserting a Person who
+    // did not write or test this would misrepresent the content to Google.
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: article.author.name,
       url: absoluteUrl(`/authors/${article.author.slug}`),
-      ...(article.author.role ? { jobTitle: article.author.role } : {}),
     },
     publisher: { "@id": absoluteUrl("/#organization") },
   };

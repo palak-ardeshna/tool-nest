@@ -2,11 +2,10 @@ export const siteConfig = {
   name: "ToolNest",
   tagline: "Discover better tools. Work smarter.",
   description:
-    "Practical guides, comparisons and reviews for AI tools, software and productivity. Independently tested, written by people who use them.",
+    "Practical guides, comparisons and buying advice for AI tools, software and productivity. Researched from vendor documentation and public reporting, reviewed before publication.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "en_US",
-  twitter: "@toolnest",
-  email: "hello@toolnest.example",
+  email: "palakpatel00132@gmail.com",
 } as const;
 
 /** Primary navigation. Slugs must match top-level Category rows. */
@@ -14,9 +13,7 @@ export const primaryNav = [
   { label: "AI Tools", href: "/category/ai-tools" },
   { label: "Software", href: "/category/software" },
   { label: "Productivity", href: "/category/productivity" },
-  { label: "Automation", href: "/category/automation" },
   { label: "Developer Tools", href: "/category/developer-tools" },
-  { label: "Guides", href: "/category/how-to" },
 ] as const;
 
 export const footerNav = [
@@ -30,7 +27,7 @@ export const footerNav = [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
       { label: "All articles", href: "/articles" },
-      { label: "Comparisons", href: "/category/comparisons" },
+      { label: "Disclaimer", href: "/disclaimer" },
     ],
   },
   {

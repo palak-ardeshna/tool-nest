@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
   },
-  twitter: { card: "summary_large_image", site: siteConfig.twitter },
+  twitter: { card: "summary_large_image" },
   ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
     ? { verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } }
     : {}),

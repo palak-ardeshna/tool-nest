@@ -5,8 +5,8 @@ export const freeVsPaidAiWritingTools: Article = {
   title: "Free vs Paid AI Writing Tools: Where the Line Actually Falls",
   excerpt:
     "The free tiers are better than most people assume. Here is exactly what you gain by paying, and the cases where you gain nothing at all.",
-  category: "ai-writing",
-  author: "maya-oduya",
+  category: "ai-tools",
+  author: "toolnest-editorial",
   tags: ["AI Writing", "Comparisons", "Software"],
   publishedAt: "2026-07-02",
   image: "/images/articles/free-vs-paid-ai-writing-tools.webp",
@@ -84,6 +84,48 @@ export const freeVsPaidAiWritingTools: Article = {
 <h2>The honest test</h2>
 
 <p>Use a free tier for two weeks and write down every time it stopped you. Not every time it was imperfect — every time it actually blocked the work. If that list has more than three or four entries, pay. If it is empty, you have your answer, and you can spend the money on something that is not a subscription.</p>
+
+<h2>The costs that do not appear on the pricing page</h2>
+
+<p>Comparing a free tier to a paid one on the vendor's own table misses three costs that decide the question in practice:</p>
+
+<ul>
+<li><strong>Subscription sprawl.</strong> One writing subscription is a rounding error. Four, alongside everything else, is a real line in a budget nobody reviews. Before adding one, check whether a tool you already pay for covers the same job adequately — a general assistant subscription frequently does.</li>
+<li><strong>Switching cost, which is mostly habitual.</strong> Prompts do not transfer cleanly between tools, and neither does the sense of what a given model is good at. Changing tools costs a few weeks of reduced usefulness even when the new one is better.</li>
+<li><strong>Data handling.</strong> Free tiers more often use submitted content to improve models, and paid or business tiers more often do not. If you draft anything confidential, this is a compliance question rather than a preference — read the specific terms for the specific tier, because they differ within the same vendor.</li>
+</ul>
+
+<h2>How to run the two-week test properly</h2>
+
+<p>The test above only works if you record the right thing, and the natural instinct is to record the wrong thing.</p>
+
+<ol>
+<li><strong>Log blocks, not disappointments.</strong> "The output was mediocre" is not a block — you edited it and moved on, which you would have done anyway. "I hit a limit and could not continue for four hours" is a block.</li>
+<li><strong>Note what you were doing at the time.</strong> Blocks cluster. If all of yours occur on long documents, you need context length, not a general upgrade — and that may point at a different vendor rather than a higher tier of the same one.</li>
+<li><strong>Count the workarounds.</strong> Splitting a document into chunks to fit a context window is a cost even when it works. Three of those a week is a subscription's worth of friction.</li>
+<li><strong>Check the tier actually fixes it.</strong> This is the step people skip. If your blocks are all rate limits during a deadline week, confirm the paid tier's limits are high enough for that week rather than merely higher.</li>
+</ol>
+
+<blockquote>
+<p>An empty block list after two weeks is a real result, not an inconclusive one. It means the free tier is your product and the money belongs somewhere else.</p>
+</blockquote>
+
+<h2>A reasonable default by how much you write</h2>
+
+<table>
+<thead>
+<tr><th>If you…</th><th>Then</th></tr>
+</thead>
+<tbody>
+<tr><td>Write occasionally, in short pieces</td><td>Free tier, indefinitely</td></tr>
+<tr><td>Write daily but in short bursts</td><td>Free tier until rate limits interrupt you, then one paid subscription</td></tr>
+<tr><td>Work regularly with long documents</td><td>Paid — context length is the one gap that cannot be worked around cheaply</td></tr>
+<tr><td>Build this into a product or pipeline</td><td>API access and pay per use, which is a different pricing model entirely</td></tr>
+<tr><td>Handle confidential material</td><td>Whichever tier's terms actually permit it, regardless of cost</td></tr>
+</tbody>
+</table>
+
+<p>Notice that only one row in that table is about quality, and it is about context rather than eloquence. That is the honest shape of this market: you are buying capacity and terms, not better writing.</p>
 
 <h2>A note on what these tools are for</h2>
 

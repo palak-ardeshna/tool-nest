@@ -7,7 +7,8 @@ import { siteConfig } from "@/config/site";
 
 export const metadata = buildMetadata({
   title: "Terms of Use",
-  description: "The terms that govern your use of ToolNest.",
+  description:
+    "The terms that govern your use of ToolNest: what you may do with our articles, our intellectual property, third-party links and the limits of our liability.",
   path: "/terms",
 });
 
@@ -40,8 +41,9 @@ export default function TermsPage() {
 
         <h2>Accuracy</h2>
         <p>
-          We test what we write about, but software changes constantly. Prices, limits and features
-          may have changed since publication. Always check the vendor&rsquo;s own documentation before
+          We research what we write about from vendor documentation and public reporting, but
+          software changes constantly. Prices, limits and features may have changed since
+          publication. Always check the vendor&rsquo;s own documentation before
           making a purchasing decision. See our <Link href="/disclaimer">disclaimer</Link>.
         </p>
 

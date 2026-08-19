@@ -5,8 +5,8 @@ export const turnLongVideosIntoShortClipsWithAi: Article = {
   title: "How to Turn Long Videos Into Short Clips Using AI (Without the Slop)",
   excerpt:
     "A repeatable workflow for cutting webinars, podcasts and talks into clips people actually watch — and the steps where automation makes it worse.",
-  category: "how-to",
-  author: "daniel-reyes",
+  category: "ai-tools",
+  author: "toolnest-editorial",
   tags: ["AI Video", "How-To", "Content"],
   publishedAt: "2026-07-15",
   image: "/images/articles/turn-long-videos-into-short-clips-with-ai.webp",
@@ -35,12 +35,12 @@ export const turnLongVideosIntoShortClipsWithAi: Article = {
     {
       question: "How long should a clip be?",
       answer:
-        "Long enough to contain one complete idea. In our experience that is usually 30–70 seconds. Cutting to a target length rather than to the idea is the most common reason clips feel truncated.",
+        "Long enough to contain one complete idea. That is usually somewhere between 30 and 70 seconds. Cutting to a target length rather than to the idea is the most common reason clips feel truncated.",
     },
   ],
   content: `<p>The pitch for automatic clipping tools is that you upload an hour and get ten shareable clips. What you actually get is ten moments where someone laughed or raised their voice. Some of them are good. Most are not.</p>
 
-<p>Here is the workflow we settled on after clipping about forty hours of talks and podcasts. It keeps the automation where it is genuinely better than a person, and keeps a human where it is not.</p>
+<p>Here is a workflow that holds up across talks, interviews and podcasts. It keeps the automation where it is genuinely better than a person, and keeps a human where it is not.</p>
 
 <h2>Step 1: Transcribe before you do anything else</h2>
 
@@ -96,6 +96,42 @@ export const turnLongVideosIntoShortClipsWithAi: Article = {
 <tr><td>Post text</td><td>5 min</td><td>No</td></tr>
 </tbody>
 </table>
+
+<h2>Choosing the moments: what actually travels</h2>
+
+<p>The transcript gives you candidates; judgement picks between them. Clips that perform share a shape, and it is not the shape a highlight-detection model looks for.</p>
+
+<ul>
+<li><strong>A complete thought, not a memorable phrase.</strong> A clip that ends on a good line but leaves the idea unfinished reads as a teaser, and teasers get scrolled past.</li>
+<li><strong>A claim someone might disagree with.</strong> Uncontroversial competence is invisible. This does not mean manufacturing conflict — it means preferring the moment where a position was actually taken.</li>
+<li><strong>Something concrete in the first sentence.</strong> A number, a name, a specific example. An abstraction in the opening line loses the viewer before the point arrives.</li>
+<li><strong>Self-contained context.</strong> If the clip requires knowing what was said two minutes earlier, it will not work, however good the moment was.</li>
+</ul>
+
+<p>That last one is where most clips fail, and it is also the most fixable: three seconds of spoken or captioned setup at the front costs almost nothing and rescues a clip that would otherwise be incomprehensible.</p>
+
+<h2>The review pass, in the order that catches the most</h2>
+
+<p>Two minutes per clip, in this order, because each check is cheaper than the one after it:</p>
+
+<ol>
+<li><strong>Watch it muted.</strong> Most viewing starts muted. If the captions alone do not carry the idea, nothing else matters.</li>
+<li><strong>Check proper nouns in the captions.</strong> Names, products, companies. This is where automatic transcription reliably fails, and it is the error that looks most careless.</li>
+<li><strong>Scrub the reframed version.</strong> Speaker-tracking loses people when they move quickly or gesture. A crop that cuts off the top of someone's head is unusable and takes one second to spot.</li>
+<li><strong>Listen to the first and last half-second.</strong> Clipped words at either end are the most common defect and the easiest to fix.</li>
+</ol>
+
+<h2>Do not publish the same clip everywhere</h2>
+
+<p>The tool will happily export one vertical video for every platform, and it is tempting to treat that as done. It is worth at least varying the text you write around it, because the platforms are read differently: one rewards a claim stated flatly, another a question, another needs the context the clip assumes.</p>
+
+<p>The clip can be identical. The framing around it should not be, and that is five minutes of writing rather than a re-export.</p>
+
+<h2>An honest note on volume</h2>
+
+<p>These tools make it possible to produce twenty clips from one recording, and the fact that it is possible is not a reason to do it. Ten thin clips from an hour of material perform worse than three good ones, and cost more of the attention of the people already following you.</p>
+
+<p>The bottleneck was never production. It was that most of any recording is not worth clipping — and no tool changes that. It just removes the excuse.</p>
 
 <h2>Where this fails</h2>
 

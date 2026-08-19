@@ -5,8 +5,8 @@ export const automateRepetitiveWorkWithoutCode: Article = {
   title: "How to Automate Repetitive Work Without Writing Code",
   excerpt:
     "A practical method for finding what to automate, choosing where to build it, and knowing when automation costs more than the task did.",
-  category: "automation",
-  author: "priya-raman",
+  category: "productivity",
+  author: "toolnest-editorial",
   tags: ["Automation", "Workflows", "How-To"],
   publishedAt: "2026-05-30",
   image: "/images/articles/automate-repetitive-work-without-code.webp",
@@ -59,7 +59,7 @@ export const automateRepetitiveWorkWithoutCode: Article = {
 <p>The reliable signal is not "what takes longest". It is "what do I copy from one place to another". Every copy-paste between two systems is a candidate, because it is by definition mechanical, and because it is where transcription errors come from.</p>
 
 <blockquote>
-<p>The best automations we have built saved fifteen minutes a week each and eliminated a category of mistake entirely. The second part mattered more.</p>
+<p>The best automations tend to save a modest amount of time each week and eliminate an entire category of mistake. The second part is worth more than the first, and it is the part people forget to count when deciding whether an automation was worth building.</p>
 </blockquote>
 
 <h2>Keep it to three steps</h2>
@@ -100,6 +100,42 @@ export const automateRepetitiveWorkWithoutCode: Article = {
 </table>
 
 <p>Write down what each automation does, in one sentence, somewhere your colleagues can find. This single habit prevents the most expensive failure mode: an automation nobody understands, which everybody is afraid to turn off.</p>
+
+<h2>What to automate second, once the first one works</h2>
+
+<p>The instinct after a successful automation is to automate something bigger. The better move is to automate something adjacent and equally small, because value compounds through coverage rather than through complexity.</p>
+
+<ol>
+<li><strong>Notifications you currently check manually.</strong> Something changed somewhere and you go and look. Low risk, immediate payoff, and failure is obvious.</li>
+<li><strong>Copying data between two systems.</strong> The classic case, and the one where transcription errors disappear entirely.</li>
+<li><strong>Creating a record from a trigger</strong> — a form submission becoming a task, an email becoming a ticket. Slightly riskier, because a broken automation silently drops work rather than announcing itself.</li>
+<li><strong>Anything that sends a message to a person outside your team.</strong> Last, and only with a review step. An automation that emails a client incorrectly costs more than every hour it saved.</li>
+</ol>
+
+<h2>The rules that keep automations from becoming a liability</h2>
+
+<ul>
+<li><strong>One owner, named.</strong> An automation nobody owns will break and stay broken. Put the owner in the automation's name if the tool allows it.</li>
+<li><strong>Never let one write to a system of record unattended</strong> — invoicing, payroll, anything financial. Have it prepare; have a person confirm.</li>
+<li><strong>Document what it does in one sentence, where the automation lives.</strong> Six months later nobody remembers, and an automation whose purpose is unknown never gets deleted, only feared.</li>
+<li><strong>Review the list quarterly.</strong> Automations outlive the processes they served. The sweep is simply asking, of each one, whether the thing it automates still happens.</li>
+</ul>
+
+<blockquote>
+<p>The failure mode of no-code automation is not that it breaks. It is that it keeps working perfectly on a process that stopped mattering, and nobody notices, because it never asks for attention.</p>
+</blockquote>
+
+<h2>When to stop and write code instead</h2>
+
+<p>No-code platforms have a real ceiling, and pushing past it costs more than the alternative. Three signals you have reached it:</p>
+
+<ul>
+<li>The flow has more than about three branches, at which point reading it is harder than reading the equivalent script.</li>
+<li>You are working around a missing feature with a chain of steps that exists only to reshape data.</li>
+<li>The per-run pricing has become a line item you notice.</li>
+</ul>
+
+<p>None of these mean the automation was a mistake. They mean it succeeded, proved the process was worth automating, and has outgrown the tool — which is a good outcome, and a far easier case to make for engineering time than a proposal for something nobody has tested.</p>
 
 <h2>A reasonable starting point</h2>
 

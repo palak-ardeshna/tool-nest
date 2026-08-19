@@ -5,8 +5,8 @@ export const invoicingAndBookkeepingForSmallTeams: Article = {
   title: "Invoicing and Bookkeeping Tools for Small Teams",
   excerpt:
     "The category nobody enjoys evaluating. Here is what actually matters when you are three people, and what only matters when you are thirty.",
-  category: "business-tools",
-  author: "maya-oduya",
+  category: "software",
+  author: "toolnest-editorial",
   tags: ["Business Tools", "Software", "Remote Work"],
   publishedAt: "2026-06-04",
   image: "/images/articles/invoicing-and-bookkeeping-for-small-teams.webp",
@@ -70,6 +70,32 @@ export const invoicingAndBookkeepingForSmallTeams: Article = {
 <p>Financial records need to outlive your software. Before you put a year of data into anything, do the export. Not read about it — do it, on the trial, and open the file.</p>
 
 <p>What you want back is every transaction, with dates, categories, attachments and references intact. What you often get is a summary report that would be useless in an audit.</p>
+
+<h2>4. What happens at the end of the tax year?</h2>
+
+<p>Every tool looks equivalent in month two. The differences appear in the fortnight where you are closing a year, and by then you have a year of data inside it.</p>
+
+<p>Three things to check on the trial rather than discover in January:</p>
+
+<ul>
+<li><strong>Can you lock a period?</strong> Once accounts are filed, edits to prior transactions should be blocked or at least flagged. Tools without this let a stray edit silently change a figure you have already reported.</li>
+<li><strong>Is there an audit trail?</strong> Who changed what, and when. Boring right up until a number moves and nobody knows why.</li>
+<li><strong>Can your accountant get in directly?</strong> A read-only advisor seat that does not cost a full licence removes the quarterly ritual of exporting files and emailing them around.</li>
+</ul>
+
+<h2>Bank feeds are the feature that actually saves time</h2>
+
+<p>Of everything in this category, automatic bank feeds are the one that changes how much time you spend. Manual statement imports are tolerable at twenty transactions a month and miserable at two hundred.</p>
+
+<p>Two caveats before you weight this heavily. Feed coverage is regional — a tool with excellent connections in one country may have none for your bank, so check yours specifically rather than trusting a marketing page. And feeds break: banks change authentication, connections lapse, and a silently broken feed means a month of missing transactions discovered at quarter end. Glance at the feed status monthly rather than assuming it is running.</p>
+
+<h2>The reconciliation habit that prevents most problems</h2>
+
+<p>Reconcile monthly, not annually. It takes fifteen minutes monthly because the transactions are recent enough to recognise. It takes a weekend annually, because you are trying to remember what a payment in March was for.</p>
+
+<blockquote>
+<p>Almost every horror story in small-business bookkeeping is the same story: nobody looked at it for eleven months. No tool prevents that, and no tool is needed to prevent it.</p>
+</blockquote>
 
 <h2>What genuinely does not matter yet</h2>
 

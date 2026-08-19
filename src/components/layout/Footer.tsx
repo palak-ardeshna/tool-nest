@@ -16,10 +16,15 @@ export function Footer() {
           {footerNav.map((group) => (
             <nav key={group.title} aria-label={group.title}>
               <h2 className="text-xs font-bold uppercase tracking-wider text-ink">{group.title}</h2>
-              <ul className="mt-3.5 space-y-2.5">
+              <ul className="mt-2 space-y-0.5">
                 {group.links.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-muted transition-colors hover:text-accent">
+                    {/* inline-block + py-1.5 gives each link a 24px+ touch target
+                        without changing the visual rhythm of the column. */}
+                    <Link
+                      href={link.href}
+                      className="inline-block py-1.5 text-sm text-muted transition-colors hover:text-accent"
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -34,8 +39,8 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <p>
-            ToolNest is reader-supported. Some articles include affiliate links, which never affect our
-            testing or verdicts. See our{" "}
+            ToolNest is funded by advertising and carries no affiliate links. Articles are
+            AI-assisted and reviewed by a person before publication. See our{" "}
             <Link href="/disclaimer" className="underline underline-offset-2 hover:text-accent">
               disclaimer
             </Link>

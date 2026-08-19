@@ -5,8 +5,8 @@ export const freeApisWorthBuildingOn: Article = {
   title: "Free APIs Worth Building On (And How to Tell Before You Commit)",
   excerpt:
     "Free tiers disappear, rate limits change and terms get rewritten. Here is how to judge whether an API is safe to build on, and a few that pass.",
-  category: "apis",
-  author: "priya-raman",
+  category: "developer-tools",
+  author: "toolnest-editorial",
   tags: ["APIs", "Developer Tools", "Software"],
   publishedAt: "2026-06-25",
   image: "/images/articles/free-apis-worth-building-on.webp",
@@ -89,6 +89,43 @@ export async function getForecast(lat: number, lon: number): Promise&lt;Forecast
 }</code></pre>
 
 <p>Everything downstream depends on <code>Forecast</code>, not on the vendor's field names. Swapping providers becomes a morning rather than a project. This is a small amount of work up front and it is the entire difference between an inconvenience and a migration.</p>
+
+<h2>Read the terms for the two clauses that actually bite</h2>
+
+<p>Most API terms are unremarkable. Two clauses decide whether a free tier is usable for what you are building, and both are easy to skip:</p>
+
+<ul>
+<li><strong>Caching and storage limits.</strong> Some providers forbid storing responses beyond a short window, or require a refresh on a schedule. If your design assumes you can cache results for a month, a clause you did not read may make the whole architecture non-compliant.</li>
+<li><strong>Attribution and display requirements.</strong> Free tiers frequently require visible credit, sometimes in a specific form, sometimes adjacent to the data itself. Fine if you know up front; awkward once the interface is designed.</li>
+</ul>
+
+<p>A third, less common but more damaging: restrictions on commercial use, or on building something that competes with the provider. Check these before building rather than before launching.</p>
+
+<h2>Failure behaviour tells you more than an uptime number</h2>
+
+<p>A published uptime figure describes the good case. What matters is what the API does in the bad one, and you can find out in ten minutes:</p>
+
+<ol>
+<li><strong>Exceed the rate limit deliberately.</strong> Does it return a clear 429 with a <code>Retry-After</code> header, or a generic error you have to guess at? That difference decides whether your retry logic can be correct.</li>
+<li><strong>Send a malformed request.</strong> A useful error names the field. A useless one says "invalid request", and will cost you an afternoon at some point.</li>
+<li><strong>Request something that does not exist.</strong> A 404 is fine. A 200 with an empty body is a bug generator, because your code cannot distinguish "no result" from "broken".</li>
+<li><strong>Check whether errors ever arrive with a 200 status.</strong> Some APIs do this. If yours does, every layer of your error handling has to know.</li>
+</ol>
+
+<h2>Watch how the provider communicates</h2>
+
+<p>The best available predictor of whether an API will still be there and still be stable is not technical. It is whether the provider behaves like an organisation with customers.</p>
+
+<ul>
+<li><strong>Is there a changelog, and is it current?</strong> A changelog that stops eighteen months ago is a stronger signal than any status page.</li>
+<li><strong>Does the status page have real incident history?</strong> One that has never recorded an incident has never been honest.</li>
+<li><strong>How were past breaking changes handled?</strong> Find the last major version bump and read what users said at the time. This is the single most informative twenty minutes in the whole evaluation.</li>
+<li><strong>Is there a way to reach a human?</strong> Not for support — as evidence that somebody is accountable.</li>
+</ul>
+
+<blockquote>
+<p>Free tiers rarely disappear overnight. They get quietly worse: limits tighten, the useful endpoint moves behind a paid plan, the docs stop being updated. The signals above catch that trajectory about a year before it becomes your problem.</p>
+</blockquote>
 
 <h2>The check before you commit</h2>
 

@@ -27,12 +27,22 @@ export default function DisclaimerPage() {
           over, editorial content.
         </p>
 
-        <h2>Affiliate links</h2>
+        <h2>How this site is funded</h2>
         <p>
-          Some articles contain affiliate links. If you sign up for a product through one, we may earn
-          a commission at no additional cost to you. Whether a link is affiliate or not has no bearing
-          on whether a tool is recommended or how it scores. If a tool we recommend has no affiliate
-          programme, we still recommend it.
+          {siteConfig.name} is funded by display advertising only. We carry no affiliate links and
+          earn no commission when you sign up for a product mentioned here. If that ever changes, it
+          will be disclosed on the affected article and on this page before any such link is
+          published.
+        </p>
+
+        <h2>How our articles are researched</h2>
+        <p>
+          Our articles are researched from vendor documentation, changelogs, pricing pages and
+          published reporting, drafted with AI assistance and reviewed by a person before
+          publication. They are not laboratory benchmarks, and we do not claim to have run
+          controlled tests on the tools we write about. Where a figure comes from a vendor, treat it
+          as a vendor claim. Full detail on our process is on the{" "}
+          <Link href="/about">about page</Link>.
         </p>
 
         <h2>Advertising</h2>
@@ -45,7 +55,8 @@ export default function DisclaimerPage() {
         <h2>No professional advice</h2>
         <p>
           Our articles are general information about software and workflows. They are not legal,
-          financial, security or professional advice for your specific situation.
+          financial, security or professional advice for your specific situation, and they are not a
+          substitute for trialling a tool on your own work.
         </p>
 
         <h2>Accuracy over time</h2>

@@ -1,12 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ArticleGrid } from "@/components/article/ArticleGrid";
-import { Pagination } from "@/components/ui/Pagination";
 import { JsonLd } from "@/components/JsonLd";
-import { countPublishedArticles, getLatestArticles } from "@/lib/articles";
+import { getLatestArticles } from "@/lib/articles";
 import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
-
-const PER_PAGE = 12;
 
 export const metadata = buildMetadata({
   title: "All articles",
@@ -15,19 +12,19 @@ export const metadata = buildMetadata({
   path: "/articles",
 });
 
-export default async function ArticlesPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ page?: string }>;
-}) {
-  const { page } = await searchParams;
-  const current = Math.max(1, Number.parseInt(page ?? "1", 10) || 1);
-
-  const [articles, total] = await Promise.all([
-    getLatestArticles(PER_PAGE, (current - 1) * PER_PAGE),
-    countPublishedArticles(),
-  ]);
-
+/**
+ * The full archive on one static page.
+ *
+ * Pagination was removed rather than fixed. It created two problems for one
+ * benefit nobody was getting at this size: page 2 canonicalised to page 1 while
+ * staying indexable, and an out-of-range `?page=` rendered not-found content
+ * under HTTP 200 — a soft 404 that `notFound()` cannot fix, because the status
+ * is already committed by the time a streamed page can call it. Reinstate it
+ * when the archive is long enough to need it, as a real `/articles/page/[n]`
+ * segment that can 404 properly.
+ */
+export default function ArticlesPage() {
+  const articles = getLatestArticles();
   const crumbs = [{ label: "Home", href: "/" }, { label: "All articles" }];
 
   return (
@@ -37,18 +34,12 @@ export default async function ArticlesPage({
       <header className="mb-10 max-w-2xl">
         <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">All articles</h1>
         <p className="mt-3 text-base leading-relaxed text-muted">
-          Everything we have published, newest first. {total} {total === 1 ? "article" : "articles"}{" "}
-          and counting.
+          Everything we have published, newest first. {articles.length}{" "}
+          {articles.length === 1 ? "article" : "articles"} and counting.
         </p>
       </header>
 
       <ArticleGrid articles={articles} priorityCount={3} />
-
-      <Pagination
-        basePath="/articles"
-        currentPage={current}
-        totalPages={Math.max(1, Math.ceil(total / PER_PAGE))}
-      />
 
       <JsonLd data={breadcrumbSchema(crumbs)} />
     </Container>

@@ -10,7 +10,7 @@ import { siteConfig } from "@/config/site";
 export const metadata = buildMetadata({
   title: "About ToolNest",
   description:
-    "Who writes ToolNest, how we test tools, and the editorial standards behind every guide and comparison we publish.",
+    "Who publishes ToolNest, how our articles are researched and reviewed, how we use AI, and the editorial standards behind every guide we publish.",
   path: "/about",
 });
 
@@ -27,46 +27,63 @@ export default function AboutPage() {
 
       <div className="prose">
         <p>
-          ToolNest is an independent technology publication about the software people actually use to
-          get work done: AI tools, productivity apps, automation platforms and developer tooling. We
-          publish hands-on guides, honest comparisons and practical how-tos.
+          ToolNest is an independent technology publication about the software people use to get
+          work done: AI tools, productivity apps, automation platforms and developer tooling. We
+          publish explainers, comparisons and practical how-tos.
         </p>
 
-        <h2>Why we exist</h2>
+        <h2>Who is behind ToolNest</h2>
         <p>
-          Searching for &ldquo;best AI writing tool&rdquo; returns thousands of pages that read like
-          they were written by someone who never opened the product. We started ToolNest to do the
-          boring part properly: sign up, use the tool on real work, hit the limits, and then write
-          down what we found.
+          ToolNest is a small independent site, not a company with a newsroom. It is run by one
+          person, and articles are published under a single editorial byline —{" "}
+          <Link href="/authors/toolnest-editorial">ToolNest Editorial</Link> — rather than invented
+          personal names. Editorial responsibility for everything on this site rests with the site
+          owner, reachable at{" "}
+          <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
         </p>
 
-        <h2>How we test</h2>
+        <h2>How our articles are made</h2>
+        <p>
+          We are direct about this, because a lot of sites are not.
+        </p>
         <ol>
           <li>
-            <strong>We use the tool.</strong> Every review is based on a real account and real tasks,
-            not a marketing page.
+            <strong>Research, not lab testing.</strong> Our articles are built from vendor
+            documentation, changelogs, pricing and limits pages, official support articles and
+            published reporting — not from a controlled test lab. We do not run benchmarks and we do
+            not claim to.
           </li>
           <li>
-            <strong>We use the same task across competitors.</strong> Comparisons run the same brief
-            through each tool so the differences are attributable to the tool, not the prompt.
+            <strong>AI-assisted drafting, human review.</strong> Drafts are produced with AI
+            assistance and then read, corrected and edited by a person before publication. Nothing
+            is published straight from a model.
           </li>
           <li>
-            <strong>We record the version and date.</strong> Software changes fast. Every article
-            carries a publication date and, where we have revisited it, an update date.
+            <strong>We say what we do not know.</strong> If we have not used a tool ourselves, the
+            article does not imply that we have. Where a claim comes from a vendor rather than from
+            independent verification, we attribute it.
           </li>
           <li>
-            <strong>We say when we are unsure.</strong> If we have not tested something, we say so
-            rather than filling the gap with confident guesswork.
+            <strong>We record the date.</strong> Software changes fast. Every article carries a
+            publication date and, where we have revisited it, an update date. Always confirm current
+            pricing and limits with the vendor.
           </li>
         </ol>
 
+        <h2>What this means for you</h2>
+        <p>
+          Use ToolNest to narrow a shortlist and understand the trade-offs between categories of
+          tool. Do not use it as a substitute for a trial. Every recommendation here is an argument
+          about fit, not a measured verdict, and your workflow is the only benchmark that matters.
+        </p>
+
         <h2>Independence and money</h2>
         <p>
-          ToolNest is funded by advertising and, in some articles, affiliate links. Vendors cannot buy
-          placement, a rating, or a mention. Nobody outside the editorial team sees an article before
-          it is published. Ad slots are clearly labelled and kept out of the reading flow. Full detail
-          is in our{" "}
-          <Link href="/disclaimer">disclaimer</Link> and{" "}
+          ToolNest is funded by advertising. Vendors cannot buy placement, a rating, or a mention,
+          and advertisers have no visibility of editorial content before it is published. Ad slots
+          are labelled and kept out of the reading flow. We currently carry no affiliate links; if
+          that changes, it will be disclosed on the article and in our{" "}
+          <Link href="/disclaimer">disclaimer</Link>. See also our{" "}
           <Link href="/privacy-policy">privacy policy</Link>.
         </p>
 
@@ -80,10 +97,10 @@ export default function AboutPage() {
 
       {authors.length ? (
         <section className="mt-12">
-          <h2 className="text-2xl font-bold tracking-tight text-ink">The team</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-ink">Byline</h2>
           <div className="mt-5 space-y-5">
             {authors.map((author) => (
-              <AuthorCard key={author.slug} author={author} heading="Editorial" />
+              <AuthorCard key={author.slug} author={author} heading="Published under" />
             ))}
           </div>
         </section>

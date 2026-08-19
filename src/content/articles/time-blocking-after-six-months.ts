@@ -1,21 +1,21 @@
 import type { Article } from "@/content/types";
 
 export const timeBlockingAfterSixMonths: Article = {
-  slug: "time-blocking-after-six-months",
-  title: "Time Blocking: What Actually Worked After Six Months",
+  slug: "time-blocking-that-survives-a-real-week",
+  title: "Time Blocking That Survives a Real Week",
   excerpt:
-    "We tried the version from the productivity books, failed, and ended up with something much looser that survived. Here is the honest account.",
-  category: "time-management",
-  author: "daniel-reyes",
+    "The version in the productivity books assigns every hour and collapses the first time something unexpected happens. A much looser version — two or three blocks a day and slack for everything else — is the one people are still running months later.",
+  category: "productivity",
+  author: "toolnest-editorial",
   tags: ["Time Management", "Productivity", "Workflows"],
   publishedAt: "2026-05-19",
   image: "/images/articles/time-blocking-after-six-months.webp",
   imageAlt: "A blank paper weekly planner with coloured blocks laid across it",
-  seoTitle: "Time Blocking: What Actually Worked After Six Months",
+  seoTitle: "Time Blocking That Survives a Real Week",
   seoDescription:
-    "A six-month account of time blocking — what failed immediately, what survived, and the three rules that made the difference.",
+    "Why strict hour-by-hour time blocking collapses, the three rules that make a looser version durable, how long a block should be, and what to do when one gets missed.",
   quickAnswer:
-    "Blocking every hour failed within a fortnight. What survived was blocking two or three things a day, leaving the rest open, and treating a missed block as information rather than failure. The looser version is the one that lasted.",
+    "Blocking every hour of the day reliably collapses within a fortnight, because one unexpected problem invalidates every block after it. The durable version blocks only the two or three things that would make the day worthwhile, leaves the rest unstructured to absorb what arrives, defines each block by a finish line rather than a duration, and treats a repeatedly missed block as information — a task missed three times is not a scheduling problem, it is a priority you have not admitted to yet.",
   pros: [
     "Protects focused work from being nibbled away by meetings",
     "Makes over-commitment visible before it becomes a problem",
@@ -30,7 +30,7 @@ export const timeBlockingAfterSixMonths: Article = {
     {
       question: "How long should a block be?",
       answer:
-        "Long enough to finish something. For us, 90 minutes was the floor — shorter blocks turned into setup time plus interruption, with little work in between.",
+        "Long enough to finish something, which for most focused work means ninety minutes as a floor. Shorter blocks tend to become setup time plus an interruption with very little work in between, because re-orientation into a complex task is itself expensive. If ninety minutes is not available, the honest move is to block something smaller rather than to block a fragment of something large.",
     },
     {
       question: "What do you do when a block gets missed?",
@@ -38,9 +38,9 @@ export const timeBlockingAfterSixMonths: Article = {
         "Nothing. Do not reschedule it into an already-full day. If a block gets missed three times, that is not a scheduling problem — it is the task telling you it is not actually a priority.",
     },
   ],
-  content: `<p>The version of time blocking in most productivity books — every hour of the day assigned, reviewed nightly, adjusted continuously — lasted nine working days here before quietly collapsing.</p>
+  content: `<p>Time blocking is one of the few productivity practices with a genuinely good idea inside it. It is also one of the most commonly abandoned, usually within a fortnight, and the reason is structural rather than a failure of discipline.</p>
 
-<p>What replaced it has now survived six months. It is much less impressive and considerably more useful.</p>
+<p>The version described in most productivity books — every hour of the day assigned, reviewed nightly, adjusted continuously — is brittle by design. What follows is why it breaks, and the looser version that people are still running months later.</p>
 
 <h2>Why the strict version failed</h2>
 
@@ -56,7 +56,7 @@ export const timeBlockingAfterSixMonths: Article = {
 
 <h3>Rule 1: block two or three things, not the whole day</h3>
 
-<p>Pick the two or three things that would make the day worthwhile and give each a real block. Leave everything else unstructured. The unstructured time absorbs the unexpected, which is what the strict version had nowhere to put.</p>
+<p>Pick the two or three things that would make the day worthwhile and give each a real block. Leave everything else unstructured. That unstructured time is not wasted — it is where the unexpected goes, and having nowhere to put the unexpected is precisely what makes the strict version collapse.</p>
 
 <blockquote>
 <p>A schedule with slack in it survives contact with reality. A schedule without slack fails the first time anything happens.</p>
@@ -66,13 +66,13 @@ export const timeBlockingAfterSixMonths: Article = {
 
 <p>"Write the comparison section" beats "90 minutes on the article". A block with a finish line ends with something done. A block with only a duration ends when the timer does, often mid-thought.</p>
 
-<p>Ninety minutes turned out to be our floor. Below that, setup and re-orientation ate most of it.</p>
+<p>Ninety minutes is a reasonable floor for anything requiring real concentration. Below that, setup and re-orientation consume most of the block, and you end up with the feeling of having worked without the artefact that proves it.</p>
 
 <h3>Rule 3: a missed block is information</h3>
 
 <p>The strict version treats a missed block as failure to be corrected by rescheduling. That is how days become impossible.</p>
 
-<p>Instead: if a block gets missed once, it was a busy day. Three times, and the task is not actually a priority — you have simply not admitted it yet. Delete it. This has been the most useful rule of the three, and the least comfortable.</p>
+<p>Instead: if a block gets missed once, it was a busy day and means nothing. Three times, and the task is not actually a priority — you have simply not admitted it yet. Delete it, and notice that the relief you feel is the information you were avoiding. This is usually the most useful of the three rules and reliably the least comfortable.</p>
 
 <h2>What it looks like now</h2>
 
@@ -88,9 +88,22 @@ export const timeBlockingAfterSixMonths: Article = {
 </tbody>
 </table>
 
-<p>Two blocks, three and a half hours protected, the rest of the day free to be a day. On a good week that is fifteen hours of focused work, which is considerably more than we were getting before and considerably less than the books promise.</p>
+<p>Two blocks, roughly three hours protected, the rest of the day free to be a day. Across a good week that is somewhere around fifteen hours of genuinely focused work — considerably more than most people manage without any structure, and considerably less than the books imply is available. Both halves of that sentence matter: the practice works, and the promised transformation does not arrive.</p>
 
-<h2>The measurable difference</h2>
+<h2>The benefit nobody advertises</h2>
 
-<p>The clearest change was not output. It was that over-commitment became visible. When someone asks for something and the two blocks are already spoken for, the answer is obvious and does not require a negotiation with yourself at 11pm. That alone has been worth the practice.</p>`,
+<p>The clearest change is usually not output. It is that over-commitment becomes visible <em>before</em> it becomes a problem. When someone asks for something and the two blocks for the day are already spoken for, the answer is obvious and does not require a negotiation with yourself at eleven at night.</p>
+
+<p>That is a smaller claim than the productivity literature makes, and it is the one that holds up. A system that makes your actual capacity legible is worth more than a system that promises to expand it.</p>
+
+<h2>If you want to try it this week</h2>
+
+<ol>
+<li>Tomorrow morning, name the one thing that would make the day worthwhile. Block ninety minutes for it with a finish line, not a duration.</li>
+<li>Do not block anything else. Resist the urge — the empty calendar is doing work.</li>
+<li>At the end of the week, count how many of the five blocks happened. If it is three or more, add a second daily block. If it is fewer, the blocks are too long or the finish lines are too vague.</li>
+<li>Delete anything you have now missed three times, without rescheduling it.</li>
+</ol>
+
+<p>That is the entire practice. It fits on an index card, which is roughly the correct amount of infrastructure for a system whose main failure mode is becoming a job of its own.</p>`,
 };

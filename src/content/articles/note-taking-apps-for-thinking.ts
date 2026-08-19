@@ -5,8 +5,8 @@ export const noteTakingAppsForThinking: Article = {
   title: "Note-Taking Apps for Thinking, Not Hoarding",
   excerpt:
     "Most note apps optimise for capture. Very few help you find the thought again six months later. Here is what separates them.",
-  category: "note-taking",
-  author: "daniel-reyes",
+  category: "productivity",
+  author: "toolnest-editorial",
   tags: ["Note Taking", "Productivity", "Software"],
   publishedAt: "2026-06-09",
   image: "/images/articles/note-taking-apps-for-thinking.webp",
@@ -81,7 +81,29 @@ export const noteTakingAppsForThinking: Article = {
 
 <p>Four checks, ten minutes, and they predict a year of use better than any feature comparison.</p>
 
+<h2>Why the elaborate methodologies keep failing</h2>
+
+<p>Every few years a note-taking methodology becomes popular, acquires an acronym, and generates a large amount of content about how to set it up. The setup content vastly outnumbers accounts of anyone still using it two years later, and that ratio is the finding.</p>
+
+<p>The failure is structural rather than a lack of discipline. These systems front-load work at capture time — deciding a category, adding links, filing into a hierarchy — in exchange for a benefit at retrieval time that arrives months later, if at all. Under pressure the cost is immediate and the benefit is theoretical, so the cost is what gets cut. What remains is a half-maintained system, which retrieves worse than no system at all, because you now trust it and it is incomplete.</p>
+
+<p>The systems that survive invert this: near-zero cost at capture, and an acceptance that retrieval will mostly be search.</p>
+
+<h2>Notes that turn out to matter get one extra step</h2>
+
+<p>The exception to minimal capture is small and worth making. Roughly one note in twenty turns out to be load-bearing — a decision and its reasoning, a supplier's terms, why something is built the way it is.</p>
+
+<p>Those deserve two minutes: a descriptive title containing the words you would actually search for, and a link from wherever you will be when you next need it. Not a tag. A link from the project note, the person, the recurring document — the place your future self will already be standing.</p>
+
+<p>You cannot identify these at capture time, which is exactly why the weekly ten-minute pass exists. It is not filing. It is asking, of the last week of notes, which two will still matter in six months.</p>
+
+<h2>A note on AI features in note apps</h2>
+
+<p>Every note app has added AI search and summarisation. The summarisation is largely irrelevant — your own notes are already short, and a summary of a summary loses the specific detail that was the reason to write it down.</p>
+
+<p>Semantic search is genuinely useful, because it addresses the exact failure of keyword search: finding a note when you remember the concept but not the words. Treat it as a better search box rather than a reason to switch tools, and check how it works if your notes are private — some implementations send note content to a third-party service, which for a personal journal or client notes is a decision worth making deliberately rather than by accepting a default.</p>
+
 <h2>The system that survives a busy week</h2>
 
-<p>Every elaborate note-taking methodology works in a calm week. The test is a week where you are behind on everything. What survives, in our experience, is: one inbox, dated notes, links when they are obvious, and a weekly ten-minute pass to file anything that turned out to matter. Anything more elaborate than that gets abandoned, and an abandoned system is worse than a simple one.</p>`,
+<p>Every elaborate note-taking methodology works in a calm week. The test is a week where you are behind on everything. What tends to survive is: one inbox, dated notes, links when they are obvious, and a weekly ten-minute pass to file anything that turned out to matter. Anything more elaborate than that gets abandoned, and an abandoned system is worse than a simple one.</p>`,
 };

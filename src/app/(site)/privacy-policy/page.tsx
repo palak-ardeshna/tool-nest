@@ -33,10 +33,6 @@ export default function PrivacyPolicyPage() {
             processed by Google Analytics.
           </li>
           <li>
-            <strong>Newsletter data.</strong> If you subscribe, we store the email address you give
-            us and which page you subscribed from. Nothing else.
-          </li>
-          <li>
             <strong>Email you send us.</strong> Kept only as long as needed to deal with your message.
           </li>
         </ul>
@@ -52,26 +48,75 @@ export default function PrivacyPolicyPage() {
           close the tab.
         </p>
 
-        <h2>Advertising</h2>
+        <h2>Advertising and Google AdSense</h2>
         <p>
-          {siteConfig.name} may display advertising served by Google AdSense. Google and its partners
-          use cookies to serve ads based on your prior visits to this and other websites. You can opt
-          out of personalised advertising in{" "}
-          <a href="https://adssettings.google.com" rel="noopener noreferrer" target="_blank">
-            Google Ads Settings
-          </a>
-          , and manage third-party cookies at{" "}
-          <a href="https://optout.aboutads.info" rel="noopener noreferrer" target="_blank">
-            aboutads.info
-          </a>
-          .
+          {siteConfig.name} displays advertising served by Google AdSense. Third-party vendors,
+          including Google, use cookies to serve ads based on your prior visits to this and other
+          websites.
+        </p>
+        <ul>
+          <li>
+            Google&rsquo;s use of advertising cookies enables it and its partners to serve ads to you
+            based on your visit to this site and/or other sites on the internet.
+          </li>
+          <li>
+            You may opt out of personalised advertising by visiting{" "}
+            <a href="https://myadcenter.google.com" rel="noopener noreferrer" target="_blank">
+              Google Ad Settings
+            </a>
+            .
+          </li>
+          <li>
+            You can opt out of some third-party vendors&rsquo; use of cookies for personalised
+            advertising at{" "}
+            <a href="https://optout.aboutads.info" rel="noopener noreferrer" target="_blank">
+              aboutads.info
+            </a>{" "}
+            and{" "}
+            <a href="https://www.youronlinechoices.eu" rel="noopener noreferrer" target="_blank">
+              youronlinechoices.eu
+            </a>
+            .
+          </li>
+          <li>
+            Third-party vendors used on this site are listed in Google&rsquo;s{" "}
+            <a
+              href="https://business.safety.google/adspartners/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              advertising partners
+            </a>{" "}
+            directory.
+          </li>
+        </ul>
+
+        <h2>Consent in the EEA, UK and Switzerland</h2>
+        <p>
+          If you are in the European Economic Area, the United Kingdom or Switzerland, a consent
+          message is shown before advertising or analytics cookies are set. It is served through
+          Google&rsquo;s certified consent management platform, and your choice is stored in your
+          browser so you are not asked on every page. You can change or withdraw that choice at any
+          time by clearing this site&rsquo;s cookies, which makes the message appear again on your
+          next visit.
+        </p>
+        <p>
+          Where you decline consent, Google may still serve non-personalised ads, which use cookies
+          for frequency capping, aggregated reporting and fraud prevention rather than for building
+          a profile of you.
         </p>
 
         <h2>Legal basis and retention</h2>
         <p>
-          Where the GDPR applies, we rely on legitimate interest for analytics and on consent for the
-          newsletter and personalised advertising. Analytics data is retained for 14 months.
-          Newsletter subscriptions are retained until you unsubscribe.
+          Where the GDPR or UK GDPR applies, we rely on your consent for analytics and advertising
+          cookies, collected through the consent message described above, and on legitimate interest
+          for keeping the site secure and working. Analytics data is retained for 14 months.
+          Email you send us is kept only as long as needed to deal with it. Google retains
+          advertising data under its own{" "}
+          <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">
+            privacy policy
+          </a>
+          , which governs its processing as an independent controller.
         </p>
 
         <h2>Your rights</h2>

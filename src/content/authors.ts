@@ -1,31 +1,21 @@
 import type { Author } from "@/content/types";
 
-/** Bylines. Every article references one of these by slug. */
+/**
+ * Bylines. Every article references one of these by slug.
+ *
+ * ToolNest publishes under a single editorial byline rather than invented
+ * personal names. Articles are researched from vendor documentation, changelogs
+ * and public reporting, drafted with AI assistance and reviewed before
+ * publication — see /about. Claiming a named individual tested something we did
+ * not test would be misrepresentation, so we do not.
+ */
 export const authors: Author[] = [
   {
-    slug: "maya-oduya",
-    name: "Maya Oduya",
-    role: "Editor-in-chief",
+    slug: "toolnest-editorial",
+    name: "ToolNest Editorial",
+    role: "Editorial team",
     bio:
-      "Maya has spent twelve years writing about software, most recently leading tool coverage at a developer publication. She reviews every comparison before it goes out and is responsible for ToolNest's testing standards.",
-    email: "maya@toolnest.example",
-    twitter: "@mayaoduya",
-  },
-  {
-    slug: "daniel-reyes",
-    name: "Daniel Reyes",
-    role: "Senior writer, productivity",
-    bio:
-      "Daniel writes about workflows, note-taking and the software people use to organise their work. He has an unhealthy interest in keyboard shortcuts and a healthy scepticism of productivity systems.",
-    email: "daniel@toolnest.example",
-  },
-  {
-    slug: "priya-raman",
-    name: "Priya Raman",
-    role: "Contributing engineer",
-    bio:
-      "Priya is a software engineer who covers developer tooling and automation for ToolNest. She tests coding tools against real production codebases rather than sample projects.",
-    email: "priya@toolnest.example",
-    website: "https://example.com",
+      "ToolNest's editorial byline. Our articles summarise and compare software using vendor documentation, changelogs, pricing pages and published reporting, and are drafted with AI assistance under human review. Where we have not used a tool ourselves, we say so rather than implying otherwise.",
+    email: "palakpatel00132@gmail.com",
   },
 ];

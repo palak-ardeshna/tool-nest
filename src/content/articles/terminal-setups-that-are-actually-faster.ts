@@ -5,8 +5,8 @@ export const terminalSetupsThatAreActuallyFaster: Article = {
   title: "Terminal Setups That Are Actually Faster",
   excerpt:
     "Most terminal customisation makes your prompt prettier and your shell slower. These are the changes that measurably saved time over three months.",
-  category: "developer-software",
-  author: "priya-raman",
+  category: "software",
+  author: "toolnest-editorial",
   tags: ["Developer Software", "Developer Tools", "Productivity"],
   publishedAt: "2026-06-16",
   image: "/images/articles/terminal-setups-that-are-actually-faster.webp",
@@ -38,7 +38,9 @@ export const terminalSetupsThatAreActuallyFaster: Article = {
         "The one you already use. Every improvement here works in bash, zsh and fish. Switching shells is a much larger change than any of these and buys much less.",
     },
   ],
-  content: `<p>Terminal customisation has a measurement problem: it feels productive, so nobody checks whether it is. We timed ours.</p>
+  content: `<p>Terminal customisation has a measurement problem: it feels productive, so almost nobody checks whether it is. The result is shells that take most of a second to start, in exchange for a prompt that displays information the user has stopped reading.</p>
+
+<p>Everything below is either measurable or discardable. Start by measuring.</p>
 
 <h2>Measure first</h2>
 
@@ -48,7 +50,7 @@ export const terminalSetupsThatAreActuallyFaster: Article = {
   /usr/bin/time -f "%e" $SHELL -i -c exit
 done 2&gt;&amp;1 | sort -n | tail -1</code></pre>
 
-<p>Under 100ms is fine. Over 300ms is a lag you can feel. Ours was 780ms, almost entirely one plugin framework and a git-aware prompt.</p>
+<p>Under 100ms is fine. Over 300ms is a lag you can feel every time you open a pane, and heavily customised shells routinely land far beyond it. When they do, the cost is almost always concentrated in two places: a plugin framework loading everything eagerly, and a git-aware prompt running status checks on every render inside a large repository. Both are fixable without giving up the feature — lazy-load the framework, and cache or disable the git segment for large repositories.</p>
 
 <h2>The four that earned their place</h2>
 
@@ -74,21 +76,50 @@ done 2&gt;&amp;1 | sort -n | tail -1</code></pre>
 
 <p>Either use a prompt that computes git state asynchronously, or show less. We show branch name only, and stopped noticing the difference within a week.</p>
 
-<h2>What we removed</h2>
+<h2>What is usually worth removing</h2>
 
 <table>
 <thead>
-<tr><th>Removed</th><th>Startup saved</th><th>Missed?</th></tr>
+<tr><th>Candidate for removal</th><th>Typical startup cost</th><th>What you actually lose</th></tr>
 </thead>
 <tbody>
-<tr><td>Plugin framework</td><td>~410ms</td><td>No — kept four plugins directly</td></tr>
-<tr><td>Synchronous git prompt</td><td>~180ms</td><td>No</td></tr>
-<tr><td>Version-manager auto-init</td><td>~150ms</td><td>Slightly — now lazy-loaded</td></tr>
-<tr><td>Aliases nobody used</td><td>0ms</td><td>No — but the config got readable</td></tr>
+<tr><td>A full plugin framework loading eagerly</td><td>Usually the largest single cost</td><td>Little — most people use three or four plugins and can source them directly</td></tr>
+<tr><td>Synchronous git status in the prompt</td><td>Large, and worst in big repositories</td><td>Nothing, if you replace it with an async or cached variant</td></tr>
+<tr><td>Version-manager auto-initialisation</td><td>Substantial, paid on every shell</td><td>Nothing, once lazy-loaded on first use of the language</td></tr>
+<tr><td>Aliases nobody remembers</td><td>None</td><td>Nothing — but the config becomes readable, which is why it is on the list</td></tr>
 </tbody>
 </table>
 
 <p>Final startup: 94ms, from 780ms. The subjective difference is larger than the number suggests, because the lag used to land at the exact moment of starting work.</p>
+
+<h2>Measure again after every change</h2>
+
+<p>The point of the timing loop at the top is that it is repeatable. Run it after each addition rather than once at the end, because the cost of a plugin is invisible in aggregate and obvious in isolation.</p>
+
+<p>A useful discipline: anything adding more than about 50ms to shell startup has to justify itself against how often you actually use it. A tool used twenty times a day earns it. A tool used twice a month does not, and belongs behind lazy loading instead.</p>
+
+<h2>Lazy-loading is the technique that resolves most of this</h2>
+
+<p>Almost every expensive shell initialisation is a language version manager or a completion system doing work eagerly that could be done on first use.</p>
+
+<p>The pattern is the same regardless of tool: define a shell function with the command's name; have that function perform the real initialisation, remove itself, then re-invoke the now-real command. The first invocation pays the cost, and every shell that never uses it pays nothing.</p>
+
+<p>That converts the version-manager question from "do I accept this startup cost on every shell" into "do I mind a short pause the first time I run this per session" — a much easier trade, and one that usually lets you keep the tool.</p>
+
+<h2>Where the time actually goes</h2>
+
+<p>Worth saying plainly, because terminal optimisation attracts more effort than it returns. Startup time is a real cost and it is not the largest one. The wins order roughly like this:</p>
+
+<ol>
+<li><strong>Not retyping commands you have run before.</strong> Fuzzy history search, by a wide margin the highest-value change available.</li>
+<li><strong>Not navigating directories manually.</strong> Directory jumping, second by the same measure.</li>
+<li><strong>Not waiting for the shell to start.</strong> Real, and third.</li>
+<li><strong>Prompt aesthetics.</strong> Not on the list — which is worth naming, because it is where the most time is spent and the least is returned.</li>
+</ol>
+
+<blockquote>
+<p>The honest test for any terminal change: could you tell, blind, whether it had been applied? If not, it was configuration as recreation — which is fine, as long as it is not counted as productivity.</p>
+</blockquote>
 
 <h2>The portability rule</h2>
 

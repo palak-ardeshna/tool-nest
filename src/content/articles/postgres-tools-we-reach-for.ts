@@ -1,17 +1,17 @@
 import type { Article } from "@/content/types";
 
 export const postgresToolsWeReachFor: Article = {
-  slug: "postgres-tools-we-reach-for",
-  title: "The Postgres Tools We Reach For",
+  slug: "postgres-tools-worth-using",
+  title: "The Postgres Tools Worth Setting Up Before You Need Them",
   excerpt:
-    "Six tools that earn their place in a working Postgres setup, what each one is actually for, and the two situations where none of them help.",
-  category: "database-tools",
-  author: "priya-raman",
+    "Six pieces of Postgres tooling that earn their place, what each one is actually for, the order to reach for them when something is slow, and the three common problems where none of them will help you.",
+  category: "developer-tools",
+  author: "toolnest-editorial",
   tags: ["Database Tools", "Developer Tools", "Software"],
   publishedAt: "2026-06-11",
   image: "/images/articles/postgres-tools-we-reach-for.webp",
   imageAlt: "Frosted acrylic sheets stacked with gaps, edges catching indigo light",
-  seoTitle: "The Postgres Tools We Reach For in 2026",
+  seoTitle: "Postgres Tools Worth Setting Up in 2026",
   seoDescription:
     "A practical set of Postgres tools — query analysis, migrations, clients and backups — with what each one is for and when it will not help.",
   quickAnswer:
@@ -62,7 +62,7 @@ LIMIT 10;</code></pre>
 </ul>
 
 <blockquote>
-<p>Roughly nine in ten slow queries we have investigated were a missing index or a query that forgot to bound its result set. Exotic explanations are rare and expensive to chase.</p>
+<p>The overwhelming majority of slow queries turn out to be a missing index or a query that forgot to bound its result set. Exotic explanations exist, but they are rare and expensive to chase — exhaust the boring ones first.</p>
 </blockquote>
 
 <h2>3. Migrations in version control</h2>
@@ -86,6 +86,37 @@ LIMIT 10;</code></pre>
 <h2>6. Backups you have restored</h2>
 
 <p>An untested backup is a belief, not a backup. Restore one into a scratch database on a schedule you actually keep — quarterly is enough — and time it. Knowing that a restore takes forty minutes is information you want before you need it, not during.</p>
+
+<h2>7. Statistics and autovacuum, which you will otherwise blame the query for</h2>
+
+<p>The failure that looks most like a query problem and is not: planner statistics drifting out of date, so the planner chooses a bad plan for a query that was fine last month.</p>
+
+<p>The symptom is distinctive — a query that was fast becomes slow with no code change and no obvious growth in data. The tell is in the plan: a row estimate wildly different from the actual count. Before rewriting anything, refresh the statistics and re-check.</p>
+
+<p>The related one is autovacuum falling behind on a heavily updated table, leaving dead rows the planner still has to step over. Watching dead tuple counts on your busiest tables costs nothing and explains a whole category of mystery slowdown that otherwise burns days.</p>
+
+<h2>The order to work in when something is slow</h2>
+
+<p>Most wasted debugging time comes from starting in the wrong place. This order is boring, and it is faster:</p>
+
+<ol>
+<li><strong>Which query?</strong> Statistics extension, sorted by total time. Do not proceed without an answer.</li>
+<li><strong>Is it slow now, or was it always slow?</strong> Newly slow points at statistics, data growth or a plan change. Always slow points at a missing index or the query itself.</li>
+<li><strong>What does the plan say?</strong> Look for the sequential scan, the bad row estimate, the nested loop over far too many rows.</li>
+<li><strong>Is it the query or the connections?</strong> If everything is slow simultaneously and then recovers, it is connections — and no amount of indexing will help.</li>
+<li><strong>Only then change something,</strong> one thing, and measure again.</li>
+</ol>
+
+<blockquote>
+<p>An index added without step one is a guess that costs write performance forever. Half of them do not help, and nobody ever removes the ones that did not.</p>
+</blockquote>
+
+<h2>Two things worth doing before you need them</h2>
+
+<ul>
+<li><strong>Enable the statistics extension on day one.</strong> It records nothing about the past, so enabling it during an incident means waiting for data while the incident continues.</li>
+<li><strong>Set a statement timeout.</strong> A default that kills any query running absurdly long turns "the database is down" into "one endpoint returns an error", which is a considerably better Tuesday.</li>
+</ul>
 
 <h2>Where none of this helps</h2>
 

@@ -2,20 +2,20 @@ import type { Article } from "@/content/types";
 
 export const weeklyPublishingWorkflow: Article = {
   slug: "weekly-publishing-workflow",
-  title: "How We Run a Weekly Publishing Workflow",
+  title: "How to Run a Weekly Publishing Workflow Without Burning Out",
   excerpt:
-    "The unglamorous machinery behind shipping an article a week: how work moves from idea to published, and the two checkpoints that catch nearly everything.",
-  category: "workflows",
-  author: "maya-oduya",
+    "Publishing weekly is a queueing problem, not a writing problem. Five stages, two checkpoints, one buffer — and the reason a three-week pipeline ships more than a one-week sprint.",
+  category: "productivity",
+  author: "toolnest-editorial",
   tags: ["Workflows", "Productivity", "Remote Work"],
   publishedAt: "2026-05-12",
   image: "/images/articles/weekly-publishing-workflow.webp",
   imageAlt: "Printed blank pages laid out in a row across a large table",
-  seoTitle: "How We Run a Weekly Publishing Workflow",
+  seoTitle: "How to Run a Weekly Publishing Workflow",
   seoDescription:
-    "The complete workflow behind publishing weekly — stages, checkpoints, and the two reviews that catch most problems before anything goes live.",
+    "A complete weekly publishing workflow: the five stages, the structure and claims checkpoints that catch most problems cheaply, why a two-article buffer is what makes the cadence survivable, and how to adapt it for one person.",
   quickAnswer:
-    "Five stages, two mandatory checkpoints, and a rule that nothing moves forward on the same day it moves in. The checkpoints — a structure review before drafting and a claims review before publishing — catch nearly every problem we used to find after publication.",
+    "Run five stages — idea, research, structure, draft, edit — with one rule: nothing advances to the next stage on the day it entered the current one. Add two checkpoints: a structure review before any prose is written, and a claims review before publishing that asks where each factual statement came from. Keep two finished pieces in reserve. The buffer is what makes it possible to say 'this is not ready' without missing a slot, and that sentence is what keeps quality from drifting.",
   pros: [
     "Predictable cadence removes weekly negotiation about what ships",
     "Two checkpoints catch most issues cheaply, before the expensive work",
@@ -38,7 +38,9 @@ export const weeklyPublishingWorkflow: Article = {
         "It does not ship, and the buffer covers the slot. The buffer existing is what makes it possible to say no — without one, every deadline becomes a reason to publish something thin.",
     },
   ],
-  content: `<p>Publishing weekly is not a writing problem. It is a queueing problem. Here is the machinery.</p>
+  content: `<p>Publishing weekly is not a writing problem. It is a queueing problem, and it is usually solved badly — by writing harder in the days before the deadline, which works until the first week something goes wrong.</p>
+
+<p>What follows is a workflow that treats the cadence as a pipeline rather than a sprint. It is deliberately unglamorous, it adds latency, and it is the reason a schedule survives a bad week.</p>
 
 <h2>The five stages</h2>
 
@@ -54,7 +56,7 @@ export const weeklyPublishingWorkflow: Article = {
 
 <h2>Checkpoint one: structure review</h2>
 
-<p>Before anyone writes a sentence of prose, someone else reads the heading structure and the claim under each heading.</p>
+<p>Before anyone writes a sentence of prose, a second reader goes through the heading structure and the one-line claim sitting under each heading. Not the prose — there is no prose yet, and that is the point.</p>
 
 <p>This catches, in order of frequency:</p>
 
@@ -75,16 +77,18 @@ export const weeklyPublishingWorkflow: Article = {
 <p>Three outcomes:</p>
 
 <ol>
-<li><strong>We tested it.</strong> Fine — and note when, because software changes.</li>
-<li><strong>A source says it.</strong> Fine, if the source is linked and actually says it.</li>
-<li><strong>It sounds right.</strong> Cut it or test it. This is where nearly everything that would have needed a correction gets caught.</li>
+<li><strong>First-hand: someone here did this and recorded what happened.</strong> Fine — and note the date, because software changes underneath published claims faster than anyone expects.</li>
+<li><strong>Sourced: a document, changelog or report says it.</strong> Fine, provided the source is linked and actually says the thing being claimed. Check the second half; a surprising share of citation failures are a real source that does not support the sentence attached to it.</li>
+<li><strong>Neither: it sounds right.</strong> Cut it, verify it, or attribute it as a vendor claim. This is where nearly everything that would later have needed a correction gets caught, and it is worth being ruthless — fluent prose disguises unsupported claims extremely well.</li>
 </ol>
 
 <h2>The buffer</h2>
 
-<p>We keep two finished articles in reserve at all times. This is the difference between a weekly cadence and a weekly panic.</p>
+<p>Keep two finished pieces in reserve at all times. This single practice is the difference between a weekly cadence and a weekly panic, and it is the first thing to build before committing to a schedule publicly.</p>
 
-<p>Without a buffer, every deadline creates pressure to publish whatever is closest to done. With one, "this is not ready" costs nothing, which means it actually gets said.</p>
+<p>Without a buffer, every deadline creates pressure to publish whatever is closest to done. With one, "this is not ready" costs nothing — which is the only condition under which anyone actually says it. A schedule with no buffer does not fail loudly; it degrades quietly, one slightly-thin piece at a time, until the cadence is being met and nothing being published is any good.</p>
+
+<p>Building the buffer is the hard part, because it means writing three pieces before publishing the first. Do it during the period before anyone is watching, not after you have announced a schedule.</p>
 
 <h2>What the week looks like</h2>
 
@@ -104,5 +108,13 @@ export const weeklyPublishingWorkflow: Article = {
 
 <h2>Where it does not work</h2>
 
-<p>Anything time-sensitive. A three-week pipeline cannot respond to something that happened yesterday. We handle that by not competing on it: if a piece only matters this week, it is probably not the kind of thing we publish anyway.</p>`,
+<p>Anything time-sensitive. A three-week pipeline cannot respond to something that happened yesterday, and no amount of tuning changes that — the latency is the mechanism, not a defect in it.</p>
+
+<p>The workable response is not to compete there. A publication built around breaking news needs a much shorter pipeline and correspondingly lighter checkpoints; trying to run both cadences through one workflow produces something too slow for news and too rushed for everything else. Decide which one you are, and let the other go.</p>
+
+<h2>Adapting it for one person</h2>
+
+<p>The workflow survives being run solo with a single substitution: wherever it says "a second reader", substitute a day of distance. Reading your own heading structure the next morning catches a surprising share of what a colleague would catch, because the failure being hunted — a topic pretending to be an argument — is invisible while the idea is still in your head and obvious once it is not.</p>
+
+<p>What does not survive being solo is quietly dropping the checkpoints. They are the entire value of the process. The five stages are just scaffolding to hang them on.</p>`,
 };

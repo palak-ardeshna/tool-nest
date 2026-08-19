@@ -5,8 +5,8 @@ export const asyncByDefaultWhatChanges: Article = {
   title: "Async by Default: What Actually Changes",
   excerpt:
     "Going async is usually described as fewer meetings. In practice it is a writing problem, a decision-making problem, and only incidentally a calendar problem.",
-  category: "remote-work",
-  author: "priya-raman",
+  category: "productivity",
+  author: "toolnest-editorial",
   tags: ["Remote Work", "Workflows", "Productivity"],
   publishedAt: "2026-05-05",
   image: "/images/articles/async-by-default-what-changes.webp",
@@ -85,6 +85,40 @@ export const asyncByDefaultWhatChanges: Article = {
 <p>Spanning more than about four hours of time-zone difference is the clear case. Below that, the honest answer is that async costs more than it saves: writing a decision takes longer than saying it, and the compounding benefit of a searchable record takes a year or two to outweigh that.</p>
 
 <p>Teams in one time zone that adopt async by default usually end up with the costs — slower questions, heavier writing burden — and none of the reason for them.</p>
+
+<h2>The meeting that should not be removed</h2>
+
+<p>Teams adopting async tend to cut meetings by category — all standups, all one-to-ones — when the useful cut is by function. Some meetings were transmitting information, and those convert cleanly to writing. Others were doing something writing cannot do.</p>
+
+<table>
+<thead>
+<tr><th>Meeting</th><th>Was actually doing</th><th>Convert to async?</th></tr>
+</thead>
+<tbody>
+<tr><td>Status standup</td><td>Transmitting information</td><td>Yes — a written update is strictly better, and searchable</td></tr>
+<tr><td>Design or architecture review</td><td>Reaching agreement under disagreement</td><td>No — threads entrench positions</td></tr>
+<tr><td>One-to-one</td><td>Detecting things nobody would write down</td><td>No, and this is the one most often wrongly cut</td></tr>
+<tr><td>Sprint planning</td><td>Both — estimation is written, sequencing is negotiated</td><td>Split it</td></tr>
+<tr><td>Incident response</td><td>Fast iteration under uncertainty</td><td>No, obviously</td></tr>
+</tbody>
+</table>
+
+<p>The one-to-one row matters most. Its real function is surfacing things people would not put in writing — that they are stuck, bored, or about to leave. Removing it does not move that conversation into a document; it removes the conversation.</p>
+
+<h2>The tooling matters less than people expect</h2>
+
+<p>Async-by-default gets discussed as a tooling decision, and it mostly is not. A team with a decision log in a plain repository and clear norms about deadlines outperforms a team with an expensive knowledge platform and no norms, every time.</p>
+
+<p>What the tool does need to do is narrow: make the decision log searchable by someone who was not there, keep it in a format that outlives the vendor, and make it obvious where a decision is <em>recorded</em> versus where it is being <em>discussed</em>. Conflating those last two is the most common tooling failure — a decision buried in a chat thread is not written down in any useful sense, because nobody will find it.</p>
+
+<h2>How to tell whether it is working</h2>
+
+<p>Two signals, both cheap to check after a couple of months:</p>
+
+<ul>
+<li><strong>Ask someone who joined recently to find out why a specific decision was made.</strong> If they can do it without asking a person, the log is working. If they end up in a chat channel asking "does anyone remember why", it is not.</li>
+<li><strong>Count how many questions are still open after three days.</strong> A growing number means the deadline norm has not landed — and that, rather than too many meetings, is what quietly kills async teams.</li>
+</ul>
 
 <h2>The compounding part</h2>
 
