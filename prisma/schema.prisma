@@ -1,0 +1,126 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ArticleStatus {
+  DRAFT
+  PUBLISHED
+}
+
+model Author {
+  id        String    @id @default(cuid())
+  name      String
+  slug      String    @unique
+  role      String?
+  bio       String?
+  avatar    String?
+  email     String?
+  twitter   String?
+  website   String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  articles  Article[]
+}
+
+/// Self-referencing so sub-categories (AI Writing, AI Video, ...) need no extra model.
+model Category {
+  id          String     @id @default(cuid())
+  name        String
+  slug        String     @unique
+  description String?
+  position    Int        @default(0)
+  parentId    String?
+  parent      Category?  @relation("CategoryTree", fields: [parentId], references: [id], onDelete: SetNull)
+  children    Category[] @relation("CategoryTree")
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  articles    Article[]
+
+  @@index([parentId, position])
+}
+
+model Tag {
+  id       String    @id @default(cuid())
+  name     String
+  slug     String    @unique
+  articles Article[] @relation("ArticleTags")
+}
+
+model Article {
+  id                String        @id @default(cuid())
+  title             String
+  slug              String        @unique
+  excerpt           String
+  content           String        @db.Text
+  featuredImage     String?
+  featuredImageAlt  String?
+  quickAnswer       String?
+  pros              String[]      @default([])
+  cons              String[]      @default([])
+  status            ArticleStatus @default(DRAFT)
+  featured          Boolean       @default(false)
+  readingMinutes    Int           @default(5)
+  seoTitle          String?
+  seoDescription    String?
+  publishedAt       DateTime?
+  /// Editorially meaningful "last reviewed" date, distinct from the row's updatedAt.
+  contentUpdatedAt  DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+  authorId   String
+  author     Author   @relation(fields: [authorId], references: [id])
+
+  tags         Tag[]         @relation("ArticleTags")
+  faqs         Faq[]
+  alternatives Alternative[]
+
+  @@index([status, publishedAt])
+  @@index([categoryId, status, publishedAt])
+}
+
+model Faq {
+  id        String  @id @default(cuid())
+  question  String
+  answer    String  @db.Text
+  position  Int     @default(0)
+  articleId String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@index([articleId, position])
+}
+
+model Alternative {
+  id        String  @id @default(cuid())
+  name      String
+  url       String?
+  note      String?
+  position  Int     @default(0)
+  articleId String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@index([articleId, position])
+}
+
+model Media {
+  id        String   @id @default(cuid())
+  url       String   @unique
+  alt       String   @default("")
+  width     Int?
+  height    Int?
+  createdAt DateTime @default(now())
+}
+
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  source    String?
+  createdAt DateTime @default(now())
+}
