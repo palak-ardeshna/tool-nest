@@ -4,7 +4,6 @@ import { cn } from "@/lib/cn";
 const tones = {
   accent: "bg-accent-light text-accent-dark",
   neutral: "bg-surface text-muted border border-line",
-  success: "bg-green-50 text-success",
 } as const;
 
 type BadgeProps = {

@@ -1,4 +1,4 @@
-import { InArticleAd } from "@/components/ads/InArticleAd";
+import { AdSlot } from "@/components/ads/AdSlot";
 import { groupSections } from "@/lib/content";
 
 export function ArticleContent({ html }: { html: string }) {
@@ -8,7 +8,15 @@ export function ArticleContent({ html }: { html: string }) {
     <>
       {groups.map((group, index) => (
         <div key={index}>
-          {index > 0 ? <InArticleAd /> : null}
+          {/* Between complete sections, never mid-thought and never styled as content. */}
+          {index > 0 ? (
+            <AdSlot
+              slotId={process.env.NEXT_PUBLIC_ADSENSE_SLOT_IN_ARTICLE}
+              format="fluid"
+              minHeight={280}
+              className="border-y border-line py-4"
+            />
+          ) : null}
           {/* Authored in the CMS by the editorial team, never by site visitors. */}
           <div
             className="prose [&>h2:first-child]:mt-0"

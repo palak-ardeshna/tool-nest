@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getArticleBySlug } from "@/lib/articles";
+import { getArticle } from "@/content";
 import { coverStyle } from "@/lib/cover-art";
 import { siteConfig } from "@/config/site";
 import { formatDate } from "@/lib/format";
@@ -16,7 +16,7 @@ const size = { width: 1200, height: 630 };
  */
 export async function GET(_request: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const article = await getArticleBySlug(slug);
+  const article = getArticle(slug);
   const { palette } = coverStyle(slug);
 
   const title = article?.title ?? siteConfig.name;

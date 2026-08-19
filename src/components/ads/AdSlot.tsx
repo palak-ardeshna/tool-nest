@@ -9,7 +9,6 @@ export type AdSlotProps = {
   /** Reserved height, so ads never cause layout shift. */
   minHeight: number;
   className?: string;
-  label?: string;
 };
 
 /**
@@ -19,16 +18,16 @@ export type AdSlotProps = {
  * It renders nothing at all until NEXT_PUBLIC_ADSENSE_CLIENT and a slot id are
  * configured; there are deliberately no placeholder boxes in production.
  */
-export function AdSlot({ slotId, format = "auto", minHeight, className, label = "Advertisement" }: AdSlotProps) {
+export function AdSlot({ slotId, format = "auto", minHeight, className }: AdSlotProps) {
   if (!adsenseClient || !slotId) return null;
 
   return (
     <aside
-      aria-label={label}
+      aria-label="Advertisement"
       className={cn("my-8 flex flex-col items-center gap-1.5", className)}
       style={{ minHeight: minHeight + 20 }}
     >
-      <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">{label}</span>
+      <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">Advertisement</span>
       <ins
         className="adsbygoogle block w-full"
         style={{ display: "block", minHeight }}

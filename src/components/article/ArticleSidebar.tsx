@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ResolvedArticle } from "@/types";
 import { ArticleCard } from "@/components/article/ArticleCard";
-import { SidebarAd } from "@/components/ads/SidebarAd";
+import { AdSlot } from "@/components/ads/AdSlot";
 import { adsenseClient } from "@/config/site";
 
 /**
@@ -43,7 +43,12 @@ export function ArticleSidebar({
         </section>
       ) : null}
 
-      <SidebarAd />
+      <AdSlot
+        slotId={process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR}
+        format="rectangle"
+        minHeight={250}
+        className="hidden lg:flex"
+      />
     </aside>
   );
 }

@@ -5,12 +5,11 @@ type ContainerProps = {
   className?: string;
   /** `wide` for grids and hero sections, `reading` for article body copy. */
   width?: "wide" | "reading";
-  as?: "div" | "section" | "header" | "footer" | "main" | "nav";
 };
 
-export function Container({ children, className, width = "wide", as: Tag = "div" }: ContainerProps) {
+export function Container({ children, className, width = "wide" }: ContainerProps) {
   return (
-    <Tag
+    <div
       className={cn(
         "mx-auto w-full px-4 sm:px-6 lg:px-8",
         width === "wide" ? "max-w-6xl" : "max-w-[720px]",
@@ -18,6 +17,6 @@ export function Container({ children, className, width = "wide", as: Tag = "div"
       )}
     >
       {children}
-    </Tag>
+    </div>
   );
 }

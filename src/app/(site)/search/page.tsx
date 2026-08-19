@@ -5,7 +5,7 @@ import { SearchFilters } from "@/components/search/SearchFilters";
 import { ArticleGrid } from "@/components/article/ArticleGrid";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { SearchTracker } from "@/components/search/SearchTracker";
-import { getCategoryTree } from "@/lib/categories";
+import { topLevelCategories } from "@/content";
 import { searchArticles } from "@/lib/search";
 import { buildMetadata } from "@/lib/seo";
 
@@ -28,7 +28,7 @@ export default async function SearchPage({ searchParams }: PageProps) {
 
   const [{ articles, total }, categories] = await Promise.all([
     searchArticles({ query, category }),
-    getCategoryTree(),
+    topLevelCategories,
   ]);
 
   return (

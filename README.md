@@ -52,7 +52,6 @@ one entry in `src/content/authors.ts`.
 src/
 ├── app/
 │   ├── (site)/          home, articles, categories, search, authors, legal
-│   ├── api/             read-only JSON endpoints
 │   ├── sitemap.ts  robots.ts  not-found.tsx
 ├── content/
 │   ├── articles/        one file per article, plus an explicit index

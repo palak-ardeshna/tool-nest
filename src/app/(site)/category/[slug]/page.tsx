@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ArticleGrid } from "@/components/article/ArticleGrid";
 import { JsonLd } from "@/components/JsonLd";
 import { getArticlesInSection } from "@/lib/articles";
-import { getAllCategories, getCategoryBySlug } from "@/lib/categories";
+import { getCategory, resolvedCategories } from "@/content";
 import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 import type { Crumb } from "@/types";
 
@@ -17,12 +17,12 @@ type PageProps = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getAllCategories().map(({ slug }) => ({ slug }));
+  return resolvedCategories.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const category = getCategoryBySlug(slug);
+  const category = getCategory(slug);
   if (!category) return { title: "Category not found" };
 
   return buildMetadata({
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function CategoryPage({ params }: PageProps) {
   const { slug } = await params;
-  const category = getCategoryBySlug(slug);
+  const category = getCategory(slug);
   if (!category) notFound();
 
   // Sections list everything they contain. No section is near a length where

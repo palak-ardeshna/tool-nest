@@ -4,8 +4,8 @@ import { FeaturedArticles } from "@/components/home/FeaturedArticles";
 import { LatestArticles } from "@/components/home/LatestArticles";
 import { PopularTopics } from "@/components/home/PopularTopics";
 import { DiscoverySection } from "@/components/home/DiscoverySection";
-import { countPublishedArticles, getFeaturedArticles, getLatestArticles } from "@/lib/articles";
-import { getCategoryTree } from "@/lib/categories";
+import { getFeaturedArticles, getLatestArticles } from "@/lib/articles";
+import { allArticles, topLevelCategories } from "@/content";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
@@ -17,8 +17,8 @@ export const metadata = buildMetadata({
 
 export default function HomePage() {
   const featured = getFeaturedArticles(4);
-  const categories = getCategoryTree();
-  const total = countPublishedArticles();
+  const categories = topLevelCategories;
+  const total = allArticles.length;
 
   const featuredSlugs = new Set(featured.map((article) => article.slug));
   const latest = getLatestArticles(10)

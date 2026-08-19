@@ -1,10 +1,6 @@
 import { notFound } from "next/navigation";
-import {
-  allArticles,
-  getArticleBySlug,
-  getMoreInSection,
-  getRelatedArticles,
-} from "@/lib/articles";
+import { allArticles, getMoreInSection, getRelatedArticles } from "@/lib/articles";
+import { getArticle } from "@/content";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ArticleHeader } from "@/components/article/ArticleHeader";
@@ -16,7 +12,7 @@ import { Alternatives } from "@/components/article/Alternatives";
 import { Faq } from "@/components/article/Faq";
 import { AuthorCard } from "@/components/article/AuthorCard";
 import { RelatedArticles } from "@/components/article/RelatedArticles";
-import { MobileAd } from "@/components/ads/MobileAd";
+import { AdSlot } from "@/components/ads/AdSlot";
 import { ArticleTracker } from "@/components/analytics/ArticleTracker";
 import { JsonLd } from "@/components/JsonLd";
 import { Badge } from "@/components/ui/Badge";
@@ -37,7 +33,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = getArticle(slug);
   if (!article) return { title: "Article not found" };
 
   return buildMetadata({
@@ -63,7 +59,7 @@ function buildCrumbs(article: ResolvedArticle): Crumb[] {
 
 export default async function ArticlePage({ params }: PageProps) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = getArticle(slug);
   if (!article) notFound();
 
   const related = getRelatedArticles(article, 3);
@@ -94,7 +90,11 @@ export default async function ArticlePage({ params }: PageProps) {
 
               <ArticleContent html={article.content} />
 
-              <MobileAd />
+              <AdSlot
+                slotId={process.env.NEXT_PUBLIC_ADSENSE_SLOT_MOBILE}
+                minHeight={250}
+                className="lg:hidden"
+              />
 
               <ProsCons pros={article.pros ?? []} cons={article.cons ?? []} />
               <Alternatives items={article.alternatives ?? []} />

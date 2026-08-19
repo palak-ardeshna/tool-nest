@@ -5,7 +5,7 @@ export function Skeleton({ className }: { className?: string }) {
 }
 
 /** Matches ArticleCard's box so loading states do not shift layout. */
-export function ArticleCardSkeleton() {
+function ArticleCardSkeleton() {
   return (
     <div className="overflow-hidden rounded-card border border-line bg-white">
       <Skeleton className="aspect-[16/9] rounded-none" />

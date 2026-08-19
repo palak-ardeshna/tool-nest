@@ -1,4 +1,4 @@
-import { allArticles, articlesInSection, getArticle } from "@/content";
+import { allArticles, articlesInSection } from "@/content";
 import type { ResolvedArticle, ResolvedCategory } from "@/types";
 
 /**
@@ -8,14 +8,6 @@ import type { ResolvedArticle, ResolvedCategory } from "@/types";
 
 export function getLatestArticles(take = 9, skip = 0): ResolvedArticle[] {
   return allArticles.slice(skip, skip + take);
-}
-
-export function countPublishedArticles(): number {
-  return allArticles.length;
-}
-
-export function getArticleBySlug(slug: string): ResolvedArticle | undefined {
-  return getArticle(slug);
 }
 
 /**

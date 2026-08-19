@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allArticles } from "@/lib/articles";
-import { getAllCategories } from "@/lib/categories";
+import { resolvedCategories } from "@/content";
 import { authors } from "@/content";
 import { absoluteUrl } from "@/lib/seo";
 
@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: route.changeFrequency,
       priority: route.priority,
     })),
-    ...getAllCategories().map((category) => ({
+    ...resolvedCategories.map((category) => ({
       url: absoluteUrl(`/category/${category.slug}`),
       lastModified: newest,
       changeFrequency: "weekly" as const,
