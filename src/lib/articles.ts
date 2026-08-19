@@ -39,9 +39,6 @@ export function getArticlesInSection(
   return take === undefined ? articles.slice(skip) : articles.slice(skip, skip + take);
 }
 
-export function countArticlesInSection(category: ResolvedCategory): number {
-  return articlesInSection(category).length;
-}
 
 export function getArticlesByAuthor(authorSlug: string): ResolvedArticle[] {
   return allArticles.filter((article) => article.author.slug === authorSlug);

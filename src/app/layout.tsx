@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import { siteConfig } from "@/config/site";
+import { adsenseClient, siteConfig } from "@/config/site";
+import { AdSenseScript } from "@/components/ads/AdSenseScript";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +30,9 @@ export const metadata: Metadata = {
   ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
     ? { verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } }
     : {}),
+  // AdSense's meta-tag verification method. Harmless alongside the script tag,
+  // and the two together cover both ways Google checks.
+  ...(adsenseClient ? { other: { "google-adsense-account": adsenseClient } } : {}),
 };
 
 export const viewport: Viewport = {
@@ -39,6 +43,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <AdSenseScript />
       <body className="flex min-h-screen flex-col antialiased">{children}</body>
     </html>
   );

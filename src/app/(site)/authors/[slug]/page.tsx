@@ -10,6 +10,11 @@ import { absoluteUrl, breadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
+// Every slug is known at build time, so anything else is a genuine 404 rather
+// than a page to render on demand. Without this, unknown URLs return HTTP 200
+// with not-found content — a soft 404.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return authors.map(({ slug }) => ({ slug }));
 }

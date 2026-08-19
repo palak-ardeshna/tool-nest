@@ -3,19 +3,18 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ArticleGrid } from "@/components/article/ArticleGrid";
-import { Pagination } from "@/components/ui/Pagination";
 import { JsonLd } from "@/components/JsonLd";
-import { countArticlesInSection, getArticlesInSection } from "@/lib/articles";
+import { getArticlesInSection } from "@/lib/articles";
 import { getAllCategories, getCategoryBySlug } from "@/lib/categories";
 import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 import type { Crumb } from "@/types";
 
-const PER_PAGE = 12;
+type PageProps = { params: Promise<{ slug: string }> };
 
-type PageProps = {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ page?: string }>;
-};
+// Every slug is known at build time, so anything else is a genuine 404 rather
+// than a page to render on demand. Without this, unknown URLs return HTTP 200
+// with not-found content — a soft 404.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getAllCategories().map(({ slug }) => ({ slug }));
@@ -33,14 +32,16 @@ export async function generateMetadata({ params }: PageProps) {
   });
 }
 
-export default async function CategoryPage({ params, searchParams }: PageProps) {
-  const [{ slug }, { page }] = await Promise.all([params, searchParams]);
+export default async function CategoryPage({ params }: PageProps) {
+  const { slug } = await params;
   const category = getCategoryBySlug(slug);
   if (!category) notFound();
 
-  const current = Math.max(1, Number.parseInt(page ?? "1", 10) || 1);
-  const articles = getArticlesInSection(category, PER_PAGE, (current - 1) * PER_PAGE);
-  const total = countArticlesInSection(category);
+  // Sections list everything they contain. No section is near a length where
+  // pagination would help, and hiding articles behind a page parameter would
+  // make the route dynamic — which turns an unknown slug into a soft 404.
+  const articles = getArticlesInSection(category);
+  const total = articles.length;
 
   const crumbs: Crumb[] = [{ label: "Home", href: "/" }];
   if (category.parentCategory) {
@@ -81,12 +82,6 @@ export default async function CategoryPage({ params, searchParams }: PageProps) 
         priorityCount={3}
         emptyTitle={`No ${category.name} articles yet`}
         emptyDescription="We publish here as soon as the testing is done. In the meantime, browse the rest of the archive."
-      />
-
-      <Pagination
-        basePath={`/category/${category.slug}`}
-        currentPage={current}
-        totalPages={Math.max(1, Math.ceil(total / PER_PAGE))}
       />
 
       <JsonLd data={breadcrumbSchema(crumbs)} />
