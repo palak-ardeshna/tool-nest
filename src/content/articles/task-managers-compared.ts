@@ -46,7 +46,7 @@ export const taskManagersCompared: Article = {
 
 <p>The conditions that actually decide whether you keep a task manager are a month with two overlapping deadlines and a week away from your desk. Systems do not get abandoned because a feature was missing. They get abandoned because using them became expensive at the exact moment you were least able to afford it.</p>
 
-<p>Three properties predict that, and none of them appear on a comparison table. Judge candidates on these, then run the two-week test at the end.</p>
+<p>Three properties predict that, and none of them appear on a comparison table. We judge candidates on these, then run the two-week test at the end.</p>
 
 <h2>The three properties that decide it</h2>
 
@@ -99,5 +99,5 @@ export const taskManagersCompared: Article = {
 
 <p>And the unglamorous truth worth stating plainly: for one person, a plain text file with a date at the top competes with all of them. Perfect capture speed, no overdue view to feel bad about, zero recovery cost after neglect, no subscription, and it will still open in twenty years. It loses on collaboration, reminders and anything recurring — which is a real list, and a shorter one than most people assume before they try it.</p>
 
-<p>If you have abandoned three task managers in two years, the problem is probably not that you have not found the right one. It is that each of them cost more to maintain than the list was worth, and the answer is a simpler system rather than a better app.</p>`,
+<p>Sound familiar? If you have abandoned three task managers in two years, the problem is probably not that you have not found the right one. It is that each of them cost more to maintain than the list was worth, and the answer is a simpler system rather than a better app.</p>`,
 };

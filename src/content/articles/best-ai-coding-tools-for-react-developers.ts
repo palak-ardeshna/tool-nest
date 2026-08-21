@@ -47,7 +47,7 @@ export const bestAiCodingToolsForReactDevelopers: Article = {
 
 <p>The result is that generic advice about AI assistants is close to useless for React work. What you need is a discriminator: something that separates tools that track the current framework from tools that produce confident, obsolete code.</p>
 
-<p>Below are four tasks that do that. Run them against any assistant you are considering, on your own codebase, in about twenty minutes. They are ordered so the most decisive one comes first.</p>
+<p>Below are the four tasks we would run. Run them against any assistant you are considering, on your own codebase, in about twenty minutes. They are ordered so the most decisive one comes first.</p>
 
 <h2>The four tasks</h2>
 
@@ -111,5 +111,7 @@ export default async function Page() {
 
 <p>Paste the relevant section of the current framework documentation into context before asking about anything released in the last year or so. It is unglamorous, it takes ten seconds, and it eliminates the large majority of framework-lag errors — which are, by a wide margin, the most common category of wrong answer in React work.</p>
 
-<p>The underlying reason is worth understanding: these tools are not wrong about React because they reason poorly. They are wrong because React's rules changed after their training data was collected, and nothing in the model knows that. Supplying the current rules fixes the actual problem. Prompting more elaborately does not.</p>`,
+<p>The underlying reason is worth understanding: these tools are not wrong about React because they reason poorly. They are wrong because React's rules changed after their training data was collected, and nothing in the model knows that. Supplying the current rules fixes the actual problem. Prompting more elaborately does not.</p>
+
+<p>So which assistant should you use for React? Whichever one passes task 1 on your own codebase. We are not going to pretend that ranking holds still long enough for a list to be worth printing.</p>`,
 };

@@ -45,7 +45,7 @@ export const figmaAlternativesWorthConsidering: Article = {
   ],
   content: `<p>Nobody switches design tools because of a feature comparison. They switch because something specific broke: the bill at forty seats, a week of offline work, or a policy that files cannot live somewhere else.</p>
 
-<p>So this is organised by constraint, not by feature.</p>
+<p>So we have organised this by constraint, not by feature. Which of the four below is the one actually pushing you to look?</p>
 
 <h2>"The per-seat bill has become absurd"</h2>
 

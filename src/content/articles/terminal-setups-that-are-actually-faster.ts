@@ -40,7 +40,7 @@ export const terminalSetupsThatAreActuallyFaster: Article = {
   ],
   content: `<p>Terminal customisation has a measurement problem: it feels productive, so almost nobody checks whether it is. The result is shells that take most of a second to start, in exchange for a prompt that displays information the user has stopped reading.</p>
 
-<p>Everything below is either measurable or discardable. Start by measuring.</p>
+<p>Everything below is either measurable or discardable. So how slow is your shell, actually? Start by measuring.</p>
 
 <h2>Measure first</h2>
 

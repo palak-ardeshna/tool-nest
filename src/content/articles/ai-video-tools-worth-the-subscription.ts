@@ -102,7 +102,7 @@ export const aiVideoToolsWorthTheSubscription: Article = {
 
 <h2>A sensible stack</h2>
 
-<p>For most small teams the answer is a transcript-based editor, caption and reframe handled either by that editor or by one companion tool, and audio cleanup — which is increasingly bundled rather than sold separately. That combination is inexpensive, it removes the genuinely tedious part of video work, and none of it depends on generative output being good.</p>
+<p>For most small teams our recommendation is a transcript-based editor, caption and reframe handled either by that editor or by one companion tool, and audio cleanup — which is increasingly bundled rather than sold separately. That combination is inexpensive, it removes the genuinely tedious part of video work, and none of it depends on generative output being good.</p>
 
 <p>The generative tools are worth revisiting periodically rather than subscribing to. The threshold to watch for is not quality: it is <em>directability</em> — whether getting a specific thing to happen on screen costs less than filming it. Until that flips, they belong in the b-roll budget, not the workflow.</p>`,
 };

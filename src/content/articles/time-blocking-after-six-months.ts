@@ -40,11 +40,11 @@ export const timeBlockingAfterSixMonths: Article = {
   ],
   content: `<p>Time blocking is one of the few productivity practices with a genuinely good idea inside it. It is also one of the most commonly abandoned, usually within a fortnight, and the reason is structural rather than a failure of discipline.</p>
 
-<p>The version described in most productivity books — every hour of the day assigned, reviewed nightly, adjusted continuously — is brittle by design. What follows is why it breaks, and the looser version that people are still running months later.</p>
+<p>The version described in most productivity books — every hour of the day assigned, reviewed nightly, adjusted continuously — is brittle by design. What follows is why it breaks, and the looser version we would actually recommend — the one people are still running months later.</p>
 
 <h2>Why the strict version failed</h2>
 
-<p>Three reasons, in order of how quickly they showed up:</p>
+<p>Three reasons, in order of how quickly they showed up. Do any of them describe your last attempt?</p>
 
 <ol>
 <li><strong>One unexpected thing invalidates the whole day.</strong> A 40-minute problem at 10am does not cost 40 minutes; it costs every block after it, and rebuilding the day costs another fifteen.</li>

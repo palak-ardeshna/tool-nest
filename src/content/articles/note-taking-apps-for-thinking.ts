@@ -40,7 +40,7 @@ export const noteTakingAppsForThinking: Article = {
   ],
   content: `<p>Everybody evaluates note apps on capture speed. Capture is the easy part — every app on the market gets a thought out of your head in under three seconds.</p>
 
-<p>The interesting question is what happens six months later, when you half-remember writing something about a supplier and you need it now.</p>
+<p>The interesting question is what happens six months later, when you half-remember writing something about a supplier and you need it now. Could your current setup find it?</p>
 
 <h2>Retrieval is the actual product</h2>
 
@@ -105,5 +105,5 @@ export const noteTakingAppsForThinking: Article = {
 
 <h2>The system that survives a busy week</h2>
 
-<p>Every elaborate note-taking methodology works in a calm week. The test is a week where you are behind on everything. What tends to survive is: one inbox, dated notes, links when they are obvious, and a weekly ten-minute pass to file anything that turned out to matter. Anything more elaborate than that gets abandoned, and an abandoned system is worse than a simple one.</p>`,
+<p>We are deliberately not naming a winner here, because retrieval style is personal and the habit matters more than the app. Every elaborate note-taking methodology works in a calm week. The test is a week where you are behind on everything. What tends to survive is: one inbox, dated notes, links when they are obvious, and a weekly ten-minute pass to file anything that turned out to matter. Anything more elaborate than that gets abandoned, and an abandoned system is worse than a simple one.</p>`,
 };

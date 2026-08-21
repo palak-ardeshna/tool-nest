@@ -35,7 +35,7 @@ export const browserExtensionsThatSaveTime: Article = {
   ],
   content: `<p>Browser extensions are unusual among software: they are free, they install in two clicks, and they are almost never removed. The result is that most people carry a dozen they no longer use, several of which have permission to read everything they type.</p>
 
-<p>This article is about the filter, not a ranking. It describes categories rather than naming specific products, because extensions change ownership, get abandoned and get sold — a named recommendation ages badly in exactly the way that matters most for security. Search your browser's store for the category and apply the permissions check at the end.</p>
+<p>This article is about the filter, not a ranking. We describe categories rather than naming specific products, because extensions change ownership, get abandoned and get sold — a named recommendation ages badly in exactly the way that matters most for security. Search your browser's store for the category and apply the permissions check at the end.</p>
 
 <h2>The rule that predicts what you will keep</h2>
 
@@ -114,7 +114,7 @@ export const browserExtensionsThatSaveTime: Article = {
 
 <h2>How to run the audit</h2>
 
-<p>Open your browser's extensions page and go through the list once, asking two questions per item: what action does this remove, and does it need the access it has? Anything you cannot answer the first question for comes out. Anything with all-sites access that does not need it gets restricted.</p>
+<p>When did you last look at what is actually installed in your browser? Open the extensions page and go through the list once, asking two questions per item: what action does this remove, and does it need the access it has? Anything you cannot answer the first question for comes out. Anything with all-sites access that does not need it gets restricted.</p>
 
 <p>Most people remove between a third and a half of what they have installed, and notice the absence of none of it — which is the same pattern that shows up in any software audit, at a smaller scale and with a larger security payoff.</p>`,
 };

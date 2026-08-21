@@ -111,5 +111,7 @@ export const aiResearchToolsAndYourSources: Article = {
 
 <h2>The honest framing</h2>
 
+<p>We hold ourselves to that rule when we research these articles: nothing gets cited here that we have not opened.</p>
+
 <p>These tools are a very good search engine with a summarising layer on top. The search part is a genuine advance. The summarising part is a convenience that must never become the basis of anything you publish, because it is confidently lossy in exactly the direction that makes findings sound stronger than they are.</p>`,
 };

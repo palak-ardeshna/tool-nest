@@ -80,3 +80,23 @@ test("every navigable section has at least one article", () => {
     assert.ok(count > 0, `category "${category.slug}" has no articles`);
   }
 });
+
+/**
+ * Editorial rules that keep drafts from reading as unedited model output —
+ * the "low value content" bar AdSense and Search both apply. Vocabulary an
+ * LLM reaches for and a person does not, plus the two voice markers that
+ * separate a written article from a generated one: it addresses the reader,
+ * and the publication is willing to say what it thinks.
+ */
+const aiTells =
+  /\b(furthermore|moreover|delve|delving|in conclusion|in summary|tapestry|testament to|revolutioniz|beacon|realm of|landscape of|navigating the|unlock the|game.?chang|seamlessly|ever.?evolving|it's worth noting|dive into|embark|myriad|plethora|holistic|synergy)\b/i;
+
+test("no article reads like unedited model output", () => {
+  for (const article of articles) {
+    const prose = `${article.title} ${article.excerpt} ${article.content}`;
+    const tell = prose.match(aiTells);
+    assert.equal(tell, null, `${article.slug}: AI-tell phrase "${tell?.[0]}"`);
+    assert.match(article.content, /\byou(r|rs)?\b/i, `${article.slug}: never addresses the reader`);
+    assert.match(article.content, /\b(we|our)\b/i, `${article.slug}: no editorial voice`);
+  }
+});

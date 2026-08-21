@@ -49,7 +49,7 @@ export const asyncByDefaultWhatChanges: Article = {
 <p>The reasoning is the part people skip and the part that matters. Six months later, "we chose X" invites someone to re-open it. "We chose X because Y, and rejected Z because W" either settles it or gives the person a specific thing to argue with.</p>
 
 <blockquote>
-<p>A decision log is the single artefact that makes async work possible. Everything else is logistics.</p>
+<p>A decision log is the single artefact that makes async work possible. Everything else is logistics. If someone asked today why your team chose its current stack, could anyone answer without calling a meeting?</p>
 </blockquote>
 
 <h3>Questions get a deadline</h3>
@@ -113,7 +113,7 @@ export const asyncByDefaultWhatChanges: Article = {
 
 <h2>How to tell whether it is working</h2>
 
-<p>Two signals, both cheap to check after a couple of months:</p>
+<p>Two signals, both cheap to check after a couple of months. If you are two months into this, run them now:</p>
 
 <ul>
 <li><strong>Ask someone who joined recently to find out why a specific decision was made.</strong> If they can do it without asking a person, the log is working. If they end up in a chat channel asking "does anyone remember why", it is not.</li>

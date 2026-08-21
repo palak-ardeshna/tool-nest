@@ -120,5 +120,5 @@ export const invoicingAndBookkeepingForSmallTeams: Article = {
 
 <h2>A reasonable default</h2>
 
-<p>For a small team: whatever your accountant uses, on the cheapest tier that supports your currencies, with a verified export. That is an unglamorous answer, and it is right far more often than the comparison tables suggest.</p>`,
+<p>Our answer for a small team: whatever your accountant uses, on the cheapest tier that supports your currencies, with a verified export. That is an unglamorous answer, and it is right far more often than the comparison tables suggest.</p>`,
 };

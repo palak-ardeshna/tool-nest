@@ -40,7 +40,7 @@ export const weeklyPublishingWorkflow: Article = {
   ],
   content: `<p>Publishing weekly is not a writing problem. It is a queueing problem, and it is usually solved badly — by writing harder in the days before the deadline, which works until the first week something goes wrong.</p>
 
-<p>What follows is a workflow that treats the cadence as a pipeline rather than a sprint. It is deliberately unglamorous, it adds latency, and it is the reason a schedule survives a bad week.</p>
+<p>What follows is the workflow we would build for that cadence: a pipeline rather than a sprint. It is deliberately unglamorous, it adds latency, and it is the reason a schedule survives a bad week.</p>
 
 <h2>The five stages</h2>
 
