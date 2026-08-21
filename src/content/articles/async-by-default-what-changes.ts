@@ -122,5 +122,5 @@ export const asyncByDefaultWhatChanges: Article = {
 
 <h2>The compounding part</h2>
 
-<p>The benefit that is genuinely hard to see early: after two years, a searchable decision log means new people can answer "why is it like this?" without asking anyone. That is worth a great deal, and it is invisible for the first eighteen months, which is why most teams abandon the practice before it pays.</p>`,
+<p>The benefit that is genuinely hard to see early: after two years, a searchable decision log means new people can answer "why is it like this?" without asking anyone. That is worth a great deal, and it is invisible for the first eighteen months, which is why most teams abandon the practice before it pays. If you want a concrete pipeline with the checkpoints baked in, <a href="/articles/weekly-publishing-workflow">our weekly publishing workflow</a> is one worked example.</p>`,
 };

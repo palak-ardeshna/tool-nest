@@ -131,5 +131,5 @@ LIMIT 10;</code></pre>
 </tbody>
 </table>
 
-<p>These are the three most common causes of "the database is slow", and none of them are database problems. Tools will show you the symptom quickly and accurately. The fix is upstream — which is why we keep the tool list short and spend the time on the queries instead.</p>`,
+<p>These are the three most common causes of "the database is slow", and none of them are database problems. Tools will show you the symptom quickly and accurately. The fix is upstream — which is why we keep the tool list short and spend the time on the queries instead. Where the database lives matters too — see <a href="/articles/deploying-a-nextjs-app-four-routes">four deployment routes compared</a>.</p>`,
 };

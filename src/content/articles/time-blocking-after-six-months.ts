@@ -105,5 +105,5 @@ export const timeBlockingAfterSixMonths: Article = {
 <li>Delete anything you have now missed three times, without rescheduling it.</li>
 </ol>
 
-<p>That is the entire practice. It fits on an index card, which is roughly the correct amount of infrastructure for a system whose main failure mode is becoming a job of its own.</p>`,
+<p>That is the entire practice. It fits on an index card, which is roughly the correct amount of infrastructure for a system whose main failure mode is becoming a job of its own. The same warning applies to <a href="/articles/task-managers-compared">the app you keep the list in</a>.</p>`,
 };

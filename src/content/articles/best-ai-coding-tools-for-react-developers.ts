@@ -113,5 +113,5 @@ export default async function Page() {
 
 <p>The underlying reason is worth understanding: these tools are not wrong about React because they reason poorly. They are wrong because React's rules changed after their training data was collected, and nothing in the model knows that. Supplying the current rules fixes the actual problem. Prompting more elaborately does not.</p>
 
-<p>So which assistant should you use for React? Whichever one passes task 1 on your own codebase. We are not going to pretend that ranking holds still long enough for a list to be worth printing.</p>`,
+<p>So which assistant should you use for React? Whichever one passes task 1 on your own codebase. We are not going to pretend that ranking holds still long enough for a list to be worth printing. If you are handing whole tickets to one rather than autocompleting inside it, <a href="/articles/which-tickets-to-give-an-ai-coding-agent">which tickets to give an AI coding agent</a> is the next question.</p>`,
 };

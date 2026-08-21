@@ -138,5 +138,5 @@ export const figmaAlternativesWorthConsidering: Article = {
 
 <p>If none of the three constraints above apply to you, do not switch. The everyday drawing experience is close enough across all of these that the migration cost dominates the decision.</p>
 
-<p>If one of them applies sharply, the alternatives are now good enough that the answer has changed since the last time you looked — which was probably long enough ago that it is worth an afternoon of re-checking.</p>`,
+<p>If one of them applies sharply, the alternatives are now good enough that the answer has changed since the last time you looked — which was probably long enough ago that it is worth an afternoon of re-checking. If seat cost is what triggered the look, <a href="/articles/auditing-small-team-software-spend">the wider spend audit</a> is the better place to start.</p>`,
 };

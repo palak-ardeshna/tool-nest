@@ -17,7 +17,7 @@ export function ArticleContent({ html }: { html: string }) {
               className="border-y border-line py-4"
             />
           ) : null}
-          {/* Authored in the CMS by the editorial team, never by site visitors. */}
+          {/* Authored in src/content by the editorial team, never by site visitors. */}
           <div
             className="prose [&>h2:first-child]:mt-0"
             dangerouslySetInnerHTML={{ __html: group }}

@@ -46,7 +46,7 @@ export const aiVideoToolsWorthTheSubscription: Article = {
 
 <p>A more useful frame is to ignore the products and ask which <em>capabilities</em> actually change the work. There are three, and the rest of the category is priced as though there were ten.</p>
 
-<p>A reference job to hold in mind while reading: turning a 40-minute recorded interview into a three-minute cut, with captions and a vertical version for social. It is the most common small-team video task there is, and it exercises every capability worth paying for.</p>
+<p>A reference job to hold in mind while reading: <a href="/articles/turn-long-videos-into-short-clips-with-ai">turning a 40-minute recorded interview into a three-minute cut</a>, with captions and a vertical version for social. It is the most common small-team video task there is, and it exercises every capability worth paying for.</p>
 
 <h2>The three things worth paying for</h2>
 

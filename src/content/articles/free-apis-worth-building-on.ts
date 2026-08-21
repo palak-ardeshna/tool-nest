@@ -136,5 +136,5 @@ export async function getForecast(lat: number, lon: number): Promise&lt;Forecast
 <li>Search for people complaining about limit changes. There will be some; the question is how they were handled.</li>
 </ol>
 
-<p>Twenty minutes, and it is a better predictor than any list of recommendations, including this one.</p>`,
+<p>Twenty minutes, and it is a better predictor than any list of recommendations, including this one. If what you are building is a small internal workflow rather than a product, <a href="/articles/automate-repetitive-work-without-code">you may not need to write code at all</a>.</p>`,
 };

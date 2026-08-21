@@ -174,5 +174,5 @@ export const chatgptVsClaudeForCoding: Article = {
 
 <p>Both assistants will produce confident, wrong statements about library APIs. Both will produce code that runs while changing behaviour in ways only a careful reader catches. Neither is a substitute for review, and any workflow that treats one as a substitute will ship bugs — the useful ones, at speed.</p>
 
-<p>The framing that survives contact with real work is not "which one replaces a developer". It is "which one gets me to a reviewable diff faster". On that question the honest answer is that it is close, it moves with every model release, and it depends almost entirely on how much surrounding context your work requires. Which is why the afternoon protocol above is worth more to you than our opinion.</p>`,
+<p>The framing that survives contact with real work is not "which one replaces a developer". It is "which one gets me to a reviewable diff faster". On that question the honest answer is that it is close, it moves with every model release, and it depends almost entirely on how much surrounding context your work requires. Which is why the afternoon protocol above is worth more to you than our opinion. If you work in React specifically, <a href="/articles/best-ai-coding-tools-for-react-developers">there is a sharper four-task version of it</a>.</p>`,
 };

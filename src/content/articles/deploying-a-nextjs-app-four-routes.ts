@@ -40,7 +40,7 @@ export const deployingANextjsAppFourRoutes: Article = {
   ],
   content: `<p>Deployment advice for Next.js tends to collapse into a preference. It is more useful as a decision about constraints, because all four routes below work — they differ in what they cost you up front, what they cost you every month afterwards, and which failure they hide until production.</p>
 
-<p>Assume throughout a realistic application rather than a demo: server components, incremental regeneration, image optimisation, a Postgres database and file uploads. Each of those exercises a different part of the deployment story, and the last two are where routes quietly break.</p>
+<p>Assume throughout a realistic application rather than a demo: server components, incremental regeneration, image optimisation, a <a href="/articles/postgres-tools-worth-using">Postgres database</a> and file uploads. Each of those exercises a different part of the deployment story, and the last two are where routes quietly break.</p>
 
 <h2>Route 1: managed platform</h2>
 

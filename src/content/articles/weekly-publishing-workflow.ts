@@ -116,5 +116,5 @@ export const weeklyPublishingWorkflow: Article = {
 
 <p>The workflow survives being run solo with a single substitution: wherever it says "a second reader", substitute a day of distance. Reading your own heading structure the next morning catches a surprising share of what a colleague would catch, because the failure being hunted — a topic pretending to be an argument — is invisible while the idea is still in your head and obvious once it is not.</p>
 
-<p>What does not survive being solo is quietly dropping the checkpoints. They are the entire value of the process. The five stages are just scaffolding to hang them on.</p>`,
+<p>What does not survive being solo is quietly dropping the checkpoints. They are the entire value of the process. The five stages are just scaffolding to hang them on. Protecting the time for them is a separate problem, and <a href="/articles/time-blocking-that-survives-a-real-week">two blocks a day</a> is usually enough.</p>`,
 };

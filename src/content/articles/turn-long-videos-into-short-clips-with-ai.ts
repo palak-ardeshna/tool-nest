@@ -135,5 +135,5 @@ export const turnLongVideosIntoShortClipsWithAi: Article = {
 
 <h2>Where this fails</h2>
 
-<p>Panel discussions with heavy interruption defeat speaker detection. Screen-share-heavy content does not survive vertical reframing — clip those as landscape or not at all. And if the source genuinely has no self-contained ideas in it, no tool will find them.</p>`,
+<p>Panel discussions with heavy interruption defeat speaker detection. Screen-share-heavy content does not survive vertical reframing — clip those as landscape or not at all. And if the source genuinely has no self-contained ideas in it, no tool will find them. Transcription quality sets the ceiling on all of it — <a href="/articles/ai-voice-tools-what-works">here is where the voice tools actually stand</a>.</p>`,
 };

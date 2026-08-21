@@ -116,5 +116,5 @@ export const browserExtensionsThatSaveTime: Article = {
 
 <p>When did you last look at what is actually installed in your browser? Open the extensions page and go through the list once, asking two questions per item: what action does this remove, and does it need the access it has? Anything you cannot answer the first question for comes out. Anything with all-sites access that does not need it gets restricted.</p>
 
-<p>Most people remove between a third and a half of what they have installed, and notice the absence of none of it — which is the same pattern that shows up in any software audit, at a smaller scale and with a larger security payoff.</p>`,
+<p>Most people remove between a third and a half of what they have installed, and notice the absence of none of it — which is the same pattern that shows up in <a href="/articles/auditing-small-team-software-spend">any software audit</a>, at a smaller scale and with a larger security payoff.</p>`,
 };

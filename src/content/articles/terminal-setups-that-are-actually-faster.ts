@@ -123,5 +123,5 @@ done 2&gt;&amp;1 | sort -n | tail -1</code></pre>
 
 <h2>The portability rule</h2>
 
-<p>One habit worth keeping: everything above should be a convenience, never a requirement. If your muscle memory only works on your own machine, every server you SSH into becomes slower than it was before you started customising. Keep the aliases; do not build a workflow that cannot survive a plain shell.</p>`,
+<p>One habit worth keeping: everything above should be a convenience, never a requirement. If your muscle memory only works on your own machine, every server you SSH into becomes slower than it was before you started customising. Keep the aliases; do not build a workflow that cannot survive a plain shell. For the repetitive work that is not shell-shaped, <a href="/articles/automate-repetitive-work-without-code">you may not need code at all</a>.</p>`,
 };

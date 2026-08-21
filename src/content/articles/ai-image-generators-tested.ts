@@ -129,5 +129,5 @@ export const aiImageGeneratorsTested: Article = {
 
 <p>The gap between the best and worst of the serious options has narrowed considerably, and on a single well-chosen image most of them look fine. Where they still differ is workflow: references, inpainting, batch generation, aspect-ratio control, and how quickly you get from a result that is nearly right to one you can publish.</p>
 
-<p>That is what to test, it is not what galleries show you, and it is the reason we would rather hand you the procedure than a ranking that will be wrong by the time you read it.</p>`,
+<p>That is what to test, it is not what galleries show you, and it is the reason we would rather hand you the procedure than a ranking that will be wrong by the time you read it. The same holds one category over: our <a href="/articles/ai-video-tools-worth-the-subscription">guide to AI video tools</a> is organised around capabilities rather than product names for exactly this reason.</p>`,
 };

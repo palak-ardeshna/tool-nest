@@ -4,7 +4,8 @@ export const siteConfig = {
   description:
     "Practical guides, comparisons and buying advice for AI tools, software and productivity. Researched from vendor documentation and public reporting, reviewed before publication.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  locale: "en_US",
+  // The publication writes in British English; og:locale should not contradict it.
+  locale: "en_GB",
   email: "palakpatel00132@gmail.com",
 } as const;
 

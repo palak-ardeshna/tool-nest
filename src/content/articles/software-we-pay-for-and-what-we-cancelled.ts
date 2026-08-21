@@ -157,5 +157,5 @@ export const softwareWePayForAndWhatWeCancelled: Article = {
 
 <h2>The point of the exercise</h2>
 
-<p>The saving is worth having, but it is not really the payoff. The payoff is that at the end you have a documented, agreed list of what your team actually uses and who owns each piece of it. That list makes onboarding faster, makes the next purchase decision easier, and means the next time someone asks "do we already have something for this?", the answer takes ten seconds instead of a week.</p>`,
+<p>The saving is worth having, but it is not really the payoff. The payoff is that at the end you have a documented, agreed list of what your team actually uses and who owns each piece of it. That list makes onboarding faster, makes the next purchase decision easier, and means the next time someone asks "do we already have something for this?", the answer takes ten seconds instead of a week. The finance side of that list has its own trade-offs — see <a href="/articles/invoicing-and-bookkeeping-for-small-teams">invoicing and bookkeeping for small teams</a>.</p>`,
 };

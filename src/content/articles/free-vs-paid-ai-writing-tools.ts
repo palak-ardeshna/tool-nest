@@ -129,5 +129,5 @@ export const freeVsPaidAiWritingTools: Article = {
 
 <h2>A note on what these tools are for</h2>
 
-<p>Both free and paid versions are good at the same thing: getting from a blank page to a rough structure. They are bad at the same thing: knowing what is specifically true about your situation. The paragraph that makes a piece worth reading — the number, the example, the thing you saw — is not something either tier can supply. That is not a limitation to work around; it is a description of where the work is.</p>`,
+<p>Both free and paid versions are good at the same thing: getting from a blank page to a rough structure. They are bad at the same thing: knowing what is specifically true about your situation. The paragraph that makes a piece worth reading — the number, the example, the thing you saw — is not something either tier can supply. That is not a limitation to work around; it is a description of where the work is. If the specifically-true part comes from a paper or a report, <a href="/articles/ai-research-tools-and-your-sources">check what the research tool did to your sources</a> before you cite it.</p>`,
 };

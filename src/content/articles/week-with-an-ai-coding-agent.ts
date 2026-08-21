@@ -140,5 +140,5 @@ export const weekWithAnAiCodingAgent: Article = {
 <li>Keep auth, billing and data deletion off the list regardless of how well specified the ticket looks.</li>
 </ul>
 
-<p>Used that way, a coding agent is a genuine help — roughly equivalent to a fast contractor with no context and no judgement, available at any hour and never bored. That is a real and useful thing to have on a team. It is also a considerably narrower thing than the demos are selling, and the gap between the two is where most disappointment with these tools comes from.</p>`,
+<p>Used that way, a coding agent is a genuine help — roughly equivalent to a fast contractor with no context and no judgement, available at any hour and never bored. That is a real and useful thing to have on a team. It is also a considerably narrower thing than the demos are selling, and the gap between the two is where most disappointment with these tools comes from. Choosing which assistant to point at those tickets is a separate question — <a href="/articles/chatgpt-vs-claude-for-coding">we compared two of them here</a>.</p>`,
 };

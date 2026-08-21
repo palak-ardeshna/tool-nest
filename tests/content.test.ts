@@ -91,12 +91,52 @@ test("every navigable section has at least one article", () => {
 const aiTells =
   /\b(furthermore|moreover|delve|delving|in conclusion|in summary|tapestry|testament to|revolutioniz|beacon|realm of|landscape of|navigating the|unlock the|game.?chang|seamlessly|ever.?evolving|it's worth noting|dive into|embark|myriad|plethora|holistic|synergy)\b/i;
 
+/** Every field that reaches the page, not just the body. */
+function renderedText(article: (typeof articles)[number]) {
+  return [
+    article.title,
+    article.excerpt,
+    article.seoTitle,
+    article.seoDescription,
+    article.quickAnswer,
+    ...(article.pros ?? []),
+    ...(article.cons ?? []),
+    ...(article.faqs ?? []).flatMap((f) => [f.question, f.answer]),
+    ...(article.alternatives ?? []).map((a) => a.note ?? ""),
+    article.content,
+  ].join(" ");
+}
+
 test("no article reads like unedited model output", () => {
   for (const article of articles) {
-    const prose = `${article.title} ${article.excerpt} ${article.content}`;
+    const prose = renderedText(article);
     const tell = prose.match(aiTells);
     assert.equal(tell, null, `${article.slug}: AI-tell phrase "${tell?.[0]}"`);
     assert.match(article.content, /\byou(r|rs)?\b/i, `${article.slug}: never addresses the reader`);
     assert.match(article.content, /\b(we|our)\b/i, `${article.slug}: no editorial voice`);
+  }
+});
+
+test("every article links out to another article that exists", () => {
+  const slugs = new Set(articles.map((a) => a.slug));
+  for (const article of articles) {
+    const links = [...article.content.matchAll(/href="\/articles\/([^"#?]+)"/g)].map((m) => m[1]);
+    assert.ok(links.length > 0, `${article.slug}: no in-body link to another article`);
+    for (const target of links) {
+      assert.ok(slugs.has(target), `${article.slug}: dead internal link /articles/${target}`);
+      assert.notEqual(target, article.slug, `${article.slug}: links to itself`);
+    }
+  }
+});
+
+/** The publication writes in British English. A mixed dialect reads as stitched-together drafts. */
+test("spelling stays in one dialect", () => {
+  const american =
+    /\b\w*(organiz|summariz|recogniz|analyz|behavior|optimiz|prioritiz|customiz|minimiz|maximiz|utiliz|labeled|traveling)\w*\b/i;
+  for (const article of articles) {
+    // Code samples are not prose — ANALYZE is SQL, not a spelling choice.
+    const prose = renderedText(article).replace(/<(pre|code)\b[^>]*>[\s\S]*?<\/\1>/g, " ");
+    const hit = prose.match(american);
+    assert.equal(hit, null, `${article.slug}: American spelling "${hit?.[0]}" in a British-English publication`);
   }
 });
