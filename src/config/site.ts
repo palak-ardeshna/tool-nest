@@ -42,5 +42,5 @@ export const footerNav = [
   },
 ] as const;
 
-export const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "";
+export const adsenseClient = "ca-pub-3720190862522195";
 export const gaId = process.env.NEXT_PUBLIC_GA_ID || "";

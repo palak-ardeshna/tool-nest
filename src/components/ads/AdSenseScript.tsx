@@ -1,4 +1,3 @@
-import { adsenseClient } from "@/config/site";
 
 /**
  * The AdSense loader, rendered only when a publisher id is configured.
@@ -9,14 +8,14 @@ import { adsenseClient } from "@/config/site";
  * which works for serving ads but leaves no <script> tag for site verification
  * to find.
  */
-export function AdSenseScript() {
-  if (!adsenseClient) return null;
+const ADSENSE_CLIENT = "ca-pub-3720190862522195";
 
+export function AdSenseScript() {
   return (
     <script
       async
       crossOrigin="anonymous"
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
     />
   );
 }
