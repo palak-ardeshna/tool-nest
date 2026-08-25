@@ -39,8 +39,8 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <p>
-            ToolNest is funded by advertising and carries no affiliate links. Articles are
-            AI-assisted and reviewed by a person before publication. See our{" "}
+            ToolNest is funded by advertising and carries no affiliate links. Every article is
+            edited and reviewed by a person before publication. See our{" "}
             <Link href="/disclaimer" className="underline underline-offset-2 hover:text-accent">
               disclaimer
             </Link>
