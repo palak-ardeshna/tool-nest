@@ -6,7 +6,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   // The publication writes in British English; og:locale should not contradict it.
   locale: "en_GB",
-  email: "palakpatel00132@gmail.com",
+  email: "parth@toolnest.quest",
 } as const;
 
 /** Primary navigation. Slugs must match top-level Category rows. */

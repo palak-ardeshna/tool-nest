@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import type { Author } from "@/content/types";
 
 /**
@@ -16,6 +17,6 @@ export const authors: Author[] = [
     role: "Editorial team",
     bio:
       "ToolNest's editorial byline. Our articles summarise and compare software using vendor documentation, changelogs, pricing pages and published reporting, and are drafted with AI assistance under human review. Where we have not used a tool ourselves, we say so rather than implying otherwise.",
-    email: "palakpatel00132@gmail.com",
+    email: siteConfig.email,
   },
 ];
