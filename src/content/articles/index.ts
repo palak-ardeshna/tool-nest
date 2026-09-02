@@ -23,8 +23,15 @@ import { freeApisWorthBuildingOn } from "@/content/articles/free-apis-worth-buil
 import { postgresToolsWeReachFor } from "@/content/articles/postgres-tools-we-reach-for";
 import { deployingANextjsAppFourRoutes } from "@/content/articles/deploying-a-nextjs-app-four-routes";
 
+import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notetakers-compared";
+import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
+import { errorTrackingForSmallTeams } from "@/content/articles/error-tracking-for-small-teams";
+
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  aiMeetingNotetakersCompared,
+  passwordManagersAfterThePriceRises,
+  errorTrackingForSmallTeams,
   chatgptVsClaudeForCoding,
   aiImageGeneratorsTested,
   turnLongVideosIntoShortClipsWithAi,
