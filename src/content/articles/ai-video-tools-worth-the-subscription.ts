@@ -42,6 +42,50 @@ export const aiVideoToolsWorthTheSubscription: Article = {
         "Editing from a transcript. Everything else on this list saves minutes; that one saves hours on long-form source material.",
     },
   ],
+  sources: [
+    {
+      title: "Edit like a doc",
+      publisher: "Descript",
+      url: "https://help.descript.com/hc/en-us/articles/15726742913933-Edit-like-a-doc",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Layout and Reframing",
+      publisher: "OpusClip",
+      url: "https://help.opus.pro/docs/article/layout-and-reframing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Studio Sound",
+      publisher: "Descript",
+      url: "https://help.descript.com/hc/en-us/articles/10327603613837-Studio-Sound",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing",
+      publisher: "Descript",
+      url: "https://www.descript.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing",
+      publisher: "Runway",
+      url: "https://runway.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "DaVinci Resolve",
+      publisher: "Blackmagic Design",
+      url: "https://www.blackmagicdesign.com/products/davinciresolve",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Disclosing use of GenAI content",
+      publisher: "YouTube (Google)",
+      url: "https://support.google.com/youtube/answer/14328491?hl=en",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>The AI video category has a marketing problem: a dozen products describe themselves in nearly identical language, and several of them are the same underlying model behind a different subscription page. Comparing them feature-by-feature is close to useless, because the feature lists were written to look alike.</p>
 
 <p>A more useful frame is to ignore the products and ask which <em>capabilities</em> actually change the work. There are three, and the rest of the category is priced as though there were ten.</p>

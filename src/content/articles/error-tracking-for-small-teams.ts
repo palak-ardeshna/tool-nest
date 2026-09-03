@@ -58,6 +58,50 @@ export const errorTrackingForSmallTeams: Article = {
         "An error tracker sees what your application reports about itself, so it is blind to the failure where the application is not running at all. Uptime monitoring checks from outside, so it catches the expired certificate, the DNS change and the crashed process. The outage that embarrasses you is almost always the one only an outside check would have caught.",
     },
   ],
+  sources: [
+    {
+      title: "Pricing | GlitchTip",
+      publisher: "GlitchTip",
+      url: "https://glitchtip.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Open Source Error Tracking | GlitchTip",
+      publisher: "GlitchTip",
+      url: "https://glitchtip.com/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Install — Documentation | GlitchTip",
+      publisher: "GlitchTip",
+      url: "https://glitchtip.com/documentation/install",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing | Better Stack",
+      publisher: "Better Stack",
+      url: "https://betterstack.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Plans & Pricing - Honeybadger",
+      publisher: "Honeybadger",
+      url: "https://www.honeybadger.io/plans/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing & Billing",
+      publisher: "Sentry",
+      url: "https://docs.sentry.io/pricing/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Scrubbing Sensitive Data | Sentry for Python",
+      publisher: "Sentry",
+      url: "https://docs.sentry.io/platforms/python/data-management/sensitive-data/",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Most small teams buy error tracking twice. The first time is at launch, when someone signs up for the free tier and wires in the SDK. The second time is eight months later, when an unbounded retry loop generates two million events over a weekend and the invoice explains what event-based pricing means.</p>
 
 <p>We have not load-tested these platforms against each other, and any article that claims to has usually tested the free tiers for an afternoon. What follows is how the pricing models differ, which decisions actually protect you, and where the cheap option is genuinely the right one.</p>

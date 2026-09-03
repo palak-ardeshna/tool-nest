@@ -52,6 +52,50 @@ export const softwareWePayForAndWhatWeCancelled: Article = {
         "Password management, backups, and anything else whose value only becomes visible on the day it is needed. These are insurance. Judging them on monthly usage is the same error as cancelling home insurance because the house has not burned down.",
     },
   ],
+  sources: [
+    {
+      title: "Slack's fair billing policy",
+      publisher: "Slack",
+      url: "https://slack.com/help/articles/218915077-Slacks-fair-billing-policy",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Microsoft 365 Admin Center Usage Reports Overview",
+      publisher: "Microsoft",
+      url: "https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "User log events",
+      publisher: "Google (Google Workspace Help)",
+      url: "https://knowledge.workspace.google.com/admin/reports/user-log-events",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Understand the data in your Slack analytics dashboard",
+      publisher: "Slack",
+      url: "https://slack.com/help/articles/360057638533-Understand-the-data-in-your-Slack-analytics-dashboard",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Usage limits for free workspaces",
+      publisher: "Slack",
+      url: "https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Guide to Slack import and export tools",
+      publisher: "Slack",
+      url: "https://slack.com/help/articles/204897248-Guide-to-Slack-import-and-export-tools",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Notion Pricing Plans: Free, Plus, Business, & Enterprise",
+      publisher: "Notion Labs",
+      url: "https://www.notion.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Software spend at a small company rarely goes wrong through extravagance. It goes wrong through accumulation: a trial that converted, a tool bought for one project, a second app in a category that already had one. Nobody decided to waste the money. It just stopped being noticed.</p>
 
 <p>What follows is a method for finding it. It is not a productivity philosophy and it does not require a procurement process — it is an afternoon with a list of invoices and one good question.</p>

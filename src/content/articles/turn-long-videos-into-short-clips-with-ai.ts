@@ -38,6 +38,44 @@ export const turnLongVideosIntoShortClipsWithAi: Article = {
         "Long enough to contain one complete idea. That is usually somewhere between 30 and 70 seconds. Cutting to a target length rather than to the idea is the most common reason clips feel truncated.",
     },
   ],
+  sources: [
+    {
+      title: "GitHub - openai/whisper: Robust Speech Recognition via Large-Scale Weak Supervision",
+      publisher: "OpenAI",
+      url: "https://github.com/openai/whisper",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "[2212.04356] Robust Speech Recognition via Large-Scale Weak Supervision",
+      publisher: "arXiv (OpenAI research paper)",
+      url: "https://arxiv.org/abs/2212.04356",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Improve transcription results with model adaptation | Cloud Speech-to-Text | Google Cloud Documentation",
+      publisher: "Google Cloud",
+      url: "https://docs.cloud.google.com/speech-to-text/docs/adaptation-model",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Use automatic captioning - YouTube Help",
+      publisher: "YouTube (Google)",
+      url: "https://support.google.com/youtube/answer/6373554",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "GitHub - pyannote/pyannote-audio: Neural building blocks for speaker diarization: speech activity detection, speaker change detection, overlapped speech detection, speaker embedding",
+      publisher: "pyannote (CNRS / open-source speaker diarization toolkit)",
+      url: "https://github.com/pyannote/pyannote-audio",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Get started creating YouTube Shorts - YouTube Help",
+      publisher: "YouTube (Google)",
+      url: "https://support.google.com/youtube/answer/10059070",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>The pitch for automatic clipping tools is that you upload an hour and get ten shareable clips. What you actually get is ten moments where someone laughed or raised their voice. Some of them are good. Most are not.</p>
 
 <p>Here is the workflow we would recommend for talks, interviews and podcasts. It keeps the automation where it is genuinely better than a person, and keeps a human where it is not.</p>

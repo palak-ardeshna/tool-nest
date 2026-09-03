@@ -38,6 +38,50 @@ export const automateRepetitiveWorkWithoutCode: Article = {
         "Anything involving a judgement call about a person — screening, prioritising, replying. The automation will be consistent, which people mistake for correct.",
     },
   ],
+  sources: [
+    {
+      title: "What is a Zap?",
+      publisher: "Zapier",
+      url: "https://help.zapier.com/hc/en-us/articles/8496309697421-What-is-a-Zap",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "How is task usage measured in Zapier?",
+      publisher: "Zapier",
+      url: "https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing & Plans",
+      publisher: "Zapier",
+      url: "https://zapier.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Operations",
+      publisher: "Make",
+      url: "https://help.make.com/operations",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Manage notifications when errors occur in Zap workflows",
+      publisher: "Zapier",
+      url: "https://help.zapier.com/hc/en-us/articles/8496289225229-Manage-notifications-when-errors-occur-in-Zap-workflows",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Handle errors gracefully | Build | n8n Docs",
+      publisher: "n8n",
+      url: "https://docs.n8n.io/build/flow-logic/handle-errors-gracefully",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Limits of automated, scheduled, and instant flows - Power Automate",
+      publisher: "Microsoft",
+      url: "https://learn.microsoft.com/en-us/power-automate/limits-and-config",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Most automation advice starts with the tool. That is backwards, and it is why so many people end up with six half-built workflows and no time saved.</p>
 
 <p>Start with the task.</p>

@@ -38,6 +38,50 @@ export const postgresToolsWeReachFor: Article = {
         "For reading, no — they are excellent. For changing schema, yes: a change made in a GUI exists in your database and nowhere in your repository, and that divergence is discovered at the worst possible moment.",
     },
   ],
+  sources: [
+    {
+      title: "PostgreSQL: Documentation: 18: F.32. pg_stat_statements — track statistics of SQL planning and execution",
+      publisher: "The PostgreSQL Global Development Group",
+      url: "https://www.postgresql.org/docs/current/pgstatstatements.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "PostgreSQL: Documentation: 18: 14.1. Using EXPLAIN",
+      publisher: "The PostgreSQL Global Development Group",
+      url: "https://www.postgresql.org/docs/current/using-explain.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "PostgreSQL: Documentation: 18: 24.1. Routine Vacuuming",
+      publisher: "The PostgreSQL Global Development Group",
+      url: "https://www.postgresql.org/docs/current/routine-vacuuming.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "PostgreSQL: Documentation: 18: 27.2. The Cumulative Statistics System",
+      publisher: "The PostgreSQL Global Development Group",
+      url: "https://www.postgresql.org/docs/current/monitoring-stats.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "PostgreSQL: Documentation: 18: 51.2. How Connections Are Established",
+      publisher: "The PostgreSQL Global Development Group",
+      url: "https://www.postgresql.org/docs/current/connect-estab.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "PostgreSQL: Documentation: 18: 19.3. Connections and Authentication",
+      publisher: "The PostgreSQL Global Development Group",
+      url: "https://www.postgresql.org/docs/current/runtime-config-connection.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "PostgreSQL: Documentation: 18: 19.11. Client Connection Defaults",
+      publisher: "The PostgreSQL Global Development Group",
+      url: "https://www.postgresql.org/docs/current/runtime-config-client.html",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Postgres tooling advice usually turns into a list of GUI clients. The useful set is broader and mostly less visual.</p>
 
 <h2>1. Query statistics, before anything else</h2>

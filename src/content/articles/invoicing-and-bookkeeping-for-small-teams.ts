@@ -38,6 +38,50 @@ export const invoicingAndBookkeepingForSmallTeams: Article = {
         "Which tools they already work in. The efficiency gain of matching them is worth more than any feature difference, because it removes a translation step from every conversation.",
     },
   ],
+  sources: [
+    {
+      title: "Invoicing and taking payment from customers: Invoices - what they must include",
+      publisher: "GOV.UK (UK Government)",
+      url: "https://www.gov.uk/invoicing-and-taking-payment-from-customers/invoices-what-they-must-include",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "VAT Invoicing",
+      publisher: "European Commission, Directorate-General for Taxation and Customs Union",
+      url: "https://taxation-customs.ec.europa.eu/taxation/vat/vat-businesses/invoicing_en",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Running a limited company: your responsibilities — Company and accounting records",
+      publisher: "GOV.UK (UK Government)",
+      url: "https://www.gov.uk/running-a-limited-company/company-and-accounting-records",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Year-end closing — Odoo 19.0 documentation",
+      publisher: "Odoo",
+      url: "https://www.odoo.com/documentation/19.0/applications/finance/accounting/reporting/year_end.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Bank synchronization — Odoo 19.0 documentation",
+      publisher: "Odoo",
+      url: "https://www.odoo.com/documentation/19.0/applications/finance/accounting/bank/bank_synchronization.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Multi-currency system — Odoo 19.0 documentation",
+      publisher: "Odoo",
+      url: "https://www.odoo.com/documentation/19.0/applications/finance/accounting/get_started/multi_currency.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Export and import data — Odoo 19.0 documentation",
+      publisher: "Odoo",
+      url: "https://www.odoo.com/documentation/19.0/applications/essentials/export_import_data.html",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>This is the least enjoyable software category to evaluate and one of the more expensive ones to get wrong, because switching means moving years of financial records.</p>
 
 <p>At small scale, three things decide it. Everything else is noise.</p>

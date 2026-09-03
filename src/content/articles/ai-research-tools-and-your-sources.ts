@@ -38,6 +38,50 @@ export const aiResearchToolsAndYourSources: Article = {
         "Use the tool to build a reading list and a rough map of the field. Then read the sources you intend to cite. The tool replaces searching, not reading.",
     },
   ],
+  sources: [
+    {
+      title: "Generalization Bias in Large Language Model Summarization of Scientific Research",
+      publisher: "arXiv (Uwe Peters and Benjamin Chin-Yee; published in Royal Society Open Science 12(4):241776)",
+      url: "https://arxiv.org/abs/2504.00025",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Evaluating Verifiability in Generative Search Engines",
+      publisher: "arXiv (Nelson F. Liu, Tianyi Zhang and Percy Liang, Stanford)",
+      url: "https://arxiv.org/abs/2304.09848",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Hallucination Rates and Reference Accuracy of ChatGPT and Bard for Systematic Reviews: Comparative Analysis",
+      publisher: "Journal of Medical Internet Research (via PubMed Central)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11153973/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "How Consensus Works",
+      publisher: "Consensus",
+      url: "https://consensus.app/home/blog/how-consensus-works/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Elicit's reliability: Does Elicit run the same risk of \"hallucination\" as other AI tools?",
+      publisher: "Elicit (Elicit Help Center)",
+      url: "https://support.elicit.com/en/articles/14757979-elicit-s-reliability-does-elicit-run-the-same-risk-of-hallucination-as-other-ai-tools",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Elicit's source for papers",
+      publisher: "Elicit (Elicit Help Center)",
+      url: "https://support.elicit.com/en/articles/14758040-elicit-s-source-for-papers",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Elicit's limitations",
+      publisher: "Elicit (Elicit Help Center)",
+      url: "https://support.elicit.com/en/articles/14757928-elicit-s-limitations",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>AI research assistants have improved in exactly the way that makes them more dangerous. The obvious failure — a confidently cited paper that does not exist — has largely been engineered out. What replaced it is quieter, survives a casual check, and lands in your work rather than theirs.</p>
 
 <p>The way to find it is unglamorous: take a summary the tool produced, open the paper it cites, and read it. Below is what to check for, where each check tends to fail, and a workflow that keeps you out of trouble.</p>

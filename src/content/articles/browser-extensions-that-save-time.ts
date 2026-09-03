@@ -33,6 +33,44 @@ export const browserExtensionsThatSaveTime: Article = {
         "They can be. An extension with 'read and change all your data on all websites' can do exactly that, including after an ownership change. Prefer extensions that request access per-site, and audit what you have installed once or twice a year.",
     },
   ],
+  sources: [
+    {
+      title: "Install and manage extensions",
+      publisher: "Google (Chrome Web Store Help)",
+      url: "https://support.google.com/chrome_webstore/answer/2664769",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Staying Safe with Chrome Extensions",
+      publisher: "Google (Google Online Security Blog)",
+      url: "https://security.googleblog.com/2024/06/staying-safe-with-chrome-extensions.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Declare permissions",
+      publisher: "Google (Chrome for Developers — Chrome Extensions docs)",
+      url: "https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "I Sold a Chrome Extension but it was a bad decision",
+      publisher: "Amit Agarwal (Digital Inspiration / labnol.org)",
+      url: "https://www.labnol.org/internet/sold-chrome-extension/28377",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "DataSpii - A global catastrophic data leak via browser extensions",
+      publisher: "Sam Jadali, Security with Sam (original research)",
+      url: "https://securitywithsam.com/2019/07/dataspii-leak-via-browser-extensions/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Personalize Chrome performance",
+      publisher: "Google (Google Chrome Help)",
+      url: "https://support.google.com/chrome/answer/12929150",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Browser extensions are unusual among software: they are free, they install in two clicks, and they are almost never removed. The result is that most people carry a dozen they no longer use, several of which have permission to read everything they type.</p>
 
 <p>This article is about the filter, not a ranking. We describe categories rather than naming specific products, because extensions change ownership, get abandoned and get sold — a named recommendation ages badly in exactly the way that matters most for security. Search your browser's store for the category and apply the permissions check at the end.</p>

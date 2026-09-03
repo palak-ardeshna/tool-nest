@@ -57,6 +57,50 @@ export const aiImageGeneratorsTested: Article = {
         "Usually not for the quality questions — free tiers generate enough images to judge text rendering, consistency and hands. You do need to read the paid licence before deciding, because free tiers frequently grant no commercial rights at all, which makes their output useless for the work you are evaluating for.",
     },
   ],
+  sources: [
+    {
+      title: "Ownership and Commercial Use FAQ",
+      publisher: "Recraft",
+      url: "https://www.recraft.ai/blog/ownership-and-commercial-use-faq",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Stability AI License",
+      publisher: "Stability AI",
+      url: "https://stability.ai/license",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Terms of Service",
+      publisher: "Ideogram",
+      url: "https://ideogram.ai/legal/tos",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Generative AI Indemnified Services",
+      publisher: "Google Cloud",
+      url: "https://cloud.google.com/terms/generative-ai-indemnified-services",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Image generation",
+      publisher: "OpenAI",
+      url: "https://developers.openai.com/api/docs/guides/image-generation",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Introducing FLUX.1 Kontext and the BFL Playground",
+      publisher: "Black Forest Labs",
+      url: "https://bfl.ai/blog/flux-1-kontext",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Generate images using text prompts with Imagen on Vertex AI",
+      publisher: "Google",
+      url: "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/image/generate-images",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Comparisons of AI image generators tend to be galleries: seven pretty pictures, a ranking, a winner. The ranking is obsolete within months, because these products update continuously under unchanged names, and the pictures were chosen to flatter rather than to stress-test.</p>
 
 <p>A more durable approach is a procedure. The five prompts below take about an hour to run across a shortlist, cost nothing on free tiers, and tell you something specific about your work rather than something general about the market. We have not run a controlled benchmark and are not publishing scores — what we are publishing is the test, and the reasoning behind each part of it.</p>

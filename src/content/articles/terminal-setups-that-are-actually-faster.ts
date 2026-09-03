@@ -38,6 +38,50 @@ export const terminalSetupsThatAreActuallyFaster: Article = {
         "The one you already use. Every improvement here works in bash, zsh and fish. Switching shells is a much larger change than any of these and buys much less.",
     },
   ],
+  sources: [
+    {
+      title: "GitHub - junegunn/fzf: A command-line fuzzy finder",
+      publisher: "junegunn (fzf project)",
+      url: "https://github.com/junegunn/fzf",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "GitHub - ajeetdsouza/zoxide: A smarter cd command. Supports all major shells.",
+      publisher: "ajeetdsouza (zoxide project)",
+      url: "https://github.com/ajeetdsouza/zoxide",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "GitHub - sharkdp/fd: A simple, fast and user-friendly alternative to 'find'",
+      publisher: "sharkdp (fd project)",
+      url: "https://github.com/sharkdp/fd",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "GitHub - romkatv/gitstatus: Git status for Bash and Zsh prompt",
+      publisher: "romkatv (gitstatus project)",
+      url: "https://github.com/romkatv/gitstatus",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Git - git-config Documentation",
+      publisher: "Git (git-scm.com)",
+      url: "https://git-scm.com/docs/git-config",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "GitHub - romkatv/powerlevel10k: A Zsh theme",
+      publisher: "romkatv (Powerlevel10k project)",
+      url: "https://github.com/romkatv/powerlevel10k",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "time(1) - Linux manual page",
+      publisher: "man7.org (Linux man-pages project)",
+      url: "https://man7.org/linux/man-pages/man1/time.1.html",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Terminal customisation has a measurement problem: it feels productive, so almost nobody checks whether it is. The result is shells that take most of a second to start, in exchange for a prompt that displays information the user has stopped reading.</p>
 
 <p>Everything below is either measurable or discardable. So how slow is your shell, actually? Start by measuring.</p>

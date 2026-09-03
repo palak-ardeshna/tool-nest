@@ -58,6 +58,50 @@ export const chatgptVsClaudeForCoding: Article = {
         "Many developers do, and it is a defensible answer if the combined cost is small relative to your time. The practical cost is context-switching and having two sets of chat history. If you do run both, use them for different jobs rather than asking the same question twice and picking the answer you prefer — that is how you end up trusting whichever one agreed with you.",
     },
   ],
+  sources: [
+    {
+      title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      publisher: "arXiv (Princeton NLP / University of Chicago)",
+      url: "https://arxiv.org/abs/2310.06770",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Claude SWE-Bench Performance \\ Anthropic",
+      publisher: "Anthropic",
+      url: "https://www.anthropic.com/engineering/swe-bench-sonnet",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Model deprecations",
+      publisher: "Anthropic",
+      url: "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Overview — Claude Code",
+      publisher: "Anthropic",
+      url: "https://code.claude.com/docs/en/overview",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Codex IDE extension | ChatGPT Learn",
+      publisher: "OpenAI",
+      url: "https://learn.chatgpt.com/docs/codex/ide",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Plans & Pricing | Claude by Anthropic",
+      publisher: "Anthropic",
+      url: "https://claude.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "GitHub Copilot code suggestions in your IDE",
+      publisher: "GitHub",
+      url: "https://docs.github.com/en/copilot/concepts/completions/code-suggestions",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Most comparisons of AI coding assistants are written from a to-do app and a benchmark chart. Neither predicts what happens when the task is boring, the codebase is not yours, and the answer has to actually run in CI.</p>
 
 <p>This article is not a benchmark. We have not run a controlled test lab, and we are wary of anyone who claims to have — model versions shift under the same product name, so a number published in March describes a product that no longer exists in September. What follows is what the two vendors document, what independent evaluations do and do not tell you, and a repeatable procedure for answering the question on the only codebase that matters to you.</p>

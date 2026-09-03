@@ -52,6 +52,50 @@ export const weekWithAnAiCodingAgent: Article = {
         "Ask it explicitly. Adding a line such as 'if the expected behaviour is unclear, stop and ask rather than choosing' works, but it has to be stated — agents generally do not volunteer uncertainty. Better still, treat a ticket that needs that line as a ticket that is not ready for an agent.",
     },
   ],
+  sources: [
+    {
+      title: "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+      publisher: "METR",
+      url: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Balancing AI tensions: Moving from AI adoption to effective SDLC use",
+      publisher: "DORA (Google Cloud)",
+      url: "https://dora.dev/insights/balancing-ai-tensions/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Best practices for using GitHub Copilot to work on tasks",
+      publisher: "GitHub",
+      url: "https://docs.github.com/en/copilot/tutorials/cloud-agent/get-the-best-results",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Best practices for Claude Code",
+      publisher: "Anthropic",
+      url: "https://code.claude.com/docs/en/best-practices",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Small CLs",
+      publisher: "Google (eng-practices)",
+      url: "https://google.github.io/eng-practices/review/developer/small-cls.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Code Coverage Best Practices",
+      publisher: "Google Testing Blog",
+      url: "https://testing.googleblog.com/2020/08/code-coverage-best-practices.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "About GitHub Copilot cloud agent",
+      publisher: "GitHub",
+      url: "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Every agent demo uses a fresh repository and a well-behaved task. Real backlogs are not that. They contain tickets written by different people at different times, some of them vague, against a codebase with years of accumulated decisions that were never written down.</p>
 
 <p>This article is about triage: which of those tickets an agent handles well, which it handles badly, and how to tell them apart before you find out the expensive way. We are describing the failure modes these tools consistently exhibit and how to design around them — not publishing measurements from a controlled trial.</p>

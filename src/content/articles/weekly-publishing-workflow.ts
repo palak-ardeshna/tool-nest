@@ -38,6 +38,50 @@ export const weeklyPublishingWorkflow: Article = {
         "It does not ship, and the buffer covers the slot. The buffer existing is what makes it possible to say no — without one, every deadline becomes a reason to publish something thin.",
     },
   ],
+  sources: [
+    {
+      title: "Creating helpful, reliable, people-first content",
+      publisher: "Google (Search Central)",
+      url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Quotation accuracy in medical journal articles—a systematic review and meta-analysis",
+      publisher: "PeerJ (via PubMed Central, NIH/NLM)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4627914/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Wikipedia:Verifiability",
+      publisher: "Wikimedia Foundation / English Wikipedia",
+      url: "https://en.wikipedia.org/wiki/Wikipedia:Verifiability",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Understanding Trust Indicators",
+      publisher: "The Trust Project",
+      url: "https://thetrustproject.org/trust-indicators/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "The Kanban Guide",
+      publisher: "Orderly Disruption Limited and Daniel S. Vacanti, Inc. (kanbanguides.org)",
+      url: "https://kanbanguides.org/the-kanban-guide/2025.5/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "What are Chrome release channels?",
+      publisher: "Google (Chrome for Developers)",
+      url: "https://developer.chrome.com/docs/web-platform/chrome-release-channels",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Low value content",
+      publisher: "Google (AdSense Help)",
+      url: "https://support.google.com/adsense/answer/9261307",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Publishing weekly is not a writing problem. It is a queueing problem, and it is usually solved badly — by writing harder in the days before the deadline, which works until the first week something goes wrong.</p>
 
 <p>What follows is the workflow we would build for that cadence: a pipeline rather than a sprint. It is deliberately unglamorous, it adds latency, and it is the reason a schedule survives a bad week.</p>

@@ -54,6 +54,12 @@ export default function AboutPage() {
             not claim to.
           </li>
           <li>
+            <strong>You can check our work.</strong> Every article ends with the primary sources
+            behind it, each with the date we last read it. If we state a price or a free-tier limit,
+            the vendor page it came from is one click away. Where a source has since changed, the
+            date tells you how stale our reading is.
+          </li>
+          <li>
             <strong>AI-assisted drafting, human review.</strong> Drafts are produced with AI
             assistance and then read, corrected and edited by a person before publication. Nothing
             is published straight from a model.

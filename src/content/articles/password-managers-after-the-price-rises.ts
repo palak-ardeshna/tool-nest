@@ -57,6 +57,50 @@ export const passwordManagersAfterThePriceRises: Article = {
         "They have improved a great deal and they are far better than nothing. The limits are portability and sharing: your passwords live inside one browser's account, and sharing one with a partner or a colleague is awkward or impossible. If you use one browser on every device and never share credentials, a built-in manager is a defensible choice. Most people fail one of those two conditions.",
     },
   ],
+  sources: [
+    {
+      title: "Bitwarden Password Manager Pricing & Plans | Bitwarden",
+      publisher: "Bitwarden",
+      url: "https://bitwarden.com/pricing/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Password Manager Pricing for Individuals & Families | 1Password",
+      publisher: "1Password",
+      url: "https://1password.com/pricing/personal",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Proton Pass pricing and plans",
+      publisher: "Proton",
+      url: "https://proton.me/pass/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "About Emergency Access",
+      publisher: "Bitwarden",
+      url: "https://bitwarden.com/help/emergency-access/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Export Vault Data",
+      publisher: "Bitwarden",
+      url: "https://bitwarden.com/help/export-your-data/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Backing up your vault",
+      publisher: "Vaultwarden project (dani-garcia/vaultwarden wiki)",
+      url: "https://github.com/dani-garcia/vaultwarden/wiki/Backing-up-your-vault",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Web Authentication: An API for accessing Public Key Credentials - Level 3",
+      publisher: "W3C",
+      url: "https://www.w3.org/TR/webauthn-3/",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Password manager comparisons age badly, and 2026 was an unusually bad year for them. Three of the main options changed price within months of each other, in different directions. Articles written in 2024 now recommend the wrong thing for the right reasons.</p>
 
 <p>We have not audited anyone's cryptography, and neither has any article that says it has. What we can do is set out what the plans now cost, what the money buys that the free tier does not, and where the decision is genuinely close enough that you should stop researching and pick one.</p>

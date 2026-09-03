@@ -38,6 +38,50 @@ export const deployingANextjsAppFourRoutes: Article = {
         "No persistent volume for uploaded files and the regeneration cache. Everything works until the container restarts, and then it silently does not.",
     },
   ],
+  sources: [
+    {
+      title: "How to self-host your Next.js application",
+      publisher: "Vercel (Next.js documentation)",
+      url: "https://nextjs.org/docs/app/guides/self-hosting",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "How to create a static export of your Next.js application",
+      publisher: "Vercel (Next.js documentation)",
+      url: "https://nextjs.org/docs/app/guides/static-exports",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "output",
+      publisher: "Vercel (Next.js documentation)",
+      url: "https://nextjs.org/docs/app/api-reference/config/next-config-js/output",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Runtimes",
+      publisher: "Vercel",
+      url: "https://vercel.com/docs/functions/runtimes",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "CDN pricing and usage",
+      publisher: "Vercel",
+      url: "https://vercel.com/docs/manage-cdn-usage",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Volumes | Docker Docs",
+      publisher: "Docker",
+      url: "https://docs.docker.com/engine/storage/volumes/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "FAQ - Let's Encrypt",
+      publisher: "Internet Security Research Group (Let's Encrypt)",
+      url: "https://letsencrypt.org/docs/faq/",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Deployment advice for Next.js tends to collapse into a preference. It is more useful as a decision about constraints, because all four routes below work — they differ in what they cost you up front, what they cost you every month afterwards, and which failure they hide until production.</p>
 
 <p>Assume throughout a realistic application rather than a demo: server components, incremental regeneration, image optimisation, a <a href="/articles/postgres-tools-worth-using">Postgres database</a> and file uploads. Each of those exercises a different part of the deployment story, and the last two are where routes quietly break.</p>

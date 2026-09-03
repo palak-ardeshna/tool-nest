@@ -38,6 +38,50 @@ export const asyncByDefaultWhatChanges: Article = {
         "Write decisions down, with the reasoning. Not minutes — the decision, who made it, and why. Everything else in async work depends on that existing.",
     },
   ],
+  sources: [
+    {
+      title: "The 37signals Guide to Internal Communication",
+      publisher: "37signals",
+      url: "https://basecamp.com/guides/how-we-communicate",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "GitLab Communication | The GitLab Handbook",
+      publisher: "GitLab",
+      url: "https://handbook.gitlab.com/handbook/communication/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "All-Remote Meetings | The GitLab Handbook",
+      publisher: "GitLab",
+      url: "https://handbook.gitlab.com/handbook/company/culture/all-remote/meetings/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "1-1 | The GitLab Handbook",
+      publisher: "GitLab",
+      url: "https://handbook.gitlab.com/handbook/leadership/1-1/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Documenting Architecture Decisions",
+      publisher: "Cognitect (Michael Nygard)",
+      url: "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "2017 Letter to Shareholders",
+      publisher: "Amazon",
+      url: "https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "The effects of remote work on collaboration among information workers",
+      publisher: "Microsoft Research (published in Nature Human Behaviour)",
+      url: "https://www.microsoft.com/en-us/research/publication/the-effects-of-remote-work-on-collaboration-among-information-workers/",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>"Async by default" gets sold as a calendar reform. It is not. The meetings were where decisions happened; removing them without replacing that function just moves the confusion somewhere less visible.</p>
 
 <h2>What actually has to change</h2>

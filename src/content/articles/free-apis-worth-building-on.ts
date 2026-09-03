@@ -38,6 +38,50 @@ export const freeApisWorthBuildingOn: Article = {
         "Generally the safest available — they are funded to exist rather than to grow. The trade is that they are often slower, less documented and less pleasant to work with.",
     },
   ],
+  sources: [
+    {
+      title: "Additional HTTP Status Codes (RFC 6585)",
+      publisher: "IETF",
+      url: "https://www.rfc-editor.org/rfc/rfc6585.html",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Rate limits for the REST API",
+      publisher: "GitHub",
+      url: "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "API upgrades",
+      publisher: "Stripe",
+      url: "https://docs.stripe.com/upgrades",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Deprecations | Google Maps Platform",
+      publisher: "Google",
+      url: "https://developers.google.com/maps/deprecations",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Google Maps Platform Terms of Service",
+      publisher: "Google",
+      url: "https://cloud.google.com/maps-platform/terms",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Nominatim Usage Policy (aka Geocoding Policy)",
+      publisher: "OpenStreetMap Foundation",
+      url: "https://operations.osmfoundation.org/policies/nominatim/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "API Web Service",
+      publisher: "National Weather Service (NOAA)",
+      url: "https://www.weather.gov/documentation/services-web-api",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Every "top free APIs" list ages badly, because half the entries stop being free. The useful thing is not the list — it is the judgement.</p>
 
 <h2>Three signals worth more than the free tier</h2>

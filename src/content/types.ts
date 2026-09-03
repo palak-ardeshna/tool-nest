@@ -27,6 +27,24 @@ export type Category = {
 export type Faq = { question: string; answer: string };
 export type Alternative = { name: string; url?: string; note?: string };
 
+/**
+ * A primary source an article was built from.
+ *
+ * /about states the articles are researched from vendor documentation, pricing
+ * pages and published reporting. This is where that claim is made checkable:
+ * a reader (or a reviewer) can follow every load-bearing fact back to its
+ * origin. `checkedAt` records when the page was last read, because vendor
+ * pricing changes under a stable URL.
+ */
+export type Source = {
+  title: string;
+  /** Who published it, e.g. "Anthropic" or "Ofcom". */
+  publisher: string;
+  url: string;
+  /** ISO date the source was last read. */
+  checkedAt: string;
+};
+
 export type Article = {
   slug: string;
   title: string;
@@ -50,6 +68,8 @@ export type Article = {
   cons?: string[];
   alternatives?: Alternative[];
   faqs?: Faq[];
+  /** Primary sources behind the article, shown as a reference list. */
+  sources?: Source[];
   /** Path under /public. Falls back to generated cover art when omitted. */
   image?: string;
   imageAlt?: string;

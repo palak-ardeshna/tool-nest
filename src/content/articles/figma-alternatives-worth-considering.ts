@@ -43,6 +43,50 @@ export const figmaAlternativesWorthConsidering: Article = {
         "Live multiplayer editing, the plugin ecosystem, and developer handoff. Those three are the reason most teams that evaluate alternatives stay.",
     },
   ],
+  sources: [
+    {
+      title: "Plans & Pricing | Figma",
+      publisher: "Figma",
+      url: "https://www.figma.com/pricing/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing for individuals, agencies & teams · Sketch",
+      publisher: "Sketch",
+      url: "https://www.sketch.com/pricing/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Penpot: The open-source design platform for teams.",
+      publisher: "Penpot (Kaleidos)",
+      url: "https://penpot.app/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Self-hosting Guide",
+      publisher: "Penpot (Kaleidos)",
+      url: "https://help.penpot.app/technical-guide/getting-started/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Variants",
+      publisher: "Penpot (Kaleidos)",
+      url: "https://help.penpot.app/user-guide/design-systems/variants/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Design Tokens",
+      publisher: "Penpot (Kaleidos)",
+      url: "https://help.penpot.app/user-guide/design-systems/design-tokens/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Affinity | Professional Creative Software, Free for Everyone",
+      publisher: "Affinity (Canva)",
+      url: "https://www.affinity.studio/",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Nobody switches design tools because of a feature comparison. They switch because something specific broke: the bill at forty seats, a week of offline work, or a policy that files cannot live somewhere else.</p>
 
 <p>So we have organised this by constraint, not by feature. Which of the four below is the one actually pushing you to look?</p>

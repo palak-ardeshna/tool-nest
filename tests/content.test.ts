@@ -140,3 +140,20 @@ test("spelling stays in one dialect", () => {
     assert.equal(hit, null, `${article.slug}: American spelling "${hit?.[0]}" in a British-English publication`);
   }
 });
+
+test("cited sources are absolute https urls, unique per article, and dated", () => {
+  for (const article of articles) {
+    if (!article.sources) continue;
+    const urls = article.sources.map((source) => source.url);
+    assert.equal(new Set(urls).size, urls.length, `${article.slug}: duplicate source url`);
+    for (const source of article.sources) {
+      assert.match(source.url, /^https:\/\//, `${article.slug}: source not https — ${source.url}`);
+      assert.ok(source.title.trim(), `${article.slug}: source without a title`);
+      assert.ok(source.publisher.trim(), `${article.slug}: source without a publisher`);
+      assert.ok(
+        !Number.isNaN(Date.parse(source.checkedAt)),
+        `${article.slug}: bad checkedAt on ${source.url}`,
+      );
+    }
+  }
+});

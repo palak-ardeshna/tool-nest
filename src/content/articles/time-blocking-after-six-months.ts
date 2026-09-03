@@ -38,6 +38,44 @@ export const timeBlockingAfterSixMonths: Article = {
         "Nothing. Do not reschedule it into an already-full day. If a block gets missed three times, that is not a scheduling problem — it is the task telling you it is not actually a priority.",
     },
   ],
+  sources: [
+    {
+      title: "Exploring the \"Planning Fallacy\": Why People Underestimate Their Task Completion Times",
+      publisher: "American Psychological Association (Journal of Personality and Social Psychology, 67(3), 366–381) — full-text copy hosted by MIT",
+      url: "https://web.mit.edu/curhan/www/docs/Articles/biases/67_J_Personality_and_Social_Psychology_366,_1994.pdf",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "No Task Left Behind? Examining the Nature of Fragmented Work",
+      publisher: "ACM (Proceedings of CHI 2005) — author copy hosted by UC Irvine",
+      url: "https://www.ics.uci.edu/~gmark/CHI2005.pdf",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "The Cost of Interrupted Work: More Speed and Stress",
+      publisher: "ACM (Proceedings of CHI 2008) — author copy hosted by UC Irvine",
+      url: "https://ics.uci.edu/~gmark/chi08-mark.pdf",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Effects of Individual Differences in Blocking Workplace Distractions",
+      publisher: "ACM (Proceedings of CHI 2018) — author copy hosted by UC Irvine",
+      url: "https://ics.uci.edu/~gmark/Home_page/Publications_files/CHI%202018%20Workplace%20Distractions.pdf",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Does time management work? A meta-analysis",
+      publisher: "PLOS (PLOS ONE 16(1): e0245066)",
+      url: "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0245066",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Implementation intentions: Strong effects of simple plans",
+      publisher: "Peter M. Gollwitzer / Social Psychology & Motivation lab, University of Konstanz (American Psychologist, 54, 493–503)",
+      url: "https://www.socmot.uni-konstanz.de/publications/implementation-intentions-strong-effects-simple-plans",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Time blocking is one of the few productivity practices with a genuinely good idea inside it. It is also one of the most commonly abandoned, usually within a fortnight, and the reason is structural rather than a failure of discipline.</p>
 
 <p>The version described in most productivity books — every hour of the day assigned, reviewed nightly, adjusted continuously — is brittle by design. What follows is why it breaks, and the looser version we would actually recommend — the one people are still running months later.</p>

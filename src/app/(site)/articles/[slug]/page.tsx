@@ -10,6 +10,7 @@ import { QuickAnswer } from "@/components/article/QuickAnswer";
 import { ProsCons } from "@/components/article/ProsCons";
 import { Alternatives } from "@/components/article/Alternatives";
 import { Faq } from "@/components/article/Faq";
+import { Sources } from "@/components/article/Sources";
 import { AuthorCard } from "@/components/article/AuthorCard";
 import { RelatedArticles } from "@/components/article/RelatedArticles";
 import { AdSlot } from "@/components/ads/AdSlot";
@@ -99,6 +100,7 @@ export default async function ArticlePage({ params }: PageProps) {
               <ProsCons pros={article.pros ?? []} cons={article.cons ?? []} />
               <Alternatives items={article.alternatives ?? []} />
               <Faq items={article.faqs ?? []} />
+              <Sources items={article.sources ?? []} />
 
               {article.tags.length ? (
                 <section aria-label="Topics" className="flex flex-wrap gap-2 border-t border-line pt-8">

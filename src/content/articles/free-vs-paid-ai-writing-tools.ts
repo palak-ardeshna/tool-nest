@@ -38,6 +38,50 @@ export const freeVsPaidAiWritingTools: Article = {
         "You can, and you should still edit every sentence. The tools are good at structure and bad at specificity — the parts that make writing worth reading are the parts you add.",
     },
   ],
+  sources: [
+    {
+      title: "What is the Pro plan?",
+      publisher: "Anthropic",
+      url: "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "How do usage and length limits work?",
+      publisher: "Anthropic",
+      url: "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Plans & Pricing | Claude by Anthropic",
+      publisher: "Anthropic",
+      url: "https://claude.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Context windows",
+      publisher: "Anthropic",
+      url: "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Long context | Gemini API | Google AI for Developers",
+      publisher: "Google",
+      url: "https://ai.google.dev/gemini-api/docs/long-context",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Is my data used for model training?",
+      publisher: "Anthropic",
+      url: "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing",
+      publisher: "OpenAI",
+      url: "https://developers.openai.com/api/docs/pricing",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>The marketing for paid AI writing tools implies the free version is a demo. It is not. For a large share of what people actually write, the free tier is the whole product.</p>
 
 <p>So is the paid tier worth it? Here is where we think paying does and does not change things.</p>

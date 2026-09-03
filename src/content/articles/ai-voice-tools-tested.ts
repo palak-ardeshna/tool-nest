@@ -51,6 +51,50 @@ export const aiVoiceToolsTested: Article = {
         "Technically yes, and for informational content the results are often publishable. Have a native speaker review before you publish rather than after — automated dubbing fails in ways that are invisible to someone who does not speak the target language, and a bad dub does more brand damage than no dub.",
     },
   ],
+  sources: [
+    {
+      title: "Whisper",
+      publisher: "OpenAI",
+      url: "https://github.com/openai/whisper",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Keyterm Prompting",
+      publisher: "Deepgram",
+      url: "https://developers.deepgram.com/docs/keyterm",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Speaker Diarization",
+      publisher: "AssemblyAI",
+      url: "https://www.assemblyai.com/docs/pre-recorded-audio/label-speakers",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Instant Voice Cloning",
+      publisher: "ElevenLabs",
+      url: "https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Professional Voice Cloning",
+      publisher: "ElevenLabs",
+      url: "https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "AI Act | Shaping Europe's digital future",
+      publisher: "European Commission",
+      url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "FTC Proposes New Protections to Combat AI Impersonation of Individuals",
+      publisher: "U.S. Federal Trade Commission",
+      url: "https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Voice is three separate markets wearing one label. Transcription, cloning and dubbing sit at completely different levels of maturity, carry completely different risks, and are bought for completely different reasons. Treating them as one category is the most common way teams end up disappointed by all three.</p>
 
 <p>What follows is where each one stands, how to evaluate it on your own material, and — for cloning — what to settle before you generate anything at all. We have grouped them by maturity rather than by vendor, because the gap between the three is far wider than any gap between products. Transcription in particular is the foundation of <a href="/articles/turn-long-videos-into-short-clips-with-ai">our clipping workflow</a>. Which of the three are you actually about to pay for?</p>

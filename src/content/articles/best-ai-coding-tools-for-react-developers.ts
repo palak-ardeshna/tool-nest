@@ -43,6 +43,50 @@ export const bestAiCodingToolsForReactDevelopers: Article = {
         "Yes, with one condition: read the diff and be able to explain it. The failure mode is not bad code, it is code you cannot debug later because you never understood it.",
     },
   ],
+  sources: [
+    {
+      title: "'use client' directive",
+      publisher: "React (Meta Open Source)",
+      url: "https://react.dev/reference/rsc/use-client",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Server Components",
+      publisher: "React (Meta Open Source)",
+      url: "https://react.dev/reference/rsc/server-components",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Server and Client Components",
+      publisher: "Vercel (Next.js documentation)",
+      url: "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "useMemo",
+      publisher: "React (Meta Open Source)",
+      url: "https://react.dev/reference/react/useMemo",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "useFormStatus",
+      publisher: "React (Meta Open Source)",
+      url: "https://react.dev/reference/react-dom/hooks/useFormStatus",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "React Developer Tools",
+      publisher: "React (Meta Open Source)",
+      url: "https://react.dev/learn/react-developer-tools",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "TypeScript: TSConfig Option: strict",
+      publisher: "Microsoft (TypeScript)",
+      url: "https://www.typescriptlang.org/tsconfig/strict.html",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>React has a specific problem for AI assistants: the rules changed. Server components, the client boundary, and the hooks rules that apply on one side but not the other are exactly the kind of thing a model trained largely on older code gets wrong confidently.</p>
 
 <p>The result is that generic advice about AI assistants is close to useless for React work. What you need is a discriminator: something that separates tools that track the current framework from tools that produce confident, obsolete code.</p>

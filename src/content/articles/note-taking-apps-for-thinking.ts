@@ -38,6 +38,50 @@ export const noteTakingAppsForThinking: Article = {
         "Markdown files in a folder you control. Every serious app can import it, and it will still open in twenty years.",
     },
   ],
+  sources: [
+    {
+      title: "How Obsidian stores data - Obsidian Help",
+      publisher: "Obsidian",
+      url: "https://obsidian.md/help/Files+and+folders/How+Obsidian+stores+data",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Export your content",
+      publisher: "Notion",
+      url: "https://www.notion.com/help/export-your-content",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Notion AI security & privacy practices",
+      publisher: "Notion",
+      url: "https://www.notion.com/help/notion-ai-security-practices",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Obsidian Sync",
+      publisher: "Obsidian",
+      url: "https://obsidian.md/sync",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Import notes - Obsidian Help",
+      publisher: "Obsidian",
+      url: "https://obsidian.md/help/import",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "CommonMark Spec Version 0.31.2 (2024-01-28)",
+      publisher: "CommonMark (John MacFarlane)",
+      url: "https://spec.commonmark.org/0.31.2/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Bending Spoons to Acquire Renowned Productivity App Evernote to Enhance Suite of Consumer-Facing Digital Products",
+      publisher: "Evernote",
+      url: "https://evernote.com/blog/bending-spoons-to-acquire-evernote",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Everybody evaluates note apps on capture speed. Capture is the easy part — every app on the market gets a thought out of your head in under three seconds.</p>
 
 <p>The interesting question is what happens six months later, when you half-remember writing something about a supplier and you need it now. Could your current setup find it?</p>

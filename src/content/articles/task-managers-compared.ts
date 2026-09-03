@@ -42,6 +42,50 @@ export const taskManagersCompared: Article = {
         "Usually not, for individual use. Paid tiers in this category are mostly collaboration and reporting features, which do nothing for one person. The free tiers of the major task managers comfortably cover individual use — pay when you add a second person, not before.",
     },
   ],
+  sources: [
+    {
+      title: "Pricing | Todoist",
+      publisher: "Todoist (Doist)",
+      url: "https://www.todoist.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Use Task Quick Add in Todoist",
+      publisher: "Todoist (Doist)",
+      url: "https://www.todoist.com/help/todoist/features/use-task-quick-add-in-todoist-va4Lhpzz",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Adding To-Dos From Anywhere On Your Mac Through Quick Entry - Things Support",
+      publisher: "Cultured Code (Things)",
+      url: "https://culturedcode.com/things/support/articles/2249437/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Add Tasks",
+      publisher: "TickTick",
+      url: "https://help.ticktick.com/articles/7055782422935240704",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Plan your day with the Today view",
+      publisher: "Todoist (Doist)",
+      url: "https://www.todoist.com/help/todoist/get-started/plan-your-day-with-the-todoist-today-view-UVUXaiSs",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Intro to databases in Notion | Notion Help – Notion Help Center",
+      publisher: "Notion Labs",
+      url: "https://www.notion.com/help/intro-to-databases",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Notion Pricing Plans: Free, Plus, Business, & Enterprise.",
+      publisher: "Notion Labs",
+      url: "https://www.notion.com/pricing",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Task manager comparisons are usually written during a calm week by someone enjoying setting up a system. That is the least informative possible moment to evaluate one.</p>
 
 <p>The conditions that actually decide whether you keep a task manager are a month with two overlapping deadlines and a week away from your desk. Systems do not get abandoned because a feature was missing. They get abandoned because using them became expensive at the exact moment you were least able to afford it.</p>

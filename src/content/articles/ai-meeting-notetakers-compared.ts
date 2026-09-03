@@ -58,6 +58,50 @@ export const aiMeetingNotetakersCompared: Article = {
         "You can, and we would think carefully first. A one-to-one is the meeting where someone tells you something difficult. A permanent transcript changes what people are willing to say, and the cost of that is invisible until it has already happened. Notes you write yourself are a reasonable answer here even if they are worse notes.",
     },
   ],
+  sources: [
+    {
+      title: "Fathom Pricing: Free AI Notetaker + Team Plans",
+      publisher: "Fathom",
+      url: "https://www.fathom.ai/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Free vs. Premium for Individuals: What's the Difference?",
+      publisher: "Fathom",
+      url: "https://help.fathom.video/en/articles/5290881",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing | Otter.ai",
+      publisher: "Otter.ai",
+      url: "https://otter.ai/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "Pricing plans | Granola",
+      publisher: "Granola",
+      url: "https://www.granola.ai/pricing",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "How transcription works",
+      publisher: "Granola",
+      url: "https://docs.granola.ai/help-center/taking-notes/transcription",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "What is personal data? | ICO",
+      publisher: "Information Commissioner's Office (UK)",
+      url: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/personal-information-what-is-it/what-is-personal-data/what-is-personal-data/",
+      checkedAt: "2026-09-03",
+    },
+    {
+      title: "California Code, PEN 632",
+      publisher: "California Legislative Information (State of California)",
+      url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=632",
+      checkedAt: "2026-09-03",
+    },
+  ],
   content: `<p>Every review of this category compares transcription accuracy. Accuracy is table stakes now, and it is not what you will regret choosing badly on. What you will regret is a bot with your company's name on it sitting in a client call nobody warned the client about, or a year of one-to-ones sitting in a vendor's archive you never audited.</p>
 
 <p>We have not run these tools across a controlled set of two hundred meetings, and we would be sceptical of anyone claiming they have — meeting audio is not reproducible, so nobody is really testing the same thing twice. What follows is what the vendors document, what the pricing pages say as of publication, and the parts of the decision that reviews consistently leave out.</p>

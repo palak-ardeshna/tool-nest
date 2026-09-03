@@ -123,6 +123,18 @@ export function articleSchema(article: ResolvedArticle) {
     articleSection: article.category.name,
     keywords: article.tags.join(", "),
     ...(article.image ? { image: [absoluteUrl(article.image)] } : {}),
+    // The primary sources behind the article, so the research is machine-readable
+    // and not just a list of links at the bottom of the page.
+    ...(article.sources?.length
+      ? {
+          citation: article.sources.map((source) => ({
+            "@type": "CreativeWork",
+            name: source.title,
+            url: source.url,
+            publisher: { "@type": "Organization", name: source.publisher },
+          })),
+        }
+      : {}),
     // An editorial-team byline, not a named individual: asserting a Person who
     // did not write or test this would misrepresent the content to Google.
     author: {
