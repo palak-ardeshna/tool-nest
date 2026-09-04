@@ -26,9 +26,15 @@ import { deployingANextjsAppFourRoutes } from "@/content/articles/deploying-a-ne
 import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notetakers-compared";
 import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
 import { errorTrackingForSmallTeams } from "@/content/articles/error-tracking-for-small-teams";
+import { runningAiModelsOnYourOwnHardware } from "@/content/articles/running-ai-models-on-your-own-hardware";
+import { ciPipelinesThatStayUnderTenMinutes } from "@/content/articles/ci-pipelines-that-stay-under-ten-minutes";
+import { backupsForASmallTeam } from "@/content/articles/backups-for-a-small-team";
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  runningAiModelsOnYourOwnHardware,
+  ciPipelinesThatStayUnderTenMinutes,
+  backupsForASmallTeam,
   aiMeetingNotetakersCompared,
   passwordManagersAfterThePriceRises,
   errorTrackingForSmallTeams,
