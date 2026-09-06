@@ -29,9 +29,15 @@ import { errorTrackingForSmallTeams } from "@/content/articles/error-tracking-fo
 import { runningAiModelsOnYourOwnHardware } from "@/content/articles/running-ai-models-on-your-own-hardware";
 import { ciPipelinesThatStayUnderTenMinutes } from "@/content/articles/ci-pipelines-that-stay-under-ten-minutes";
 import { backupsForASmallTeam } from "@/content/articles/backups-for-a-small-team";
+import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recording-for-async-teams";
+import { sendingEmailFromYourApp } from "@/content/articles/sending-email-from-your-app";
+import { webAnalyticsWithoutGoogleAnalytics } from "@/content/articles/web-analytics-without-google-analytics";
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  screenRecordingForAsyncTeams,
+  sendingEmailFromYourApp,
+  webAnalyticsWithoutGoogleAnalytics,
   runningAiModelsOnYourOwnHardware,
   ciPipelinesThatStayUnderTenMinutes,
   backupsForASmallTeam,
