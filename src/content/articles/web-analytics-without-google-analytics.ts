@@ -5,6 +5,9 @@ export const webAnalyticsWithoutGoogleAnalytics: Article = {
   title: "Web Analytics Without Google Analytics: What You Gain and What You Give Up",
   excerpt:
     "Most teams open their analytics twice a month and leave with the same three numbers. That is a small enough job that the tool doing it should be simple, cheap and honest about retention — and the honest part is where GA4 falls down for small sites.",
+  image: "/images/articles/web-analytics-without-google-analytics.webp",
+  imageAlt:
+    "Photograph: a laptop screen at an angle showing a web analytics report, with a visitors-over-time line chart above a new-versus-returning pie chart",
   category: "software",
   author: "toolnest-editorial",
   tags: ["Software", "Analytics", "Privacy", "Small Teams"],

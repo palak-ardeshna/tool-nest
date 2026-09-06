@@ -5,6 +5,9 @@ export const screenRecordingForAsyncTeams: Article = {
   title: "Screen Recording for Async Teams: When a Video Beats a Message",
   excerpt:
     "Async video gets recommended for everything and is right for about three things. Here is the test we use before hitting record, what the tools genuinely differ on, and why the free tier's five-minute limit is a better constraint than it looks.",
+  image: "/images/articles/screen-recording-for-async-teams.webp",
+  imageAlt:
+    "Photograph: a laptop on a desk by a window showing a multitrack recording timeline, with a mixer, a monitor speaker and headphones around it",
   category: "productivity",
   author: "toolnest-editorial",
   tags: ["Productivity", "Async Work", "Video", "Remote Teams"],

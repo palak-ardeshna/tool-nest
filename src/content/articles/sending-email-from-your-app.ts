@@ -5,6 +5,9 @@ export const sendingEmailFromYourApp: Article = {
   title: "Sending Email From Your App Without Landing in Spam",
   excerpt:
     "Password resets that never arrive are not a mystery. They are three DNS records and one architectural decision. Here is what SPF, DKIM and DMARC each prove, what Gmail and Yahoo now require in writing, and what sending actually costs once you price it.",
+  image: "/images/articles/sending-email-from-your-app.webp",
+  imageAlt:
+    "Photograph: an open laptop in a darkened room, its screen the only light, showing a long list of messages in an email client",
   category: "developer-tools",
   author: "toolnest-editorial",
   tags: ["Developer Tools", "Email", "DNS", "Deliverability"],
