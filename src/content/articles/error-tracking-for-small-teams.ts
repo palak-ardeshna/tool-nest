@@ -12,7 +12,7 @@ export const errorTrackingForSmallTeams: Article = {
   contentUpdatedAt: "2026-09-01",
   featured: true,
   image: "/images/articles/error-tracking-for-small-teams.webp",
-  imageAlt: "Illustration: an event-volume chart flat except for one sharp spike, beside a list of grouped issues and an alert badge",
+  imageAlt: "A laptop screen showing a web performance monitoring dashboard: load time and start render histograms with a bounce rate curve over them, above session and page-view figures",
   seoTitle: "Error Tracking for Small Teams (2026)",
   seoDescription:
     "Sentry, GlitchTip, Better Stack and Honeybadger compared for small teams: how event-based pricing bites, and the four alerts worth setting up on day one.",

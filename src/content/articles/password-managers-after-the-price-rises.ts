@@ -11,7 +11,7 @@ export const passwordManagersAfterThePriceRises: Article = {
   publishedAt: "2026-08-24",
   contentUpdatedAt: "2026-09-01",
   image: "/images/articles/password-managers-after-the-price-rises.webp",
-  imageAlt: "Illustration: a stack of three credential cards with masked passwords, beside a closed padlock badge",
+  imageAlt: "An opened silver combination padlock resting on the keys of a white computer keyboard",
   seoTitle: "Password Managers in 2026: Prices Compared",
   seoDescription:
     "1Password, Bitwarden and Proton Pass after the 2026 price rises: what each plan costs, whether the free tiers are enough, and what Vaultwarden costs.",

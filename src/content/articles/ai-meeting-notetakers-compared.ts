@@ -12,7 +12,7 @@ export const aiMeetingNotetakersCompared: Article = {
   contentUpdatedAt: "2026-09-01",
   featured: true,
   image: "/images/articles/ai-meeting-notetakers-compared.webp",
-  imageAlt: "Illustration: a grid of video-call tiles with one speaker active, beside a notes panel of transcript lines and ticked action items",
+  imageAlt: "A laptop on a wooden table showing a video call with a grid of around twenty participants, a mug of coffee in the foreground",
   seoTitle: "AI Meeting Notetakers Compared (2026)",
   seoDescription:
     "Fathom vs Otter vs Granola: how the bot-in-the-call model differs from local capture, what the free tiers include, and the consent rules you cannot skip.",
