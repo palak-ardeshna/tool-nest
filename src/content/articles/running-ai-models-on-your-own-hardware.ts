@@ -5,6 +5,9 @@ export const runningAiModelsOnYourOwnHardware: Article = {
   title: "Running AI Models on Your Own Hardware: When It Is Actually Worth It",
   excerpt:
     "Local models are sold on privacy and cost, and argued about at the wrong altitude. The decision is really an arithmetic problem you can do before downloading anything, and it turns on how much memory you have and which job you are trying to move off the API.",
+  image: "/images/articles/running-ai-models-on-your-own-hardware.webp",
+  imageAlt:
+    "Photograph: a processor seated in an open motherboard socket with the retention arm raised, blue memory slots running along the top",
   category: "ai-tools",
   author: "toolnest-editorial",
   tags: ["AI Tools", "Local AI", "Privacy", "Hardware"],

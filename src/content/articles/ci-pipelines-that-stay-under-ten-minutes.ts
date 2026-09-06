@@ -5,6 +5,9 @@ export const ciPipelinesThatStayUnderTenMinutes: Article = {
   title: "CI Pipelines That Stay Under Ten Minutes",
   excerpt:
     "A slow pipeline does not just waste minutes, it changes how a team works: people stop waiting, start batching, and review code that has not finished checking. Here is where the time actually goes, and the four changes that recover most of it.",
+  image: "/images/articles/ci-pipelines-that-stay-under-ten-minutes.webp",
+  imageAlt:
+    "Photograph: two hands typing on a laptop at a pale desk, the screen filled with a syntax-highlighted code editor and a row of open file tabs",
   category: "developer-tools",
   author: "toolnest-editorial",
   tags: ["Developer Tools", "CI/CD", "GitHub Actions", "Performance"],

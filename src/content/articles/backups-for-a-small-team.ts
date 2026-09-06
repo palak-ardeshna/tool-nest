@@ -5,6 +5,9 @@ export const backupsForASmallTeam: Article = {
   title: "Backups for a Small Team: What 3-2-1 Costs When You Actually Price It",
   excerpt:
     "Everyone knows the rule and almost nobody has implemented it, mostly because it sounds expensive and nobody has done the sum. For a team of five it is usually under ten pounds a month — and the copy you are missing is probably not the one on your laptop.",
+  image: "/images/articles/backups-for-a-small-team.webp",
+  imageAlt:
+    "Photograph: a dozen bare hard drives laid face down and packed edge to edge, their green and blue controller boards and barcode labels showing",
   category: "software",
   author: "toolnest-editorial",
   tags: ["Software", "Backups", "Security", "Small Teams"],
