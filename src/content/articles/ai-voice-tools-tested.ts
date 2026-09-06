@@ -14,7 +14,7 @@ export const aiVoiceToolsTested: Article = {
   imageAlt: "A studio condenser microphone on a boom arm against a grey backdrop",
   seoTitle: "AI Voice Tools in 2026: What Works",
   seoDescription:
-    "Where AI voice tools are genuinely reliable in 2026 and where they are not, how to evaluate transcription accuracy on your own audio, and the consent and disclosure questions to settle before cloning a voice.",
+    "Where AI voice tools are reliable in 2026 and where they are not, how to test transcription on your own audio, and the consent questions to settle first.",
   quickAnswer:
     "Transcription is mature, cheap, and good enough to run locally for free on clean single-speaker audio; paid services earn their price on messy multi-speaker recordings through better speaker separation. Voice cloning has passed the point where quality is the limiting factor, which means consent and disclosure are now the questions that matter — settle them in writing before you generate anything. Dubbing works well for straight informational narration and poorly wherever delivery, timing or humour carry the meaning.",
   pros: [

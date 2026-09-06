@@ -15,7 +15,7 @@ export const screenRecordingForAsyncTeams: Article = {
   contentUpdatedAt: "2026-09-06",
   seoTitle: "Async Screen Recording Tools Compared (2026)",
   seoDescription:
-    "When a screen recording beats a written message, how Loom, Screen Studio, OBS and the built-in OS recorders compare, and how to make videos colleagues actually watch to the end.",
+    "When a screen recording beats a written message, how Loom, Screen Studio, OBS and the built-in recorders compare, and how to make videos people finish.",
   quickAnswer:
     "Record a video when you need to show something on a screen, when tone would be misread in writing, or when a written explanation would take three rounds of questions to land. Everything else should be text, because text is searchable, skimmable and quotable and a video is none of those. On tools: the built-in recorder in Windows and macOS is free and fine for a quick clip; Loom is the default for sharing because the link and the transcript come with it, with a free tier of 25 videos capped at five minutes each and paid plans from around $18 per person per month; Screen Studio produces a noticeably more polished result on macOS for anything customer-facing; OBS is free, unlimited and expects you to know what you are doing. Whichever you pick, keep recordings under five minutes and put the conclusion in the first fifteen seconds.",
   pros: [

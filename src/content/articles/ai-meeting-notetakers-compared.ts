@@ -15,7 +15,7 @@ export const aiMeetingNotetakersCompared: Article = {
   imageAlt: "Illustration: a grid of video-call tiles with one speaker active, beside a notes panel of transcript lines and ticked action items",
   seoTitle: "AI Meeting Notetakers Compared (2026)",
   seoDescription:
-    "Fathom vs Otter vs Granola: how the bot-in-the-call model differs from local capture, what the free tiers really include, the consent rules you cannot skip, and a two-week evaluation you can run yourself.",
+    "Fathom vs Otter vs Granola: how the bot-in-the-call model differs from local capture, what the free tiers include, and the consent rules you cannot skip.",
   quickAnswer:
     "The category splits on one thing: whether a bot joins the call as a visible participant or the app records locally on your machine. Fathom and Otter send a bot and build a searchable archive; Granola records on-device and produces notes that read like the ones you would have written. Free tiers differ far more than paid ones — Fathom's free tier gives unlimited recording but only a handful of AI summaries a month, Otter's caps each conversation at 30 minutes, and Granola's is a lifetime allowance rather than a monthly one. Before any of that matters, check what your jurisdiction and your clients require for consent, because that constraint eliminates options faster than any feature comparison.",
   pros: [

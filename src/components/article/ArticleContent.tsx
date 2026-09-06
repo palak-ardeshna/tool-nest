@@ -12,6 +12,7 @@ export function ArticleContent({ html }: { html: string }) {
           {index > 0 ? (
             <AdSlot
               slotId={process.env.NEXT_PUBLIC_ADSENSE_SLOT_IN_ARTICLE}
+              instance={index}
               format="fluid"
               minHeight={280}
               className="border-y border-line py-4"

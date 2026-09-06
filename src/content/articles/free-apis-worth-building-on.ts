@@ -13,7 +13,7 @@ export const freeApisWorthBuildingOn: Article = {
   imageAlt: "Small pale cubes joined by fine indigo threads forming a network",
   seoTitle: "Free APIs Worth Building On",
   seoDescription:
-    "How to judge whether a free API is safe to depend on — pricing history, rate-limit clarity, deprecation policy — plus categories where the free options are genuinely solid.",
+    "How to judge whether a free API is safe to depend on — pricing history, rate-limit clarity, deprecation policy — and where the free options are solid.",
   quickAnswer:
     "Judge an API on its history, not its current free tier. Three signals predict stability: a published deprecation policy, versioned endpoints that are actually still running, and a paid tier that makes obvious commercial sense. An API with no visible business model is a future migration.",
   pros: [

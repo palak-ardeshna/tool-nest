@@ -15,7 +15,7 @@ export const weekWithAnAiCodingAgent: Article = {
   imageAlt: "A desk at dusk with a dark monitor and a single warm lamp",
   seoTitle: "What to Give an AI Coding Agent",
   seoDescription:
-    "A practical triage guide for AI coding agents: which backlog tickets they handle well, the failure modes to expect, why review time is the real cost, and how to measure whether an agent is actually saving your team time.",
+    "Which backlog tickets AI coding agents handle well, the failure modes to expect, and why review time is the real cost of putting one on your team.",
   quickAnswer:
     "Give an agent work you could hand to a competent contractor with no context: clear acceptance criteria, existing test coverage, changes confined to a few files, and no product decisions embedded in the ticket. Keep away from it anything where the correct behaviour has not been decided — an agent treats ambiguity as permission to choose rather than a reason to ask. The practical limit is review cost: once a change touches more than two files you have not read recently, reconstructing intent from a diff is usually slower than writing it yourself.",
   pros: [

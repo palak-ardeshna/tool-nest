@@ -15,7 +15,7 @@ export const softwareWePayForAndWhatWeCancelled: Article = {
   imageAlt: "A grid of blank ceramic tiles with a few lifted and stacked aside",
   seoTitle: "How to Audit Your Software Spend",
   seoDescription:
-    "A step-by-step method for auditing SaaS subscriptions at a small company: how to build the list, the one question that predicts which tools survive, what to keep on principle, and how to cancel without a fight.",
+    "How to audit SaaS subscriptions at a small company: building the list, the one question that predicts which tools survive, and cancelling without a fight.",
   quickAnswer:
     "Export twelve months of invoices, list every recurring charge, then ask one question per tool: does anyone open this without being reminded to? Tools opened voluntarily survive; tools that need a weekly nudge, a process document or a manager chasing updates are already dead and you are paying for the funeral. Cancel monthly plans first, set a ninety-day review date on everything you buy from now on, and never audit security tooling on cost.",
   pros: [

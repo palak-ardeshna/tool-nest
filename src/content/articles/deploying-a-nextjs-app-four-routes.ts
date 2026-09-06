@@ -13,7 +13,7 @@ export const deployingANextjsAppFourRoutes: Article = {
   imageAlt: "Four small matte shipping containers arranged in a row",
   seoTitle: "Deploying Next.js: 4 Routes Compared",
   seoDescription:
-    "Four ways to deploy a Next.js app in 2026 compared on setup effort, ongoing maintenance and cost shape — plus the specific failure each route hides, including ephemeral filesystems and the missing persistent volume.",
+    "Four ways to deploy a Next.js app compared on setup, maintenance and cost — plus the specific failure each route hides, starting with ephemeral disks.",
   quickAnswer:
     "A managed platform for almost everyone; a container on a VPS when the bill or a data-residency rule says otherwise. Kubernetes only if you already run it for something else. Static export only if you genuinely have no server-side rendering, which most real apps do.",
   pros: [

@@ -14,7 +14,7 @@ export const browserExtensionsThatSaveTime: Article = {
   imageAlt: "A tidy desk from above with a closed laptop and a mug",
   seoTitle: "10 Browser Extensions That Save Time",
   seoDescription:
-    "Ten types of browser extension that remove a repeated manual step, the four types that add work instead, the permissions to check before installing, and how to audit what you already have.",
+    "Ten types of browser extension that remove a repeated manual step, the four types that add work instead, and the permissions to check before installing.",
   quickAnswer:
     "One rule predicts which extensions you will still have installed in a month: it must either remove a repeated manual step, or remove a distraction at the moment it appears. Anything that adds a new dashboard, inbox or report to check is creating work while feeling productive. Install against that rule, cap yourself at around ten, and read the permission prompt every time — an extension with access to all sites can read everything you type.",
   pros: [

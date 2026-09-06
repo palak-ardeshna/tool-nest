@@ -15,7 +15,7 @@ export const ciPipelinesThatStayUnderTenMinutes: Article = {
   contentUpdatedAt: "2026-09-04",
   seoTitle: "How to Get CI Under Ten Minutes (2026)",
   seoDescription:
-    "Why CI slows down, how GitHub Actions caching and concurrency actually behave, what runners cost per minute, and the four changes that take a typical pipeline from twenty-five minutes to under ten.",
+    "Why CI slows down, how GitHub Actions caching and concurrency behave, and the four changes that take a pipeline from twenty-five minutes to under ten.",
   quickAnswer:
     "Ten minutes is the threshold where people stop waiting for a pipeline and go and do something else, and a team that has stopped waiting has effectively stopped running CI. Most slow pipelines are slow for four reasons: dependency installation that is not cached properly, everything running in one sequential job, superseded runs still burning runners because nothing cancels them, and an expensive runner chosen by habit. Fix caching and concurrency first — they are configuration changes rather than restructuring, and between them they usually recover more than half the time. Then split the pipeline by who is waiting for the answer, so the fast checks report in two minutes and the slow ones stop blocking review.",
   pros: [

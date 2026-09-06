@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ArticleGrid } from "@/components/article/ArticleGrid";
 import { JsonLd } from "@/components/JsonLd";
-import { getLatestArticles } from "@/lib/articles";
+import { allArticles } from "@/lib/articles";
 import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -24,7 +24,11 @@ export const metadata = buildMetadata({
  * segment that can 404 properly.
  */
 export default function ArticlesPage() {
-  const articles = getLatestArticles();
+  // Every article, not a page of them: this is the archive the footer and the
+  // breadcrumb promise, and the only page that links to the whole back
+  // catalogue. `getLatestArticles()` defaults to nine, which quietly dropped
+  // everything older off the site's own index.
+  const articles = allArticles;
   const crumbs = [{ label: "Home", href: "/" }, { label: "All articles" }];
 
   return (

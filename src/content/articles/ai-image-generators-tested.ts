@@ -15,7 +15,7 @@ export const aiImageGeneratorsTested: Article = {
   imageAlt: "Photographic test prints spread across a white light table",
   seoTitle: "How to Choose an AI Image Generator",
   seoDescription:
-    "A practical framework for picking an AI image generator: the five prompts that separate the field, why consistency and inpainting matter more than raw quality, and what to check in the commercial licence before you ship.",
+    "A framework for picking an AI image generator: the five prompts that separate the field, and why consistency and inpainting matter more than raw quality.",
   quickAnswer:
     "No single generator wins across the board, and the ranking changes every few months, so choose on workflow rather than aesthetics. Run five prompts through your shortlist: a simple product shot, a flat illustration, an image containing legible text, the same character in three poses, and two hands manipulating a small object. Text rendering and set consistency eliminate most candidates in minutes. Then read the commercial licence for the exact plan you would buy — that is what determines whether you can actually ship the result.",
   pros: [

@@ -13,7 +13,7 @@ export const taskManagersCompared: Article = {
   imageAlt: "Three slim notebooks standing side by side against a pale background",
   seoTitle: "Choosing a Task Manager That Lasts",
   seoDescription:
-    "Why feature comparisons fail to predict which task manager you will keep, the three properties that do — capture speed, overdue handling and recovery after neglect — and a two-week test you can run yourself.",
+    "Why feature comparisons fail to predict which task manager you keep, and the three that do: capture speed, overdue handling, recovery after neglect.",
   quickAnswer:
     "Ignore feature lists and judge on three things. Capture speed: if recording a thought takes more than about three seconds on a locked phone, you will bypass the system exactly when you are busiest. Overdue handling: a tool that greets you with forty red items after a hard week is one you will avoid during the next one. Recovery after neglect: a system with elaborate structure to re-establish costs you an hour on the Monday after travel, which nobody has. The most capable product usually loses on all three.",
   pros: [

@@ -13,7 +13,7 @@ export const timeBlockingAfterSixMonths: Article = {
   imageAlt: "A blank paper weekly planner with coloured blocks laid across it",
   seoTitle: "Time Blocking That Actually Lasts",
   seoDescription:
-    "Why strict hour-by-hour time blocking collapses, the three rules that make a looser version durable, how long a block should be, and what to do when one gets missed.",
+    "Why strict hour-by-hour time blocking collapses, the three rules that make a looser version durable, and what to do when a block gets missed.",
   quickAnswer:
     "Blocking every hour of the day reliably collapses within a fortnight, because one unexpected problem invalidates every block after it. The durable version blocks only the two or three things that would make the day worthwhile, leaves the rest unstructured to absorb what arrives, defines each block by a finish line rather than a duration, and treats a repeatedly missed block as information — a task missed three times is not a scheduling problem, it is a priority you have not admitted to yet.",
   pros: [

@@ -15,7 +15,7 @@ export const errorTrackingForSmallTeams: Article = {
   imageAlt: "Illustration: an event-volume chart flat except for one sharp spike, beside a list of grouped issues and an alert badge",
   seoTitle: "Error Tracking for Small Teams (2026)",
   seoDescription:
-    "Sentry, GlitchTip, Better Stack and Honeybadger compared for teams of two to twenty: how event-based pricing bites, what self-hosting actually costs, and the four alerts worth setting up on day one.",
+    "Sentry, GlitchTip, Better Stack and Honeybadger compared for small teams: how event-based pricing bites, and the four alerts worth setting up on day one.",
   quickAnswer:
     "Error tracking and uptime monitoring are two different problems sold as one product, and small teams routinely overbuy on the first while neglecting the second. Sentry has the best SDKs and a bill that scales with your worst day rather than your traffic. GlitchTip speaks the same SDK protocol at a fraction of the cost and self-hosts in four containers instead of forty. Better Stack bundles errors, uptime and incident alerting at one price, which for a team of five is usually the right shape. Whichever you pick, sampling and a grouping rule matter more than the vendor: an unsampled error loop can turn a five-pound month into a four-hundred-pound one before anyone reads the email.",
   pros: [

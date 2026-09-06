@@ -13,9 +13,9 @@ export const sendingEmailFromYourApp: Article = {
   tags: ["Developer Tools", "Email", "DNS", "Deliverability"],
   publishedAt: "2026-09-05",
   contentUpdatedAt: "2026-09-06",
-  seoTitle: "App Email Deliverability: SPF, DKIM and DMARC Explained (2026)",
+  seoTitle: "Email Deliverability: SPF, DKIM and DMARC (2026)",
   seoDescription:
-    "Why transactional email lands in spam, what SPF, DKIM and DMARC each prove, the Gmail and Yahoo sender requirements in full, and what Resend, Postmark and Amazon SES cost per message.",
+    "Why transactional email lands in spam, what SPF, DKIM and DMARC each prove, the Gmail sender rules, and what Resend, Postmark and SES cost per message.",
   quickAnswer:
     "Publish all three records and align them. SPF says which servers may send for your domain, DKIM signs the message with a key published in your DNS, and DMARC tells receivers what to do when either fails — and requires the domain in the From header to match the SPF or DKIM domain. Gmail requires all three from anyone sending more than 5,000 messages a day to Gmail accounts, along with TLS, valid forward and reverse DNS, one-click unsubscribe on marketing mail, and a reported spam rate below 0.30%. Yahoo asks for the same and wants unsubscribes honoured within two days. The architectural decision most teams get wrong is sending password resets and newsletters from one domain, which lets a bad campaign take your login emails down with it. Split them across subdomains, and instrument bounces and complaints so you hear about failures before your customers do.",
   pros: [

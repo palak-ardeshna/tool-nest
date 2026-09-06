@@ -16,7 +16,7 @@ export const runningAiModelsOnYourOwnHardware: Article = {
   featured: true,
   seoTitle: "Running AI Models Locally: Is It Worth It? (2026)",
   seoDescription:
-    "Ollama, LM Studio and llama.cpp compared for local AI. How much memory each model size needs, what quantisation costs you in quality, and the three jobs where running locally genuinely beats an API.",
+    "Ollama, LM Studio and llama.cpp compared. How much memory each model size needs, what quantisation costs in quality, and when local genuinely beats an API.",
   quickAnswer:
     "Work out the memory first: a model at four-bit quantisation needs roughly half a gigabyte per billion parameters, plus headroom for context. That single sum tells you which models your machine can hold, and everything else follows from it. Local wins clearly in three situations — data that is not allowed to leave your network, high-volume repetitive work where per-token pricing quietly adds up, and anything that must keep working offline or at a fixed cost. It loses on hard reasoning, on long context, and anywhere a subtle quality drop is expensive. Most people who try it seriously end up running both: a local model for the bulk work, a hosted model for the parts that are genuinely difficult.",
   pros: [

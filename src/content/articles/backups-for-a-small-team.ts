@@ -15,7 +15,7 @@ export const backupsForASmallTeam: Article = {
   contentUpdatedAt: "2026-09-04",
   seoTitle: "Small Team Backups: 3-2-1 Priced Properly (2026)",
   seoDescription:
-    "What the 3-2-1 backup rule costs a small team once you price it, why your Google Workspace and Microsoft 365 data is not backed up, and how restic, rclone and object storage fit together.",
+    "What the 3-2-1 backup rule costs once you price it, why your Google Workspace and Microsoft 365 data is not backed up, and how restic and rclone fit in.",
   quickAnswer:
     "Three copies, on two kinds of media, one of them off-site. Priced with commodity object storage at roughly seven dollars per terabyte per month, a small team storing 500 GB is looking at under five dollars a month for the off-site copy — far less than the single subscription you would cancel to pay for it. The copy most teams are missing is not the laptop one; it is their software-as-a-service data. Every major provider states plainly that the customer remains responsible for their own data, and the thirty-day bin in your email suite is a deletion grace period rather than a backup. Whatever you build, the only part that counts is a restore you have actually performed.",
   pros: [

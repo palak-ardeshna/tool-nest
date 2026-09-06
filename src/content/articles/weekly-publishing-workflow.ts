@@ -13,7 +13,7 @@ export const weeklyPublishingWorkflow: Article = {
   imageAlt: "Printed blank pages laid out in a row across a large table",
   seoTitle: "A Weekly Publishing Workflow",
   seoDescription:
-    "A complete weekly publishing workflow: the five stages, the structure and claims checkpoints that catch most problems cheaply, why a two-article buffer is what makes the cadence survivable, and how to adapt it for one person.",
+    "A weekly publishing workflow: the five stages, the two checkpoints that catch most problems cheaply, and why a two-article buffer makes it survivable.",
   quickAnswer:
     "Run five stages — idea, research, structure, draft, edit — with one rule: nothing advances to the next stage on the day it entered the current one. Add two checkpoints: a structure review before any prose is written, and a claims review before publishing that asks where each factual statement came from. Keep two finished pieces in reserve. The buffer is what makes it possible to say 'this is not ready' without missing a slot, and that sentence is what keeps quality from drifting.",
   pros: [

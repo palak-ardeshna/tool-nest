@@ -14,7 +14,7 @@ export const passwordManagersAfterThePriceRises: Article = {
   imageAlt: "Illustration: a stack of three credential cards with masked passwords, beside a closed padlock badge",
   seoTitle: "Password Managers in 2026: Prices Compared",
   seoDescription:
-    "1Password, Bitwarden and Proton Pass after the 2026 pricing changes: what each plan now costs, whether the free tiers are enough, what self-hosting Vaultwarden really costs you, and how to migrate without losing a vault.",
+    "1Password, Bitwarden and Proton Pass after the 2026 price rises: what each plan costs, whether the free tiers are enough, and what Vaultwarden costs.",
   quickAnswer:
     "Bitwarden's free tier still covers unlimited passwords across unlimited devices and remains the right answer for most individuals — the paid upgrade buys emergency access, integrated authenticator codes and file attachments rather than core password storage. Proton Pass Plus is now the cheapest paid personal plan after a substantial cut, and it is the pick if you already pay Proton for anything else. 1Password costs the most and earns it only if you need its sharing and recovery model for a family or a small team. If you are already on one of these and it works, the price change is not on its own a reason to move: migration costs you an evening and a small risk of losing something, and that is worth more than the difference.",
   pros: [

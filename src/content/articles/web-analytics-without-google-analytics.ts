@@ -13,9 +13,9 @@ export const webAnalyticsWithoutGoogleAnalytics: Article = {
   tags: ["Software", "Analytics", "Privacy", "Small Teams"],
   publishedAt: "2026-09-05",
   contentUpdatedAt: "2026-09-06",
-  seoTitle: "GA4 Alternatives Compared: Plausible, Umami and Matomo (2026)",
+  seoTitle: "GA4 Alternatives: Plausible, Umami, Matomo (2026)",
   seoDescription:
-    "What GA4 actually costs you in retention and complexity, how Plausible, Umami and Matomo compare, where the consent rules really bite, and how to switch without losing your history.",
+    "What GA4 costs you in retention and complexity, how Plausible, Umami and Matomo compare, and how to switch without losing your history.",
   quickAnswer:
     "Decide what you use analytics for before you choose a tool. If the answer is which pages people find, where they came from and which ones convert, almost anything does that, and the deciding factors become retention, consent and cost. GA4 keeps event-level data for two months by default on a standard property, with fourteen months the longest option — after that it is deleted and only aggregated reports remain. The lighter alternatives keep data indefinitely and are simpler to read, but you give up the Google Ads and Search Console integrations and, on self-hosted setups, take on running the thing. Matomo is free on your own server and starts around €29 a month hosted; Plausible starts at $9 a month and publishes a self-hostable community edition under the AGPL. Run the new tool alongside the old one for a month before switching anything off.",
   pros: [

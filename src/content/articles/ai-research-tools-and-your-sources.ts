@@ -13,7 +13,7 @@ export const aiResearchToolsAndYourSources: Article = {
   imageAlt: "A stack of blank books beside a closed laptop and a magnifying glass",
   seoTitle: "AI Research Tools: Are Citations Safe?",
   seoDescription:
-    "Fabricated citations have largely been fixed. The failure that replaced them is quieter and more dangerous: a real paper, correctly cited, summarised without the limitations its authors were careful to state.",
+    "Fabricated citations are largely fixed. The quieter failure that replaced them: a real paper, correctly cited, summarised without its stated limitations.",
   quickAnswer:
     "Use AI research tools to find sources, never to represent them. Outright invented citations have become rare in dedicated research products, which retrieve from real indexes. The failure that remains is compression: summaries drop the limitations authors stated prominently — small sample, single population, correlation not causation — and present a hedged finding as a settled one. Read anything you intend to cite, specifically the methods and limitations, and write the claim from the paper rather than pasting the summary.",
   pros: [

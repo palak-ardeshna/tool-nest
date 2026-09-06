@@ -157,3 +157,56 @@ test("cited sources are absolute https urls, unique per article, and dated", () 
     }
   }
 });
+
+/**
+ * SERP presentation. Google truncates a title around 60 characters and the
+ * template appends " | ToolNest" to every one of them, so the budget an article
+ * actually gets is shorter than the string in the file.
+ */
+test("rendered page titles fit in a search result", () => {
+  const suffix = " | ToolNest";
+  for (const article of articles) {
+    const rendered = (article.seoTitle ?? article.title) + suffix;
+    assert.ok(
+      rendered.length <= 60,
+      `${article.slug}: title renders as ${rendered.length} chars — "${rendered}"`,
+    );
+  }
+});
+
+/**
+ * /articles is the only page linking the whole back catalogue, and the helper
+ * it reads through defaults to nine. Listing a slice there silently drops the
+ * older half of the site out of its own index.
+ */
+test("the archive page lists every published article", async () => {
+  const { allArticles } = await import("../src/content");
+  assert.equal(
+    allArticles.length,
+    articles.filter((a) => Date.parse(a.publishedAt) <= Date.now()).length,
+    "allArticles should expose every published article",
+  );
+  const source = await import("node:fs").then((fs) =>
+    fs.readFileSync("src/app/(site)/articles/page.tsx", "utf8"),
+  );
+  assert.match(
+    source,
+    /const articles = allArticles;/,
+    "/articles must render allArticles, not a getLatestArticles() slice",
+  );
+});
+
+/**
+ * Meta descriptions. Google truncates the snippet around 155-160 characters,
+ * and a description that ends mid-clause reads as carelessness on the one
+ * surface a reader sees before deciding whether to click.
+ */
+test("meta descriptions fit in a search snippet", () => {
+  for (const article of articles) {
+    const description = article.seoDescription ?? article.excerpt;
+    assert.ok(
+      description.length <= 155,
+      `${article.slug}: description is ${description.length} chars — "${description}"`,
+    );
+  }
+});

@@ -14,7 +14,7 @@ export const bestAiCodingToolsForReactDevelopers: Article = {
   imageAlt: "Close-up of a mechanical keyboard with blank keycaps",
   seoTitle: "AI Coding Tools for React Devs",
   seoDescription:
-    "A four-task evaluation for AI coding assistants on React and Next.js: the server component boundary test that eliminates most tools, where assistants genuinely save time, and why performance work is not one of those places.",
+    "Four tasks that separate AI coding assistants on React and Next.js: the server component test most tools fail, and where they genuinely save time.",
   quickAnswer:
     "For React specifically, the deciding factor is whether a tool respects the server/client component boundary. Ask it to convert a client component to a server component and move the data fetch: if the result calls a hook in an async server component, the tool does not understand the framework you are writing in and you will spend your time correcting it. Tools with repository-wide context generally get this right because they can see the neighbouring 'use client' directives; inline completion tools frequently do not. Beyond that boundary, assistants are strong on forms and component extraction, and weak on render performance, which is a measurement problem they cannot see.",
   pros: [
