@@ -33,8 +33,17 @@ import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recordin
 import { sendingEmailFromYourApp } from "@/content/articles/sending-email-from-your-app";
 import { webAnalyticsWithoutGoogleAnalytics } from "@/content/articles/web-analytics-without-google-analytics";
 
+import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
+import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
+import { textExpandersAndClipboardManagers } from "@/content/articles/text-expanders-and-clipboard-managers";
+import { authenticationBuildOrBuy } from "@/content/articles/authentication-build-or-buy";
+
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  whichAiAssistantIsWorthPayingFor,
+  whenASpreadsheetBecomesADatabase,
+  textExpandersAndClipboardManagers,
+  authenticationBuildOrBuy,
   screenRecordingForAsyncTeams,
   sendingEmailFromYourApp,
   webAnalyticsWithoutGoogleAnalytics,
