@@ -37,9 +37,11 @@ import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-as
 import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
 import { textExpandersAndClipboardManagers } from "@/content/articles/text-expanders-and-clipboard-managers";
 import { authenticationBuildOrBuy } from "@/content/articles/authentication-build-or-buy";
+import { choosingABackgroundJobQueue } from "@/content/articles/choosing-a-background-job-queue";
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  choosingABackgroundJobQueue,
   whichAiAssistantIsWorthPayingFor,
   whenASpreadsheetBecomesADatabase,
   textExpandersAndClipboardManagers,
