@@ -38,9 +38,13 @@ import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spre
 import { textExpandersAndClipboardManagers } from "@/content/articles/text-expanders-and-clipboard-managers";
 import { authenticationBuildOrBuy } from "@/content/articles/authentication-build-or-buy";
 import { choosingABackgroundJobQueue } from "@/content/articles/choosing-a-background-job-queue";
+import { schedulingLinksAndWhenToSkipThem } from "@/content/articles/scheduling-links-and-when-to-skip-them";
+import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  schedulingLinksAndWhenToSkipThem,
+  pdfToolsBeyondTheBrowser,
   choosingABackgroundJobQueue,
   whichAiAssistantIsWorthPayingFor,
   whenASpreadsheetBecomesADatabase,
