@@ -7,7 +7,7 @@ import type { Author, Category, ResolvedArticle, ResolvedCategory } from "@/cont
 /**
  * Resolves the content files into the shapes the app renders, once per process.
  *
- * Everything here is derived at module load: 23 articles is a few milliseconds,
+ * Everything here is derived at module load: a few dozen articles is a few milliseconds,
  * and doing it eagerly means every page is a pure array read with no async.
  */
 

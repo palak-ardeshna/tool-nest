@@ -210,3 +210,14 @@ test("meta descriptions fit in a search snippet", () => {
     );
   }
 });
+
+/**
+ * Publishing is "add a file, add an import line". A file without its line
+ * typechecks, builds and is never published — the one content mistake nothing
+ * else here catches.
+ */
+test("every article file is wired into the index", async () => {
+  const { readdirSync } = await import("node:fs");
+  const files = readdirSync("src/content/articles").filter((f) => f.endsWith(".ts") && f !== "index.ts");
+  assert.equal(articles.length, files.length, "an article file is missing from src/content/articles/index.ts");
+});

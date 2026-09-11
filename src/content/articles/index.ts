@@ -40,9 +40,15 @@ import { authenticationBuildOrBuy } from "@/content/articles/authentication-buil
 import { choosingABackgroundJobQueue } from "@/content/articles/choosing-a-background-job-queue";
 import { schedulingLinksAndWhenToSkipThem } from "@/content/articles/scheduling-links-and-when-to-skip-them";
 import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
+import { featureFlagsConfigFileOrPlatform } from "@/content/articles/feature-flags-config-file-or-platform";
+import { readItLaterAppsAfterPocket } from "@/content/articles/read-it-later-apps-after-pocket";
+import { whichBrowserAfterArc } from "@/content/articles/which-browser-after-arc";
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  whichBrowserAfterArc,
+  readItLaterAppsAfterPocket,
+  featureFlagsConfigFileOrPlatform,
   schedulingLinksAndWhenToSkipThem,
   pdfToolsBeyondTheBrowser,
   choosingABackgroundJobQueue,
