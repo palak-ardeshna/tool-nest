@@ -43,6 +43,12 @@ import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-th
 import { featureFlagsConfigFileOrPlatform } from "@/content/articles/feature-flags-config-file-or-platform";
 import { readItLaterAppsAfterPocket } from "@/content/articles/read-it-later-apps-after-pocket";
 import { whichBrowserAfterArc } from "@/content/articles/which-browser-after-arc";
+import { keywordResearchWithoutASubscription } from "@/content/articles/keyword-research-without-a-subscription";
+import { searchEnginesBeyondGoogle } from "@/content/articles/search-engines-beyond-google";
+import { checkingAClaimBeforeYouPublish } from "@/content/articles/checking-a-claim-before-you-publish";
+import { officeSuitesAfterThe2026PriceRises } from "@/content/articles/office-suites-after-the-2026-price-rises";
+import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
+import { writingForSearchWhenMostSearchesNeverClick } from "@/content/articles/writing-for-search-when-most-searches-never-click";
 
 import { aiInSpreadsheetsWhatItActuallyDoes } from "@/content/articles/ai-in-spreadsheets-what-it-actually-does";
 import { aiBrowserAgentsAfterAtlas } from "@/content/articles/ai-browser-agents-after-atlas";
@@ -63,6 +69,12 @@ export const articles: Article[] = [
   websiteBlockersThatActuallyHold,
   npmPnpmOrBunChoosingAPackageManager,
   objectStorageForASmallAppS3R2OrB2,
+  writingForSearchWhenMostSearchesNeverClick,
+  aiAppBuildersBeforeYouHireADeveloper,
+  officeSuitesAfterThe2026PriceRises,
+  checkingAClaimBeforeYouPublish,
+  searchEnginesBeyondGoogle,
+  keywordResearchWithoutASubscription,
   whichBrowserAfterArc,
   readItLaterAppsAfterPocket,
   featureFlagsConfigFileOrPlatform,

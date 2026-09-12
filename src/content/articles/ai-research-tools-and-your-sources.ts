@@ -5,7 +5,7 @@ export const aiResearchToolsAndYourSources: Article = {
   title: "AI Research Tools: What They Actually Do to Your Sources",
   excerpt:
     "Every research assistant promises to read the literature for you. The question worth asking is what happens to a citation on the way into a summary — and whether the paper still says what the summary claims it says.",
-  category: "ai-tools",
+  category: "research",
   author: "toolnest-editorial",
   tags: ["AI Research", "AI Tools", "How-To"],
   publishedAt: "2026-06-30",

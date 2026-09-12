@@ -29,6 +29,12 @@ export const categories: Category[] = [
       "Workflows, note-taking, time management and automation — practical systems that survive a busy week, and an honest account of the ones that do not.",
   },
   {
+    slug: "research",
+    name: "Research",
+    description:
+      "Web research done properly: finding what people actually search for, which search engines are worth switching to, and how to check a claim before you publish it.",
+  },
+  {
     slug: "developer-tools",
     name: "Developer Tools",
     description:
