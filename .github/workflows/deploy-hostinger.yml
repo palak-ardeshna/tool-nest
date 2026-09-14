@@ -1,0 +1,137 @@
+# Deploys to Hostinger's Node.js web app hosting through its public API on
+# every push to main. Nothing on the Hostinger side needs to be linked to
+# GitHub: the workflow packs the repo into a zip, uploads it to the site's
+# file storage, and asks Hostinger to build and start it — the same thing
+# hPanel's "Upload your website files" does, minus the clicking.
+#
+# One-time setup (repo → Settings → Secrets and variables → Actions):
+#   HOSTINGER_API_TOKEN  hPanel → API (under Dev tools) → Generate token
+#
+# API reference: https://docs.hostinger.com/api-reference/endpoints/hosting/nodejs/start-node-js-build
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Two pushes in quick succession queue up instead of racing each other.
+concurrency:
+  group: hostinger-deploy
+  cancel-in-progress: false
+
+env:
+  HOSTINGER_USERNAME: u118892403 # hosting account, from hPanel → Files → FTP Accounts
+  HOSTINGER_DOMAIN: toolnest.quest
+  NODE_VERSION: "22"
+  ARCHIVE: app.zip
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - run: npm ci
+
+      # Fail here, on the runner, rather than on Hostinger where a failed build
+      # replaces the running site. The editorial tests are the cheap part; the
+      # build is the one that catches a broken page.
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run build
+
+      # Tracked files only — no node_modules, no .next. Hostinger installs and
+      # builds from source on its side.
+      - name: Pack repository
+        run: git archive --format=zip -o "$ARCHIVE" HEAD
+
+      - name: Upload archive and start build
+        env:
+          HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$HOSTINGER_API_TOKEN" ]; then
+            echo "::error::HOSTINGER_API_TOKEN secret is not set"; exit 1
+          fi
+
+          API="https://developers.hostinger.com"
+          SITE="$API/api/hosting/v1/accounts/$HOSTINGER_USERNAME/websites/$HOSTINGER_DOMAIN"
+          api() {
+            curl -sS --fail-with-body \
+              -H "Authorization: Bearer $HOSTINGER_API_TOKEN" \
+              -H "Accept: application/json" \
+              -H "Content-Type: application/json" "$@"
+          }
+
+          echo "::group::1/4 Request upload credentials"
+          creds=$(api -X POST "$API/api/hosting/v1/files/upload-urls" \
+            -d "{\"username\":\"$HOSTINGER_USERNAME\",\"domain\":\"$HOSTINGER_DOMAIN\"}")
+          upload_url=$(jq -er '.url' <<<"$creds")
+          auth_key=$(jq -er '.auth_key' <<<"$creds")
+          rest_key=$(jq -er '.rest_auth_key' <<<"$creds")
+          echo "::add-mask::$auth_key"
+          echo "::add-mask::$rest_key"
+          echo "ok"
+          echo "::endgroup::"
+
+          echo "::group::2/4 Upload $ARCHIVE to public_html (TUS)"
+          size=$(stat -c%s "$ARCHIVE")
+          target="${upload_url%/}/$ARCHIVE?override=true"
+          tus=(-H "X-Auth: $auth_key" -H "X-Auth-Rest: $rest_key" -H "Tus-Resumable: 1.0.0")
+          curl -sS --fail-with-body -o /dev/null -X POST "$target" "${tus[@]}" \
+            -H "Upload-Length: $size" -H "Upload-Offset: 0"
+          curl -sS --fail-with-body -o /dev/null -X PATCH "$target" "${tus[@]}" \
+            -H "Content-Type: application/offset+octet-stream" \
+            -H "Upload-Offset: 0" --data-binary "@$ARCHIVE"
+          echo "uploaded $size bytes"
+          echo "::endgroup::"
+
+          echo "::group::3/4 Start build"
+          # Same framework detection hPanel runs on an uploaded zip, so the
+          # settings match what a manual upload would have used.
+          detected=$(api "$SITE/nodejs/builds/settings/from-archive?archive_path=$ARCHIVE")
+          echo "detected: $(jq -c 'del(.available_scripts)' <<<"$detected")"
+          payload=$(jq -c --arg archive "$ARCHIVE" --argjson node "$NODE_VERSION" '{
+            node_version: (.node_version // $node),
+            app_type: .app_type,
+            root_directory: .root_directory,
+            output_directory: .output_directory,
+            build_script: .build_script,
+            entry_file: .entry_file,
+            package_manager: (.package_manager // "npm"),
+            source_type: "archive",
+            source_options: { archive_path: $archive }
+          }' <<<"$detected")
+          build=$(api -X POST "$SITE/nodejs/builds" -d "$payload")
+          uuid=$(jq -er '.uuid' <<<"$build")
+          echo "build $uuid"
+          echo "::endgroup::"
+
+          echo "::group::4/4 Wait for build"
+          state=pending
+          for _ in $(seq 1 80); do # up to 20 minutes
+            sleep 15
+            state=$(api "$SITE/nodejs/builds/$uuid" | jq -r '.state')
+            echo "$(date +%T) $state"
+            [ "$state" = completed ] || [ "$state" = failed ] && break
+          done
+          echo "::endgroup::"
+
+          echo "::group::Build log"
+          api "$SITE/nodejs/builds/$uuid/logs" | jq -r '.logs // ""' | tail -n 80
+          echo "::endgroup::"
+
+          if [ "$state" != completed ]; then
+            echo "::error::Hostinger build ended in state '$state'"; exit 1
+          fi
+
+          # Edge cache still holds the previous build's HTML for up to five
+          # minutes; clearing it makes the deploy visible immediately.
+          api -X DELETE "$SITE/cache/clear" -o /dev/null || echo "cache clear skipped"
+          echo "deployed https://$HOSTINGER_DOMAIN"
