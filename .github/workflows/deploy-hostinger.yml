@@ -62,14 +62,26 @@ jobs:
 
           API="https://developers.hostinger.com"
           SITE="$API/api/hosting/v1/accounts/$HOSTINGER_USERNAME/websites/$HOSTINGER_DOMAIN"
+          FILES="$API/api/hosting/v1/accounts/$HOSTINGER_USERNAME/domains/$HOSTINGER_DOMAIN/files"
+
+          # Prints the response body. On HTTP >= 400 also reports status + body on
+          # stderr and fails, so a 500 from Hostinger shows *what* it complained about.
           api() {
-            curl -sS --fail-with-body \
+            local out code body
+            out=$(curl -sS -w '\n%{http_code}' \
               -H "Authorization: Bearer $HOSTINGER_API_TOKEN" \
               -H "Accept: application/json" \
-              -H "Content-Type: application/json" "$@"
+              -H "Content-Type: application/json" "$@")
+            code=${out##*$'\n'}
+            body=${out%$'\n'*}
+            printf '%s' "$body"
+            if [ "$code" -ge 400 ]; then
+              echo "HTTP $code: $body" >&2
+              return 22
+            fi
           }
 
-          echo "::group::1/4 Request upload credentials"
+          echo "::group::1/5 Request upload credentials"
           creds=$(api -X POST "$API/api/hosting/v1/files/upload-urls" \
             -d "{\"username\":\"$HOSTINGER_USERNAME\",\"domain\":\"$HOSTINGER_DOMAIN\"}")
           upload_url=$(jq -er '.url' <<<"$creds")
@@ -80,7 +92,7 @@ jobs:
           echo "ok"
           echo "::endgroup::"
 
-          echo "::group::2/4 Upload $ARCHIVE to public_html (TUS)"
+          echo "::group::2/5 Upload $ARCHIVE to the document root (TUS)"
           size=$(stat -c%s "$ARCHIVE")
           target="${upload_url%/}/$ARCHIVE?override=true"
           tus=(-H "X-Auth: $auth_key" -H "X-Auth-Rest: $rest_key" -H "Tus-Resumable: 1.0.0")
@@ -89,37 +101,57 @@ jobs:
           curl -sS --fail-with-body -o /dev/null -X PATCH "$target" "${tus[@]}" \
             -H "Content-Type: application/offset+octet-stream" \
             -H "Upload-Offset: 0" --data-binary "@$ARCHIVE"
-          echo "uploaded $size bytes"
+          echo "sent $size bytes"
           echo "::endgroup::"
 
-          echo "::group::3/4 Start build"
-          # Same framework detection hPanel runs on an uploaded zip, so the
-          # settings match what a manual upload would have used.
-          detected=$(api "$SITE/nodejs/builds/settings/from-archive?archive_path=$ARCHIVE")
-          echo "detected: $(jq -c 'del(.available_scripts)' <<<"$detected")"
+          echo "::group::3/5 Verify the archive landed"
+          listing=$(api "$FILES?max_depth=1&file_types=file&max_items=500")
+          remote_size=$(jq -r --arg f "$ARCHIVE" '.items[] | select(.name == $f) | .size_bytes' <<<"$listing")
+          if [ "$remote_size" != "$size" ]; then
+            echo "::error::$ARCHIVE not found in the document root with $size bytes (got '${remote_size:-nothing}')"
+            jq -r '.items[] | "\(.type)\t\(.size_bytes // "-")\t\(.path)"' <<<"$listing" | head -n 40
+            exit 1
+          fi
+          echo "$ARCHIVE is on the server ($remote_size bytes)"
+          echo "::endgroup::"
+
+          echo "::group::4/5 Start build"
+          # Settings, in order of trust: the ones Hostinger stored from earlier
+          # deploys of this site, then its auto-detection of the uploaded zip, then
+          # plain Next.js defaults. Each miss is reported, none of them is fatal.
+          err=$(mktemp)
+          if settings=$(api "$SITE/nodejs/builds/settings" 2>"$err"); then
+            echo "using stored build settings"
+          elif settings=$(api "$SITE/nodejs/builds/settings/from-archive?archive_path=$ARCHIVE" 2>"$err"); then
+            echo "no stored settings; using settings detected from the archive"
+          else
+            echo "::warning::stored settings and auto-detect both unavailable ($(tr '\n' ' ' <"$err")); using Next.js defaults"
+            settings='{}'
+          fi
           payload=$(jq -c --arg archive "$ARCHIVE" --argjson node "$NODE_VERSION" '{
             node_version: (.node_version // $node),
-            app_type: .app_type,
+            app_type: (.app_type // "next"),
             root_directory: .root_directory,
-            output_directory: .output_directory,
-            build_script: .build_script,
+            output_directory: (.output_directory // ".next"),
+            build_script: (.build_script // "build"),
             entry_file: .entry_file,
             package_manager: (.package_manager // "npm"),
             source_type: "archive",
             source_options: { archive_path: $archive }
-          }' <<<"$detected")
+          }' <<<"$settings")
+          echo "build request: $payload"
           build=$(api -X POST "$SITE/nodejs/builds" -d "$payload")
           uuid=$(jq -er '.uuid' <<<"$build")
-          echo "build $uuid"
+          echo "build $uuid started"
           echo "::endgroup::"
 
-          echo "::group::4/4 Wait for build"
+          echo "::group::5/5 Wait for build"
           state=pending
           for _ in $(seq 1 80); do # up to 20 minutes
             sleep 15
             state=$(api "$SITE/nodejs/builds/$uuid" | jq -r '.state')
             echo "$(date +%T) $state"
-            [ "$state" = completed ] || [ "$state" = failed ] && break
+            if [ "$state" = completed ] || [ "$state" = failed ]; then break; fi
           done
           echo "::endgroup::"
 
@@ -133,5 +165,5 @@ jobs:
 
           # Edge cache still holds the previous build's HTML for up to five
           # minutes; clearing it makes the deploy visible immediately.
-          api -X DELETE "$SITE/cache/clear" -o /dev/null || echo "cache clear skipped"
+          api -X DELETE "$SITE/cache/clear" >/dev/null || echo "cache clear skipped"
           echo "deployed https://$HOSTINGER_DOMAIN"
