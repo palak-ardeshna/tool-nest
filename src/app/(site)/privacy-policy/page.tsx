@@ -17,7 +17,7 @@ const crumbs = [{ label: "Home", href: "/" }, { label: "Privacy Policy" }];
 export default function PrivacyPolicyPage() {
   return (
     <Container width="reading" className="py-10 lg:py-14">
-      <PageHeader title="Privacy Policy" crumbs={crumbs} updated="19 August 2026" />
+      <PageHeader title="Privacy Policy" crumbs={crumbs} updated="18 September 2026" />
 
       <div className="prose">
         <p>
@@ -29,8 +29,9 @@ export default function PrivacyPolicyPage() {
         <ul>
           <li>
             <strong>Analytics data.</strong> Pages viewed, approximate location (country/region),
-            device and browser type, referring site, and any campaign parameters in the URL. This is
-            processed by Google Analytics.
+            device and browser type, referring site, and any campaign parameters in the URL. This
+            would be processed by Google Analytics; it is not currently enabled on the site, and this
+            policy will be updated before it is.
           </li>
           <li>
             <strong>Email you send us.</strong> Kept only as long as needed to deal with your message.

@@ -164,5 +164,5 @@ export const objectStorageForASmallAppS3R2OrB2: Article = {
 <li><strong>Moving the data.</strong> Egress applies to the migration too. Pulling 2 TB out of S3 costs about $180 at list price. rclone can do the copy from anywhere, and Cloudflare offers a migration tool that pulls from S3 progressively; do the sums before the copy, not after.</li>
 </ol>
 
-<p>The code change is an afternoon. The pricing change is permanent, in either direction, so it is worth an hour with a spreadsheet — and if that spreadsheet is the same one your app's other costs live in, the <a href="/articles/deploying-a-nextjs-app-four-routes">hosting comparison</a> we ran earlier this year is the other half of the bill.</p>`,
+<p>The code change is an afternoon. The pricing change is permanent, in either direction, so it is worth an hour with a spreadsheet — and if that spreadsheet is the same one your app's other costs live in, the <a href="/articles/deploying-a-nextjs-app-four-routes">hosting comparison</a> we wrote earlier this year is the other half of the bill.</p>`,
 };

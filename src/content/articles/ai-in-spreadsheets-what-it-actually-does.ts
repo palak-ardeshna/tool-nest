@@ -4,7 +4,7 @@ export const aiInSpreadsheetsWhatItActuallyDoes: Article = {
   slug: "ai-in-spreadsheets-what-it-actually-does",
   title: "AI in Spreadsheets: What Copilot, Gemini and Claude Actually Do in Your Cells",
   excerpt:
-    "Excel's COPILOT function is withdrawn from today, Google Sheets has an AI function that reads the web, and Claude now sits in a side pane and edits your formulas. We tested what each one is for, where each vendor tells you not to use it, and the one rule that keeps AI out of the cells that matter.",
+    "Excel's COPILOT function is withdrawn from today, Google Sheets has an AI function that reads the web, and Claude now sits in a side pane and edits your formulas. Here is what each one is for according to its own documentation, where each vendor tells you not to use it, and the one rule that keeps AI out of the cells that matter.",
   category: "ai-tools",
   author: "parth-patel",
   tags: ["AI Tools", "Spreadsheets", "Excel", "Google Sheets", "Comparisons"],
@@ -85,7 +85,7 @@ export const aiInSpreadsheetsWhatItActuallyDoes: Article = {
       checkedAt: "2026-09-14",
     },
   ],
-  content: `<p>There is a version of "AI in spreadsheets" that the demos show — type a question, get a chart — and a version that survives contact with a real workbook. We spent a month with the second version across Excel and Google Sheets, and the most useful thing we learnt is where each vendor draws its own line. All three publish a list of things not to use their tool for, and the lists are more honest than the marketing.</p>
+  content: `<p>There is a version of "AI in spreadsheets" that the demos show — type a question, get a chart — and a version that survives contact with a real workbook. We have not run a controlled test of the second version; what we have done is read each vendor's documentation closely, and the most useful thing in it is where each vendor draws its own line. All three publish a list of things not to use their tool for, and the lists are more honest than the marketing.</p>
 
 <p>The other thing we learnt is that the category is moving under our feet. Excel's in-cell COPILOT function, the feature that made the biggest splash a year ago, is withdrawn from today.</p>
 
@@ -101,7 +101,7 @@ export const aiInSpreadsheetsWhatItActuallyDoes: Article = {
 
 <h2>Google Sheets: the AI function that can read the web</h2>
 
-<p>Google's equivalent is still in the cell and, for the tasks it suits, is the most useful in-cell tool we tried. The syntax is <code>=AI("prompt", [range])</code> — you can also type <code>=Gemini()</code> — and the help page lists what it does: generate text, summarise, categorise, and analyse sentiment across the range you point it at. The feature that separates it from Excel's withdrawn function is that it can access real-time information from Google Search, so a column of company names can become a column of headquarters cities without leaving the sheet.</p>
+<p>Google's equivalent is still in the cell and, for the tasks it suits, is, on paper, the most useful in-cell tool of the three. The syntax is <code>=AI("prompt", [range])</code> — you can also type <code>=Gemini()</code> — and the help page lists what it does: generate text, summarise, categorise, and analyse sentiment across the range you point it at. The feature that separates it from Excel's withdrawn function is that it can access real-time information from Google Search, so a column of company names can become a column of headquarters cities without leaving the sheet.</p>
 
 <p>The limits are practical. You select cells and click Generate; only the first 350 selected cells run at a time, there are short-term and long-term generation limits, and the output is text you can refresh rather than a live formula. You need an eligible Google Workspace or Google AI plan. And the help page is plain that Gemini features may suggest inaccurate or inappropriate information and are not a substitute for professional advice. That is the right frame: it is a fast first draft of a column, to be spot-checked, not a lookup.</p>
 

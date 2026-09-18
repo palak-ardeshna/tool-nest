@@ -4,7 +4,7 @@ export const aiBrowserAgentsAfterAtlas: Article = {
   slug: "ai-browser-agents-after-atlas",
   title: "AI Browser Agents After Atlas: Claude in Chrome, Gemini Auto Browse, Copilot Mode and Comet",
   excerpt:
-    "OpenAI switched off its Atlas browser in August, less than a year after launching it, and the idea moved into extensions and modes inside the browser you already use. We tried the four that remain on the tasks people actually want done, and on the question the vendors' own safety pages keep raising: what happens when a web page gives your agent instructions.",
+    "OpenAI switched off its Atlas browser in August, less than a year after launching it, and the idea moved into extensions and modes inside the browser you already use. Here is how the four that remain describe themselves on the tasks people actually want done, and on the question the vendors' own safety pages keep raising: what happens when a web page gives your agent instructions.",
   category: "ai-tools",
   author: "parth-patel",
   tags: ["AI Tools", "Browsers", "Agents", "Comparisons"],
@@ -116,7 +116,7 @@ export const aiBrowserAgentsAfterAtlas: Article = {
   ],
   content: `<p>A year ago the pitch was a new browser. OpenAI's Atlas, Perplexity's Comet, a handful of others: replace Chrome with something that has an agent in it, and the agent will do the web for you. Atlas lasted ten months. OpenAI announced in July that it was being wound down, it stopped working on 9 August 2026, and the agent moved back into ChatGPT. The idea did not die; it just stopped being a browser and became a feature of the one you already had.</p>
 
-<p>So the field in September 2026 is one browser and three things that live inside other browsers. We ran the same tasks on each, then read what every vendor says on its own page about what not to do, because on this subject the safety pages are the most useful documentation there is.</p>
+<p>So the field in September 2026 is one browser and three things that live inside other browsers. We compared what each vendor documents for the same tasks, then read what every vendor says on its own page about what not to do, because on this subject the safety pages are the most useful documentation there is.</p>
 
 <h2>What they are for</h2>
 
