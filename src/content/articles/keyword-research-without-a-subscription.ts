@@ -6,7 +6,7 @@ export const keywordResearchWithoutASubscription: Article = {
   excerpt:
     "Google Trends, Search Console, Keyword Planner and Ahrefs Webmaster Tools cover most of what a small publication needs before it pays for anything. Here is what each one measures, what the numbers mean, and where the free tier stops.",
   category: "research",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Research", "SEO", "Google Trends", "How-To"],
   publishedAt: "2026-09-12",
   image: "/images/articles/keyword-research-without-a-subscription.webp",

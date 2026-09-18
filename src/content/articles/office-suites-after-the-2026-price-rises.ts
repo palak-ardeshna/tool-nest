@@ -6,7 +6,7 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
   excerpt:
     "Microsoft 365 Business plans went up in July, Google Workspace went up the year before, and Office 2021 leaves support in October. For a small team that is three bills arriving at once. Here is what actually changed, what the alternatives cost, and the one exercise that settles the decision.",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Software", "Microsoft 365", "Google Workspace", "Pricing", "Small Teams"],
   publishedAt: "2026-09-12",
   image: "/images/articles/office-suites-after-the-2026-price-rises.webp",

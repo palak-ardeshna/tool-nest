@@ -6,10 +6,9 @@ export const errorTrackingForSmallTeams: Article = {
   excerpt:
     "Sentry is priced by event volume, and event volume is not something you control on a bad day. Here is how the alternatives differ, what self-hosting really costs, and the four things to set up before you need any of them.",
   category: "developer-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Developer Tools", "Monitoring", "Self-hosting", "Comparisons"],
-  publishedAt: "2026-08-28",
-  contentUpdatedAt: "2026-09-01",
+  publishedAt: "2026-09-02",
   featured: true,
   image: "/images/articles/error-tracking-for-small-teams.webp",
   imageAlt: "A laptop screen showing a web performance monitoring dashboard: load time and start render histograms with a bounce rate curve over them, above session and page-view figures",

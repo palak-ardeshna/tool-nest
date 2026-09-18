@@ -6,9 +6,9 @@ export const taskManagersCompared: Article = {
   excerpt:
     "Every task manager works in a calm week, which is why feature comparisons predict nothing. Three properties decide whether you are still using one in six months — and none of them appear on a pricing page.",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Productivity Apps", "Productivity", "Comparisons"],
-  publishedAt: "2026-07-08",
+  publishedAt: "2026-08-19",
   image: "/images/articles/task-managers-compared.webp",
   imageAlt: "Three slim notebooks standing side by side against a pale background",
   seoTitle: "Choosing a Task Manager That Lasts",

@@ -135,10 +135,8 @@ export function articleSchema(article: ResolvedArticle) {
           })),
         }
       : {}),
-    // An editorial-team byline, not a named individual: asserting a Person who
-    // did not write or test this would misrepresent the content to Google.
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: article.author.name,
       url: absoluteUrl(`/authors/${article.author.slug}`),
     },

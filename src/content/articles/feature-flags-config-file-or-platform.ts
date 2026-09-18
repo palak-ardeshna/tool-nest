@@ -6,7 +6,7 @@ export const featureFlagsConfigFileOrPlatform: Article = {
   excerpt:
     "Most teams under ten engineers do not need a feature flag service. Here is the point at which they do, what LaunchDarkly, PostHog, Flagsmith and Unleash actually cost when you get there, and the one habit that keeps flags from becoming a wall of switches nobody understands.",
   category: "developer-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Developer Tools", "Feature Flags", "Deployment", "Comparisons"],
   publishedAt: "2026-09-11",
   image: "/images/articles/feature-flags-config-file-or-platform.webp",

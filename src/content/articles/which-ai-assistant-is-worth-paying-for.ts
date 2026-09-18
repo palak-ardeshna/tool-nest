@@ -9,7 +9,7 @@ export const whichAiAssistantIsWorthPayingFor: Article = {
   imageAlt:
     "Photograph: a laptop on a speckled worktop showing OpenAI's ChatGPT announcement page, the screen the only lit thing in a dark room",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Tools", "ChatGPT", "Claude", "Gemini", "Subscriptions"],
   publishedAt: "2026-09-07",
   seoTitle: "ChatGPT vs Claude vs Gemini: What to Pay For",

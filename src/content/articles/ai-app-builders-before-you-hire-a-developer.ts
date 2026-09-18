@@ -6,7 +6,7 @@ export const aiAppBuildersBeforeYouHireADeveloper: Article = {
   excerpt:
     "Lovable, Bolt and v0 will turn a paragraph into a working web app in an afternoon. Whether that app survives its first real user is a different question. Here is what each tool is for, what the credit-based pricing really costs, and the point at which you need a person.",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Tools", "No-Code", "Lovable", "Bolt", "Prototyping"],
   publishedAt: "2026-09-12",
   image: "/images/articles/ai-app-builders-before-you-hire-a-developer.webp",

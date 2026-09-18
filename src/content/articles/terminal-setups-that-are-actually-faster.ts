@@ -6,9 +6,9 @@ export const terminalSetupsThatAreActuallyFaster: Article = {
   excerpt:
     "Most terminal customisation makes your prompt prettier and your shell slower. These are the changes that measurably saved time over three months.",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Developer Software", "Developer Tools", "Productivity"],
-  publishedAt: "2026-06-16",
+  publishedAt: "2026-08-19",
   image: "/images/articles/terminal-setups-that-are-actually-faster.webp",
   imageAlt: "A dark desk setup lit by a single warm rim light",
   seoTitle: "Terminal Setups That Are Faster",

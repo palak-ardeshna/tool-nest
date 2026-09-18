@@ -6,7 +6,7 @@ export const writingForSearchWhenMostSearchesNeverClick: Article = {
   excerpt:
     "SparkToro's 2026 study puts zero-click Google searches at 68%, up from 60% two years earlier, with AI Overviews doing most of the pushing. For a small site that lives on search traffic this is the number that matters. Here is what it does and does not mean, and what we changed.",
   category: "research",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Research", "SEO", "AI Overviews", "Publishing"],
   publishedAt: "2026-09-12",
   image: "/images/articles/writing-for-search-when-most-searches-never-click.webp",

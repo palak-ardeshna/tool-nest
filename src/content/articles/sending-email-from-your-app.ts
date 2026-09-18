@@ -9,9 +9,9 @@ export const sendingEmailFromYourApp: Article = {
   imageAlt:
     "Photograph: an open laptop in a darkened room, its screen the only light, showing a long list of messages in an email client",
   category: "developer-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Developer Tools", "Email", "DNS", "Deliverability"],
-  publishedAt: "2026-09-05",
+  publishedAt: "2026-09-06",
   contentUpdatedAt: "2026-09-06",
   seoTitle: "Email Deliverability: SPF, DKIM and DMARC (2026)",
   seoDescription:

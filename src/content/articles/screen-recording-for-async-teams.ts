@@ -9,7 +9,7 @@ export const screenRecordingForAsyncTeams: Article = {
   imageAlt:
     "Photograph: a laptop on a desk by a window showing a multitrack recording timeline, with a mixer, a monitor speaker and headphones around it",
   category: "productivity",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Productivity", "Async Work", "Video", "Remote Teams"],
   publishedAt: "2026-09-06",
   contentUpdatedAt: "2026-09-06",

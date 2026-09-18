@@ -35,11 +35,9 @@ export default function AboutPage() {
         <h2>Who is behind ToolNest</h2>
         <p>
           ToolNest is a small independent site, not a company with a newsroom. It is run by one
-          person, and articles are published under a single editorial byline —{" "}
-          <Link href="/authors/toolnest-editorial">ToolNest Editorial</Link> — rather than invented
-          personal names. Editorial responsibility for everything on this site rests with the site
-          owner, reachable at{" "}
-          <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
+          person, <Link href="/authors/parth-patel">Parth Patel</Link>, who researches, edits and
+          publishes every article. Editorial responsibility for everything on this site rests with
+          him, reachable at <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
         </p>
 
         <h2>How our articles are made</h2>

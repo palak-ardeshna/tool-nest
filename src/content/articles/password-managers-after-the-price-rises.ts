@@ -6,10 +6,9 @@ export const passwordManagersAfterThePriceRises: Article = {
   excerpt:
     "1Password put its individual plan up, Bitwarden roughly doubled Premium, and Proton Pass cut its price in half. The ranking people memorised two years ago no longer matches the invoices. Here is what actually moved, and how to decide without migrating twice.",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Security", "Software", "Comparisons", "Privacy"],
-  publishedAt: "2026-08-24",
-  contentUpdatedAt: "2026-09-01",
+  publishedAt: "2026-09-02",
   image: "/images/articles/password-managers-after-the-price-rises.webp",
   imageAlt: "An opened silver combination padlock resting on the keys of a white computer keyboard",
   seoTitle: "Password Managers in 2026: Prices Compared",

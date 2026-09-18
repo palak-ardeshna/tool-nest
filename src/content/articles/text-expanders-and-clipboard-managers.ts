@@ -9,7 +9,7 @@ export const textExpandersAndClipboardManagers: Article = {
   imageAlt:
     "Photograph: a close-up of one hand resting on a laptop keyboard mid-sentence, the rest of the desk out of focus",
   category: "productivity",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Productivity", "Automation", "Espanso", "Raycast", "Shortcuts"],
   publishedAt: "2026-09-07",
   seoTitle: "Text Expanders and Clipboard Managers Compared",

@@ -6,7 +6,7 @@ export const bestAiCodingToolsForReactDevelopers: Article = {
   excerpt:
     "React changed its rules, and assistants trained largely on older code get the server/client boundary wrong with total confidence. Our shortlist of the tools that handle it, and the four tasks that tell you within twenty minutes whether yours does.",
   category: "developer-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Coding", "React", "Developer Tools"],
   publishedAt: "2026-08-11",
   contentUpdatedAt: "2026-09-14",

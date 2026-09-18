@@ -6,7 +6,7 @@ export const choosingABackgroundJobQueue: Article = {
   excerpt:
     "Every comparison of Inngest, Trigger.dev, BullMQ and pg-boss argues about features. The decision is usually made earlier and by something else: whether your runtime lets you keep a worker process alive at all.",
   category: "developer-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Developer Tools", "Backend", "Serverless", "Comparisons"],
   publishedAt: "2026-09-08",
   image: "/images/articles/choosing-a-background-job-queue.webp",

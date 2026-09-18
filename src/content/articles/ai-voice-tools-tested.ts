@@ -6,9 +6,9 @@ export const aiVoiceToolsTested: Article = {
   excerpt:
     "Transcription, cloning and dubbing wear one label but sit at completely different levels of maturity. Treating them as one category is how teams end up disappointed — and, with cloning, exposed.",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Voice", "Buying Guides", "AI Tools"],
-  publishedAt: "2026-07-21",
+  publishedAt: "2026-08-19",
   contentUpdatedAt: "2026-08-19",
   image: "/images/articles/ai-voice-tools-tested.webp",
   imageAlt: "A studio condenser microphone on a boom arm against a grey backdrop",

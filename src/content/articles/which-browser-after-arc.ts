@@ -6,7 +6,7 @@ export const whichBrowserAfterArc: Article = {
   excerpt:
     "Arc stopped getting new features in 2025 and its maker now belongs to Atlassian. If you built your working day around Spaces and a sidebar, here is what each replacement actually gives you, what it costs, and why the right answer for most people is duller than they hoped.",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Software", "Browsers", "Productivity", "Comparisons"],
   publishedAt: "2026-09-11",
   image: "/images/articles/which-browser-after-arc.webp",

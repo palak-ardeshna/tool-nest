@@ -9,7 +9,7 @@ export const whenASpreadsheetBecomesADatabase: Article = {
   imageAlt:
     "Photograph: over the shoulder of someone typing at a laptop, the screen filled with a grid of small charts and figures",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Software", "Airtable", "Notion", "No-Code", "Small Teams"],
   publishedAt: "2026-09-07",
   seoTitle: "Airtable vs Notion vs Baserow vs NocoDB",

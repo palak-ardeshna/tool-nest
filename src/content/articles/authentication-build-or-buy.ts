@@ -9,7 +9,7 @@ export const authenticationBuildOrBuy: Article = {
   imageAlt:
     "Photograph: a laptop screen at an angle showing a browser page reading Authentication Failed, with a Login Retry link beneath it",
   category: "developer-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Developer Tools", "Authentication", "SaaS", "Security", "Pricing"],
   publishedAt: "2026-09-07",
   seoTitle: "Auth: Clerk vs Auth0 vs Supabase vs WorkOS",

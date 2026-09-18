@@ -6,7 +6,7 @@ export const checkingAClaimBeforeYouPublish: Article = {
   excerpt:
     "A pricing figure, a statistic, a quote, a screenshot. Each one can be checked in under five minutes with tools that cost nothing, if you know which tool answers which question. This is the sequence we run on every article, and where it still fails.",
   category: "research",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Research", "Fact-Checking", "Sources", "How-To"],
   publishedAt: "2026-09-12",
   image: "/images/articles/checking-a-claim-before-you-publish.webp",

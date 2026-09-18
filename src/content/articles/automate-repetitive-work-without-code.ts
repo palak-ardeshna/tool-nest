@@ -6,9 +6,9 @@ export const automateRepetitiveWorkWithoutCode: Article = {
   excerpt:
     "A practical method for finding what to automate, choosing where to build it, and knowing when automation costs more than the task did.",
   category: "productivity",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Automation", "Workflows", "How-To"],
-  publishedAt: "2026-05-30",
+  publishedAt: "2026-08-19",
   image: "/images/articles/automate-repetitive-work-without-code.webp",
   imageAlt: "Three pale interlocking ceramic gears on a light surface",
   seoTitle: "Automate Repetitive Work, No Code",

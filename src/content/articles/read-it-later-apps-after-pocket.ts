@@ -6,7 +6,7 @@ export const readItLaterAppsAfterPocket: Article = {
   excerpt:
     "Pocket closed in July 2025 and took a lot of people's reading habit with it. We compared the survivors — Instapaper, Readwise Reader, Raindrop, Wallabag and your browser's own reading list — on what the free tiers cover, what you actually pay for, and how to stop the queue becoming a graveyard.",
   category: "productivity",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Productivity", "Reading", "Bookmarks", "Comparisons"],
   publishedAt: "2026-09-11",
   image: "/images/articles/read-it-later-apps-after-pocket.webp",

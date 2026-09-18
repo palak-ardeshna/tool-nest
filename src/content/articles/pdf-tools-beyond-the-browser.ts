@@ -6,7 +6,7 @@ export const pdfToolsBeyondTheBrowser: Article = {
   excerpt:
     "Most of what people install PDF software for is already sitting on the machine: the browser reads and fills them, and one free command-line tool merges, splits and repairs them. Here is where that stops working and paying starts to make sense.",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Software", "PDF", "Documents", "Free Tools"],
   publishedAt: "2026-09-09",
   image: "/images/articles/pdf-tools-beyond-the-browser.webp",

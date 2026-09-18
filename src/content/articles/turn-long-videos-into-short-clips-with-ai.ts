@@ -6,9 +6,9 @@ export const turnLongVideosIntoShortClipsWithAi: Article = {
   excerpt:
     "A repeatable workflow for cutting webinars, podcasts and talks into clips people actually watch — and the steps where automation makes it worse.",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Video", "How-To", "Content"],
-  publishedAt: "2026-07-15",
+  publishedAt: "2026-08-19",
   image: "/images/articles/turn-long-videos-into-short-clips-with-ai.webp",
   imageAlt: "A strip of 35mm film beside a closed clapperboard",
   seoTitle: "Turn Long Videos Into Short Clips",

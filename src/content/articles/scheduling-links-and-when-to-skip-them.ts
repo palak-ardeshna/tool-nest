@@ -6,7 +6,7 @@ export const schedulingLinksAndWhenToSkipThem: Article = {
   excerpt:
     "A booking link saves you three emails and quietly tells the other person whose time is worth more. Here is the rule we use for which conversations get a link, and what the free tiers of Cal.com, Calendly and Google Calendar actually cover.",
   category: "productivity",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Productivity", "Meetings", "Calendars", "Comparisons"],
   publishedAt: "2026-09-09",
   image: "/images/articles/scheduling-links-and-when-to-skip-them.webp",

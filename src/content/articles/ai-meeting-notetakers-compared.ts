@@ -6,10 +6,9 @@ export const aiMeetingNotetakersCompared: Article = {
   excerpt:
     "Fathom, Otter and Granola are sold as the same product and are not. The real decision is whether a bot joins your call, who is allowed to record it, and what happens to the transcript afterwards. Here is how the options differ and how to test one in a fortnight.",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Tools", "Meetings", "Comparisons", "Productivity"],
-  publishedAt: "2026-08-20",
-  contentUpdatedAt: "2026-09-01",
+  publishedAt: "2026-09-02",
   featured: true,
   image: "/images/articles/ai-meeting-notetakers-compared.webp",
   imageAlt: "A laptop on a wooden table showing a video call with a grid of around twenty participants, a mug of coffee in the foreground",

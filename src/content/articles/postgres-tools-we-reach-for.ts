@@ -6,9 +6,9 @@ export const postgresToolsWeReachFor: Article = {
   excerpt:
     "Six pieces of Postgres tooling that earn their place, what each one is actually for, the order to reach for them when something is slow, and the three common problems where none of them will help you.",
   category: "developer-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Database Tools", "Developer Tools", "Software"],
-  publishedAt: "2026-06-11",
+  publishedAt: "2026-08-19",
   image: "/images/articles/postgres-tools-we-reach-for.webp",
   imageAlt: "Frosted acrylic sheets stacked with gaps, edges catching indigo light",
   seoTitle: "Postgres Tools Worth Setting Up",

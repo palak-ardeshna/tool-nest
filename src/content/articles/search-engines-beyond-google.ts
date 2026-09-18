@@ -6,7 +6,7 @@ export const searchEnginesBeyondGoogle: Article = {
   excerpt:
     "Kagi, Brave, DuckDuckGo and Perplexity are sold as alternatives to Google, but only some of them are alternatives to Google's index. Here is where each one's results come from, what they cost, and how to tell in a week whether switching is worth the friction.",
   category: "research",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Research", "Search", "Privacy", "Comparisons"],
   publishedAt: "2026-09-12",
   image: "/images/articles/search-engines-beyond-google.webp",

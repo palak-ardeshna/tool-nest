@@ -15,8 +15,8 @@ export function Hero({ articleCount }: { articleCount: number }) {
             <span className="text-accent">Work smarter.</span>
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            Practical guides, comparisons and reviews for AI tools, software and productivity —
-            written after we actually use them.
+            Practical guides, comparisons and buying advice for AI tools, software and
+            productivity — researched from vendor documentation, with every claim sourced and dated.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <ButtonLink href="/category/ai-tools" size="lg">

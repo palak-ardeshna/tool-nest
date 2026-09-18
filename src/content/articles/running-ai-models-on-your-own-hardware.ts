@@ -9,9 +9,9 @@ export const runningAiModelsOnYourOwnHardware: Article = {
   imageAlt:
     "Photograph: a processor seated in an open motherboard socket with the retention arm raised, blue memory slots running along the top",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Tools", "Local AI", "Privacy", "Hardware"],
-  publishedAt: "2026-09-01",
+  publishedAt: "2026-09-04",
   contentUpdatedAt: "2026-09-04",
   featured: true,
   seoTitle: "Running AI Models Locally: Is It Worth It? (2026)",

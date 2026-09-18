@@ -58,9 +58,17 @@ import { appLaunchersRaycastAlfredAndPowertoys } from "@/content/articles/app-la
 import { websiteBlockersThatActuallyHold } from "@/content/articles/website-blockers-that-actually-hold";
 import { npmPnpmOrBunChoosingAPackageManager } from "@/content/articles/npm-pnpm-or-bun-choosing-a-package-manager";
 import { objectStorageForASmallAppS3R2OrB2 } from "@/content/articles/object-storage-for-a-small-app-s3-r2-or-b2";
+import { windows10SupportHasEndedWhatEachOptionCosts } from "@/content/articles/windows-10-support-has-ended-what-each-option-costs";
+import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
+import { softwareYouCanStillBuyOnce } from "@/content/articles/software-you-can-still-buy-once";
+import { leavingCursorWhatMovesAndWhatDoesnt } from "@/content/articles/leaving-cursor-what-moves-and-what-doesnt";
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  windows10SupportHasEndedWhatEachOptionCosts,
+  shouldYouLetAnAiAgentUseYourBrowser,
+  softwareYouCanStillBuyOnce,
+  leavingCursorWhatMovesAndWhatDoesnt,
   aiInSpreadsheetsWhatItActuallyDoes,
   aiBrowserAgentsAfterAtlas,
   emailClientsAfterNotionMail,

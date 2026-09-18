@@ -6,9 +6,9 @@ export const freeVsPaidAiWritingTools: Article = {
   excerpt:
     "The free tiers are better than most people assume. Here is exactly what you gain by paying, and the cases where you gain nothing at all.",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Writing", "Comparisons", "Software"],
-  publishedAt: "2026-07-02",
+  publishedAt: "2026-08-19",
   image: "/images/articles/free-vs-paid-ai-writing-tools.webp",
   imageAlt: "Two stacks of blank paper, one taller than the other",
   seoTitle: "Free vs Paid AI Writing Tools",

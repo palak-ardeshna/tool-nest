@@ -6,9 +6,9 @@ export const weekWithAnAiCodingAgent: Article = {
   excerpt:
     "Agent demos use fresh repositories and well-behaved tasks. Real backlogs contain vague tickets, undocumented decisions and untested code paths — and the difference between where agents succeed and where they fail is sharper than the marketing suggests.",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Coding", "Developer Tools", "AI Tools"],
-  publishedAt: "2026-08-13",
+  publishedAt: "2026-08-19",
   contentUpdatedAt: "2026-08-19",
   featured: true,
   image: "/images/articles/week-with-an-ai-coding-agent.webp",
