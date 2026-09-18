@@ -221,3 +221,24 @@ test("every article file is wired into the index", async () => {
   const files = readdirSync("src/content/articles").filter((f) => f.endsWith(".ts") && f !== "index.ts");
   assert.equal(articles.length, files.length, "an article file is missing from src/content/articles/index.ts");
 });
+
+/**
+ * Cadence. CLAUDE.md caps publishing at two articles a week: batches are the
+ * fingerprint AdSense rejects. The 61 articles that predate the rule stay as
+ * they are; anything dated after it is held to it. Two articles on the same
+ * day are fine; a third within any seven-day window is not.
+ */
+test("no more than two articles publish in any seven-day window", () => {
+  const RULE_DATE = Date.parse("2026-09-18");
+  const WEEK = 7 * 24 * 60 * 60 * 1000;
+  const dates = articles
+    .map((a) => Date.parse(a.publishedAt))
+    .filter((d) => d > RULE_DATE)
+    .sort((a, b) => a - b);
+  for (let i = 2; i < dates.length; i += 1) {
+    assert.ok(
+      dates[i] - dates[i - 2] >= WEEK,
+      `three articles within seven days around ${new Date(dates[i]).toISOString().slice(0, 10)}`,
+    );
+  }
+});
