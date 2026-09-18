@@ -14,7 +14,7 @@ export const whichBrowserAfterArc: Article = {
     "A laptop on a stand on a wooden desk with a keyboard, mouse, glasses and a small potted plant arranged around it",
   seoTitle: "Best Browser After Arc: Zen, Vivaldi, Dia (2026)",
   seoDescription:
-    "Arc is in maintenance mode. We compare Zen, Vivaldi, Dia, Edge and Chrome on vertical tabs, workspaces, extensions and price for anyone who has to move.",
+    "Arc is in maintenance mode. I compare Zen, Vivaldi, Dia, Edge and Chrome on vertical tabs, workspaces, extensions and price for anyone who has to move.",
   quickAnswer:
     "Arc still runs and still gets security updates through Chromium, so you do not have to move today — but its sync and its team are gone, so plan to. If Spaces and the sidebar were the point, Zen is the closest free replacement: Firefox-based, open source, workspaces and split view built in, on Windows, macOS and Linux, with the trade-off that Chrome extensions do not work. If you need Chrome extensions, Vivaldi is free, has workspaces, tab stacks and a vertical tab bar, and has been shipping for a decade. Dia is the official successor and is a different product: an AI assistant with a browser attached, macOS on Apple Silicon only, free for the browser and $20 a month for the AI. For most people, Chrome or Edge with vertical tabs switched on — both have it natively now — is the answer they will still be using in five years.",
   pros: [
@@ -106,7 +106,7 @@ export const whichBrowserAfterArc: Article = {
 
 <p>In May 2025 The Browser Company said it would stop building new features for Arc and put its effort into Dia, an AI-first browser. In September 2025 Atlassian agreed to buy the company for $610 million in cash. Arc still installs, still runs and still picks up Chromium security fixes, but its team has moved on and nobody has committed to keeping its sync servers alive. If it was your daily browser, the sensible thing is to decide where you are going before you are forced to.</p>
 
-<p>We moved a mix of Mac, Windows and Linux machines off Arc over the past year. This is what each option is actually like to live in.</p>
+<p>I moved a mix of Mac, Windows and Linux machines off Arc over the past year. This is what each option is actually like to live in.</p>
 
 <h2>First, what you actually used</h2>
 
@@ -126,7 +126,7 @@ export const whichBrowserAfterArc: Article = {
 
 <p>Zen is a fork of Firefox, open source under the Mozilla Public Licence, built by a small community and released on Windows, macOS and Linux. It is the browser that looks most like Arc: a vertical sidebar that collapses to icons in compact mode, workspaces that separate tabs by project, split view for two pages side by side, nested tab folders, and Glance, which opens a link in a modal preview over the current page rather than in a new tab.</p>
 
-<p>It is also the browser that asks the most of you. It runs Firefox add-ons rather than Chrome extensions, which covers the popular ones — uBlock Origin, the <a href="/articles/password-managers-after-the-price-rises">password managers we compared</a>, Obsidian's clipper — but not the long tail, and not an internal tool your employer built for Chrome. Some DRM-protected streaming can be awkward on Firefox forks. And it is a community project on a fast release cadence, which means the odd rough edge and a settings screen that changes between versions.</p>
+<p>It is also the browser that asks the most of you. It runs Firefox add-ons rather than Chrome extensions, which covers the popular ones — uBlock Origin, the <a href="/articles/password-managers-after-the-price-rises">password managers I compared</a>, Obsidian's clipper — but not the long tail, and not an internal tool your employer built for Chrome. Some DRM-protected streaming can be awkward on Firefox forks. And it is a community project on a fast release cadence, which means the odd rough edge and a settings screen that changes between versions.</p>
 
 <blockquote>
 <p>Zen is the right answer if Arc's layout was the point and you can live without Chrome extensions. That is a real trade, and worth making deliberately.</p>
@@ -142,13 +142,13 @@ export const whichBrowserAfterArc: Article = {
 
 <p>Dia is what The Browser Company built instead of Arc, and it is a different product. The browser itself is deliberately plain — profiles, tab groups, split view, a built-in ad blocker and sync are on the free plan — and the point is the assistant: chat with your open tabs, draft from what you are reading, and on the paid tiers generate briefs and recaps from your documents. Better Answers is $20 a month; Better Days is $100 a month and pitched at people who live in meetings.</p>
 
-<p>It runs only on macOS 14 or later on Apple Silicon. There is no Windows or Linux version and no date for one. If you loved Arc for the sidebar and Spaces, Dia will feel like a step backwards with a chatbot attached. If what you actually wanted was an assistant that can see your tabs — a use we found genuinely handy when <a href="/articles/which-ai-assistant-is-worth-paying-for">comparing paid AI assistants</a> — then the free plan is a reasonable place to try it, and the $20 tier is priced against the assistants, not the browsers.</p>
+<p>It runs only on macOS 14 or later on Apple Silicon. There is no Windows or Linux version and no date for one. If you loved Arc for the sidebar and Spaces, Dia will feel like a step backwards with a chatbot attached. If what you actually wanted was an assistant that can see your tabs — a use I found genuinely handy when <a href="/articles/which-ai-assistant-is-worth-paying-for">comparing paid AI assistants</a> — then the free plan is a reasonable place to try it, and the $20 tier is priced against the assistants, not the browsers.</p>
 
 <h2>The boring answer: Chrome or Edge</h2>
 
 <p>Here is the thing the browser enthusiasts skip over. Chrome added native vertical tabs to its stable release in early 2026: right-click the tab strip and choose Show Tabs Vertically. Edge has had vertical tabs, sleeping tabs and Workspaces for years, and its Workspaces are now a solid local project-per-window feature even after Microsoft removed the ability to share one with a colleague. Both are free, both run every extension, both are on every platform, and both will exist in five years.</p>
 
-<p>What you give up is the feel. Neither has split view, neither has anything like Little Arc, and Chrome's tab groups are a poor substitute for Spaces. But if the two things you named at the top were vertical tabs and extensions, this is where you should go, and a couple of the <a href="/articles/browser-extensions-that-save-time">extensions we rate</a> will cover most of the rest.</p>
+<p>What you give up is the feel. Neither has split view, neither has anything like Little Arc, and Chrome's tab groups are a poor substitute for Spaces. But if the two things you named at the top were vertical tabs and extensions, this is where you should go, and a couple of the <a href="/articles/browser-extensions-that-save-time">extensions I rate</a> will cover most of the rest.</p>
 
 <h2>Side by side</h2>
 
@@ -166,9 +166,9 @@ export const whichBrowserAfterArc: Article = {
 </tbody>
 </table>
 
-<h2>What we did</h2>
+<h2>What I did</h2>
 
-<p>The Mac users who cared most about the sidebar went to Zen and have stayed, with one exception who needed a Chrome-only internal tool and landed on Vivaldi. The Windows and Linux machines went to Vivaldi or straight to Edge with vertical tabs. Nobody kept Dia past the trial, though one of us pays for an assistant separately and could see the appeal.</p>
+<p>On the Mac, where the sidebar mattered most to me, I went to Zen and have stayed. On the Linux machine I use Vivaldi, and Edge with vertical tabs is the fallback where a Chrome-only internal tool is involved. I did not keep Dia past the trial, though I pay for an assistant separately and could see the appeal.</p>
 
-<p>The lesson we took from Arc is the one we keep taking from software this decade: a lovely product from a venture-funded company is a lease, not a purchase. Pick the replacement you can live with if its maker is bought tomorrow. For most people, that is the boring one.</p>`,
+<p>The lesson I took from Arc is the one I keep taking from software this decade: a lovely product from a venture-funded company is a lease, not a purchase. Pick the replacement you can live with if its maker is bought tomorrow. For most people, that is the boring one.</p>`,
 };

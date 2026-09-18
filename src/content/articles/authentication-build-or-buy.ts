@@ -126,7 +126,7 @@ export const authenticationBuildOrBuy: Article = {
 <p>Not in the login form. In four places that never appear in the estimate:</p>
 
 <ul>
-<li><strong>Email deliverability.</strong> A password reset that lands in spam is an outage with a support ticket attached. Reset and verification messages are the highest-stakes email your application sends, and getting them delivered is its own piece of work — we went through it in detail in our guide to <a href="/articles/sending-email-from-your-app">sending email from your app</a>.</li>
+<li><strong>Email deliverability.</strong> A password reset that lands in spam is an outage with a support ticket attached. Reset and verification messages are the highest-stakes email your application sends, and getting them delivered is its own piece of work — I went through it in detail in my guide to <a href="/articles/sending-email-from-your-app">sending email from your app</a>.</li>
 <li><strong>Session handling.</strong> Expiry, refresh, revocation on password change, and logging someone out of every device. Each one is a small decision with a security consequence.</li>
 <li><strong>Account recovery.</strong> The path for someone who has lost the phone with their second factor on it. This flow is where most real-world account takeovers actually happen, because it is the one everybody rushes.</li>
 <li><strong>Enterprise features later.</strong> SAML, SCIM, audit logs. Cheap to add if you chose a library that has them; a quarter of work if you did not.</li>
@@ -152,11 +152,11 @@ export const authenticationBuildOrBuy: Article = {
 <li><strong>Is your funnel leaky?</strong> Large numbers of signups who never return are cheap under retained-user metering and expensive under active-user metering. That difference alone can move the annual bill by a factor of ten.</li>
 </ol>
 
-<p>Whichever way it goes, ask one question before signing: will you export password hashes if we leave? A provider who will not is quietly making every future migration a forced password reset for your entire user base.</p>
+<p>Whichever way it goes, ask one question before signing: will you export password hashes if I leave? A provider who will not is quietly making every future migration a forced password reset for your entire user base.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <p>For a product that has not found its shape yet, use the library and keep the users in your own database, because that decision stays reversible. For anything selling to businesses with a procurement process, buy from the start and treat the bill as the price of not writing SAML.</p>
 
-<p>Then instrument the thing. Failed logins, reset requests and sudden spikes in either are the earliest signal you get that something is wrong, and they belong wherever the rest of your alerts already live — our notes on <a href="/articles/error-tracking-for-small-teams">error tracking for small teams</a> cover setting that up without drowning in noise.</p>`,
+<p>Then instrument the thing. Failed logins, reset requests and sudden spikes in either are the earliest signal you get that something is wrong, and they belong wherever the rest of your alerts already live — my notes on <a href="/articles/error-tracking-for-small-teams">error tracking for small teams</a> cover setting that up without drowning in noise.</p>`,
 };

@@ -97,7 +97,7 @@ export const aiVoiceToolsTested: Article = {
   ],
   content: `<p>Voice is three separate markets wearing one label. Transcription, cloning and dubbing sit at completely different levels of maturity, carry completely different risks, and are bought for completely different reasons. Treating them as one category is the most common way teams end up disappointed by all three.</p>
 
-<p>What follows is where each one stands, how to evaluate it on your own material, and — for cloning — what to settle before you generate anything at all. We have grouped them by maturity rather than by vendor, because the gap between the three is far wider than any gap between products. Transcription in particular is the foundation of <a href="/articles/turn-long-videos-into-short-clips-with-ai">our clipping workflow</a>. Which of the three are you actually about to pay for?</p>
+<p>What follows is where each one stands, how to evaluate it on your own material, and — for cloning — what to settle before you generate anything at all. I have grouped them by maturity rather than by vendor, because the gap between the three is far wider than any gap between products. Transcription in particular is the foundation of <a href="/articles/turn-long-videos-into-short-clips-with-ai">my clipping workflow</a>. Which of the three are you actually about to pay for?</p>
 
 <h2>Transcription: mature, and cheaper than most people assume</h2>
 

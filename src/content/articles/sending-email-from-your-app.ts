@@ -98,7 +98,7 @@ export const sendingEmailFromYourApp: Article = {
   ],
   content: `<p>The first time it happens it looks like a mystery. Password resets reach your own inbox in seconds. A customer says they never got one. You check the logs and the message was accepted, queued and delivered. It was delivered — into a spam folder, or into wherever Gmail files the things it has decided not to show anybody.</p>
 
-<p>Deliverability has a reputation for being unknowable. It is not. There are three DNS records, a short list of requirements the large mailbox providers have now written down explicitly, and one architectural decision that nearly every team gets wrong on the first attempt. Those three things account for most of the cases we have seen.</p>
+<p>Deliverability has a reputation for being unknowable. It is not. There are three DNS records, a short list of requirements the large mailbox providers have now written down explicitly, and one architectural decision that nearly every team gets wrong on the first attempt. Those three things account for most of the cases I have seen.</p>
 
 <h2>The three records, and what each one proves</h2>
 
@@ -161,7 +161,7 @@ _dmarc.example.com.         TXT  "v=DMARC1; p=none; rua=mailto:dmarc@example.com
 
 <p>The gap between the managed services and SES is roughly an order of magnitude, and what the difference buys is everything around the send: templates, suppression lists, bounce handling, dashboards, and somebody to talk to when a domain gets blocked. At a few thousand messages a month that gap is a couple of pounds and not worth a minute's thought. At several million it is a salary.</p>
 
-<p>One SES detail to know before you plan around it: new accounts sit in a sandbox permitting 200 messages per 24 hours at one message per second, and only to verified addresses. Leaving the sandbox is a support request, and it is not instant. Do not find this out on launch day. The same forward planning applies to any outside dependency you build on — the questions we ask about <a href="/articles/free-apis-worth-building-on">whether a free API is worth building on</a> apply just as well to the service that sends your mail.</p>
+<p>One SES detail to know before you plan around it: new accounts sit in a sandbox permitting 200 messages per 24 hours at one message per second, and only to verified addresses. Leaving the sandbox is a support request, and it is not instant. Do not find this out on launch day. The same forward planning applies to any outside dependency you build on — the questions I ask about <a href="/articles/free-apis-worth-building-on">whether a free API is worth building on</a> apply just as well to the service that sends your mail.</p>
 
 <h2>The part nobody instruments</h2>
 
@@ -177,7 +177,7 @@ _dmarc.example.com.         TXT  "v=DMARC1; p=none; rua=mailto:dmarc@example.com
 
 <p>These are the same class of signal as an application exception: something failed after the request finished and nobody will mention it unless you asked. If you already run <a href="/articles/error-tracking-for-small-teams">error tracking in production</a>, route delivery failures into it rather than building a second dashboard nobody opens.</p>
 
-<h2>What we would do first</h2>
+<h2>What I would do first</h2>
 
 <p>Roughly in order of return on the time spent:</p>
 

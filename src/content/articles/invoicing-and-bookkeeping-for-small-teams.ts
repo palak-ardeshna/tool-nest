@@ -164,5 +164,5 @@ export const invoicingAndBookkeepingForSmallTeams: Article = {
 
 <h2>A reasonable default</h2>
 
-<p>Our answer for a small team: whatever your accountant uses, on the cheapest tier that supports your currencies, with a verified export. That is an unglamorous answer, and it is right far more often than the comparison tables suggest. While you are in the billing settings, it is a good moment to <a href="/articles/auditing-small-team-software-spend">audit the rest of the software spend</a>.</p>`,
+<p>My answer for a small team: whatever your accountant uses, on the cheapest tier that supports your currencies, with a verified export. That is an unglamorous answer, and it is right far more often than the comparison tables suggest. While you are in the billing settings, it is a good moment to <a href="/articles/auditing-small-team-software-spend">audit the rest of the software spend</a>.</p>`,
 };

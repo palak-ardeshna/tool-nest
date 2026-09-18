@@ -67,7 +67,7 @@ export const aiBrowserAgentsAfterAtlas: Article = {
     {
       question: "Are they actually faster than doing it myself?",
       answer:
-        "For a task you know how to do, usually not. For a task that is tedious rather than hard — pull the price and delivery time from these twelve pages into a table, fill this form on eight sites — yes, and the agent does not get bored. The honest use is the boring middle. We reached the same conclusion about coding agents: hand over the tickets that are tedious and verifiable, keep the ones that need judgement.",
+        "For a task you know how to do, usually not. For a task that is tedious rather than hard — pull the price and delivery time from these twelve pages into a table, fill this form on eight sites — yes, and the agent does not get bored. The honest use is the boring middle. I reached the same conclusion about coding agents: hand over the tickets that are tedious and verifiable, keep the ones that need judgement.",
     },
   ],
   sources: [
@@ -116,7 +116,7 @@ export const aiBrowserAgentsAfterAtlas: Article = {
   ],
   content: `<p>A year ago the pitch was a new browser. OpenAI's Atlas, Perplexity's Comet, a handful of others: replace Chrome with something that has an agent in it, and the agent will do the web for you. Atlas lasted ten months. OpenAI announced in July that it was being wound down, it stopped working on 9 August 2026, and the agent moved back into ChatGPT. The idea did not die; it just stopped being a browser and became a feature of the one you already had.</p>
 
-<p>So the field in September 2026 is one browser and three things that live inside other browsers. We compared what each vendor documents for the same tasks, then read what every vendor says on its own page about what not to do, because on this subject the safety pages are the most useful documentation there is.</p>
+<p>So the field in September 2026 is one browser and three things that live inside other browsers. I compared what each vendor documents for the same tasks, then read what every vendor says on its own page about what not to do, because on this subject the safety pages are the most useful documentation there is.</p>
 
 <h2>What they are for</h2>
 
@@ -128,7 +128,7 @@ export const aiBrowserAgentsAfterAtlas: Article = {
 
 <p>Claude in Chrome is an extension, available on all paid Claude plans, and its design is built around how much rope you want to give it. It reads the page you are signed in to, then clicks, types and fills forms, and you choose between letting it complete tasks with built-in safeguards or a permissions mode that grants access one site at a time. It stops before sensitive actions such as purchases and asks you. On Team and Enterprise plans, admins can switch the extension on or off for the whole organisation and set allowlists and blocklists of sites, which is the feature that makes it deployable at work rather than just usable at home.</p>
 
-<p>Anthropic says its prompt-injection defences have been tested against real attacks and still tells you to start with trusted sites and familiar workflows. Both statements are true, and the second is the one to act on. If you are already handing whole tickets to a coding agent — <a href="/articles/which-tickets-to-give-an-ai-coding-agent">we wrote about which ones to hand over</a> — the same instinct applies here: give it the browsing jobs that are tedious and checkable.</p>
+<p>Anthropic says its prompt-injection defences have been tested against real attacks and still tells you to start with trusted sites and familiar workflows. Both statements are true, and the second is the one to act on. If you are already handing whole tickets to a coding agent — <a href="/articles/which-tickets-to-give-an-ai-coding-agent">I wrote about which ones to hand over</a> — the same instinct applies here: give it the browsing jobs that are tedious and checkable.</p>
 
 <blockquote>
 <p>The vendors' safety pages agree on the boundary. Inside it — comparing, filling, collecting — the agents are useful. Outside it — paying, logging in, anything you would not want undone — they are not yet, and the vendors are the ones saying so.</p>
@@ -144,13 +144,13 @@ export const aiBrowserAgentsAfterAtlas: Article = {
 
 <p>Microsoft's approach is a mode in Edge rather than a separate product. Turn it on and Copilot can read across your open tabs to compare options and pull out key details, take actions such as searching and filling forms with your approval before anything is finalised, and group your browsing into Journeys you can return to. It is free with Edge, every feature is optional and can be switched off, and for work accounts Microsoft says your data stays in the tenant.</p>
 
-<p>It is the least agentic of the four in practice — more assistant than agent — which is either a limitation or the correct amount of caution depending on how you feel about a browser acting on its own. For someone already on Edge who wants the tab-comparison trick without a subscription, it is the obvious place to start. If you are choosing a browser at all, <a href="/articles/which-browser-after-arc">our browser comparison</a> covers the wider decision.</p>
+<p>It is the least agentic of the four in practice — more assistant than agent — which is either a limitation or the correct amount of caution depending on how you feel about a browser acting on its own. For someone already on Edge who wants the tab-comparison trick without a subscription, it is the obvious place to start. If you are choosing a browser at all, <a href="/articles/which-browser-after-arc">my browser comparison</a> covers the wider decision.</p>
 
 <h2>Comet: still a browser</h2>
 
 <p>Perplexity's Comet is the one survivor of the "new browser" wave. It is a full browser on Windows, macOS, Android and iOS with the assistant in a sidebar that knows what is on the page, can run tasks across tabs, and has Perplexity's search engine built in. It launched as a premium product and has spent 2026 becoming free with usage limits, with paid Perplexity plans adding heavier background tasks.</p>
 
-<p>It is also the tool with the most public prompt-injection case study. In 2025, Brave's security researchers showed that instructions hidden in a Reddit post could steer Comet's assistant into acting against the user, and their write-up is the clearest explanation of the problem we have read. Perplexity addressed the specific issue, and the write-up remains the reason we would not let any browser agent — Comet or otherwise — near an account we cared about.</p>
+<p>It is also the tool with the most public prompt-injection case study. In 2025, Brave's security researchers showed that instructions hidden in a Reddit post could steer Comet's assistant into acting against the user, and their write-up is the clearest explanation of the problem I have read. Perplexity addressed the specific issue, and the write-up remains the reason I would not let any browser agent — Comet or otherwise — near an account I cared about.</p>
 
 <h2>Side by side</h2>
 
@@ -166,9 +166,9 @@ export const aiBrowserAgentsAfterAtlas: Article = {
 </tbody>
 </table>
 
-<h2>How we use them</h2>
+<h2>How I use them</h2>
 
-<p>Claude in Chrome in permissions mode, allowed on a short list of sites we read for research, for the tab-comparison job and nothing else. Copilot Mode on the Windows machine for the same. Nothing is logged in to a bank, a password manager or an email account while an agent is active, which is a rule we keep by running the agent in a separate browser profile with no saved logins — a habit we borrowed from <a href="/articles/password-managers-after-the-price-rises">how we set up password managers</a>.</p>
+<p>Claude in Chrome in permissions mode, allowed on a short list of sites I read for research, for the tab-comparison job and nothing else. Copilot Mode on the Windows machine for the same. Nothing is logged in to a bank, a password manager or an email account while an agent is active, which is a rule I keep by running the agent in a separate browser profile with no saved logins — a habit I borrowed from <a href="/articles/password-managers-after-the-price-rises">how I set up password managers</a>.</p>
 
 <p>The agents will get better and the restrictions will loosen. What will not change is that a program acting on your behalf on a web page it did not write is reading instructions from a stranger. Until the vendors take the money warning off their own pages, keep it out of the accounts that matter.</p>`,
 };

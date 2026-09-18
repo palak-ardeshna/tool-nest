@@ -4,7 +4,7 @@ export const objectStorageForASmallAppS3R2OrB2: Article = {
   slug: "object-storage-for-a-small-app-s3-r2-or-b2",
   title: "Object Storage for a Small App: S3, Cloudflare R2 or Backblaze B2",
   excerpt:
-    "The three buckets most small apps end up choosing between look identical from your code and cost wildly different amounts once users start downloading. We priced a realistic month on each — storage, requests and the egress line that decides it — and explain when S3's ecosystem is still worth paying for.",
+    "The three buckets most small apps end up choosing between look identical from your code and cost wildly different amounts once users start downloading. I priced a realistic month on each — storage, requests and the egress line that decides it — and explain when S3's ecosystem is still worth paying for.",
   category: "developer-tools",
   author: "parth-patel",
   tags: ["Cloud Storage", "AWS", "Cloudflare", "Developer Tools", "Comparisons"],
@@ -62,7 +62,7 @@ export const objectStorageForASmallAppS3R2OrB2: Article = {
     {
       question: "Can I use one of these as a backup target?",
       answer:
-        "Yes, and B2 in particular has been a backup destination for a long time; restic, rclone and most backup tools support it directly. The 3x egress allowance is generous for backups because you rarely restore more than you store. We covered the tooling side in our piece on backups for a small team.",
+        "Yes, and B2 in particular has been a backup destination for a long time; restic, rclone and most backup tools support it directly. The 3x egress allowance is generous for backups because you rarely restore more than you store. I covered the tooling side in my piece on backups for a small team.",
     },
   ],
   sources: [
@@ -87,7 +87,7 @@ export const objectStorageForASmallAppS3R2OrB2: Article = {
   ],
   content: `<p>Every small app eventually needs somewhere to put files that are not rows: uploaded images, generated PDFs, video, exports, the nightly database dump. Object storage is the answer, and from inside your code the three products most people choose between are indistinguishable — the same S3 API, the same SDK, a different endpoint string.</p>
 
-<p>From the invoice they are not indistinguishable at all. We priced a realistic month on each and the spread was more than twenty to one. Here is where the money goes, and when the expensive option is still the right one.</p>
+<p>From the invoice they are not indistinguishable at all. I priced a realistic month on each and the spread was more than twenty to one. Here is where the money goes, and when the expensive option is still the right one.</p>
 
 <h2>What you are actually paying for</h2>
 
@@ -116,7 +116,7 @@ export const objectStorageForASmallAppS3R2OrB2: Article = {
 </tbody>
 </table>
 
-<p>Prices are the ones on each vendor's page on the day we checked, in US dollars. AWS varies by region; we have used US East (N. Virginia), the cheapest and the one most people default to.</p>
+<p>Prices are the ones on each vendor's page on the day I checked, in US dollars. AWS varies by region; I have used US East (N. Virginia), the cheapest and the one most people default to.</p>
 
 <h2>A worked month</h2>
 
@@ -154,7 +154,7 @@ export const objectStorageForASmallAppS3R2OrB2: Article = {
 
 <p>B2 is the cheapest storage of the three and the longest-standing backup target. Its egress rule is a ratio: free up to three times your average stored volume each month, then $0.01 a GB, which is a ninth of S3's rate. Downloads routed through a partner CDN — Cloudflare, Fastly and bunny.net among them — are free without limit, so a B2 bucket behind a CDN is close to zero egress in practice. The API is S3-compatible, with a native API alongside it that some tools still use, and there is no minimum file size or storage duration to trip over.</p>
 
-<p>Our rule: R2 if the files are served to browsers and you are anywhere near Cloudflare already; B2 if the files are backups, archives or large media where the storage price dominates and a CDN can front the downloads. Either is a fine default for a new small app. For the backup case specifically, the tooling matters as much as the bucket, and we went through it in <a href="/articles/backups-for-a-small-team">backups for a small team</a>.</p>
+<p>My rule: R2 if the files are served to browsers and you are anywhere near Cloudflare already; B2 if the files are backups, archives or large media where the storage price dominates and a CDN can front the downloads. Either is a fine default for a new small app. For the backup case specifically, the tooling matters as much as the bucket, and I went through it in <a href="/articles/backups-for-a-small-team">backups for a small team</a>.</p>
 
 <h2>Three things to check before you migrate</h2>
 
@@ -164,5 +164,5 @@ export const objectStorageForASmallAppS3R2OrB2: Article = {
 <li><strong>Moving the data.</strong> Egress applies to the migration too. Pulling 2 TB out of S3 costs about $180 at list price. rclone can do the copy from anywhere, and Cloudflare offers a migration tool that pulls from S3 progressively; do the sums before the copy, not after.</li>
 </ol>
 
-<p>The code change is an afternoon. The pricing change is permanent, in either direction, so it is worth an hour with a spreadsheet — and if that spreadsheet is the same one your app's other costs live in, the <a href="/articles/deploying-a-nextjs-app-four-routes">hosting comparison</a> we wrote earlier this year is the other half of the bill.</p>`,
+<p>The code change is an afternoon. The pricing change is permanent, in either direction, so it is worth an hour with a spreadsheet — and if that spreadsheet is the same one your app's other costs live in, the <a href="/articles/deploying-a-nextjs-app-four-routes">hosting comparison</a> I wrote earlier this year is the other half of the bill.</p>`,
 };

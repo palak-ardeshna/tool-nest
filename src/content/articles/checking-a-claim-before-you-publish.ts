@@ -4,7 +4,7 @@ export const checkingAClaimBeforeYouPublish: Article = {
   slug: "checking-a-claim-before-you-publish",
   title: "Checking a Claim Before You Publish: The Free Tools and the Order to Use Them In",
   excerpt:
-    "A pricing figure, a statistic, a quote, a screenshot. Each one can be checked in under five minutes with tools that cost nothing, if you know which tool answers which question. This is the sequence we run on every article, and where it still fails.",
+    "A pricing figure, a statistic, a quote, a screenshot. Each one can be checked in under five minutes with tools that cost nothing, if you know which tool answers which question. This is the sequence I run on every article, and where it still fails.",
   category: "research",
   author: "parth-patel",
   tags: ["Research", "Fact-Checking", "Sources", "How-To"],
@@ -38,7 +38,7 @@ export const checkingAClaimBeforeYouPublish: Article = {
     {
       question: "The vendor's page has changed since I wrote the article. Was I wrong?",
       answer:
-        "Not if you recorded the date. Prices and feature lists change under a stable URL, which is exactly why we attach a 'checked on' date to every source on this site. Save the page to the Wayback Machine when you cite it and you have a copy that shows what it said. The article is then correct as of a date rather than wrong as of today, and a reader can see which.",
+        "Not if you recorded the date. Prices and feature lists change under a stable URL, which is exactly why I attach a 'checked on' date to every source on this site. Save the page to the Wayback Machine when you cite it and you have a copy that shows what it said. The article is then correct as of a date rather than wrong as of today, and a reader can see which.",
     },
     {
       question: "A statistic appears in twenty articles. Is that enough?",
@@ -48,7 +48,7 @@ export const checkingAClaimBeforeYouPublish: Article = {
     {
       question: "What if I cannot confirm something?",
       answer:
-        "Write that you could not. 'The vendor did not respond' and 'we could not find a primary source for this figure' are ordinary sentences in a serious publication and unusual ones in a bad one. The alternative is to publish the claim with the uncertainty removed, which is how a figure nobody can trace ends up in twenty articles.",
+        "Write that you could not. 'The vendor did not respond' and 'I could not find a primary source for this figure' are ordinary sentences in a serious publication and unusual ones in a bad one. The alternative is to publish the claim with the uncertainty removed, which is how a figure nobody can trace ends up in twenty articles.",
     },
   ],
   sources: [
@@ -79,7 +79,7 @@ export const checkingAClaimBeforeYouPublish: Article = {
   ],
   content: `<p>Most errors in published articles are not lies. They are claims that were true somewhere, once, and were copied without anyone going back to check. A price from last year. A statistic from a report that measured something slightly different. A screenshot that was real but of a different product. None of these takes long to catch if you check the right thing, and all of them survive indefinitely if you check the wrong one.</p>
 
-<p>What follows is the sequence we run on every ToolNest article before it goes out. It uses nothing you need to pay for. It does not catch everything, and the last section is about what it misses.</p>
+<p>What follows is the sequence I run on every ToolNest article before it goes out. It uses nothing you need to pay for. It does not catch everything, and the last section is about what it misses.</p>
 
 <h2>First, name the type of claim</h2>
 
@@ -113,7 +113,7 @@ export const checkingAClaimBeforeYouPublish: Article = {
 
 <p>When you reach the origin, check three things: what was actually measured, when, and of whom. "Users spend 40% of their time in meetings" turns out to be a survey of 300 managers at large American firms in 2019, which is not nothing but is not "users" either. Write the qualified version. It is less quotable and it is true.</p>
 
-<p>When the trail ends without a source, the number has no known origin. That is a finding. Either drop it or publish it with that stated, and we would drop it. This is also the check that AI research tools fail most reliably; <a href="/articles/ai-research-tools-and-your-sources">they will hand you the number with a citation to an article that quotes it</a>, which looks like a source and is not.</p>
+<p>When the trail ends without a source, the number has no known origin. That is a finding. Either drop it or publish it with that stated, and I would drop it. This is also the check that AI research tools fail most reliably; <a href="/articles/ai-research-tools-and-your-sources">they will hand you the number with a citation to an article that quotes it</a>, which looks like a source and is not.</p>
 
 <h2>Images: find the first copy</h2>
 
@@ -127,7 +127,7 @@ export const checkingAClaimBeforeYouPublish: Article = {
 
 <p>Google's Fact Check Explorer searches the published fact-checks of organisations that mark their work up with ClaimReview structured data — the same markup that puts a "Fact check" label under a search result. Paste the claim or a person's name and you get a list of verdicts with links to the full pieces.</p>
 
-<p>Its coverage is what you would expect from who does fact-checking: strong on politics, health and viral news, thin on software, pricing and anything technical. For our subject matter it rarely has a direct hit. It is still worth the query, because when it does, someone has done in a day what would take you an afternoon, and their working is shown.</p>
+<p>Its coverage is what you would expect from who does fact-checking: strong on politics, health and viral news, thin on software, pricing and anything technical. For my subject matter it rarely has a direct hit. It is still worth the query, because when it does, someone has done in a day what would take you an afternoon, and their working is shown.</p>
 
 <h2>Quotes: context is the check</h2>
 
@@ -148,5 +148,5 @@ export const checkingAClaimBeforeYouPublish: Article = {
 
 <p>A primary source can be wrong. A vendor's pricing page can be out of date on the vendor's own site, a report's methodology can be bad, a transcript can be mis-transcribed. Everything above gets you to the origin of a claim; none of it evaluates the origin. That takes domain knowledge, and it is the part that cannot be reduced to a tool.</p>
 
-<p>It also does not catch what you did not think to check. The claims that survive to publication are the ones that sounded obviously true, and those are exactly the ones nobody marks in step one. The only defence we have found is a second reader who has not seen the draft, which is why <a href="/articles/weekly-publishing-workflow">our publishing week</a> has a review day that is not the writing day. It is slower. It is also the reason this article has a source list rather than a corrections list.</p>`,
+<p>It also does not catch what you did not think to check. The claims that survive to publication are the ones that sounded obviously true, and those are exactly the ones nobody marks in step one. The only defence I have found is a second reader who has not seen the draft, which is why <a href="/articles/weekly-publishing-workflow">my publishing week</a> has a review day that is not the writing day. It is slower. It is also the reason this article has a source list rather than a corrections list.</p>`,
 };

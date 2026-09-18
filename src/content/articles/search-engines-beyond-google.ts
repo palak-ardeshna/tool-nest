@@ -15,7 +15,7 @@ export const searchEnginesBeyondGoogle: Article = {
   seoDescription:
     "Kagi vs Brave vs DuckDuckGo vs Perplexity: which have their own index, what they cost, and a one-week test for whether switching is worth the friction.",
   quickAnswer:
-    "The question to ask is not 'is it private' but 'whose index is it'. Brave and Kagi run their own indexes, which means their results can genuinely differ from Google's. DuckDuckGo's traditional web results come largely from Bing behind a privacy proxy, so you are getting Bing's view of the web with your identity removed — a fine trade, but a different one. Perplexity is not a search engine in the same sense: it reads results and writes an answer, which is faster when it is right and harder to check when it is not. Kagi costs $5 or $10 a month and has no ads, which is the whole point; the rest are free or freemium. For research, we would run Kagi or Brave as the default and keep Google one keystroke away.",
+    "The question to ask is not 'is it private' but 'whose index is it'. Brave and Kagi run their own indexes, which means their results can genuinely differ from Google's. DuckDuckGo's traditional web results come largely from Bing behind a privacy proxy, so you are getting Bing's view of the web with your identity removed — a fine trade, but a different one. Perplexity is not a search engine in the same sense: it reads results and writes an answer, which is faster when it is right and harder to check when it is not. Kagi costs $5 or $10 a month and has no ads, which is the whole point; the rest are free or freemium. For research, I would run Kagi or Brave as the default and keep Google one keystroke away.",
   pros: [
     "An independent index surfaces pages Google's ranking buries, which is the point of a second opinion",
     "Kagi lets you raise, lower or block domains permanently — the feature Google removed years ago",
@@ -43,12 +43,12 @@ export const searchEnginesBeyondGoogle: Article = {
     {
       question: "Is Kagi worth $10 a month?",
       answer:
-        "If you search a lot for work, we think yes, and the reason is not results quality. It is the domain controls: block the content farm that keeps appearing, boost the documentation site you always want first, and never see either decision undone. That compounds. If you search a few times a day, the $5 Starter plan with its 300-search cap will probably cover you, and the free trial of 100 searches tells you quickly which side you fall on.",
+        "If you search a lot for work, I think yes, and the reason is not results quality. It is the domain controls: block the content farm that keeps appearing, boost the documentation site you always want first, and never see either decision undone. That compounds. If you search a few times a day, the $5 Starter plan with its 300-search cap will probably cover you, and the free trial of 100 searches tells you quickly which side you fall on.",
     },
     {
       question: "Can I just use Perplexity instead of a search engine?",
       answer:
-        "For questions with a settled answer, it is faster. For anything you will publish, rely on, or spend money because of, it is a starting point that needs its citations opened. It composes an answer from pages it found, and the composition can be confidently wrong while every footnote is real. We cover the failure modes in our piece on AI research tools; the short version is that the answer is not the source.",
+        "For questions with a settled answer, it is faster. For anything you will publish, rely on, or spend money because of, it is a starting point that needs its citations opened. It composes an answer from pages it found, and the composition can be confidently wrong while every footnote is real. I cover the failure modes in my piece on AI research tools; the short version is that the answer is not the source.",
     },
   ],
   sources: [
@@ -77,7 +77,7 @@ export const searchEnginesBeyondGoogle: Article = {
       checkedAt: "2026-09-12",
     },
   ],
-  content: `<p>Google is still the best general search engine most of the time, and the moments it is not have become frequent enough that a second engine is worth having. The reasons people give for switching — privacy, ads, AI overviews eating the results — are all real, but they are not the reason we would give. Ours is simpler: two indexes see more of the web than one, and if you do research for a living you want a second opinion that is not just Google's opinion with the tracking removed.</p>
+  content: `<p>Google is still the best general search engine most of the time, and the moments it is not have become frequent enough that a second engine is worth having. The reasons people give for switching — privacy, ads, AI overviews eating the results — are all real, but they are not the reason I would give. Mine is simpler: two indexes see more of the web than one, and if you do research for a living you want a second opinion that is not just Google's opinion with the tracking removed.</p>
 
 <p>That is why the first thing to establish about any alternative is where its results actually come from. It changes what you are buying.</p>
 
@@ -101,7 +101,7 @@ export const searchEnginesBeyondGoogle: Article = {
 
 <p>Kagi's pitch is that a search engine you pay for works for you, and the product mostly delivers on that. There are no ads, no sponsored results, and — the part that keeps people subscribed — you can adjust the ranking of any domain permanently. Block a site and it never appears again. Raise a site and it floats to the top whenever it is relevant. After a month of doing this your results are noticeably cleaner than anyone else's, because the content farms and the SEO-bait listicles are simply gone.</p>
 
-<p>The pricing is $5 a month for 300 searches or $10 for unlimited, with a $25 tier that adds their premium AI features. The trial gives you 100 searches, which is not many; count them as a week of light use. The 300-search cap on the Starter plan sounds generous until you check how often you search when working, which for us was several hundred a week. Most people who stay end up on the $10 plan.</p>
+<p>The pricing is $5 a month for 300 searches or $10 for unlimited, with a $25 tier that adds their premium AI features. The trial gives you 100 searches, which is not many; count them as a week of light use. The 300-search cap on the Starter plan sounds generous until you check how often you search when working, which for me was several hundred a week. Most people who stay end up on the $10 plan.</p>
 
 <p>Where it is weaker: very recent news, local businesses, and the long tail of tiny sites that Google has crawled and nobody else has. Kagi blends in partner results to cover the gaps, and it mostly works, but you will occasionally fall back to Google, and the honest test is how often.</p>
 
@@ -121,7 +121,7 @@ export const searchEnginesBeyondGoogle: Article = {
 
 <p>Perplexity takes your query, runs searches, reads the results and writes an answer with footnotes. For a question with a stable answer — how a library's function works, when a policy changed — this is faster than a results page. For anything contested, recent or nuanced, you have to open the citations anyway, at which point you have done a search with an extra step.</p>
 
-<p>The failure mode is specific and worth naming. The footnotes are real pages. The sentence they are attached to is the model's summary of those pages, and the summary can drop a qualifier, merge two sources or state a probability as a fact. Every citation checks out, and the claim is still wrong. We went into this at length in <a href="/articles/ai-research-tools-and-your-sources">what AI research tools do to your sources</a>, and nothing about it has changed. Use Perplexity to orient yourself, then search properly for anything you will cite.</p>
+<p>The failure mode is specific and worth naming. The footnotes are real pages. The sentence they are attached to is the model's summary of those pages, and the summary can drop a qualifier, merge two sources or state a probability as a fact. Every citation checks out, and the claim is still wrong. I went into this at length in <a href="/articles/ai-research-tools-and-your-sources">what AI research tools do to your sources</a>, and nothing about it has changed. Use Perplexity to orient yourself, then search properly for anything you will cite.</p>
 
 <p>Pro is around $20 a month at the time of writing and buys more searches on the stronger models. Whether that is worth it depends on whether you use it as a search engine, in which case probably not, or as a reading assistant, in which case it can be.</p>
 
@@ -131,12 +131,12 @@ export const searchEnginesBeyondGoogle: Article = {
 
 <ol>
 <li><strong>Change your browser default</strong> to the engine you are trialling. Not a bookmark — the default. If it is not the default you will not use it under pressure, and pressure is where the differences show.</li>
-<li><strong>Keep a tally of fallbacks.</strong> Every time you re-run a query on Google because the first engine failed, mark it. Note what kind of query it was. After a week you will have a pattern: for us it was local businesses and things that happened yesterday, and nothing else.</li>
+<li><strong>Keep a tally of fallbacks.</strong> Every time you re-run a query on Google because the first engine failed, mark it. Note what kind of query it was. After a week you will have a pattern: for me it was local businesses and things that happened yesterday, and nothing else.</li>
 <li><strong>Do the reverse once a day.</strong> Take a query you searched on Google and run it on the new engine. Count how often a useful page appears that Google did not show on page one. That number is the value of the second index, and it is the number the privacy argument never mentions.</li>
 <li><strong>Decide on the fallback rate.</strong> Under one in ten, the switch is free. One in four, keep both. Over half, the engine is not there yet for your work and it is fine to say so.</li>
 </ol>
 
-<h2>What we would pick</h2>
+<h2>What I would pick</h2>
 
 <ul>
 <li><strong>You research for a living and search hundreds of times a week:</strong> Kagi at $10. The domain ranking pays for itself in noise removed.</li>

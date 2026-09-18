@@ -48,7 +48,7 @@ export const ciPipelinesThatStayUnderTenMinutes: Article = {
         "Almost always, but only if the key is right. On GitHub Actions a cache is looked up first by exact key, then by the restore-keys prefixes in order, and an existing cache can never be modified — you can only write a new one under a new key. So build the key from a hash of your lockfile. If the key does not change when dependencies change you will keep restoring a stale cache and reinstalling anyway, which is slower than not caching at all. Caches that go unread for seven days are removed, and the repository limit is 10 GB with the oldest-accessed entries evicted first.",
     },
     {
-      question: "Should we run everything on every push?",
+      question: "Should I run everything on every push?",
       answer:
         "No, and this is the change with the best ratio of effort to payoff. Split by who is waiting for the answer. Lint, type-check and unit tests are for the person who just pushed, so they run on every push and need to be fast. Full browser tests across several targets, security scans and long integration suites are for the team, so they can run on the pull request, on a merge queue, or on a schedule. The mistake is treating every check as equally urgent when only some of them block a human.",
     },
@@ -84,7 +84,7 @@ export const ciPipelinesThatStayUnderTenMinutes: Article = {
 
 <h2>Where the time actually goes</h2>
 
-<p>Before changing anything, look at one recent run and write down the duration of each step. Almost every slow pipeline we have seen falls into the same distribution, and it is rarely the tests.</p>
+<p>Before changing anything, look at one recent run and write down the duration of each step. Almost every slow pipeline I have seen falls into the same distribution, and it is rarely the tests.</p>
 
 <table>
 <thead>
@@ -168,7 +168,7 @@ export const ciPipelinesThatStayUnderTenMinutes: Article = {
 
 <p>It is also worth checking what your pipeline is not telling you. A suite that is green while production is throwing errors is a suite testing the wrong things, and no amount of speeding it up helps — <a href="/articles/error-tracking-for-small-teams">error tracking in production</a> is what closes that gap, not more CI.</p>
 
-<h2>What we would do first</h2>
+<h2>What I would do first</h2>
 
 <p>In this order, because it is roughly the order of return on effort:</p>
 

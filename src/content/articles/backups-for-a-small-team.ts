@@ -53,7 +53,7 @@ export const backupsForASmallTeam: Article = {
         "This is the right question and it is why the provider matters. Some object stores charge for every gigabyte you download, which turns a disaster into an invoice. Backblaze B2 includes free egress up to three times your average monthly storage, so a full restore of everything you have stored is free, and you could do it three times over in a month before paying anything. Check this before you choose, because the price you care about is the one you pay on your worst day.",
     },
     {
-      question: "How often should we test a restore?",
+      question: "How often should I test a restore?",
       answer:
         "Quarterly is enough, and it should be a real restore rather than a check that the job ran. Pick a file nobody has touched in months, restore it to a scratch location, open it, and time how long the whole thing took. The number you are looking for is not whether it worked but how long it takes, because that is the figure you will need during an actual incident when someone asks when the system will be back. Write it down.",
     },
@@ -86,7 +86,7 @@ export const backupsForASmallTeam: Article = {
   ],
   content: `<p>Everyone in software can recite the 3-2-1 rule. Three copies of your data, on two different kinds of media, one of them off-site. Very few small teams have actually implemented it, and the reason is not carelessness. It is that backups are invisible work with no deadline, and that most people have never sat down and priced the thing they are avoiding.</p>
 
-<p>So let us price it. And then let us talk about the copy you are almost certainly missing, which is probably not the one you think.</p>
+<p>So let me price it. And then let me talk about the copy you are almost certainly missing, which is probably not the one you think.</p>
 
 <h2>The rule, stated properly</h2>
 
@@ -181,7 +181,7 @@ restic -r b2:your-bucket:/laptops check --read-data-subset 5%
 
 <p>That last number is the one worth having. When something has gone badly wrong and someone asks how long until things are back, the difference between an answer and a guess is whether you have ever timed it.</p>
 
-<h2>What we would do at three sizes</h2>
+<h2>What I would do at three sizes</h2>
 
 <ul>
 <li><strong>One person, working alone:</strong> an external drive with the operating system's own backup tool, plus restic to object storage on a daily timer. Around three dollars a month, two hours to set up once, and it covers the laptop being stolen and the laptop being encrypted.</li>
@@ -189,5 +189,5 @@ restic -r b2:your-bucket:/laptops check --read-data-subset 5%
 <li><strong>Running your own infrastructure:</strong> the above, plus database dumps to the same repository with object lock and append-only credentials, plus a restore rehearsal into a scratch environment every quarter rather than every year.</li>
 </ul>
 
-<p>None of this is difficult and none of it is expensive. It fails to get done because it defends against something that has not happened yet, and there is always a task with a deadline instead. The way we would frame it to anyone weighing it up: an afternoon and the price of a couple of coffees a month, against the category of incident that ends small businesses. Set the timer, and then go and restore one file so you know it works.</p>`,
+<p>None of this is difficult and none of it is expensive. It fails to get done because it defends against something that has not happened yet, and there is always a task with a deadline instead. The way I would frame it to anyone weighing it up: an afternoon and the price of a couple of coffees a month, against the category of incident that ends small businesses. Set the timer, and then go and restore one file so you know it works.</p>`,
 };

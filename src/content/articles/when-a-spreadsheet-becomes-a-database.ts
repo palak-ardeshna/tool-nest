@@ -54,7 +54,7 @@ export const whenASpreadsheetBecomesADatabase: Article = {
     {
       question: "Can I just keep using the spreadsheet?",
       answer:
-        "Often, yes, and we would rather say so than sell you a migration. A spreadsheet that one person maintains, that nobody else depends on, and that answers a question once a month is not a problem waiting to happen. It is a spreadsheet. The move is worth making when other people depend on the thing being correct, because that is the point at which the informal rules in someone's head need to become constraints the tool enforces.",
+        "Often, yes, and I would rather say so than sell you a migration. A spreadsheet that one person maintains, that nobody else depends on, and that answers a question once a month is not a problem waiting to happen. It is a spreadsheet. The move is worth making when other people depend on the thing being correct, because that is the point at which the informal rules in someone's head need to become constraints the tool enforces.",
     },
   ],
   sources: [
@@ -131,7 +131,7 @@ export const whenASpreadsheetBecomesADatabase: Article = {
 
 <p>Notion is a documents product that grew tables. That sounds like faint praise and is not meant as it: when the table needs context around it, when each row wants a page of notes behind it, Notion is the only one of the four that does not feel like two tools stapled together. It is a poor choice for ten thousand rows of structured data and an excellent one for forty projects that each need a brief.</p>
 
-<p>NocoDB is the odd one out and the most interesting for anyone technical. It does not want to own your data; it puts a grid over a database you already run, Postgres or SQLite included. The table stays queryable by your own application, which means the no-code layer is a view rather than a silo. If you already have a database and a person who is comfortable with it, that changes the calculation — as does knowing what your database can already do on its own, which we covered in our notes on the <a href="/articles/postgres-tools-worth-using">Postgres tools we reach for</a>.</p>
+<p>NocoDB is the odd one out and the most interesting for anyone technical. It does not want to own your data; it puts a grid over a database you already run, Postgres or SQLite included. The table stays queryable by your own application, which means the no-code layer is a view rather than a silo. If you already have a database and a person who is comfortable with it, that changes the calculation — as does knowing what your database can already do on its own, which I covered in my notes on the <a href="/articles/postgres-tools-worth-using">Postgres tools I reach for</a>.</p>
 
 <h2>What you lose by leaving the sheet</h2>
 
@@ -148,10 +148,10 @@ export const whenASpreadsheetBecomesADatabase: Article = {
 <li><strong>Clean the sheet before you import.</strong> One header row, no merged cells, one type per column. Every minute here saves five later.</li>
 <li><strong>Move one table, not the system.</strong> Pick the table other things depend on, get it right, and leave the rest where it is for a fortnight.</li>
 <li><strong>Give people a view, not the grid.</strong> A filtered view or a form is what most colleagues need, and it prevents the accidental edits that made you leave the spreadsheet in the first place.</li>
-<li><strong>Point the automations at the new home.</strong> If a script or a scheduled job reads the old sheet, it is now reading a stale copy — and that failure is silent. Our guide to <a href="/articles/automate-repetitive-work-without-code">automating repetitive work without code</a> covers where those jobs usually hide.</li>
+<li><strong>Point the automations at the new home.</strong> If a script or a scheduled job reads the old sheet, it is now reading a stale copy — and that failure is silent. My guide to <a href="/articles/automate-repetitive-work-without-code">automating repetitive work without code</a> covers where those jobs usually hide.</li>
 </ol>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <p>For most small teams, Airtable if the budget allows and the team is small enough that per-seat pricing stays sane, Notion if the rows need paragraphs attached, and Baserow or NocoDB if you already run infrastructure and would rather own the data than rent it.</p>
 

@@ -78,7 +78,7 @@ export const timeBlockingAfterSixMonths: Article = {
   ],
   content: `<p>Time blocking is one of the few productivity practices with a genuinely good idea inside it. It is also one of the most commonly abandoned, usually within a fortnight, and the reason is structural rather than a failure of discipline.</p>
 
-<p>The version described in most productivity books — every hour of the day assigned, reviewed nightly, adjusted continuously — is brittle by design. What follows is why it breaks, and the looser version we would actually recommend — the one people are still running months later.</p>
+<p>The version described in most productivity books — every hour of the day assigned, reviewed nightly, adjusted continuously — is brittle by design. What follows is why it breaks, and the looser version I would actually recommend — the one people are still running months later.</p>
 
 <h2>Why the strict version failed</h2>
 

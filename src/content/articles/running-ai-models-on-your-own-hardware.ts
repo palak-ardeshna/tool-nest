@@ -51,7 +51,7 @@ export const runningAiModelsOnYourOwnHardware: Article = {
     {
       question: "Can a local model replace an API for coding?",
       answer:
-        "For the mechanical parts, increasingly yes — renaming things across a file, writing tests that follow an existing pattern, translating between formats, explaining unfamiliar code. For work that means holding a large codebase in mind and reasoning about consequences, the gap is still wide. Our advice is the same as for hosted tools: decide task by task rather than tool by tool, and keep a review step wherever the output is load-bearing.",
+        "For the mechanical parts, increasingly yes — renaming things across a file, writing tests that follow an existing pattern, translating between formats, explaining unfamiliar code. For work that means holding a large codebase in mind and reasoning about consequences, the gap is still wide. My advice is the same as for hosted tools: decide task by task rather than tool by tool, and keep a review step wherever the output is load-bearing.",
     },
     {
       question: "Does running locally really keep the data private?",
@@ -165,7 +165,7 @@ export const runningAiModelsOnYourOwnHardware: Article = {
 <li><strong>Compare the totals.</strong> If the local model lands within a point or so, that task can move, and every future run of it is free.</li>
 </ol>
 
-<p>The result is nearly always the same shape: some of your work moves and some does not, and the split runs along the boundary between mechanical tasks and judgement. That is a better outcome than either camp advertises. If you are still deciding which hosted model to keep for the difficult half, our comparison of <a href="/articles/chatgpt-vs-claude-for-coding">the main assistants for coding work</a> covers that side of the split.</p>
+<p>The result is nearly always the same shape: some of your work moves and some does not, and the split runs along the boundary between mechanical tasks and judgement. That is a better outcome than either camp advertises. If you are still deciding which hosted model to keep for the difficult half, my comparison of <a href="/articles/chatgpt-vs-claude-for-coding">the main assistants for coding work</a> covers that side of the split.</p>
 
-<p>What we would not do is treat this as a replacement decision. The people getting the most out of local models are running them alongside a hosted one, not instead of it, and the skill worth building is knowing which pile a given job belongs in.</p>`,
+<p>What I would not do is treat this as a replacement decision. The people getting the most out of local models are running them alongside a hosted one, not instead of it, and the skill worth building is knowing which pile a given job belongs in.</p>`,
 };

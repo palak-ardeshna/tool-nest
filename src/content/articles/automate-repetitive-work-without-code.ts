@@ -183,5 +183,5 @@ export const automateRepetitiveWorkWithoutCode: Article = {
 
 <h2>A reasonable starting point</h2>
 
-<p>Our advice is narrower than most guides to this category: pick one task that passes all three filters, build it in under an hour, add a failure notification, and use it for a month before building a second one. Most people who end up with useful automation got there this way. Most people who end up with a graveyard of workflows started by exploring the tool. If the task needs data from somewhere else, check <a href="/articles/free-apis-worth-building-on">whether the API is worth building on</a> before you wire it in.</p>`,
+<p>My advice is narrower than most guides to this category: pick one task that passes all three filters, build it in under an hour, add a failure notification, and use it for a month before building a second one. Most people who end up with useful automation got there this way. Most people who end up with a graveyard of workflows started by exploring the tool. If the task needs data from somewhere else, check <a href="/articles/free-apis-worth-building-on">whether the API is worth building on</a> before you wire it in.</p>`,
 };

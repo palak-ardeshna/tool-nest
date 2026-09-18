@@ -15,7 +15,7 @@ export const softwareYouCanStillBuyOnce: Article = {
   seoDescription:
     "Office, design, audio and video apps you can pay for once instead of renting: current prices, what 'perpetual' means for each, and what is now free.",
   quickAnswer:
-    "More than you would think, but 'buy once' now comes in four flavours and you need to know which one you are getting. A few applications — DaVinci Resolve Studio at $295 is the clearest example — sell a licence with every future update included. Most sell a licence that never expires but only receives updates for a fixed window: Sublime Text ($99, three years), DEVONthink 4 (one year, extendable), Alfred (per major version, or pay once more for all of them). Microsoft's Office Home 2024 and Things 3 are perpetual for the version you bought and nothing after it. And Affinity, which used to be the standard answer to this question, is no longer for sale at all: Canva made it free in October 2025. Our rule is to divide the price by the number of years you honestly expect to run that version. If it comes to less than the subscription, buy it.",
+    "More than you would think, but 'buy once' now comes in four flavours and you need to know which one you are getting. A few applications — DaVinci Resolve Studio at $295 is the clearest example — sell a licence with every future update included. Most sell a licence that never expires but only receives updates for a fixed window: Sublime Text ($99, three years), DEVONthink 4 (one year, extendable), Alfred (per major version, or pay once more for all of them). Microsoft's Office Home 2024 and Things 3 are perpetual for the version you bought and nothing after it. And Affinity, which used to be the standard answer to this question, is no longer for sale at all: Canva made it free in October 2025. My rule is to divide the price by the number of years you honestly expect to run that version. If it comes to less than the subscription, buy it.",
   pros: [
     "A perpetual licence cannot have its price raised on you next January",
     "Several of the best tools in their category — Resolve, Sublime, Reaper — have never been subscription-only",
@@ -43,7 +43,7 @@ export const softwareYouCanStillBuyOnce: Article = {
     {
       question: "Is Office Home 2024 a good deal against Microsoft 365?",
       answer:
-        "For one person on one computer who wants Word, Excel and PowerPoint and does not want Copilot or a terabyte of OneDrive, yes. Retailers in the UK have been selling it for less than a year and a half of Microsoft 365 Personal, and Microsoft supports the 2024 release with security fixes until October 2029. If you need it on a laptop and a desktop, or you actually use the cloud storage, the sum flips. We went through the family plans and the free suites in our office suites piece after this year's price rises.",
+        "For one person on one computer who wants Word, Excel and PowerPoint and does not want Copilot or a terabyte of OneDrive, yes. Retailers in the UK have been selling it for less than a year and a half of Microsoft 365 Personal, and Microsoft supports the 2024 release with security fixes until October 2029. If you need it on a laptop and a desktop, or you actually use the cloud storage, the sum flips. I went through the family plans and the free suites in my office suites piece after this year's price rises.",
     },
     {
       question: "Why is Affinity on a list of things you can buy?",
@@ -107,9 +107,9 @@ export const softwareYouCanStillBuyOnce: Article = {
       checkedAt: "2026-09-16",
     },
   ],
-  content: `<p>Most of the software price rises we wrote about this year were subscription price rises, and they landed the same way: an email, a new monthly figure, and no real choice because the work is inside the tool. A licence you paid for once does not do that. It cannot. Whatever the vendor decides next January, the copy on your machine keeps running at the price you already paid.</p>
+  content: `<p>Most of the software price rises I wrote about this year were subscription price rises, and they landed the same way: an email, a new monthly figure, and no real choice because the work is inside the tool. A licence you paid for once does not do that. It cannot. Whatever the vendor decides next January, the copy on your machine keeps running at the price you already paid.</p>
 
-<p>That has made the one-off purchase worth more than it was, and it is also why the list of software sold that way keeps shrinking. So we went through the categories most people pay for — office, design, writing, developer tools, audio, video — and wrote down what you can still buy outright, what it costs, and the sentence in each vendor's terms that tells you what "buy" actually means. Prices are as shown on the vendor's or a UK retailer's page on the date in our sources; treat them as a snapshot.</p>
+<p>That has made the one-off purchase worth more than it was, and it is also why the list of software sold that way keeps shrinking. So I went through the categories most people pay for — office, design, writing, developer tools, audio, video — and wrote down what you can still buy outright, what it costs, and the sentence in each vendor's terms that tells you what "buy" actually means. Prices are as shown on the vendor's or a UK retailer's page on the date in my sources; treat them as a snapshot.</p>
 
 <h2>Four kinds of "buy once"</h2>
 
@@ -146,15 +146,15 @@ export const softwareYouCanStillBuyOnce: Article = {
 
 <h2>Office: the one-off Microsoft still sells</h2>
 
-<p>Microsoft would prefer you did not know that Office Home 2024 exists, and its store page duly buries it beneath Microsoft 365. It is a real product: Word, Excel, PowerPoint and OneNote, licensed for one PC or Mac, for a single payment. The Home &amp; Business edition adds Outlook and the right to use it for work. UK retailers routinely sell both below Microsoft's own price; we have seen the Home edition listed between about £90 and £125, and Home &amp; Business from around £170.</p>
+<p>Microsoft would prefer you did not know that Office Home 2024 exists, and its store page duly buries it beneath Microsoft 365. It is a real product: Word, Excel, PowerPoint and OneNote, licensed for one PC or Mac, for a single payment. The Home &amp; Business edition adds Outlook and the right to use it for work. UK retailers routinely sell both below Microsoft's own price; I have seen the Home edition listed between about £90 and £125, and Home &amp; Business from around £170.</p>
 
-<p>What you do not get is anything that arrived after the 2024 feature set: no Copilot, no cloud storage beyond the free 5 GB, and no new features until you buy the next release. Security fixes continue until October 2029 under Microsoft's fixed lifecycle policy. For a single computer used by a single person who wants the desktop applications and nothing else, that is a straightforward saving over Microsoft 365. For a household with three laptops it is not, and we worked through both cases in our piece on <a href="/articles/office-suites-after-the-2026-price-rises">office suites after this year's price rises</a>.</p>
+<p>What you do not get is anything that arrived after the 2024 feature set: no Copilot, no cloud storage beyond the free 5 GB, and no new features until you buy the next release. Security fixes continue until October 2029 under Microsoft's fixed lifecycle policy. For a single computer used by a single person who wants the desktop applications and nothing else, that is a straightforward saving over Microsoft 365. For a household with three laptops it is not, and I worked through both cases in my piece on <a href="/articles/office-suites-after-the-2026-price-rises">office suites after this year's price rises</a>.</p>
 
 <h2>Design: the answer changed in October</h2>
 
 <p>For years the reply to "what do I buy instead of renting Adobe" was Affinity: Designer, Photo and Publisher, each a one-off purchase, together a fraction of a year of Creative Cloud. That is no longer available. On 29 October 2025 Canva, which bought Serif in 2024, relaunched the three applications as a single program called Affinity and made it free for everyone, with no time limit. The only requirement is a free Canva account to download and activate it. Existing owners of the V2 applications keep their licences and can still download them; nobody new can buy them.</p>
 
-<p>For most people this is simply better than the old deal. The catch, if there is one, is that "free with an account" is a different relationship from "paid for and done": it is worth reading what Canva's terms say about the account, and noticing that the paid features Canva does sell sit alongside the free app. If you are choosing design tools more broadly, our <a href="/articles/figma-alternatives-worth-considering">look at Figma alternatives</a> covers where Affinity fits.</p>
+<p>For most people this is simply better than the old deal. The catch, if there is one, is that "free with an account" is a different relationship from "paid for and done": it is worth reading what Canva's terms say about the account, and noticing that the paid features Canva does sell sit alongside the free app. If you are choosing design tools more broadly, my <a href="/articles/figma-alternatives-worth-considering">look at Figma alternatives</a> covers where Affinity fits.</p>
 
 <p>Pixelmator Pro is the other one to know. Apple bought the company and, as of January 2026, the Mac application remains a $49.99 one-off on the App Store — while also appearing inside Apple's new Creator Studio subscription. Both routes exist; the one-off is still the better value if it is the only Apple creative app you want.</p>
 
@@ -166,11 +166,11 @@ export const softwareYouCanStillBuyOnce: Article = {
 
 <h2>Writing, research and developer tools</h2>
 
-<p>Sublime Text costs $99 and includes three years of updates; when the three years end the licence keeps working on the last build you received, and a renewal is optional. DEVONthink 4, the Mac document and research manager, moved to a similar shape this year: the licence never expires, a year of updates is included, and extending updates is a discounted optional purchase rather than a subscription. Both are examples of a vendor being precise about what "perpetual" covers, which we would take over a vaguer promise every time.</p>
+<p>Sublime Text costs $99 and includes three years of updates; when the three years end the licence keeps working on the last build you received, and a renewal is optional. DEVONthink 4, the Mac document and research manager, moved to a similar shape this year: the licence never expires, a year of updates is included, and extending updates is a discounted optional purchase rather than a subscription. Both are examples of a vendor being precise about what "perpetual" covers, which I would take over a vaguer promise every time.</p>
 
-<p>Things 3 is the last of the well-known task managers with no subscription at all: $49.99 on the Mac, $19.99 on iPad, $9.99 on iPhone, paid once per platform for the current version. It has been at version 3 since 2017. If you live in Apple's ecosystem and want a task manager that will not bill you, it is the one we point to; our <a href="/articles/task-managers-compared">task manager comparison</a> explains what you give up against the subscription tools. Alfred, the Mac launcher, prices its Powerpack in pounds because the developer is British: a single licence from £34 covers one major version, and the Mega Supporter tier covers every future version for one higher payment.</p>
+<p>Things 3 is the last of the well-known task managers with no subscription at all: $49.99 on the Mac, $19.99 on iPad, $9.99 on iPhone, paid once per platform for the current version. It has been at version 3 since 2017. If you live in Apple's ecosystem and want a task manager that will not bill you, it is the one I point to; my <a href="/articles/task-managers-compared">task manager comparison</a> explains what you give up against the subscription tools. Alfred, the Mac launcher, prices its Powerpack in pounds because the developer is British: a single licence from £34 covers one major version, and the Mega Supporter tier covers every future version for one higher payment.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <ul>
 <li><strong>One PC, one person, Word and Excel:</strong> Office Home 2024 from a UK retailer. Divide the price by five years and compare it with Microsoft 365 Personal; it is not close.</li>
@@ -179,5 +179,5 @@ export const softwareYouCanStillBuyOnce: Article = {
 <li><strong>Anything else on this list:</strong> find the sentence about updates before you pay, and set a calendar reminder for when the window closes so the renewal is a decision rather than a surprise.</li>
 </ul>
 
-<p>Finally, the sum cuts both ways. We went through our own subscriptions this year and kept several, because a tool that improves every month and syncs across four devices can be worth renting. The point of a one-off licence is not that it is always cheaper. It is that the price you agreed to is the price you pay, and after the year the software industry has just had, that is a feature.</p>`,
+<p>Finally, the sum cuts both ways. I went through my own subscriptions this year and kept several, because a tool that improves every month and syncs across four devices can be worth renting. The point of a one-off licence is not that it is always cheaper. It is that the price you agreed to is the price you pay, and after the year the software industry has just had, that is a feature.</p>`,
 };

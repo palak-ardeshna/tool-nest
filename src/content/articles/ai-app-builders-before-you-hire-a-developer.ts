@@ -73,7 +73,7 @@ export const aiAppBuildersBeforeYouHireADeveloper: Article = {
   ],
   content: `<p>The pitch for these tools is that anyone can build software now. The reality is narrower and still useful: anyone can build the first version of software now, and the first version is where most ideas should have stopped anyway. Used that way — as a fast, cheap way to find out whether something is worth building properly — Lovable, Bolt and v0 are genuinely good. Used as a replacement for ever talking to a developer, they are how a small company ends up with a customer database anyone on the internet can read.</p>
 
-<p>We have built throwaway tools with all three for this site, and we have not shipped any of them to readers. That is a deliberate choice, and the reasons are most of this article.</p>
+<p>I have built throwaway tools with all three for this site, and I have not shipped any of them to readers. That is a deliberate choice, and the reasons are most of this article.</p>
 
 <h2>What each one is actually for</h2>
 
@@ -88,7 +88,7 @@ export const aiAppBuildersBeforeYouHireADeveloper: Article = {
 </tbody>
 </table>
 
-<p><strong>Lovable</strong> makes the most decisions for you. Describe the app, and it picks the stack, wires up a database, adds sign-in and gives you a URL. It is the one we hand to people who have never seen a terminal, because they can get something working before they have time to be discouraged. The trade is that its choices are its choices; if you later want a different database or a different hosting arrangement, you are exporting the code and continuing somewhere else.</p>
+<p><strong>Lovable</strong> makes the most decisions for you. Describe the app, and it picks the stack, wires up a database, adds sign-in and gives you a URL. It is the one I hand to people who have never seen a terminal, because they can get something working before they have time to be discouraged. The trade is that its choices are its choices; if you later want a different database or a different hosting arrangement, you are exporting the code and continuing somewhere else.</p>
 
 <p><strong>Bolt</strong> shows its working. The editor, the file tree and the terminal are all visible, and you can edit the code directly between AI turns. That makes it slower for a complete beginner and much better for anyone who wants to learn what the tool is doing, which is the group most likely to end up with something maintainable. Tokens on paid plans roll over for a month, which matters more than it sounds when you have a quiet fortnight.</p>
 
@@ -104,7 +104,7 @@ export const aiAppBuildersBeforeYouHireADeveloper: Article = {
 
 <h2>Where generated apps go wrong</h2>
 
-<p>The code is usually fine. It is the assumptions that are not. A person who asks for "a form where customers submit their details" gets a form that works perfectly when they test it, because they are logged in as the administrator and are entering sensible data. The classes of mistake below are invisible from that seat, and we have seen every one of them in something a builder produced.</p>
+<p>The code is usually fine. It is the assumptions that are not. A person who asks for "a form where customers submit their details" gets a form that works perfectly when they test it, because they are logged in as the administrator and are entering sensible data. The classes of mistake below are invisible from that seat, and I have seen every one of them in something a builder produced.</p>
 
 <ul>
 <li><strong>One user can read another's rows.</strong> The app has accounts, the database has a user column, and nothing checks that the two match on every query. Lovable's Supabase setup makes this less likely than it was, but "less likely" is not a security policy.</li>
@@ -113,7 +113,7 @@ export const aiAppBuildersBeforeYouHireADeveloper: Article = {
 <li><strong>No thought about ten users at once.</strong> Everything works for one person clicking slowly. A hundred people on launch day is a different program.</li>
 </ul>
 
-<p>None of these are exotic. They are the mistakes junior developers make, produced at speed, with nobody in the loop who would recognise them. That is why our threshold is simple: the day the app holds anyone else's data or takes anyone's money, a developer reads it. A day of review is cheap. We went through the equivalent decision for sign-in specifically in <a href="/articles/authentication-build-or-buy">authentication: build or buy</a>, and the answer there is even more firmly "buy".</p>
+<p>None of these are exotic. They are the mistakes junior developers make, produced at speed, with nobody in the loop who would recognise them. That is why my threshold is simple: the day the app holds anyone else's data or takes anyone's money, a developer reads it. A day of review is cheap. I went through the equivalent decision for sign-in specifically in <a href="/articles/authentication-build-or-buy">authentication: build or buy</a>, and the answer there is even more firmly "buy".</p>
 
 <h2>A way to use them that works</h2>
 
@@ -125,12 +125,12 @@ export const aiAppBuildersBeforeYouHireADeveloper: Article = {
 <li><strong>Keep using the builder for the front-end.</strong> This is where they stay useful long after the prototype stage. Interfaces are cheap to regenerate and low-risk to get wrong.</li>
 </ol>
 
-<h2>What we would pick</h2>
+<h2>What I would pick</h2>
 
 <ul>
 <li><strong>You have never built anything and want to see an idea on a screen:</strong> Lovable, free tier, this afternoon.</li>
 <li><strong>You know a little code and want to learn as you go:</strong> Bolt. Watch what it does, edit between turns, and you will come out able to maintain the result.</li>
 <li><strong>You need interfaces for an app that already exists:</strong> v0, especially on Vercel.</li>
-<li><strong>The prototype has users:</strong> whichever tool you used, plus a developer for a day. We compared what the agent-style coding tools are like to work alongside in <a href="/articles/which-tickets-to-give-an-ai-coding-agent">a week with an AI coding agent</a>; the difference is that those assume a developer is present, and these assume one is not.</li>
+<li><strong>The prototype has users:</strong> whichever tool you used, plus a developer for a day. I compared what the agent-style coding tools are like to work alongside in <a href="/articles/which-tickets-to-give-an-ai-coding-agent">a week with an AI coding agent</a>; the difference is that those assume a developer is present, and these assume one is not.</li>
 </ul>`,
 };

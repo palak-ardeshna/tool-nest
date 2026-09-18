@@ -29,7 +29,7 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
     "Mixed-suite teams end up with two sets of file formats and two admin consoles",
   ],
   alternatives: [
-    { name: "Microsoft 365 Business", url: "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing", note: "Basic $7, Standard $14, Premium $22 per user per month on annual terms after July 2026." },
+    { name: "Microsoft 365 Business", url: "https://www.microsoft.com/en-me/microsoft-365/business/microsoft-365-plans-and-pricing", note: "Basic $7, Standard $14, Premium $22 per user per month on annual terms after July 2026." },
     { name: "Google Workspace", url: "https://workspace.google.com/pricing", note: "Starter, Standard and Plus tiers; prices vary by region and now include Gemini." },
     { name: "Zoho Workplace", url: "https://www.zoho.com/workplace/pricing.html", note: "Mail, docs and drive at a lower per-seat price; strongest if you already use other Zoho products." },
     { name: "LibreOffice", url: "https://www.libreoffice.org/download/", note: "Free desktop suite; no mail or shared drive, so it replaces the apps rather than the subscription." },
@@ -43,7 +43,7 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
     {
       question: "Can I keep using Office 2021 after October?",
       answer:
-        "It will keep opening. It will stop receiving security updates on 14 October 2026, which for a business machine that handles email attachments is not a risk we would carry. The realistic options are a Microsoft 365 subscription, a newer perpetual licence if Microsoft still sells one in your region when you check, or LibreOffice on the machines that only need to open and edit documents.",
+        "It will keep opening. It will stop receiving security updates on 14 October 2026, which for a business machine that handles email attachments is not a risk I would carry. The realistic options are a Microsoft 365 subscription, a newer perpetual licence if Microsoft still sells one in your region when you check, or LibreOffice on the machines that only need to open and edit documents.",
     },
     {
       question: "Is it worth mixing suites — Google for mail, Microsoft for Excel?",
@@ -85,7 +85,7 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
   ],
   content: `<p>Office software is the bill nobody reviews. It was set up when the company was three people, it renews automatically, and it has just gone up for the second time in eighteen months. Microsoft's commercial price changes took effect on 1 July 2026. Google's came in 2025 and brought Gemini with them whether you asked or not. And Office 2021, the last "just buy it once" option a lot of small firms were quietly relying on, leaves support on 14 October.</p>
 
-<p>That is three reasons to look at the bill in one year, so we did, for our own small team and for the plans a reader is likely to be on. The conclusion is duller than the headlines: the rises are small, the migrations are not, and the money is almost always in the tier rather than the vendor.</p>
+<p>That is three reasons to look at the bill in one year, so I did, for my own small team and for the plans a reader is likely to be on. The conclusion is duller than the headlines: the rises are small, the migrations are not, and the money is almost always in the tier rather than the vendor.</p>
 
 <h2>What actually changed</h2>
 
@@ -102,7 +102,7 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
 
 <p>Prices are per user per month on an annual commitment, in US dollars because that is how Microsoft publishes them; your local price will differ and your reseller may add a margin. The licensing FAQ is clear on timing: the new price applies at your next renewal after 1 July, not on the day itself. Microsoft also added storage and some security features to Basic and Standard alongside the rise, which is the standard way to make an increase sound like an upgrade.</p>
 
-<p>Google's pricing page is now regional, which makes a single figure impossible to quote honestly — the page we checked showed rupees, and your page will show whatever your billing country uses. What is consistent is that Gemini is included in every Business tier and priced into it. You cannot buy Workspace without paying for the AI.</p>
+<p>Google's pricing page is now regional, which makes a single figure impossible to quote honestly — the page I checked showed rupees, and your page will show whatever your billing country uses. What is consistent is that Gemini is included in every Business tier and priced into it. You cannot buy Workspace without paying for the AI.</p>
 
 <p>And Office 2021 retires on 14 October 2026. Machines running it will keep working and stop receiving security patches. For a laptop that opens attachments from strangers, that is the end of its usable life as a business tool.</p>
 
@@ -110,7 +110,7 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
 
 <p>Before comparing vendors, list every seat you pay for and answer one question about each: <strong>does this person open a desktop app?</strong> Not "might", not "used to". Did they, this month.</p>
 
-<p>When we did this, the answer surprised us. Business Standard exists to give people installed Word, Excel and Outlook. Most of our seats never launched any of them; they worked in the browser and in the mobile apps, which Basic includes. The difference between Basic and Standard is now $7 a seat a month — $84 a year, per person, for desktop apps nobody opened. On a ten-person team that is more than the entire price rise several times over.</p>
+<p>When I did this, the answer surprised me. Business Standard exists to give people installed Word, Excel and Outlook. Most of my seats never launched any of them; they worked in the browser and in the mobile apps, which Basic includes. The difference between Basic and Standard is now $7 a seat a month — $84 a year, per person, for desktop apps nobody opened. On a ten-person team that is more than the entire price rise several times over.</p>
 
 <p>Three tiers, three kinds of person:</p>
 
@@ -120,7 +120,7 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
 <li><strong>Premium</strong> only if you need the device management and security tooling, which is a decision about compliance, not about Word.</li>
 </ul>
 
-<p>You can mix tiers in one tenant. Almost nobody does, because the default when adding a user is whatever the last one had. We covered the same audit for the rest of the stack in <a href="/articles/auditing-small-team-software-spend">what we pay for and what we cancelled</a>; the office suite is where it pays off fastest.</p>
+<p>You can mix tiers in one tenant. Almost nobody does, because the default when adding a user is whatever the last one had. I covered the same audit for the rest of the stack in <a href="/articles/auditing-small-team-software-spend">what I pay for and what I cancelled</a>; the office suite is where it pays off fastest.</p>
 
 <h2>If you are still going to leave</h2>
 
@@ -138,7 +138,7 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
 </tbody>
 </table>
 
-<p><strong>Zoho Workplace</strong> is the credible cheap option. The pricing page is regional too, so we will not quote a number, but it has consistently sat well under both Microsoft and Google per seat. The compromise is ecosystem: fewer third-party integrations, and formatting that is fine for internal documents and occasionally not fine for a contract someone else drafted in Word. If your business already runs on Zoho for CRM or invoicing — we looked at that side in <a href="/articles/invoicing-and-bookkeeping-for-small-teams">invoicing and bookkeeping for small teams</a> — the case gets much stronger.</p>
+<p><strong>Zoho Workplace</strong> is the credible cheap option. The pricing page is regional too, so I will not quote a number, but it has consistently sat well under both Microsoft and Google per seat. The compromise is ecosystem: fewer third-party integrations, and formatting that is fine for internal documents and occasionally not fine for a contract someone else drafted in Word. If your business already runs on Zoho for CRM or invoicing — I looked at that side in <a href="/articles/invoicing-and-bookkeeping-for-small-teams">invoicing and bookkeeping for small teams</a> — the case gets much stronger.</p>
 
 <p><strong>LibreOffice</strong> is not a suite in the subscription sense. It is the applications, free, with no mail, no shared drive and no admin console. That makes it the wrong answer to "what replaces Microsoft 365" and the right answer to "what goes on the three laptops that only open spreadsheets". Pair it with whatever mail you already have. Compatibility with modern Word files is good for prose and adequate for anything with heavy layout; test the documents you actually exchange before committing.</p>
 
@@ -148,9 +148,9 @@ export const officeSuitesAfterThe2026PriceRises: Article = {
 
 <p>Put that against the saving. Basic to a cheaper competitor might save $2 or $3 a seat a month — a few hundred dollars a year for ten people. The migration week costs more than that in salary before you count the risk. This is why the tier audit almost always wins: it saves more, it costs an afternoon, and nothing breaks.</p>
 
-<p>Leave when the reason is not the price rise. Leave because you need collaboration that Microsoft does badly, or because your CRM lives in Zoho, or because you are on Office 2021 and have to go somewhere anyway. Those are good reasons. "It went up by a dollar" is not, and we say that as people who were annoyed when it did.</p>
+<p>Leave when the reason is not the price rise. Leave because you need collaboration that Microsoft does badly, or because your CRM lives in Zoho, or because you are on Office 2021 and have to go somewhere anyway. Those are good reasons. "It went up by a dollar" is not, and I say that as people who were annoyed when it did.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <ul>
 <li><strong>On Microsoft 365, renewing soon:</strong> run the desktop-app audit, move browser-only seats to Basic at the renewal, and pocket the difference. This offsets the rise for almost every team.</li>

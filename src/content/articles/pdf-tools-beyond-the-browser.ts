@@ -57,7 +57,7 @@ export const pdfToolsBeyondTheBrowser: Article = {
     {
       question: "Is it safe to use a free online PDF converter?",
       answer:
-        "For a menu or a public leaflet, it makes no difference. For a contract, an invoice, a payslip or anything with a client's name on it, you are uploading the document to a third party you have not assessed in order to avoid a two-minute install. We do not do it, and we would not want a supplier of ours doing it with our paperwork.",
+        "For a menu or a public leaflet, it makes no difference. For a contract, an invoice, a payslip or anything with a client's name on it, you are uploading the document to a third party you have not assessed in order to avoid a two-minute install. I do not do it, and I would not want a supplier of mine doing it with my paperwork.",
     },
     {
       question: "Does blacking out text in a PDF actually remove it?",
@@ -121,7 +121,7 @@ export const pdfToolsBeyondTheBrowser: Article = {
 <li><strong>JSON output</strong> dumps the structure in a form you can read with ordinary tooling, which turns "why is this file strange" from guesswork into something you can look at.</li>
 </ul>
 
-<p>It installs from every mainstream package manager, runs offline, and is the reason we have not opened an online PDF converter in years. If you are already comfortable in a terminal — and if you are not, our piece on <a href="/articles/terminal-setups-that-are-actually-faster">terminal setups that are actually faster</a> is the place to start — this replaces a subscription outright.</p>
+<p>It installs from every mainstream package manager, runs offline, and is the reason I have not opened an online PDF converter in years. If you are already comfortable in a terminal — and if you are not, my piece on <a href="/articles/terminal-setups-that-are-actually-faster">terminal setups that are actually faster</a> is the place to start — this replaces a subscription outright.</p>
 
 <h2>Where the free route genuinely stops</h2>
 
@@ -131,7 +131,7 @@ export const pdfToolsBeyondTheBrowser: Article = {
 
 <p><strong>Redaction.</strong> Drawing a black rectangle over a name does not remove the name. The text stays in the file and comes back out of any extraction tool, and this is how confidential material leaks from documents that somebody believed they had cleaned. Removing the underlying content properly is a specific feature, and if you handle other people's personal data you should be paying for it rather than improvising.</p>
 
-<p><strong>Editing text in place.</strong> Changing a sentence inside a finished PDF means reflowing a page that was never designed to reflow. Tools that do it are working against the format. Where you can, fix the original document and export again — the same rule we apply to <a href="/articles/backups-for-a-small-team">the files we keep copies of</a>, where the source always outranks the derived artefact.</p>
+<p><strong>Editing text in place.</strong> Changing a sentence inside a finished PDF means reflowing a page that was never designed to reflow. Tools that do it are working against the format. Where you can, fix the original document and export again — the same rule I apply to <a href="/articles/backups-for-a-small-team">the files I keep copies of</a>, where the source always outranks the derived artefact.</p>
 
 <p><strong>Tagged, accessible output.</strong> If a document has to be usable with a screen reader, it needs a proper structure tree, and adding one after the fact is real work with real tooling behind it.</p>
 
@@ -139,9 +139,9 @@ export const pdfToolsBeyondTheBrowser: Article = {
 
 <p>If you cross that line, Acrobat is still the default. UK individual pricing on an annual plan billed monthly runs at £14.99 a month for Standard, £19.97 for Pro and £24.98 for Studio, all including VAT. The month-to-month equivalents are £24.98, £29.96 and £34.98, which is the usual arrangement: the flexible option costs roughly two-thirds more, and most people take it and then keep it for three years.</p>
 
-<p>Our advice on that is the same as it was when we went through <a href="/articles/auditing-small-team-software-spend">what we pay for and what we cancelled</a>: name the specific job before you subscribe. "PDFs" is not a job. "Redacting client names from twenty documents a month" is, and it justifies the licence on its own.</p>
+<p>My advice on that is the same as it was when I went through <a href="/articles/auditing-small-team-software-spend">what I pay for and what I cancelled</a>: name the specific job before you subscribe. "PDFs" is not a job. "Redacting client names from twenty documents a month" is, and it justifies the licence on its own.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <p>Read and sign in the browser. Install qpdf and learn two of its commands. Keep the original document, because every hard PDF problem is easier upstream of the PDF. And pay for exactly one seat of something serious if — and only if — you have a recurring job on that list of four, rather than because a file needed splitting on a Tuesday afternoon.</p>`,
 };

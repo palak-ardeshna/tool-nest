@@ -33,7 +33,7 @@ export const textExpandersAndClipboardManagers: Article = {
     { name: "Espanso", url: "https://github.com/espanso/espanso", note: "Free and GPL-3.0. Windows, macOS and Linux. Snippets are YAML files, with forms, shell commands and a package hub." },
     { name: "Raycast", url: "https://www.raycast.com/pricing", note: "Free plan includes clipboard history and snippets. Pro is $10 a month, $8 annually. macOS first, with Windows and iOS versions." },
     { name: "TextExpander", url: "https://textexpander.com/pricing", note: "Free tier holds five snippets. Pro is $6 per user a month billed annually; Business is $12 for shared team libraries." },
-    { name: "PowerToys", url: "https://learn.microsoft.com/en-us/windows/powertoys/", note: "Free and open source from Microsoft. Advanced Paste, a command palette, a launcher and screen text extraction." },
+    { name: "PowerToys", url: "https://learn.microsoft.com/en-me/windows/powertoys/", note: "Free and open source from Microsoft. Advanced Paste, a command palette, a launcher and screen text extraction." },
   ],
   faqs: [
     {
@@ -54,7 +54,7 @@ export const textExpandersAndClipboardManagers: Article = {
     {
       question: "Is clipboard history a security problem?",
       answer:
-        "It is a real consideration, and the answer is configuration rather than avoidance. Anything you copy is retained, which includes passwords copied out of a password manager, one-time codes and API keys. Most tools can be told to ignore your password manager, to exclude specific applications, or to expire entries after a set period, and every one of those settings is worth finding on the day you install it. Keeping the history local rather than synced is the other sensible default — and if you are already thinking about credentials, our piece on <a href=\"/articles/password-managers-after-the-price-rises\">password managers after the price rises</a> is the companion to this one.",
+        "It is a real consideration, and the answer is configuration rather than avoidance. Anything you copy is retained, which includes passwords copied out of a password manager, one-time codes and API keys. Most tools can be told to ignore your password manager, to exclude specific applications, or to expire entries after a set period, and every one of those settings is worth finding on the day you install it. Keeping the history local rather than synced is the other sensible default — and if you are already thinking about credentials, my piece on <a href=\"/articles/password-managers-after-the-price-rises\">password managers after the price rises</a> is the companion to this one.",
     },
   ],
   sources: [
@@ -124,13 +124,13 @@ export const textExpandersAndClipboardManagers: Article = {
 
 <p>Two things are worth pulling out of that table. Raycast's free plan already includes clipboard history — three months of it — and snippets, so on a Mac you can have both tools working before lunch without paying anything. And Alfred is one of the last pieces of desktop software still sold as a one-off licence rather than a subscription, which for some people settles it on principle alone.</p>
 
-<h2>Why we keep coming back to Espanso</h2>
+<h2>Why I keep coming back to Espanso</h2>
 
 <p>Espanso is free, runs on all three desktop platforms, and stores its configuration as YAML files in a folder. That last detail is the one that matters more than it sounds.</p>
 
 <p>Snippets in a text file can go in a git repository. They can be reviewed, copied to a new machine in one command, and diffed when something changes. Every commercial expander stores its library in a proprietary sync service, which is fine until you leave, and a nuisance the day you want your snippets somewhere else. Plain files sidestep the whole question.</p>
 
-<p>It also does the advanced things: forms that prompt for values before expanding, shell command output, regex triggers, and a package hub for shared sets. If you already keep a set of dotfiles, this belongs beside them — the same instinct we described in our piece on <a href="/articles/terminal-setups-that-are-actually-faster">terminal setups that are actually faster</a>.</p>
+<p>It also does the advanced things: forms that prompt for values before expanding, shell command output, regex triggers, and a package hub for shared sets. If you already keep a set of dotfiles, this belongs beside them — the same instinct I described in my piece on <a href="/articles/terminal-setups-that-are-actually-faster">terminal setups that are actually faster</a>.</p>
 
 <blockquote>
 <p>Give every trigger a prefix that never occurs in normal writing. A leading colon costs one keystroke and saves you from an expansion firing in the middle of a word for the rest of your life.</p>
@@ -140,7 +140,7 @@ export const textExpandersAndClipboardManagers: Article = {
 
 <p>Do not build a library. Notice one instead. For one week, every time you catch yourself retyping something, write it down. At the end of the week you will have between eight and fifteen items, and that list is your snippet set.</p>
 
-<p>Ours, for what it is worth, has settled on roughly this shape:</p>
+<p>Mine, for what it is worth, has settled on roughly this shape:</p>
 
 <ul>
 <li><strong>Identity.</strong> Email address, postal address, phone number, company registration details.</li>
@@ -157,7 +157,7 @@ export const textExpandersAndClipboardManagers: Article = {
 
 <p>The second is forgetting what the clipboard history contains. It holds whatever you copied, and what you copied includes passwords, one-time codes and API keys. Every serious tool can exclude specific applications, or expire entries after an hour — turn that on when you install it, not after an incident. Keep the history local rather than synced unless you have a specific reason not to.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <p>On a Mac, install Raycast, use the free clipboard history immediately, and add Espanso for expansion if you want your snippets as files. On Windows, PowerToys plus Espanso covers everything without spending anything. On Linux, Espanso and whatever clipboard manager your desktop environment already ships.</p>
 

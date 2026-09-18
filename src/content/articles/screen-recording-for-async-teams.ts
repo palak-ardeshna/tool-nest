@@ -4,7 +4,7 @@ export const screenRecordingForAsyncTeams: Article = {
   slug: "screen-recording-for-async-teams",
   title: "Screen Recording for Async Teams: When a Video Beats a Message",
   excerpt:
-    "Async video gets recommended for everything and is right for about three things. Here is the test we use before hitting record, what the tools genuinely differ on, and why the free tier's five-minute limit is a better constraint than it looks.",
+    "Async video gets recommended for everything and is right for about three things. Here is the test I use before hitting record, what the tools genuinely differ on, and why the free tier's five-minute limit is a better constraint than it looks.",
   image: "/images/articles/screen-recording-for-async-teams.webp",
   imageAlt:
     "Photograph: a laptop on a desk by a window showing a multitrack recording timeline, with a mixer, a monitor speaker and headphones around it",
@@ -55,7 +55,7 @@ export const screenRecordingForAsyncTeams: Article = {
     {
       question: "What about recordings of meetings?",
       answer:
-        "That is a different job and a different tool. A screen recorder captures something you chose to show deliberately; a meeting recording captures an hour nobody will rewatch. If the goal is that people who missed a call know what happened, a notetaker producing a summary and actions serves that far better than a video file. We compared that category separately in our look at AI meeting notetakers — the deciding factor there is what happens to the recording afterwards, not the quality of the capture.",
+        "That is a different job and a different tool. A screen recorder captures something you chose to show deliberately; a meeting recording captures an hour nobody will rewatch. If the goal is that people who missed a call know what happened, a notetaker producing a summary and actions serves that far better than a video file. I compared that category separately in my look at AI meeting notetakers — the deciding factor there is what happens to the recording afterwards, not the quality of the capture.",
     },
   ],
   sources: [
@@ -104,7 +104,7 @@ export const screenRecordingForAsyncTeams: Article = {
 <li><strong>Writing it would take three rounds.</strong> When you can predict the clarifying questions, answering them in advance while showing the thing is faster than the thread would have been.</li>
 </ul>
 
-<p>Everything else is a message or a document. Text is searchable, skimmable, quotable and readable at whatever speed the person prefers, and video is none of those. The most common mistake we see is a video containing a decision, because six weeks later somebody needs that decision and there is no way to find it except watching. If the video contains a decision, write the decision underneath it.</p>
+<p>Everything else is a message or a document. Text is searchable, skimmable, quotable and readable at whatever speed the person prefers, and video is none of those. The most common mistake I see is a video containing a decision, because six weeks later somebody needs that decision and there is no way to find it except watching. If the video contains a decision, write the decision underneath it.</p>
 
 <blockquote>
 <p>A reasonable division: video shows, text decides. Record the walkthrough, then write the two lines saying what was agreed. The video is the evidence; the text is the record.</p>
@@ -157,7 +157,7 @@ export const screenRecordingForAsyncTeams: Article = {
 
 <p>For everything else, a broken link is fine. The overwhelming majority of async videos are useful for about four days and then never again, and pretending otherwise is how teams end up paying for storage of things nobody will open.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <p>Start with the recorder already on your machine, and only pay for a tool once you have noticed yourself doing the export-and-upload dance more than twice a week. When you do pay, pay for the sharing rather than the recording, because the recording was never the hard part.</p>
 

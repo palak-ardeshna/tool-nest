@@ -37,7 +37,7 @@ export const errorTrackingForSmallTeams: Article = {
   ],
   faqs: [
     {
-      question: "Do we need error tracking if we already have logs?",
+      question: "Do I need error tracking if I already have logs?",
       answer:
         "Logs tell you what happened if you already know where to look. An error tracker tells you that something new started happening and how often, then groups every instance of it together so you see one issue rather than nine thousand lines. The two solve different problems. If you can only afford attention for one, the error tracker is the one that finds problems you did not know about.",
     },
@@ -103,7 +103,7 @@ export const errorTrackingForSmallTeams: Article = {
   ],
   content: `<p>Most small teams buy error tracking twice. The first time is at launch, when someone signs up for the free tier and wires in the SDK. The second time is eight months later, when an unbounded retry loop generates two million events over a weekend and the invoice explains what event-based pricing means.</p>
 
-<p>We have not load-tested these platforms against each other, and any article that claims to has usually tested the free tiers for an afternoon. What follows is how the pricing models differ, which decisions actually protect you, and where the cheap option is genuinely the right one.</p>
+<p>I have not load-tested these platforms against each other, and any article that claims to has usually tested the free tiers for an afternoon. What follows is how the pricing models differ, which decisions actually protect you, and where the cheap option is genuinely the right one.</p>
 
 <h2>Two problems sold as one product</h2>
 
@@ -179,7 +179,7 @@ export const errorTrackingForSmallTeams: Article = {
 
 <p>A single request to a URL that exercises your database, every minute, from outside your infrastructure. If it fails twice in a row, someone's phone rings. This is the cheapest monitoring you will ever configure and it catches the failures the other three cannot see. If you set up nothing else on this list, set up this.</p>
 
-<h2>What we would pick at each size</h2>
+<h2>What I would pick at each size</h2>
 
 <ul>
 <li><strong>One person, a side project with real users:</strong> GlitchTip's hosted free tier plus a free external uptime check. Total cost nothing, and it covers the two failures that matter.</li>
@@ -188,5 +188,5 @@ export const errorTrackingForSmallTeams: Article = {
 <li><strong>Regulated data or a contract that names where data lives:</strong> self-hosted GlitchTip, on infrastructure separate from the application, with retention configured before the first event arrives.</li>
 </ul>
 
-<p>The pattern worth remembering is that this category punishes defaults. The default sampling rate, the default scrubbing rules and the default alert configuration are all tuned for a demo, and every one of them costs you something in production — money, privacy, or the team's willingness to look at the alerts. Half an hour of configuration on day one is worth more than any comparison table, ours included. If your stack is Postgres-backed, <a href="/articles/postgres-tools-worth-using">the query-level tooling we reach for</a> covers the layer underneath this one.</p>`,
+<p>The pattern worth remembering is that this category punishes defaults. The default sampling rate, the default scrubbing rules and the default alert configuration are all tuned for a demo, and every one of them costs you something in production — money, privacy, or the team's willingness to look at the alerts. Half an hour of configuration on day one is worth more than any comparison table, mine included. If your stack is Postgres-backed, <a href="/articles/postgres-tools-worth-using">the query-level tooling I reach for</a> covers the layer underneath this one.</p>`,
 };

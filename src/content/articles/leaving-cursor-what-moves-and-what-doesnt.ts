@@ -38,12 +38,12 @@ export const leavingCursorWhatMovesAndWhatDoesnt: Article = {
     {
       question: "Do I actually need to leave?",
       answer:
-        "That is a judgement about the owner, not the editor, and we are not going to make it for you. What we would say is that the product has changed hands and the pricing page already reflects it — Grok models and a Grok Bot now feature in the plan descriptions — so the terms you originally agreed to are worth re-reading whether or not you move. The migration steps below are useful either way: a portable AGENTS.md and a portable MCP file mean the next acquisition, whoever it is, costs you an afternoon rather than a month.",
+        "That is a judgement about the owner, not the editor, and I am not going to make it for you. What I would say is that the product has changed hands and the pricing page already reflects it — Grok models and a Grok Bot now feature in the plan descriptions — so the terms you originally agreed to are worth re-reading whether or not you move. The migration steps below are useful either way: a portable AGENTS.md and a portable MCP file mean the next acquisition, whoever it is, costs you an afternoon rather than a month.",
     },
     {
       question: "What happens to code Cursor has already processed?",
       answer:
-        "Read the privacy policy rather than a forum thread. When we checked, Cursor's policy — last updated 6 October 2025 — said inputs and suggestions are not used to train its models or shared with third parties for training unless flagged for security review, and that data is retained only as long as needed to operate the service; it did not mention SpaceX or xAI. Reporting since the deal has raised questions about whether the training terms have changed. We could not verify those claims against Cursor's own published documentation, so our advice is procedural: read the policy on the day you leave, use the account deletion route if you want retention to end, and keep a dated copy of what the policy said.",
+        "Read the privacy policy rather than a forum thread. When I checked, Cursor's policy — last updated 6 October 2025 — said inputs and suggestions are not used to train its models or shared with third parties for training unless flagged for security review, and that data is retained only as long as needed to operate the service; it did not mention SpaceX or xAI. Reporting since the deal has raised questions about whether the training terms have changed. I could not verify those claims against Cursor's own published documentation, so my advice is procedural: read the policy on the day you leave, use the account deletion route if you want retention to end, and keep a dated copy of what the policy said.",
     },
     {
       question: "Which tool is most like Cursor?",
@@ -95,11 +95,11 @@ export const leavingCursorWhatMovesAndWhatDoesnt: Article = {
       checkedAt: "2026-09-16",
     },
   ],
-  content: `<p>SpaceX announced its all-stock, $60 billion agreement to buy Anysphere, the company behind Cursor, on 16 June 2026, four days after its own flotation. The deal closed on 14 August. Since then the question in our inbox has not been "is Cursor still good" — it is — but "how much of my setup is stuck there if I want to go". So this is not a review of the alternatives. We covered <a href="/articles/best-ai-coding-tools-for-react-developers">the coding tools themselves</a> earlier this year. This is the checklist of what actually has to move, drawn from each tool's current documentation.</p>
+  content: `<p>SpaceX announced its all-stock, $60 billion agreement to buy Anysphere, the company behind Cursor, on 16 June 2026, four days after its own flotation. The deal closed on 14 August. Since then the question in my inbox has not been "is Cursor still good" — it is — but "how much of my setup is stuck there if I want to go". So this is not a review of the alternatives. I covered <a href="/articles/best-ai-coding-tools-for-react-developers">the coding tools themselves</a> earlier this year. This is the checklist of what actually has to move, drawn from each tool's current documentation.</p>
 
 <h2>What is in a Cursor setup</h2>
 
-<p>Strip it down and a Cursor installation has six things that are yours: project rules, MCP server definitions, editor settings and keybindings, extensions, a billing relationship, and a history of what the tool has seen. The first four are files on your disk and move with varying degrees of friction. The fifth is a cancellation. The sixth is the one people forget, and we will come to it last.</p>
+<p>Strip it down and a Cursor installation has six things that are yours: project rules, MCP server definitions, editor settings and keybindings, extensions, a billing relationship, and a history of what the tool has seen. The first four are files on your disk and move with varying degrees of friction. The fifth is a cancellation. The sixth is the one people forget, and I will come to it last.</p>
 
 <table>
 <thead>
@@ -132,7 +132,7 @@ export const leavingCursorWhatMovesAndWhatDoesnt: Article = {
 
 <p>Cursor is a fork of VS Code. So is Windsurf, whatever its name is this month. That means your <code>settings.json</code>, <code>keybindings.json</code> and snippets are in the same format and Windsurf offers to import them on first launch; where it does not, copying the files across works. Extensions mostly carry over too, with one wrinkle that applies to both forks: they cannot legally use Microsoft's extension marketplace and rely on Open VSX instead, so an extension that was missing in Cursor will be missing in Windsurf as well.</p>
 
-<p>For Claude Code and OpenCode there is nothing to migrate, because they are not editors. They run in a terminal — including the terminal inside Cursor or VS Code — and your editor stays whatever it was. This is the least disruptive path if you are unsure: install one, run it in a split pane for a fortnight, and notice which one you reach for. We did roughly that <a href="/articles/which-tickets-to-give-an-ai-coding-agent">for a week with a coding agent</a> and the findings still hold. What you will not get from either is inline Tab completion in the editor; if that is the Cursor feature you would miss most, Windsurf is your answer, not a terminal tool.</p>
+<p>For Claude Code and OpenCode there is nothing to migrate, because they are not editors. They run in a terminal — including the terminal inside Cursor or VS Code — and your editor stays whatever it was. This is the least disruptive path if you are unsure: install one, run it in a split pane for a fortnight, and notice which one you reach for. I did roughly that <a href="/articles/which-tickets-to-give-an-ai-coding-agent">for a week with a coding agent</a> and the findings still hold. What you will not get from either is inline Tab completion in the editor; if that is the Cursor feature you would miss most, Windsurf is your answer, not a terminal tool.</p>
 
 <h2>Step four: billing</h2>
 
@@ -142,9 +142,9 @@ export const leavingCursorWhatMovesAndWhatDoesnt: Article = {
 
 <p>Everything above concerns files on your machine. None of it touches what Cursor has already processed on its side, and that is where the acquisition actually matters.</p>
 
-<p>Here is what we can verify. Cursor's privacy policy, last updated on 6 October 2025 when we read it, says the company does not use inputs or suggestions to train its models or allow third parties to use them for training, unless they are flagged for security review, and that personal data is kept only as long as necessary to operate the service. It does not mention SpaceX or xAI. Cursor's pricing page, meanwhile, now advertises "generous limits for Grok" and "Grok Bot access" on its plans, which tells you the xAI relationship is a product fact even if the policy has not caught up.</p>
+<p>Here is what I can verify. Cursor's privacy policy, last updated on 6 October 2025 when I read it, says the company does not use inputs or suggestions to train its models or allow third parties to use them for training, unless they are flagged for security review, and that personal data is kept only as long as necessary to operate the service. It does not mention SpaceX or xAI. Cursor's pricing page, meanwhile, now advertises "generous limits for Grok" and "Grok Bot access" on its plans, which tells you the xAI relationship is a product fact even if the policy has not caught up.</p>
 
-<p>Here is what we cannot verify. Several outlets have reported that the terms around privacy mode and training data changed around the time the deal closed. We could not confirm those reports against Cursor's published policy text, so we are not going to repeat them as fact. What we would do instead is procedural:</p>
+<p>Here is what I cannot verify. Several outlets have reported that the terms around privacy mode and training data changed around the time the deal closed. I could not confirm those reports against Cursor's published policy text, so I am not going to repeat them as fact. What I would do instead is procedural:</p>
 
 <ol>
 <li>Read the privacy policy and the security page on the day you leave, and save a dated copy.</li>
@@ -153,13 +153,13 @@ export const leavingCursorWhatMovesAndWhatDoesnt: Article = {
 <li>If you are on Teams or Enterprise, ask your account contact in writing what happens to stored data and get the answer in writing.</li>
 </ol>
 
-<p>That is the same advice we would give for any tool that has changed hands, and we would have given it about Cursor's competitors too; Windsurf's own change of owner is why its file paths are in flux. The habit is worth more than the specific answer.</p>
+<p>That is the same advice I would give for any tool that has changed hands, and I would have given it about Cursor's competitors too; Windsurf's own change of owner is why its file paths are in flux. The habit is worth more than the specific answer.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <ul>
 <li><strong>You want the least change:</strong> Windsurf. Import settings, convert rules to <code>AGENTS.md</code>, copy MCP entries, done in an afternoon.</li>
-<li><strong>You want out of the editor-fork business altogether:</strong> Claude Code or OpenCode inside plain VS Code, and pick between them by model preference; our <a href="/articles/chatgpt-vs-claude-for-coding">comparison of the assistants for coding</a> is the place to start on that.</li>
+<li><strong>You want out of the editor-fork business altogether:</strong> Claude Code or OpenCode inside plain VS Code, and pick between them by model preference; my <a href="/articles/chatgpt-vs-claude-for-coding">comparison of the assistants for coding</a> is the place to start on that.</li>
 <li><strong>You are not sure:</strong> run a terminal agent in Cursor's own terminal for two weeks and make the decision on evidence.</li>
 <li><strong>Whatever you decide:</strong> write the <code>AGENTS.md</code> anyway. It is the one piece of this that makes the next migration free.</li>
 </ul>`,

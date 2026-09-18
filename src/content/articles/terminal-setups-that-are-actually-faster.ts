@@ -118,7 +118,7 @@ done 2&gt;&amp;1 | sort -n | tail -1</code></pre>
 <p>If your prompt shows git status, measure it inside your largest repository, not your dotfiles repository. That is where you will actually feel it.</p>
 </blockquote>
 
-<p>Either use a prompt that computes git state asynchronously, or show less. We show branch name only, and stopped noticing the difference within a week.</p>
+<p>Either use a prompt that computes git state asynchronously, or show less. I show branch name only, and stopped noticing the difference within a week.</p>
 
 <h2>What is usually worth removing</h2>
 

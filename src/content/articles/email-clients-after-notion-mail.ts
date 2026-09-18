@@ -4,7 +4,7 @@ export const emailClientsAfterNotionMail: Article = {
   slug: "email-clients-after-notion-mail",
   title: "Email Clients After Notion Mail: What to Move to Before 22 September",
   excerpt:
-    "Notion Mail switches off on 22 September 2026, and four things in it do not live in Gmail. We list what to export by the 21st, then compare Superhuman, Spark, Shortwave, Thunderbird and the clients you already have on price, provider support and the AI features that were the reason you tried Notion Mail in the first place.",
+    "Notion Mail switches off on 22 September 2026, and four things in it do not live in Gmail. I list what to export by the 21st, then compare Superhuman, Spark, Shortwave, Thunderbird and the clients you already have on price, provider support and the AI features that were the reason you tried Notion Mail in the first place.",
   category: "software",
   author: "parth-patel",
   tags: ["Email", "Software", "Notion", "Comparisons"],
@@ -71,7 +71,7 @@ export const emailClientsAfterNotionMail: Article = {
     {
       question: "What if I do not want another company that might shut down?",
       answer:
-        "Thunderbird. It is open source, funded by donations, has existed for two decades, and works with any IMAP provider, so neither the client nor the mailbox depends on one company's product decisions. It has no AI, which for some people is the point. Pocket and Omnivore taught the same lesson for reading apps; we wrote about that when Pocket closed.",
+        "Thunderbird. It is open source, funded by donations, has existed for two decades, and works with any IMAP provider, so neither the client nor the mailbox depends on one company's product decisions. It has no AI, which for some people is the point. Pocket and Omnivore taught the same lesson for reading apps; I wrote about that when Pocket closed.",
     },
   ],
   sources: [
@@ -114,7 +114,7 @@ export const emailClientsAfterNotionMail: Article = {
   ],
   content: `<p>Notion announced in June that Notion Mail would close on 22 September 2026, and the reason it gave is the interesting part: more than half of its users, it said, were managing email through Notion's agents without ever opening the inbox. So the inbox goes, the agents stay, and if you were one of the people who actually liked the inbox, you have about a week to move.</p>
 
-<p>We used Notion Mail for most of the last year. Here is what you need to save first, and where we ended up.</p>
+<p>I used Notion Mail for most of the last year. Here is what you need to save first, and where I ended up.</p>
 
 <h2>Do this before 21 September</h2>
 
@@ -133,7 +133,7 @@ export const emailClientsAfterNotionMail: Article = {
 
 <p>If what you liked about Notion Mail was the split inbox, the keyboard shortcuts and the AI labelling, Superhuman is where that idea came from. Starter is $30 a month or $25 a month billed yearly and includes the split inbox, the shortcuts, AI writing, summaries, snippets and calendar. Business, at $40 a month or about $33 yearly, adds the things that map most directly onto Notion Mail's AI — auto-drafts, Ask AI over your mail, and custom auto-labels — plus CRM integrations.</p>
 
-<p>It works with Gmail and Outlook, which matters if you are not purely on Google. It is fast in a way that is hard to describe until you have used it and then hard to give up. It is also, for one person paying yearly, $300 a year for an email client. Whether that is reasonable depends entirely on how much of your day is email. Superhuman now sits inside Grammarly's company, which we mention only because the last year has taught everyone to ask who owns the tool they are moving to.</p>
+<p>It works with Gmail and Outlook, which matters if you are not purely on Google. It is fast in a way that is hard to describe until you have used it and then hard to give up. It is also, for one person paying yearly, $300 a year for an email client. Whether that is reasonable depends entirely on how much of your day is email. Superhuman now sits inside Grammarly's company, which I mention only because the last year has taught everyone to ask who owns the tool they are moving to.</p>
 
 <blockquote>
 <p>Superhuman is what Notion Mail was imitating. If you want the original and email is your job, pay for it. If you handle thirty messages a day, you are paying for shortcuts.</p>
@@ -141,7 +141,7 @@ export const emailClientsAfterNotionMail: Article = {
 
 <h2>Spark: the free one that does most of it</h2>
 
-<p>Spark is the one we would tell most people to try first, because the free tier is genuinely complete for a personal inbox: a smart inbox that groups mail by priority, unlimited accounts from any provider, smart notifications and a calendar, on iOS, Mac, Windows and Android with the same features everywhere. If Notion Mail's appeal was that it was free and did not look like Gmail, Spark's free tier is the direct replacement.</p>
+<p>Spark is the one I would tell most people to try first, because the free tier is genuinely complete for a personal inbox: a smart inbox that groups mail by priority, unlimited accounts from any provider, smart notifications and a calendar, on iOS, Mac, Windows and Android with the same features everywhere. If Notion Mail's appeal was that it was free and did not look like Gmail, Spark's free tier is the direct replacement.</p>
 
 <p>The AI is paid. Plus is $10 a month or $120 a year, which works out at $8.25 a month, and adds the Spark AI assistant with a monthly allowance of AI meeting notes. Pro doubles the price to $20 a month or $240 a year and adds unlimited meeting notes, read statuses, team collaboration and a HubSpot integration. Spark lists auto-labels, auto-drafts and workflows as coming soon, which is worth knowing: the specific Notion Mail features you are missing are on its roadmap, not in the product yet.</p>
 
@@ -155,7 +155,7 @@ export const emailClientsAfterNotionMail: Article = {
 
 <p>The quiet lesson of the last two years, from Pocket to Omnivore to Notion Mail, is that a client built on someone's product strategy lasts as long as the strategy. Thunderbird is the opposite bet. It is free, open source, and funded by donations; its own site is explicit that it does not collect personal data, sell ads in your inbox, or train AI on your conversations. It runs on Windows, macOS and Linux, and since 2024 on Android, with any IMAP account including Gmail and Outlook.</p>
 
-<p>It has no AI features, and the interface is functional rather than lovely. For some people reading this, both of those are recommendations. It is the client we point people to when they say they never want to do this migration again; we said something similar about Wallabag in <a href="/articles/read-it-later-apps-after-pocket">our piece on life after Pocket</a>.</p>
+<p>It has no AI features, and the interface is functional rather than lovely. For some people reading this, both of those are recommendations. It is the client I point people to when they say they never want to do this migration again; I said something similar about Wallabag in <a href="/articles/read-it-later-apps-after-pocket">my piece on life after Pocket</a>.</p>
 
 <h2>Or just use the one you already have</h2>
 
@@ -176,7 +176,7 @@ export const emailClientsAfterNotionMail: Article = {
 </tbody>
 </table>
 
-<h2>What we did</h2>
+<h2>What I did</h2>
 
-<p>One of us went to Superhuman on the yearly plan, because email is most of their day and the split inbox paid for itself in a week. Two of us went to Spark free and have not felt the need to pay. Nobody chose Shortwave, purely on price. And the auto-label instructions we exported from Notion Mail are in a text file, which is where they will stay until Spark ships its version — at which point the wording, not the tool, is what we will have kept. If you are weighing that Superhuman subscription against the AI plan you already pay for, <a href="/articles/which-ai-assistant-is-worth-paying-for">our comparison of the assistant subscriptions</a> is the other half of that sum.</p>`,
+<p>I went to Spark free and have not felt the need to pay; Superhuman's split inbox is the feature I would pay for if email were most of my day, and it is not. I ruled out Shortwave purely on price. And the auto-label instructions I exported from Notion Mail are in a text file, which is where they will stay until Spark ships its version — at which point the wording, not the tool, is what I will have kept. If you are weighing that Superhuman subscription against the AI plan you already pay for, <a href="/articles/which-ai-assistant-is-worth-paying-for">my comparison of the assistant subscriptions</a> is the other half of that sum.</p>`,
 };

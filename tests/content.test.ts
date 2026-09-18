@@ -113,7 +113,7 @@ test("no article reads like unedited model output", () => {
     const tell = prose.match(aiTells);
     assert.equal(tell, null, `${article.slug}: AI-tell phrase "${tell?.[0]}"`);
     assert.match(article.content, /\byou(r|rs)?\b/i, `${article.slug}: never addresses the reader`);
-    assert.match(article.content, /\b(we|our)\b/i, `${article.slug}: no editorial voice`);
+    assert.doesNotMatch(article.content.replace(/"[^"]*"/g, ""), /\b(we|our|ourselves)\b/i, `${article.slug}: plural voice on a one-person site`);
   }
 });
 

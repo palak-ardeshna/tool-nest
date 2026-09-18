@@ -42,7 +42,7 @@ export const softwareWePayForAndWhatWeCancelled: Article = {
         "The second tool in a category you already have a tool for, bought during a busy month because the first one was annoying that particular week. It rarely replaces the first — it splits your data across both, which costs more than the subscription.",
     },
     {
-      question: "Should we consolidate onto one all-in-one suite?",
+      question: "Should I consolidate onto one all-in-one suite?",
       answer:
         "Only if the suite is genuinely adequate at the two or three jobs you do most. Suites win on billing and lose on depth. The failure mode is consolidating, discovering the suite is weak at your most important job, and re-buying the specialist tool while still paying for the suite.",
     },

@@ -4,7 +4,7 @@ export const writingForSearchWhenMostSearchesNeverClick: Article = {
   slug: "writing-for-search-when-most-searches-never-click",
   title: "Writing for Search When Two-Thirds of Searches Never Click",
   excerpt:
-    "SparkToro's 2026 study puts zero-click Google searches at 68%, up from 60% two years earlier, with AI Overviews doing most of the pushing. For a small site that lives on search traffic this is the number that matters. Here is what it does and does not mean, and what we changed.",
+    "SparkToro's 2026 study puts zero-click Google searches at 68%, up from 60% two years earlier, with AI Overviews doing most of the pushing. For a small site that lives on search traffic this is the number that matters. Here is what it does and does not mean, and what I changed.",
   category: "research",
   author: "parth-patel",
   tags: ["Research", "SEO", "AI Overviews", "Publishing"],
@@ -15,7 +15,7 @@ export const writingForSearchWhenMostSearchesNeverClick: Article = {
   seoDescription:
     "68% of US Google searches ended without a click in early 2026. What that figure measures, what it misses, and how a small site should write in response.",
   quickAnswer:
-    "The figure is real and the panic is mostly misdirected. SparkToro's analysis of Similarweb panel data for January to April 2026 found 68% of US Google searches ended without a click, against 60% in 2024, and that only about 276 of every 1,000 searches reached the open web. AI Overviews are the main reason. But the searches that never clicked were overwhelmingly ones that never needed to — a fact, a definition, a conversion — and a comparison or a buying decision still sends the reader somewhere. Our response was not to write more; it was to stop writing the kind of page an Overview replaces, and to make the pages that survive worth the click they still get.",
+    "The figure is real and the panic is mostly misdirected. SparkToro's analysis of Similarweb panel data for January to April 2026 found 68% of US Google searches ended without a click, against 60% in 2024, and that only about 276 of every 1,000 searches reached the open web. AI Overviews are the main reason. But the searches that never clicked were overwhelmingly ones that never needed to — a fact, a definition, a conversion — and a comparison or a buying decision still sends the reader somewhere. My response was not to write more; it was to stop writing the kind of page an Overview replaces, and to make the pages that survive worth the click they still get.",
   pros: [
     "The study is large, panel-based and repeated on the same method since 2019, so the trend is trustworthy",
     "Pages that answer a decision rather than a fact are the ones still earning clicks",
@@ -42,7 +42,7 @@ export const writingForSearchWhenMostSearchesNeverClick: Article = {
     {
       question: "What about traffic from ChatGPT and Perplexity?",
       answer:
-        "It exists, it is growing, and it is still a small fraction of what Google sends. Those tools cite sources and a minority of readers click them. The pages they cite are the same pages that do well in Overviews: specific, sourced, and clearly written. There is no separate optimisation for AI search that we have found; there is just writing something worth citing.",
+        "It exists, it is growing, and it is still a small fraction of what Google sends. Those tools cite sources and a minority of readers click them. The pages they cite are the same pages that do well in Overviews: specific, sourced, and clearly written. There is no separate optimisation for AI search that I have found; there is just writing something worth citing.",
     },
   ],
   sources: [
@@ -85,33 +85,33 @@ export const writingForSearchWhenMostSearchesNeverClick: Article = {
 
 <p>Search Console is the tool here, and it is free. Open the Performance report, compare the last three months to the same three months a year ago, and sort queries by the change in click-through rate rather than by clicks. What you are looking for is queries where impressions held up or grew and clicks fell. That is the signature of an Overview arriving above you: Google still shows your page, and fewer people need it.</p>
 
-<p>When we ran this on ToolNest, the pattern was clean enough to be uncomfortable. Queries of the form "what is X" and "does X do Y" had lost a third to a half of their click-through rate. Queries of the form "X vs Y", "best X for Z" and "should I switch from X" had barely moved. The definitional pages were being answered above us; the decision pages were not, because a decision is not something a paragraph at the top of a results page can make for you.</p>
+<p>When I ran this on ToolNest, the pattern was clean enough to be uncomfortable. Queries of the form "what is X" and "does X do Y" had lost a third to a half of their click-through rate. Queries of the form "X vs Y", "best X for Z" and "should I switch from X" had barely moved. The definitional pages were being answered above me; the decision pages were not, because a decision is not something a paragraph at the top of a results page can make for you.</p>
 
-<p>That split is the whole strategy, and it cost nothing to find. We wrote up the free research stack, including the Search Console part, in <a href="/articles/keyword-research-without-a-subscription">keyword research without a subscription</a>.</p>
+<p>That split is the whole strategy, and it cost nothing to find. I wrote up the free research stack, including the Search Console part, in <a href="/articles/keyword-research-without-a-subscription">keyword research without a subscription</a>.</p>
 
-<h2>What we changed</h2>
+<h2>What I changed</h2>
 
 <p>Not the volume. Publishing more pages into a shrinking click pool is the response everyone reaches for, and it produces more pages that get read by an Overview and nobody else. What changed was what a page is for.</p>
 
 <ol>
-<li><strong>We stopped writing the fact page.</strong> "What is a password manager" is a query Google now answers itself, well enough. A page targeting it is a donation. The pages we write answer a question with a "because" in it — which one, for whom, after what changed.</li>
+<li><strong>I stopped writing the fact page.</strong> "What is a password manager" is a query Google now answers itself, well enough. A page targeting it is a donation. The pages I write answer a question with a "because" in it — which one, for whom, after what changed.</li>
 <li><strong>The answer moved to the top.</strong> Every article on the site now opens with a quick answer of a paragraph. If that is all the reader needed, they have it, and they had to click to get it. If it is not, the rest of the page earns the time. This is also the section an Overview is most likely to cite, which brings a different kind of reader.</li>
-<li><strong>Every claim got a source with a date.</strong> Overviews and answer engines cite pages they can verify against. A pricing table that says when it was checked is more citable than one that does not, and it is more useful to a human for the same reason. The sourcing rules we follow are in <a href="/articles/checking-a-claim-before-you-publish">checking a claim before you publish</a>.</li>
+<li><strong>Every claim got a source with a date.</strong> Overviews and answer engines cite pages they can verify against. A pricing table that says when it was checked is more citable than one that does not, and it is more useful to a human for the same reason. The sourcing rules I follow are in <a href="/articles/checking-a-claim-before-you-publish">checking a claim before you publish</a>.</li>
 <li><strong>Titles say what the page decides, not what it is about.</strong> "Password managers after the price rises" tells a reader there is a judgement inside. "Password managers compared" tells them there is a table, and Google has one of those now.</li>
-<li><strong>We measured citations, not just clicks.</strong> Being named in an Overview shows up as impressions with a low click-through rate. That used to look like failure. It is now a separate line, because a reader who sees the name three times before clicking is a reader who arrives already trusting it.</li>
+<li><strong>I measured citations, not just clicks.</strong> Being named in an Overview shows up as impressions with a low click-through rate. That used to look like failure. It is now a separate line, because a reader who sees the name three times before clicking is a reader who arrives already trusting it.</li>
 </ol>
 
 <h2>What did not work</h2>
 
-<p>Two things we tried and stopped.</p>
+<p>Two things I tried and stopped.</p>
 
-<p><strong>Writing "for AI".</strong> There was a period of advice about structuring pages so that language models would prefer them — particular heading patterns, question-and-answer blocks in a particular order, schema for everything. We tried it on a handful of pages. It made them worse to read and changed nothing measurable. The pages that get cited are the ones that were already clear and sourced. There is no trick; there is just the work.</p>
+<p><strong>Writing "for AI".</strong> There was a period of advice about structuring pages so that language models would prefer them — particular heading patterns, question-and-answer blocks in a particular order, schema for everything. I tried it on a handful of pages. It made them worse to read and changed nothing measurable. The pages that get cited are the ones that were already clear and sourced. There is no trick; there is just the work.</p>
 
-<p><strong>Chasing volume with thinner pieces.</strong> For a month we published shorter, faster articles on more queries to see if breadth compensated for the falling rate. Impressions went up. Clicks did not, because the short pieces were exactly the kind an Overview replaces. We took most of them down.</p>
+<p><strong>Chasing volume with thinner pieces.</strong> For a month I published shorter, faster articles on more queries to see if breadth compensated for the falling rate. Impressions went up. Clicks did not, because the short pieces were exactly the kind an Overview replaces. I took most of them down.</p>
 
 <h2>The honest outlook</h2>
 
 <p>The trend is not going to reverse. Google has said clearly that it intends search to answer more questions in place, and a study showing that this is working will not change its mind. Clicks from search to the open web will keep falling as a share, and a small publication that treats search traffic as a stable input is planning on a number that will be smaller next year.</p>
 
-<p>What is left is the part that was always the point: pages that help someone decide, that show their sources, and that are worth the click they still get. That is a narrower target than "rank for everything" and a better one. It is also, not coincidentally, the only kind of page that AdSense's own quality guidance ever wanted from us in the first place. Our publishing rhythm changed to fit it, and <a href="/articles/weekly-publishing-workflow">the weekly workflow</a> now has a research day that used to be a writing day.</p>`,
+<p>What is left is the part that was always the point: pages that help someone decide, that show their sources, and that are worth the click they still get. That is a narrower target than "rank for everything" and a better one. It is also, not coincidentally, the only kind of page that AdSense's own quality guidance ever wanted from me in the first place. My publishing rhythm changed to fit it, and <a href="/articles/weekly-publishing-workflow">the weekly workflow</a> now has a research day that used to be a writing day.</p>`,
 };

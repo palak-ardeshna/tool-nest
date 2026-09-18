@@ -43,7 +43,7 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
     {
       question: "Which one is safest?",
       answer:
-        "None is safe in the sense that your bank app is safe. Claude in Chrome publishes the most detail about its defences and their limits, including an attack success rate that fell from 23.6% to 11.2% with mitigations — which is a vendor telling you that one attempt in nine still gets through. ChatGPT agent's design of running in a separate browser, pausing on financial sites and making you type your own passwords is the most conservative default. Comet is the most convenient and has had the most public holes found in it. We would rank them in that order for anything touching money.",
+        "None is safe in the sense that your bank app is safe. Claude in Chrome publishes the most detail about its defences and their limits, including an attack success rate that fell from 23.6% to 11.2% with mitigations — which is a vendor telling you that one attempt in nine still gets through. ChatGPT agent's design of running in a separate browser, pausing on financial sites and making you type your own passwords is the most conservative default. Comet is the most convenient and has had the most public holes found in it. I would rank them in that order for anything touching money.",
     },
     {
       question: "Can I use one safely at all?",
@@ -101,9 +101,9 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
       checkedAt: "2026-09-16",
     },
   ],
-  content: `<p>The pitch for an AI browser agent is that you describe an errand — find three quotes for van insurance, fill in this council form, book the cheapest train that gets in before ten — and it goes and does the clicking. This year that stopped being a demo. OpenAI, Anthropic, Perplexity and Google all ship one, and the question people are asking us is no longer "does it work" but "is it safe to let it near my accounts".</p>
+  content: `<p>The pitch for an AI browser agent is that you describe an errand — find three quotes for van insurance, fill in this council form, book the cheapest train that gets in before ten — and it goes and does the clicking. This year that stopped being a demo. OpenAI, Anthropic, Perplexity and Google all ship one, and the question people are asking me is no longer "does it work" but "is it safe to let it near my accounts".</p>
 
-<p>We have not run these agents against our own bank accounts, and we would not recommend you do either. What we have done is read what each vendor says its agent can reach, what it promises to ask before doing, and what the security researchers who have attacked them found. That turns out to be enough to make the decision.</p>
+<p>I have not run these agents against my own bank accounts, and I would not recommend you do either. What I have done is read what each vendor says its agent can reach, what it promises to ask before doing, and what the security researchers who have attacked them found. That turns out to be enough to make the decision.</p>
 
 <h2>Two designs, and why it matters where the agent runs</h2>
 
@@ -145,7 +145,7 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
 
 <h3>Gemini in Chrome</h3>
 
-<p>Google's auto browse arrived in Chrome on 28 January 2026 for Google AI Pro and Ultra subscribers on desktop in the United States, and at the time of writing we could not confirm UK availability. It handles multi-step chores — quotes, forms, subscriptions — with explicit approval required for purchases and logins, and you can stop it mid-task. Because it lives inside Chrome it has the same exposure as Claude's extension: whatever Chrome is signed in to, the agent can reach.</p>
+<p>Google's auto browse arrived in Chrome on 28 January 2026 for Google AI Pro and Ultra subscribers on desktop in the United States, and at the time of writing I could not confirm UK availability. It handles multi-step chores — quotes, forms, subscriptions — with explicit approval required for purchases and logins, and you can stop it mid-task. Because it lives inside Chrome it has the same exposure as Claude's extension: whatever Chrome is signed in to, the agent can reach.</p>
 
 <h2>The problem none of them has solved</h2>
 
@@ -158,19 +158,19 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
 <h2>How to use one without regretting it</h2>
 
 <ol>
-<li><strong>Give it its own browser profile.</strong> Chrome, Edge and Firefox all support profiles; create one for the agent and log in to nothing there except what the task needs. If you are choosing a browser anyway, our <a href="/articles/which-browser-after-arc">comparison of browsers after Arc</a> covers which ones handle profiles well.</li>
+<li><strong>Give it its own browser profile.</strong> Chrome, Edge and Firefox all support profiles; create one for the agent and log in to nothing there except what the task needs. If you are choosing a browser anyway, my <a href="/articles/which-browser-after-arc">comparison of browsers after Arc</a> covers which ones handle profiles well.</li>
 <li><strong>Never leave it signed in to email.</strong> Email is the master key to everything else, because it is where the password resets go. Brave's Comet demonstration went straight for the inbox for exactly that reason.</li>
 <li><strong>Keep every confirmation on, and read the payment ones.</strong> The prompts are irritating within an hour. They are also the only line between "the agent was fooled" and "the agent was fooled and spent money".</li>
 <li><strong>Prefer the agents that let you draw a fence.</strong> A site allow-list is worth more than any model improvement, because it does not depend on the model noticing the attack.</li>
-<li><strong>Give it the right jobs.</strong> Research, comparison, form-filling you will check before submitting, collecting quotes. Anything where the worst outcome is a wasted ten minutes. We cover the research side, and how much to trust an AI's citations, in our piece on <a href="/articles/ai-research-tools-and-your-sources">AI research tools and your sources</a>.</li>
+<li><strong>Give it the right jobs.</strong> Research, comparison, form-filling you will check before submitting, collecting quotes. Anything where the worst outcome is a wasted ten minutes. I cover the research side, and how much to trust an AI's citations, in my piece on <a href="/articles/ai-research-tools-and-your-sources">AI research tools and your sources</a>.</li>
 </ol>
 
-<h2>What we would pick</h2>
+<h2>What I would pick</h2>
 
 <ul>
 <li><strong>You want to try the category and see whether it saves you time:</strong> Comet, in a fresh profile logged in to nothing. It is free and it is capable, and the constraints above make its history less alarming.</li>
 <li><strong>You already pay for ChatGPT and the task involves any site with your money on it:</strong> ChatGPT agent. Its separate-browser design and takeover mode are the closest thing to a safe default.</li>
-<li><strong>You already pay for Claude, or you are rolling this out to a team:</strong> Claude in Chrome, for the allow-list. Being able to say "this agent may visit these six sites and nothing else" is the control we would want before letting staff use one. If you are still deciding between the assistants themselves, <a href="/articles/which-ai-assistant-is-worth-paying-for">our comparison of the paid plans</a> is the place to start.</li>
+<li><strong>You already pay for Claude, or you are rolling this out to a team:</strong> Claude in Chrome, for the allow-list. Being able to say "this agent may visit these six sites and nothing else" is the control I would want before letting staff use one. If you are still deciding between the assistants themselves, <a href="/articles/which-ai-assistant-is-worth-paying-for">my comparison of the paid plans</a> is the place to start.</li>
 <li><strong>You are in the UK and were hoping for Chrome's built-in version:</strong> wait. Check Google's availability page rather than a third-party guide, because the rollout has been US-first and subscription-gated.</li>
 </ul>
 

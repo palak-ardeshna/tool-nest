@@ -4,7 +4,7 @@ export const schedulingLinksAndWhenToSkipThem: Article = {
   slug: "scheduling-links-and-when-to-skip-them",
   title: "Scheduling Links: When to Send One, and When to Just Offer Three Times",
   excerpt:
-    "A booking link saves you three emails and quietly tells the other person whose time is worth more. Here is the rule we use for which conversations get a link, and what the free tiers of Cal.com, Calendly and Google Calendar actually cover.",
+    "A booking link saves you three emails and quietly tells the other person whose time is worth more. Here is the rule I use for which conversations get a link, and what the free tiers of Cal.com, Calendly and Google Calendar actually cover.",
   category: "productivity",
   author: "parth-patel",
   tags: ["Productivity", "Meetings", "Calendars", "Comparisons"],
@@ -92,7 +92,7 @@ export const schedulingLinksAndWhenToSkipThem: Article = {
   ],
   content: `<p>A booking link is one of those tools that quietly changes the shape of your week, and not always in the direction you expected. It removes the back-and-forth. It also removes something else, and that is the part people notice about six months in.</p>
 
-<p>We have run it both ways here: a link in the signature for a year, then no link at all for a stretch, then a link again but only on a narrow set of conversations. This is where we landed and why.</p>
+<p>I have run it both ways here: a link in the signature for a year, then no link at all for a stretch, then a link again but only on a narrow set of conversations. This is where I landed and why.</p>
 
 <h2>What a booking link actually removes</h2>
 
@@ -108,9 +108,9 @@ export const schedulingLinksAndWhenToSkipThem: Article = {
 <p>If you are the one asking for the favour, offer times. If they are asking you, send the link.</p>
 </blockquote>
 
-<p>That rule is short enough to apply without deliberating, and it covers nearly every case we have run into. The awkward middle — a peer, a warm introduction, a supplier you might buy from — is handled by doing both: name three specific slots, then add the link underneath for anyone who would rather browse.</p>
+<p>That rule is short enough to apply without deliberating, and it covers nearly every case I have run into. The awkward middle — a peer, a warm introduction, a supplier you might buy from — is handled by doing both: name three specific slots, then add the link underneath for anyone who would rather browse.</p>
 
-<p>There is a second cost, and it is the one that bites teams rather than individuals. A link makes saying yes frictionless. Every meeting that used to require somebody to compose an email now requires a click, and a calendar that anyone can write to stops being yours. If your team has moved towards written updates — we wrote about what that actually changes in <a href="/articles/async-by-default-what-changes">async by default</a> — a public booking page quietly pushes in the opposite direction.</p>
+<p>There is a second cost, and it is the one that bites teams rather than individuals. A link makes saying yes frictionless. Every meeting that used to require somebody to compose an email now requires a click, and a calendar that anyone can write to stops being yours. If your team has moved towards written updates — I wrote about what that actually changes in <a href="/articles/async-by-default-what-changes">async by default</a> — a public booking page quietly pushes in the opposite direction.</p>
 
 <h2>What the free tiers cover</h2>
 
@@ -141,7 +141,7 @@ export const schedulingLinksAndWhenToSkipThem: Article = {
 <li><strong>Minimum lead time.</strong> Twenty-four hours, so nobody books you for forty minutes from now while you are mid-task.</li>
 </ul>
 
-<p>Set the availability window narrower than your actual working hours, too. If you publish nine to six, you will be booked nine to six. We publish four hours a day and have never had anyone complain about the choice.</p>
+<p>Set the availability window narrower than your actual working hours, too. If you publish nine to six, you will be booked nine to six. I publish four hours a day and have never had anyone complain about the choice.</p>
 
 <h2>When to pay</h2>
 
@@ -149,7 +149,7 @@ export const schedulingLinksAndWhenToSkipThem: Article = {
 
 <p>Branding removal, custom domains and SSO show up on the same tiers. They are worth what they are worth to you, but do not let a page of ticked boxes convince you that you have a team problem when you have a one-person calendar.</p>
 
-<h2>What we do now</h2>
+<h2>What I do now</h2>
 
-<p>Two event types on a free tier, fifteen-minute buffers, three slots a day, a day of lead time, and a link that goes out only when somebody has asked for our time rather than the other way round. For anything we initiated, we still write out three options in a sentence. It takes twenty seconds and it has never once been the wrong call.</p>`,
+<p>Two event types on a free tier, fifteen-minute buffers, three slots a day, a day of lead time, and a link that goes out only when somebody has asked for my time rather than the other way round. For anything I initiated, I still write out three options in a sentence. It takes twenty seconds and it has never once been the wrong call.</p>`,
 };

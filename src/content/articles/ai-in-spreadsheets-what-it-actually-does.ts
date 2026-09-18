@@ -85,9 +85,9 @@ export const aiInSpreadsheetsWhatItActuallyDoes: Article = {
       checkedAt: "2026-09-14",
     },
   ],
-  content: `<p>There is a version of "AI in spreadsheets" that the demos show — type a question, get a chart — and a version that survives contact with a real workbook. We have not run a controlled test of the second version; what we have done is read each vendor's documentation closely, and the most useful thing in it is where each vendor draws its own line. All three publish a list of things not to use their tool for, and the lists are more honest than the marketing.</p>
+  content: `<p>There is a version of "AI in spreadsheets" that the demos show — type a question, get a chart — and a version that survives contact with a real workbook. I have not run a controlled test of the second version; what I have done is read each vendor's documentation closely, and the most useful thing in it is where each vendor draws its own line. All three publish a list of things not to use their tool for, and the lists are more honest than the marketing.</p>
 
-<p>The other thing we learnt is that the category is moving under our feet. Excel's in-cell COPILOT function, the feature that made the biggest splash a year ago, is withdrawn from today.</p>
+<p>The other thing I learnt is that the category is moving under my feet. Excel's in-cell COPILOT function, the feature that made the biggest splash a year ago, is withdrawn from today.</p>
 
 <h2>Excel: the function goes, the side pane stays</h2>
 
@@ -113,7 +113,7 @@ export const aiInSpreadsheetsWhatItActuallyDoes: Article = {
 
 <p>It edits, too, and this is where it is most careful: change a discount rate and it updates the value while keeping formula relationships intact so downstream cells recompute; ask it to find the source of a #REF! error and it traces it; it can populate a template, build a three-statement model from a trial balance, and do native Excel operations like sorting, pivot tables and conditional formatting. It does not touch data tables, macros or VBA, and it will not run on the perpetual-licence Excel 2016 and 2019, on iPad or on Android.</p>
 
-<p>Anthropic's list of what not to do is the most explicit of the three. It is not recommended for final client deliverables without human review, audit-critical calculations without verification, or highly sensitive data without proper controls. And there is a warning that the other two do not spell out as clearly: a spreadsheet from outside your organisation can contain hidden instructions — a prompt injection — that tries to make the add-in extract data or change records, so only use it on trusted files and read the confirmation prompts. We wrote about the same risk in browsers in <a href="/articles/ai-browser-agents-after-atlas">our piece on browser agents</a>; it applies to any assistant that can act on a document you did not write.</p>
+<p>Anthropic's list of what not to do is the most explicit of the three. It is not recommended for final client deliverables without human review, audit-critical calculations without verification, or highly sensitive data without proper controls. And there is a warning that the other two do not spell out as clearly: a spreadsheet from outside your organisation can contain hidden instructions — a prompt injection — that tries to make the add-in extract data or change records, so only use it on trusted files and read the confirmation prompts. I wrote about the same risk in browsers in <a href="/articles/ai-browser-agents-after-atlas">my piece on browser agents</a>; it applies to any assistant that can act on a document you did not write.</p>
 
 <h2>Side by side</h2>
 
@@ -128,7 +128,7 @@ export const aiInSpreadsheetsWhatItActuallyDoes: Article = {
 </tbody>
 </table>
 
-<h2>The rule we ended up with</h2>
+<h2>The rule I ended up with</h2>
 
 <p>AI goes in the text columns and stays out of the number columns. Let it categorise, summarise, extract, explain and find the broken reference. Do not let it produce the figure that the decision rests on, because a model that is non-deterministic by design should not be the thing that calculates a margin, and every vendor here says the same in its own documentation.</p>
 

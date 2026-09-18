@@ -18,7 +18,7 @@ export function Sources({ items }: { items: Source[] }) {
       </h2>
       <p className="mt-2 text-[15px] leading-relaxed text-muted">
         Everything factual in this article traces back to one of these. Vendors change pricing and
-        limits without changing the URL, so each entry records the date we last read it.
+        limits without changing the URL, so each entry records the date I last read it.
       </p>
       <ol className="mt-4 divide-y divide-line rounded-card border border-line bg-white">
         {items.map((item) => (

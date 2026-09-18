@@ -38,7 +38,7 @@ export const windows10SupportHasEndedWhatEachOptionCosts: Article = {
     {
       question: "Will my Windows 10 PC stop working?",
       answer:
-        "No. It boots, runs your programs and connects to the internet exactly as before. What stops is the monthly stream of security fixes. Every vulnerability found from now on stays open on an unenrolled machine, and because the fixes for Windows 11 are public, attackers can read them to work out what is broken in Windows 10. The risk is gradual rather than sudden, which is why people ignore it and why we would not.",
+        "No. It boots, runs your programs and connects to the internet exactly as before. What stops is the monthly stream of security fixes. Every vulnerability found from now on stays open on an unenrolled machine, and because the fixes for Windows 11 are public, attackers can read them to work out what is broken in Windows 10. The risk is gradual rather than sudden, which is why people ignore it and why I would not.",
     },
     {
       question: "Is the consumer ESU really free?",
@@ -53,7 +53,7 @@ export const windows10SupportHasEndedWhatEachOptionCosts: Article = {
     {
       question: "Can I just install Linux and carry on?",
       answer:
-        "Often, and it is the choice we would make for a machine used for browsing, email, documents and video calls. The honest answer depends on the programs you rely on. Microsoft 365 and Adobe applications do not run natively; the web versions do. Most printers work; some do not. Games with anti-cheat frequently refuse. Write the list of programs you cannot lose, boot Mint from a USB stick, and check each one before you wipe anything.",
+        "Often, and it is the choice I would make for a machine used for browsing, email, documents and video calls. The honest answer depends on the programs you rely on. Microsoft 365 and Adobe applications do not run natively; the web versions do. Most printers work; some do not. Games with anti-cheat frequently refuse. Write the list of programs you cannot lose, boot Mint from a USB stick, and check each one before you wipe anything.",
     },
   ],
   sources: [
@@ -102,7 +102,7 @@ export const windows10SupportHasEndedWhatEachOptionCosts: Article = {
   ],
   content: `<p>Windows 10 reached the end of its support life on 14 October 2025. Nearly a year on, a great many PCs are still running it, most of them because they failed the Windows 11 hardware check and their owners quite reasonably did not want to buy a new computer to replace one that works. If that is you, the good news is that the deadline everyone worried about has moved: Microsoft has quietly extended its consumer security-update programme to October 2027. The less good news is that "extended" does not mean "free forever", and the options have enough small print that people are paying for things they could have had at no cost.</p>
 
-<p>We have put the numbers in one place. Every price below comes from a Microsoft, Google or Linux Mint page we read on the date shown in the sources list, because these figures have already changed once this year and may change again.</p>
+<p>I have put the numbers in one place. Every price below comes from a Microsoft, Google or Linux Mint page I read on the date shown in the sources list, because these figures have already changed once this year and may change again.</p>
 
 <h2>First, the check that settles most cases</h2>
 
@@ -132,15 +132,15 @@ export const windows10SupportHasEndedWhatEachOptionCosts: Article = {
 </tbody>
 </table>
 
-<p>UK resellers quote the business licence in sterling — we have seen year one listed at just under £50 excluding VAT — but Microsoft's own documentation prices it in dollars, so treat any pound figure as a snapshot of that reseller on that day.</p>
+<p>UK resellers quote the business licence in sterling — I have seen year one listed at just under £50 excluding VAT — but Microsoft's own documentation prices it in dollars, so treat any pound figure as a snapshot of that reseller on that day.</p>
 
 <h2>Consumer ESU: the free route and its condition</h2>
 
 <p>Microsoft's page for households lists three ways to enrol, and the order matters. The first is at no additional cost if you are syncing your PC settings, which in practice means signing in with a Microsoft account that is an administrator on the machine and turning on Windows Backup. The second is redeeming 1,000 Microsoft Rewards points. The third is a one-time purchase of $30 or the local equivalent plus tax. Whichever you pick, the licence covers up to ten devices signed in to the same account, and the device must be on Windows 10 version 22H2 with the latest update installed.</p>
 
-<p>The condition on the free route is the part that upset consumer groups in Europe. Inside the European Economic Area Microsoft agreed to drop the sync requirement; the United Kingdom is outside the EEA, so the three routes above are what apply here. If you use a local account and have avoided Microsoft accounts on principle, that is a real cost, just not a monetary one. Our view is that a Microsoft account you use for nothing else is a smaller concession than an unpatched machine, but it is a fair thing to object to.</p>
+<p>The condition on the free route is the part that upset consumer groups in Europe. Inside the European Economic Area Microsoft agreed to drop the sync requirement; the United Kingdom is outside the EEA, so the three routes above are what apply here. If you use a local account and have avoided Microsoft accounts on principle, that is a real cost, just not a monetary one. My view is that a Microsoft account you use for nothing else is a smaller concession than an unpatched machine, but it is a fair thing to object to.</p>
 
-<p>On the end date: Microsoft's UK page now says enrolled devices receive updates through 12 October 2027, a year later than originally announced. The page still describes the paid route as a one-time purchase. Reporting on the extension says home users who paid will be charged again for the second year. We could not reconcile the two from Microsoft's published text, so if you paid rather than synced, expect the possibility of a second $30 and check what Settings shows on your own PC in October.</p>
+<p>On the end date: Microsoft's UK page now says enrolled devices receive updates through 12 October 2027, a year later than originally announced. The page still describes the paid route as a one-time purchase. Reporting on the extension says home users who paid will be charged again for the second year. I could not reconcile the two from Microsoft's published text, so if you paid rather than synced, expect the possibility of a second $30 and check what Settings shows on your own PC in October.</p>
 
 <h2>Business ESU: cheap for one year, expensive for three</h2>
 
@@ -158,19 +158,19 @@ export const windows10SupportHasEndedWhatEachOptionCosts: Article = {
 
 <h2>Linux Mint: the option for people who still need a desktop</h2>
 
-<p>Of the Linux desktops aimed at people leaving Windows, Mint is the one we would hand to a relative. Version 22.3, called Zena, is current at the time of writing and comes in three editions; the default Cinnamon edition has a taskbar, a start menu and a file manager where you expect them. Mint's installation guide asks for 2 GB of RAM and 20 GB of disk, and recommends 4 GB, which is less than Windows 10 itself needs.</p>
+<p>Of the Linux desktops aimed at people leaving Windows, Mint is the one I would hand to a relative. Version 22.3, called Zena, is current at the time of writing and comes in three editions; the default Cinnamon edition has a taskbar, a start menu and a file manager where you expect them. Mint's installation guide asks for 2 GB of RAM and 20 GB of disk, and recommends 4 GB, which is less than Windows 10 itself needs.</p>
 
-<p>The question is never whether Mint will run — it will — but which of your programs will not. Native Microsoft Office and Adobe applications do not; the web versions of both work in Firefox or Chrome. Most printers, cameras and USB devices work without a driver hunt, and some models do not. Games that use kernel-level anti-cheat frequently refuse to start. Accounting software written for Windows is the most common deal-breaker we hear about. Write down the six programs you would miss, boot from the USB stick, and test each one before you install anything. If you have been putting off moving from a desktop office suite to the browser versions, our piece on <a href="/articles/office-suites-after-the-2026-price-rises">office suites after this year's price rises</a> covers what the free options actually lack.</p>
+<p>The question is never whether Mint will run — it will — but which of your programs will not. Native Microsoft Office and Adobe applications do not; the web versions of both work in Firefox or Chrome. Most printers, cameras and USB devices work without a driver hunt, and some models do not. Games that use kernel-level anti-cheat frequently refuse to start. Accounting software written for Windows is the most common deal-breaker I hear about. Write down the six programs you would miss, boot from the USB stick, and test each one before you install anything. If you have been putting off moving from a desktop office suite to the browser versions, my piece on <a href="/articles/office-suites-after-the-2026-price-rises">office suites after this year's price rises</a> covers what the free options actually lack.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <ul>
 <li><strong>The PC passes the Windows 11 check:</strong> upgrade this week. There is no version of the decision where waiting helps.</li>
 <li><strong>It fails, and it is a household machine:</strong> enrol in consumer ESU by the free route today, then spend a weekend trying ChromeOS Flex or Mint from a USB stick. You have until October 2027 to decide, which is plenty.</li>
 <li><strong>It fails, and it is a business machine:</strong> buy year one of ESU and put the replacement in next year's budget. Do not plan on year two; the doubling price is Microsoft telling you not to.</li>
 <li><strong>It only ever runs a browser:</strong> ChromeOS Flex, and stop paying attention to Windows news.</li>
-<li><strong>Whatever you pick:</strong> back up first. An operating system change is the moment a decade of photographs goes missing, and the <a href="/articles/backups-for-a-small-team">backup routine we recommend</a> works just as well for one machine as for ten.</li>
+<li><strong>Whatever you pick:</strong> back up first. An operating system change is the moment a decade of photographs goes missing, and the <a href="/articles/backups-for-a-small-team">backup routine I recommend</a> works just as well for one machine as for ten.</li>
 </ul>
 
-<p>The one thing we would not do is nothing. A Windows 10 PC without ESU is not going to fail dramatically; it is going to accumulate known, published, unpatched holes one month at a time, while continuing to hold your email, your <a href="/articles/password-managers-after-the-price-rises">password manager</a> and your bank login. The free enrolment takes ten minutes. Start there.</p>`,
+<p>The one thing I would not do is nothing. A Windows 10 PC without ESU is not going to fail dramatically; it is going to accumulate known, published, unpatched holes one month at a time, while continuing to hold your email, your <a href="/articles/password-managers-after-the-price-rises">password manager</a> and your bank login. The free enrolment takes ten minutes. Start there.</p>`,
 };

@@ -104,7 +104,7 @@ export const chatgptVsClaudeForCoding: Article = {
   ],
   content: `<p>Most comparisons of AI coding assistants are written from a to-do app and a benchmark chart. Neither predicts what happens when the task is boring, the codebase is not yours, and the answer has to actually run in CI.</p>
 
-<p>This article is not a benchmark. We have not run a controlled test lab, and we are wary of anyone who claims to have — model versions shift under the same product name, so a number published in March describes a product that no longer exists in September. What follows is what the two vendors document, what independent evaluations do and do not tell you, and a repeatable procedure for answering the question on the only codebase that matters to you.</p>
+<p>This article is not a benchmark. I have not run a controlled test lab, and I am wary of anyone who claims to have — model versions shift under the same product name, so a number published in March describes a product that no longer exists in September. What follows is what the two vendors document, what independent evaluations do and do not tell you, and a repeatable procedure for answering the question on the only codebase that matters to you.</p>
 
 <h2>Where the two products actually differ</h2>
 
@@ -153,7 +153,7 @@ export const chatgptVsClaudeForCoding: Article = {
 
 <h2>Run the comparison yourself: an afternoon protocol</h2>
 
-<p>This is the part we would actually do in your position, and it is more informative than any article — ours included. It takes about half a day and produces evidence about your code rather than someone else's.</p>
+<p>This is the part I would actually do in your position, and it is more informative than any article — mine included. It takes about half a day and produces evidence about your code rather than someone else's.</p>
 
 <h3>1. Pick four tasks from real work</h3>
 
@@ -205,7 +205,7 @@ export const chatgptVsClaudeForCoding: Article = {
 <li><strong>Volume is not thoroughness.</strong> Fourteen generated tests of which four are distinct is worse than six that are all distinct — you pay for the tokens, you pay for the review, and the redundant ones create maintenance load forever.</li>
 </ul>
 
-<h2>What we would tell a team choosing today</h2>
+<h2>What I would tell a team choosing today</h2>
 
 <ul>
 <li><strong>Mostly working inside one large existing codebase:</strong> weight context handling and the assistant's willingness to flag what it cannot see. That is where Claude's product line is aimed.</li>
@@ -218,5 +218,5 @@ export const chatgptVsClaudeForCoding: Article = {
 
 <p>Both assistants will produce confident, wrong statements about library APIs. Both will produce code that runs while changing behaviour in ways only a careful reader catches. Neither is a substitute for review, and any workflow that treats one as a substitute will ship bugs — the useful ones, at speed.</p>
 
-<p>The framing that survives contact with real work is not "which one replaces a developer". It is "which one gets me to a reviewable diff faster". On that question the honest answer is that it is close, it moves with every model release, and it depends almost entirely on how much surrounding context your work requires. Which is why the afternoon protocol above is worth more to you than our opinion. If you work in React specifically, <a href="/articles/best-ai-coding-tools-for-react-developers">there is a sharper four-task version of it</a>.</p>`,
+<p>The framing that survives contact with real work is not "which one replaces a developer". It is "which one gets me to a reviewable diff faster". On that question the honest answer is that it is close, it moves with every model release, and it depends almost entirely on how much surrounding context your work requires. Which is why the afternoon protocol above is worth more to you than my opinion. If you work in React specifically, <a href="/articles/best-ai-coding-tools-for-react-developers">there is a sharper four-task version of it</a>.</p>`,
 };

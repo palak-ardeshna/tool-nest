@@ -4,7 +4,7 @@ export const npmPnpmOrBunChoosingAPackageManager: Article = {
   slug: "npm-pnpm-or-bun-choosing-a-package-manager",
   title: "npm, pnpm or Bun: Choosing a Package Manager in 2026",
   excerpt:
-    "The three serious options for installing JavaScript dependencies now differ less on speed than on what they refuse to do. We compared npm, pnpm and Bun on disk use, lockfiles, monorepos and the supply-chain defaults that matter after a year of poisoned packages, and on the one change to Node itself that affects all three.",
+    "The three serious options for installing JavaScript dependencies now differ less on speed than on what they refuse to do. I compared npm, pnpm and Bun on disk use, lockfiles, monorepos and the supply-chain defaults that matter after a year of poisoned packages, and on the one change to Node itself that affects all three.",
   category: "developer-tools",
   author: "parth-patel",
   tags: ["Node.js", "Package Managers", "Developer Tools", "Comparisons"],
@@ -15,7 +15,7 @@ export const npmPnpmOrBunChoosingAPackageManager: Article = {
   seoDescription:
     "npm, pnpm and Bun compared on install speed, disk use, lockfiles, monorepos and the supply-chain defaults that matter after a year of poisoned packages.",
   quickAnswer:
-    "For a new project we would pick pnpm. Its strict node_modules layout stops code importing packages it never declared, its content-addressable store means one copy of each package on disk however many projects use it, and since version 11 it waits 24 hours before installing any newly published version — which is the single most effective defence against the malicious releases that hit npm through 2025. Bun's installer is the fastest of the three and works in ordinary Node projects, but its speed matters most in CI and least on a laptop. npm is fine if you are on it already and have turned lifecycle scripts off; it is the one of the three that still runs a dependency's install scripts by default.",
+    "For a new project I would pick pnpm. Its strict node_modules layout stops code importing packages it never declared, its content-addressable store means one copy of each package on disk however many projects use it, and since version 11 it waits 24 hours before installing any newly published version — which is the single most effective defence against the malicious releases that hit npm through 2025. Bun's installer is the fastest of the three and works in ordinary Node projects, but its speed matters most in CI and least on a laptop. npm is fine if you are on it already and have turned lifecycle scripts off; it is the one of the three that still runs a dependency's install scripts by default.",
   pros: [
     "All three read the same package.json and npm registry, so switching is a lockfile change rather than a rewrite",
     "pnpm and Bun both refuse to run dependency install scripts unless you allow them by name",
@@ -57,7 +57,7 @@ export const npmPnpmOrBunChoosingAPackageManager: Article = {
     {
       question: "Does Bun's package manager mean I have to run Bun instead of Node?",
       answer:
-        "No. Bun's own documentation describes the installer as a standalone tool that works in existing Node.js projects. You can use bun install in CI for the speed and keep running the app on Node. Whether that split is worth the second tool is a fair question; we mostly use it where the install step is the slow part of a pipeline.",
+        "No. Bun's own documentation describes the installer as a standalone tool that works in existing Node.js projects. You can use bun install in CI for the speed and keep running the app on Node. Whether that split is worth the second tool is a fair question; I mostly use it where the install step is the slow part of a pipeline.",
     },
     {
       question: "What does the Corepack change actually break?",
@@ -116,7 +116,7 @@ export const npmPnpmOrBunChoosingAPackageManager: Article = {
   ],
   content: `<p>For most of the last decade the package manager question was about speed, and the answer changed every eighteen months. That argument is mostly over. All three serious options are fast enough on a warm cache that you will not notice the difference on a laptop, and where it does matter, in CI, the fix is usually caching rather than switching tools.</p>
 
-<p>What separates them now is what they refuse to do. After a year in which the npm registry was hit by a run of compromised packages, some of them self-propagating, the defaults around install scripts and freshly published versions are the reason to choose one over another. We run projects on all three. Here is how we decide.</p>
+<p>What separates them now is what they refuse to do. After a year in which the npm registry was hit by a run of compromised packages, some of them self-propagating, the defaults around install scripts and freshly published versions are the reason to choose one over another. I run projects on all three. Here is how I decide.</p>
 
 <h2>The short version</h2>
 
@@ -139,29 +139,29 @@ export const npmPnpmOrBunChoosingAPackageManager: Article = {
 
 <p>npm's case is that it is already there. It comes with Node, every tutorial assumes it, and <code>npm ci</code> does the one thing a CI install must do: install exactly what the lockfile says and fail loudly if package.json has drifted from it. If your project is small and your team is not fighting it, there is no prize for switching.</p>
 
-<p>The two things we change on every npm project are both about scripts. First, <code>ignore-scripts=true</code> in <code>.npmrc</code>, so a dependency's <code>postinstall</code> cannot run code on your machine just because you typed install. The handful of packages that genuinely need a build step, native modules mostly, you then run by hand or list explicitly. Second, <code>npm ci</code> rather than <code>npm install</code> anywhere automated, which we covered in more detail in <a href="/articles/ci-pipelines-that-stay-under-ten-minutes">our piece on keeping CI under ten minutes</a>.</p>
+<p>The two things I change on every npm project are both about scripts. First, <code>ignore-scripts=true</code> in <code>.npmrc</code>, so a dependency's <code>postinstall</code> cannot run code on your machine just because you typed install. The handful of packages that genuinely need a build step, native modules mostly, you then run by hand or list explicitly. Second, <code>npm ci</code> rather than <code>npm install</code> anywhere automated, which I covered in more detail in <a href="/articles/ci-pipelines-that-stay-under-ten-minutes">my piece on keeping CI under ten minutes</a>.</p>
 
 <p>What npm does not give you is any protection against a package that was fine yesterday and compromised this morning. If a version is on the registry, npm will install it.</p>
 
-<h2>pnpm: the defaults we would want everywhere</h2>
+<h2>pnpm: the defaults I would want everywhere</h2>
 
 <p>pnpm started as a disk-space fix and became the safest of the three almost as a side effect of being strict. The disk-space part still holds: every package version lives once in a content-addressable store on your machine, and projects hard-link to it. Its documentation puts it simply — when packages are installed, their files are hard-linked from that single place, consuming no additional disk space. Ten projects on one laptop that all use the same React means one React on disk.</p>
 
 <p>The strictness is the part that changes how you write code. pnpm puts only your declared dependencies at the top of node_modules, so <code>import lodash from "lodash"</code> fails unless lodash is actually in your package.json, rather than quietly working because something else pulled it in. That is the phantom dependency problem, and it is the cause of a whole class of "works on my machine, breaks in production" bugs. If some tool you rely on cannot cope with the symlinked layout, <code>nodeLinker: hoisted</code> gives you a flat tree and you lose only that check.</p>
 
 <blockquote>
-<p>Since version 11, pnpm waits 24 hours before it will install a newly published version of anything, including transitive dependencies. Most malicious releases are pulled from the registry within an hour. That one default is worth more than any audit tool we have used.</p>
+<p>Since version 11, pnpm waits 24 hours before it will install a newly published version of anything, including transitive dependencies. Most malicious releases are pulled from the registry within an hour. That one default is worth more than any audit tool I have used.</p>
 </blockquote>
 
 <p>Two settings do the security work. <code>minimumReleaseAge</code> defines the minimum number of minutes that must pass after a version is published before pnpm will install it, and defaults to 1440 in v11. And since v10.3, dependency build scripts do not run at all unless you allow the package by name; with <code>strictDepBuilds</code> on, which is the default, an install with unreviewed scripts fails rather than silently skipping them. You will spend five minutes approving esbuild and sharp on a new project. That is the cost.</p>
 
 <h2>Bun: the fastest installer, in a runtime you may not want</h2>
 
-<p>Bun's package manager is the one people mean when they say "Bun is fast". Bun's own page claims installs many times faster than npm; we would treat the headline multiplier as a best case on a cold cache, but the direction is right. On a CI runner with nothing cached, <code>bun install --frozen-lockfile</code> is consistently the quickest way we know to get from a checkout to a node_modules.</p>
+<p>Bun's package manager is the one people mean when they say "Bun is fast". Bun's own page claims installs many times faster than npm; I would treat the headline multiplier as a best case on a cold cache, but the direction is right. On a CI runner with nothing cached, <code>bun install --frozen-lockfile</code> is consistently the quickest way I know to get from a checkout to a node_modules.</p>
 
-<p>The point that is easy to miss is that you do not have to run your app on Bun to use it. The documentation is explicit: it is a standalone tool that works in existing Node.js projects; if your project has a package.json, you can use bun install. So the practical pattern is Bun for the install step and Node for everything else, which is what we do on a couple of pipelines where installing was the slow part.</p>
+<p>The point that is easy to miss is that you do not have to run your app on Bun to use it. The documentation is explicit: it is a standalone tool that works in existing Node.js projects; if your project has a package.json, you can use bun install. So the practical pattern is Bun for the install step and Node for everything else, which is what I do on a couple of pipelines where installing was the slow part.</p>
 
-<p>On safety, Bun is closer to pnpm than to npm. It does not execute lifecycle scripts like postinstall for installed dependencies unless you list the package in <code>trustedDependencies</code>. What it lacks is any equivalent of pnpm's release-age delay. And the lockfile, binary until 1.2, is now plain text and reviewable in a pull request, which removes the objection we used to have.</p>
+<p>On safety, Bun is closer to pnpm than to npm. It does not execute lifecycle scripts like postinstall for installed dependencies unless you list the package in <code>trustedDependencies</code>. What it lacks is any equivalent of pnpm's release-age delay. And the lockfile, binary until 1.2, is now plain text and reviewable in a pull request, which removes the objection I used to have.</p>
 
 <h2>The Corepack change affects all three</h2>
 
@@ -172,11 +172,11 @@ export const npmPnpmOrBunChoosingAPackageManager: Article = {
 <h2>Which one, then</h2>
 
 <ul>
-<li><strong>Starting a project:</strong> pnpm. The strict layout and the 24-hour delay are the defaults we would choose if we were designing a package manager today, and workspaces are good enough that we no longer reach for a separate monorepo tool for small setups.</li>
+<li><strong>Starting a project:</strong> pnpm. The strict layout and the 24-hour delay are the defaults I would choose if I was designing a package manager today, and workspaces are good enough that I no longer reach for a separate monorepo tool for small setups.</li>
 <li><strong>Existing npm project that works:</strong> stay, set <code>ignore-scripts</code>, use <code>npm ci</code>. Migrate when you next touch the monorepo structure or the CI install time, not before.</li>
 <li><strong>Install step is the slow part of CI:</strong> Bun for the install, Node for the app. Cheap to try, easy to reverse.</li>
 <li><strong>Already on Bun as a runtime:</strong> use its installer; the two are built to go together.</li>
 </ul>
 
-<p>Whichever you pick, the same three habits apply: commit the lockfile, install with the frozen flag in CI, and do not let dependencies run scripts you have not read. The tool makes those easier or harder. It does not make them optional. And if the project is a Next.js app you are about to deploy, the package manager you choose also has to be one your host supports — <a href="/articles/deploying-a-nextjs-app-four-routes">our deployment comparison</a> notes where that bites.</p>`,
+<p>Whichever you pick, the same three habits apply: commit the lockfile, install with the frozen flag in CI, and do not let dependencies run scripts you have not read. The tool makes those easier or harder. It does not make them optional. And if the project is a Next.js app you are about to deploy, the package manager you choose also has to be one your host supports — <a href="/articles/deploying-a-nextjs-app-four-routes">my deployment comparison</a> notes where that bites.</p>`,
 };

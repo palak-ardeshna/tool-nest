@@ -4,7 +4,7 @@ export const appLaunchersRaycastAlfredAndPowertoys: Article = {
   slug: "app-launchers-raycast-alfred-and-powertoys",
   title: "App Launchers: Raycast, Alfred and PowerToys Command Palette",
   excerpt:
-    "A launcher is the keystroke between thinking of something and doing it. We compared Raycast, Alfred and Microsoft's PowerToys Command Palette on what the free versions do, what the paid tiers actually add, and whether the built-in Spotlight and Start menu have caught up enough to skip the category.",
+    "A launcher is the keystroke between thinking of something and doing it. I compared Raycast, Alfred and Microsoft's PowerToys Command Palette on what the free versions do, what the paid tiers actually add, and whether the built-in Spotlight and Start menu have caught up enough to skip the category.",
   category: "productivity",
   author: "parth-patel",
   tags: ["Productivity", "Launchers", "macOS", "Windows", "Comparisons"],
@@ -57,7 +57,7 @@ export const appLaunchersRaycastAlfredAndPowertoys: Article = {
     {
       question: "Does Raycast work on Windows?",
       answer:
-        "Raycast lists a Windows product alongside the Mac app, and it has been rolling out through 2025 and 2026. It is newer and thinner than the Mac version. On Windows we would start with Command Palette, which is free and already installed if you use PowerToys, and try Raycast if you are switching from a Mac and miss a specific extension.",
+        "Raycast lists a Windows product alongside the Mac app, and it has been rolling out through 2025 and 2026. It is newer and thinner than the Mac version. On Windows I would start with Command Palette, which is free and already installed if you use PowerToys, and try Raycast if you are switching from a Mac and miss a specific extension.",
     },
     {
       question: "What replaced PowerToys Run?",
@@ -87,13 +87,13 @@ export const appLaunchersRaycastAlfredAndPowertoys: Article = {
   ],
   content: `<p>A launcher is a small thing that changes how a computer feels. You press a key, type three letters, and the app opens, the file appears, the sum is done, the window snaps to the left half — without touching the mouse or looking at a dock. Once you have one, the built-in way of doing things starts to feel like walking to the shop for something you could have shouted for.</p>
 
-<p>We have run all three of the current serious options for months each. The question is no longer whether they are good, because they are. It is what the free versions leave out, whether the paid tiers are worth it, and whether you need any of them now that the operating systems have copied the idea.</p>
+<p>I have run all three of the current serious options for months each. The question is no longer whether they are good, because they are. It is what the free versions leave out, whether the paid tiers are worth it, and whether you need any of them now that the operating systems have copied the idea.</p>
 
 <h2>What a launcher does, and what it is not</h2>
 
 <p>The core job — open an app, find a file, do a calculation — is table stakes and all three do it well. What separates them is the second layer: clipboard history, text snippets, window management, and extensions that reach into other services so you can search your calendar or post to a channel without opening a browser. That second layer is where the money is, and where the built-ins still fall short.</p>
 
-<p>It is not an automation tool. If you want to move data between services on a schedule, that is a different category; <a href="/articles/automate-repetitive-work-without-code">we compared those separately</a>. A launcher is for the thing you are doing right now, by hand, faster.</p>
+<p>It is not an automation tool. If you want to move data between services on a schedule, that is a different category; <a href="/articles/automate-repetitive-work-without-code">I compared those separately</a>. A launcher is for the thing you are doing right now, by hand, faster.</p>
 
 <h2>Raycast: the biggest ecosystem, priced around AI</h2>
 
@@ -144,5 +144,5 @@ export const appLaunchersRaycastAlfredAndPowertoys: Article = {
 
 <p>The launcher earns its place at the second layer. A clipboard history you can search back through, snippets that expand on a trigger, a window that goes to the left half on one shortcut, and an extension for the service you open forty times a day. If two of those four sound useful, install Raycast or enable Command Palette this afternoon. The snippet part in particular has a whole category of dedicated tools behind it — <a href="/articles/text-expanders-and-clipboard-managers">text expanders and clipboard managers</a> — and a launcher does enough of that job that many people stop there.</p>
 
-<p>Our setup, for what it is worth: Raycast free on the Macs, Command Palette on the Windows machine, and no AI tier on either. The keystroke is the feature. The rest we can decide about later.</p>`,
+<p>My setup, for what it is worth: Raycast free on the Macs, Command Palette on the Windows machine, and no AI tier on either. The keystroke is the feature. The rest I can decide about later.</p>`,
 };

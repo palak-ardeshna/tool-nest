@@ -4,7 +4,7 @@ export const readItLaterAppsAfterPocket: Article = {
   slug: "read-it-later-apps-after-pocket",
   title: "Read-It-Later Apps After Pocket: What to Use, and Whether You Need One at All",
   excerpt:
-    "Pocket closed in July 2025 and took a lot of people's reading habit with it. We compared the survivors — Instapaper, Readwise Reader, Raindrop, Wallabag and your browser's own reading list — on what the free tiers cover, what you actually pay for, and how to stop the queue becoming a graveyard.",
+    "Pocket closed in July 2025 and took a lot of people's reading habit with it. I compared the survivors — Instapaper, Readwise Reader, Raindrop, Wallabag and your browser's own reading list — on what the free tiers cover, what you actually pay for, and how to stop the queue becoming a graveyard.",
   category: "productivity",
   author: "parth-patel",
   tags: ["Productivity", "Reading", "Bookmarks", "Comparisons"],
@@ -67,7 +67,7 @@ export const readItLaterAppsAfterPocket: Article = {
     {
       question: "What about Matter, Omnivore and the others?",
       answer:
-        "Omnivore shut down in 2024 after its team was acquired, which is the reason we now weigh a company's stability as heavily as its feature list. Matter is still going with a free tier and a $79.99 a year premium; we have not used it enough to recommend it over the options here. If a service matters to you, keep an export.",
+        "Omnivore shut down in 2024 after its team was acquired, which is the reason I now weigh a company's stability as heavily as its feature list. Matter is still going with a free tier and a $79.99 a year premium; I have not used it enough to recommend it over the options here. If a service matters to you, keep an export.",
     },
     {
       question: "How do I stop the queue piling up?",
@@ -109,13 +109,13 @@ export const readItLaterAppsAfterPocket: Article = {
   ],
   content: `<p>Pocket was the default. It came bundled in Firefox, it was free, and for a decade "save it for later" meant the same thing to most people. Mozilla announced its closure in May 2025, switched it off on 8 July, and closed the export window on 8 October. If you had a reading habit built on it, you have spent the last year improvising.</p>
 
-<p>We had a few thousand items in Pocket between us. Here is what we moved to, what we tried and dropped, and the question we should have asked first.</p>
+<p>I had a few thousand items in Pocket. Here is what I moved to, what I tried and dropped, and the question I should have asked first.</p>
 
 <h2>Do you need an app at all?</h2>
 
 <p>Before comparing apps, count how much you actually saved. For a lot of people the honest answer is a handful of links a week, most of them read within a day or two. That workload does not need a product. Safari, Chrome and Edge each have a reading list built in, synced through the account you are already signed into, with offline copies on mobile.</p>
 
-<p>What the built-in lists lack is everything after saving: tags, search, highlights, an archive you can trust to still be there in five years. If you never used those in Pocket, you will not miss them now. If your saved list was a research pile — sources for something you were writing, in the way we described in <a href="/articles/ai-research-tools-and-your-sources">our piece on research tools</a> — you need a real app, and the rest of this article is for you.</p>
+<p>What the built-in lists lack is everything after saving: tags, search, highlights, an archive you can trust to still be there in five years. If you never used those in Pocket, you will not miss them now. If your saved list was a research pile — sources for something you were writing, in the way I described in <a href="/articles/ai-research-tools-and-your-sources">my piece on research tools</a> — you need a real app, and the rest of this article is for you.</p>
 
 <h2>Instapaper: the closest thing to Pocket</h2>
 
@@ -127,7 +127,7 @@ export const readItLaterAppsAfterPocket: Article = {
 
 <h2>Readwise Reader: the most capable, and the most expensive way to get it</h2>
 
-<p>Reader is a different kind of product. It takes articles, RSS feeds, email newsletters, PDFs, EPUBs and YouTube transcripts into a single queue, and everything you highlight flows into Readwise's daily review and out to Obsidian, Notion, Logseq or Roam. If you have a notes system — we compared the main ones in <a href="/articles/note-taking-apps-for-thinking">note-taking apps for thinking</a> — Reader is the piece that connects reading to it.</p>
+<p>Reader is a different kind of product. It takes articles, RSS feeds, email newsletters, PDFs, EPUBs and YouTube transcripts into a single queue, and everything you highlight flows into Readwise's daily review and out to Obsidian, Notion, Logseq or Roam. If you have a notes system — I compared the main ones in <a href="/articles/note-taking-apps-for-thinking">note-taking apps for thinking</a> — Reader is the piece that connects reading to it.</p>
 
 <blockquote>
 <p>Reader is worth the money if you highlight and review. If you read and forget, you are paying for a loop you never close.</p>
@@ -164,7 +164,7 @@ export const readItLaterAppsAfterPocket: Article = {
 
 <h2>The habit matters more than the app</h2>
 
-<p>Every one of us had a Pocket archive with hundreds of unread items in it, and the shutdown was the first time we looked at them. Almost none were worth reading a year on. The app was never the problem; the missing habit was.</p>
+<p>My Pocket archive had hundreds of unread items in it, and the shutdown was the first time I looked at them. Almost none were worth reading a year on. The app was never the problem; the missing habit was.</p>
 
 <p>Two rules fixed it. Anything unread after thirty days is archived, no exceptions and no guilt, because if you did not want it in a month you did not want it. And every save gets a reason — one tag or one line about why — which makes the item findable later and cuts reflexive saving by more than half. Pick whichever app above suits you, then set those two rules on day one. The queue is only useful if it empties.</p>`,
 };

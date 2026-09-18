@@ -78,7 +78,7 @@ export const turnLongVideosIntoShortClipsWithAi: Article = {
   ],
   content: `<p>The pitch for automatic clipping tools is that you upload an hour and get ten shareable clips. What you actually get is ten moments where someone laughed or raised their voice. Some of them are good. Most are not.</p>
 
-<p>Here is the workflow we would recommend for talks, interviews and podcasts. It keeps the automation where it is genuinely better than a person, and keeps a human where it is not.</p>
+<p>Here is the workflow I would recommend for talks, interviews and podcasts. It keeps the automation where it is genuinely better than a person, and keeps a human where it is not.</p>
 
 <h2>Step 1: Transcribe before you do anything else</h2>
 

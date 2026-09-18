@@ -84,7 +84,7 @@ export const freeVsPaidAiWritingTools: Article = {
   ],
   content: `<p>The marketing for paid AI writing tools implies the free version is a demo. It is not. For a large share of what people actually write, the free tier is the whole product.</p>
 
-<p>So is the paid tier worth it? Here is where we think paying does and does not change things.</p>
+<p>So is the paid tier worth it? Here is where I think paying does and does not change things.</p>
 
 <h2>What you are actually buying</h2>
 

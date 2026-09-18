@@ -149,5 +149,5 @@ export const deployingANextjsAppFourRoutes: Article = {
 
 <p>The last case covers most projects. The setup cost is minutes and the operational cost is nothing, which is difficult to beat before you have traffic. When the bill does start to matter, moving to a container on a VPS is an afternoon of work in exchange for a flat monthly cost — a good trade at that point and a premature one before it.</p>
 
-<p>We know that is an unexciting recommendation, and we are making it anyway. Deployment is the least differentiated part of this stack now — all four routes work, and the decision should be made on your constraints rather than on anyone's benchmark. Which of the four is actually binding for you?</p>`,
+<p>I know that is an unexciting recommendation, and I am making it anyway. Deployment is the least differentiated part of this stack now — all four routes work, and the decision should be made on your constraints rather than on anyone's benchmark. Which of the four is actually binding for you?</p>`,
 };

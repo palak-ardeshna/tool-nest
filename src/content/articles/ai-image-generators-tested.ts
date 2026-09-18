@@ -103,7 +103,7 @@ export const aiImageGeneratorsTested: Article = {
   ],
   content: `<p>Comparisons of AI image generators tend to be galleries: seven pretty pictures, a ranking, a winner. The ranking is obsolete within months, because these products update continuously under unchanged names, and the pictures were chosen to flatter rather than to stress-test.</p>
 
-<p>A more durable approach is a procedure. The five prompts below take about an hour to run across a shortlist, cost nothing on free tiers, and tell you something specific about your work rather than something general about the market. We have not run a controlled benchmark and are not publishing scores — what we are publishing is the test, and the reasoning behind each part of it.</p>
+<p>A more durable approach is a procedure. The five prompts below take about an hour to run across a shortlist, cost nothing on free tiers, and tell you something specific about your work rather than something general about the market. I have not run a controlled benchmark and are not publishing scores — what I am publishing is the test, and the reasoning behind each part of it.</p>
 
 <h2>The five prompts, and why each one is there</h2>
 
@@ -173,5 +173,5 @@ export const aiImageGeneratorsTested: Article = {
 
 <p>The gap between the best and worst of the serious options has narrowed considerably, and on a single well-chosen image most of them look fine. Where they still differ is workflow: references, inpainting, batch generation, aspect-ratio control, and how quickly you get from a result that is nearly right to one you can publish.</p>
 
-<p>That is what to test, it is not what galleries show you, and it is the reason we would rather hand you the procedure than a ranking that will be wrong by the time you read it. The same holds one category over: our <a href="/articles/ai-video-tools-worth-the-subscription">guide to AI video tools</a> is organised around capabilities rather than product names for exactly this reason.</p>`,
+<p>That is what to test, it is not what galleries show you, and it is the reason I would rather hand you the procedure than a ranking that will be wrong by the time you read it. The same holds one category over: my <a href="/articles/ai-video-tools-worth-the-subscription">guide to AI video tools</a> is organised around capabilities rather than product names for exactly this reason.</p>`,
 };

@@ -149,5 +149,5 @@ export const noteTakingAppsForThinking: Article = {
 
 <h2>The system that survives a busy week</h2>
 
-<p>We are deliberately not naming a winner here, because retrieval style is personal and the habit matters more than the app. Every elaborate note-taking methodology works in a calm week. The test is a week where you are behind on everything. What tends to survive is: one inbox, dated notes, links when they are obvious, and a weekly ten-minute pass to file anything that turned out to matter. Anything more elaborate than that gets abandoned, and an abandoned system is worse than a simple one. The same test applies to <a href="/articles/task-managers-compared">the task manager next to it</a>, for the same reason.</p>`,
+<p>I am deliberately not naming a winner here, because retrieval style is personal and the habit matters more than the app. Every elaborate note-taking methodology works in a calm week. The test is a week where you are behind on everything. What tends to survive is: one inbox, dated notes, links when they are obvious, and a weekly ten-minute pass to file anything that turned out to matter. Anything more elaborate than that gets abandoned, and an abandoned system is worse than a simple one. The same test applies to <a href="/articles/task-managers-compared">the task manager next to it</a>, for the same reason.</p>`,
 };

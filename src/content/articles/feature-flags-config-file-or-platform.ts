@@ -60,17 +60,17 @@ export const featureFlagsConfigFileOrPlatform: Article = {
         "Yes, in the sense that matters: the code checks a boolean and takes one of two paths, and you can turn the new path off without reverting the commit. What it lacks is the ability to change without a deploy and to vary per user. If your deploys take five minutes and your flags are on-or-off for everyone, you are not missing much.",
     },
     {
-      question: "What is the first sign we need a platform?",
+      question: "What is the first sign I need a platform?",
       answer:
         "Somebody who is not an engineer asks to turn something on for one customer. That request has three parts a config file cannot do — no deploy, per-account targeting, and an audit trail of who flipped it — and it tends to arrive from sales or support rather than from engineering.",
     },
     {
-      question: "Should we self-host Unleash or Flagsmith?",
+      question: "Should I self-host Unleash or Flagsmith?",
       answer:
         "Only if you would already be comfortable running a Postgres-backed service with an uptime expectation, because a flag server that is down is a production incident. The open-source tiers are genuinely complete for a single project. If nobody on the team wants to own that box, the hosted free tiers exist for exactly this reason.",
     },
     {
-      question: "How do we stop flags piling up?",
+      question: "How do I stop flags piling up?",
       answer:
         "Give every flag an owner and a removal date when it is created, and add a lint rule or a scheduled reminder that lists flags older than ninety days. A flag that has been fully on for a quarter is dead code with a runtime cost. Platforms show you stale flags; none of them delete the code behind them.",
     },
@@ -103,7 +103,7 @@ export const featureFlagsConfigFileOrPlatform: Article = {
   ],
   content: `<p>Feature flags are one of the few engineering practices that almost everyone agrees on and almost everyone over-buys. The idea is small: put the new thing behind a switch, ship the switch off, turn it on when you are ready. The market built on that idea sells seats, environments, monthly active users and service connections, and it is easy to end up paying for a rollout system when what you needed was a boolean.</p>
 
-<p>We have run flags three ways at different sizes: a hand-rolled object in config, a self-hosted open-source server, and a paid platform. Each was right at the time. This is how we tell which one you are at.</p>
+<p>I have run flags three ways at different sizes: a hand-rolled object in config, a self-hosted open-source server, and a paid platform. Each was right at the time. This is how I tell which one you are at.</p>
 
 <h2>The config-file version, and what it covers</h2>
 
@@ -115,7 +115,7 @@ export const featureFlagsConfigFileOrPlatform: Article = {
 
 <h2>The three requests that mean you have outgrown it</h2>
 
-<p>A platform becomes worth its cost when one of these lands, and in our experience they arrive in this order.</p>
+<p>A platform becomes worth its cost when one of these lands, and in my experience they arrive in this order.</p>
 
 <ul>
 <li><strong>"Can you turn it on just for this customer?"</strong> Usually from sales or support, usually about a feature that is nearly ready. Per-account targeting in a config file means hard-coding account ids and redeploying for each one, and that gets old by the third request.</li>
@@ -153,9 +153,9 @@ export const featureFlagsConfigFileOrPlatform: Article = {
 
 <p>Every platform puts an SDK in your request path and a network call in your startup. All of them cache aggressively and degrade to defaults if the service is unreachable, but you should know what those defaults are before the day the service is unreachable, because the flag you most want to flip during an incident is the one whose provider is also having one.</p>
 
-<p>The other cost is the flags themselves. A flag is two code paths, both of which need tests, one of which is usually forgotten. Platforms will show you a list of stale flags; none of them will remove the dead branch from your codebase. Our rule is that a flag gets an owner and a removal date on the day it is created, and a scheduled job lists anything over ninety days old. Without that, the dashboard ends up looking like the wall in the photograph — dozens of switches, wired by people who have left, and nobody willing to touch any of them.</p>
+<p>The other cost is the flags themselves. A flag is two code paths, both of which need tests, one of which is usually forgotten. Platforms will show you a list of stale flags; none of them will remove the dead branch from your codebase. My rule is that a flag gets an owner and a removal date on the day it is created, and a scheduled job lists anything over ninety days old. Without that, the dashboard ends up looking like the wall in the photograph — dozens of switches, wired by people who have left, and nobody willing to touch any of them.</p>
 
-<h2>Where we landed</h2>
+<h2>Where I landed</h2>
 
-<p>A config object with environment overrides until a non-engineer asks to flip something, or a flag needs to differ per user. Then PostHog if the analytics are already there, Flagsmith's hosted tier if not, and Unleash self-hosted only where somebody actively wants to own the server. LaunchDarkly when a procurement team is involved and the feature list has to match a spreadsheet. The same build-or-buy reasoning we used for <a href="/articles/authentication-build-or-buy">authentication</a> applies here, with a lower bar: flags are easy to build and easy to leave, so buy late and stay flexible.</p>`,
+<p>A config object with environment overrides until a non-engineer asks to flip something, or a flag needs to differ per user. Then PostHog if the analytics are already there, Flagsmith's hosted tier if not, and Unleash self-hosted only where somebody actively wants to own the server. LaunchDarkly when a procurement team is involved and the feature list has to match a spreadsheet. The same build-or-buy reasoning I used for <a href="/articles/authentication-build-or-buy">authentication</a> applies here, with a lower bar: flags are easy to build and easy to leave, so buy late and stay flexible.</p>`,
 };

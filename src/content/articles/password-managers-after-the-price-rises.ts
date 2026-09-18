@@ -102,7 +102,7 @@ export const passwordManagersAfterThePriceRises: Article = {
   ],
   content: `<p>Password manager comparisons age badly, and 2026 was an unusually bad year for them. Three of the main options changed price within months of each other, in different directions. Articles written in 2024 now recommend the wrong thing for the right reasons.</p>
 
-<p>We have not audited anyone's cryptography, and neither has any article that says it has. What we can do is set out what the plans now cost, what the money buys that the free tier does not, and where the decision is genuinely close enough that you should stop researching and pick one.</p>
+<p>I have not audited anyone's cryptography, and neither has any article that says it has. What I can do is set out what the plans now cost, what the money buys that the free tier does not, and where the decision is genuinely close enough that you should stop researching and pick one.</p>
 
 <h2>What actually moved</h2>
 
@@ -156,7 +156,7 @@ export const passwordManagersAfterThePriceRises: Article = {
 <li><strong>Availability is now your job.</strong> Clients cache your vault locally, so a server outage is survivable — but adding a password from a new device while it is down is not.</li>
 </ul>
 
-<p>The people for whom this is the right answer usually already run other services and have a backup routine that works. If setting this up would be your first server, the twenty dollars a year is a bargain and you should pay it. Our notes on <a href="/articles/deploying-a-nextjs-app-four-routes">what running your own infrastructure actually involves</a> apply to this decision more or less unchanged.</p>
+<p>The people for whom this is the right answer usually already run other services and have a backup routine that works. If setting this up would be your first server, the twenty dollars a year is a bargain and you should pay it. My notes on <a href="/articles/deploying-a-nextjs-app-four-routes">what running your own infrastructure actually involves</a> apply to this decision more or less unchanged.</p>
 
 <h2>Migration is the part people underestimate</h2>
 
@@ -178,7 +178,7 @@ export const passwordManagersAfterThePriceRises: Article = {
 
 <p>Nobody has a fully satisfying answer to that yet. It is a reason to prefer a vendor with a credible export story over one betting on lock-in.</p>
 
-<h2>What we would tell someone choosing today</h2>
+<h2>What I would tell someone choosing today</h2>
 
 <ul>
 <li><strong>One person, no sharing, watching the cost:</strong> Bitwarden free. It is not a lesser product for this use; it is the product.</li>
@@ -188,5 +188,5 @@ export const passwordManagersAfterThePriceRises: Article = {
 <li><strong>You are already on one of these and content:</strong> stay. A few pounds a year is not worth an evening of migration and the risk of losing an entry.</li>
 </ul>
 
-<p>The thing worth keeping in view is that the differences between these products are small and the difference between using one and not using one is enormous. If this article talks you out of a decision and into six more months of a reused password, it has made your security worse. Pick the one that fits the list above, spend the evening moving, and stop reading comparisons — including ours.</p>`,
+<p>The thing worth keeping in view is that the differences between these products are small and the difference between using one and not using one is enormous. If this article talks you out of a decision and into six more months of a reused password, it has made your security worse. Pick the one that fits the list above, spend the evening moving, and stop reading comparisons — including mine.</p>`,
 };

@@ -98,7 +98,7 @@ export const weekWithAnAiCodingAgent: Article = {
   ],
   content: `<p>Every agent demo uses a fresh repository and a well-behaved task. Real backlogs are not that. They contain tickets written by different people at different times, some of them vague, against a codebase with years of accumulated decisions that were never written down.</p>
 
-<p>This article is about triage: which of those tickets an agent handles well, which it handles badly, and how to tell them apart before you find out the expensive way. We are describing the failure modes these tools consistently exhibit and how to design around them — not publishing measurements from a controlled trial.</p>
+<p>This article is about triage: which of those tickets an agent handles well, which it handles badly, and how to tell them apart before you find out the expensive way. I am describing the failure modes these tools consistently exhibit and how to design around them — not publishing measurements from a controlled trial.</p>
 
 <h2>The triage rule</h2>
 
@@ -184,5 +184,5 @@ export const weekWithAnAiCodingAgent: Article = {
 <li>Keep auth, billing and data deletion off the list regardless of how well specified the ticket looks.</li>
 </ul>
 
-<p>Used that way, a coding agent is a genuine help — roughly equivalent to a fast contractor with no context and no judgement, available at any hour and never bored. That is a real and useful thing to have on a team. It is also a considerably narrower thing than the demos are selling, and the gap between the two is where most disappointment with these tools comes from. Choosing which assistant to point at those tickets is a separate question — <a href="/articles/chatgpt-vs-claude-for-coding">we compared two of them here</a>.</p>`,
+<p>Used that way, a coding agent is a genuine help — roughly equivalent to a fast contractor with no context and no judgement, available at any hour and never bored. That is a real and useful thing to have on a team. It is also a considerably narrower thing than the demos are selling, and the gap between the two is where most disappointment with these tools comes from. Choosing which assistant to point at those tickets is a separate question — <a href="/articles/chatgpt-vs-claude-for-coding">I compared two of them here</a>.</p>`,
 };

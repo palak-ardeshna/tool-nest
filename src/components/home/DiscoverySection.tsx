@@ -26,13 +26,12 @@ export function DiscoverySection({
               Find the tool you are actually looking for
             </h2>
             <p className="mt-2.5 max-w-md text-sm leading-relaxed text-muted sm:text-base">
-              {articleCount} guides, comparisons and reviews — every one written after we used the
-              tool on real work. No sponsored picks, no rankings for sale.
+              {articleCount} guides and comparisons, organised by the kind of tool you need.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <ButtonLink href="/articles">Browse all articles</ButtonLink>
               <ButtonLink href="/about" variant="secondary">
-                How we test
+                About ToolNest
               </ButtonLink>
             </div>
           </div>

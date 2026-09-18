@@ -72,7 +72,7 @@ export const browserExtensionsThatSaveTime: Article = {
   ],
   content: `<p>Browser extensions are unusual among software: they are free, they install in two clicks, and they are almost never removed. The result is that most people carry a dozen they no longer use, several of which have permission to read everything they type.</p>
 
-<p>This article is about the filter, not a ranking. We describe categories rather than naming specific products, because extensions change ownership, get abandoned and get sold — a named recommendation ages badly in exactly the way that matters most for security. Search your browser's store for the category and apply the permissions check at the end.</p>
+<p>This article is about the filter, not a ranking. I describe categories rather than naming specific products, because extensions change ownership, get abandoned and get sold — a named recommendation ages badly in exactly the way that matters most for security. Search your browser's store for the category and apply the permissions check at the end.</p>
 
 <h2>The rule that predicts what you will keep</h2>
 

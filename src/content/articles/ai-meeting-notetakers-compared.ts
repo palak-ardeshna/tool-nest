@@ -54,7 +54,7 @@ export const aiMeetingNotetakersCompared: Article = {
     {
       question: "Can I use one of these for one-to-ones?",
       answer:
-        "You can, and we would think carefully first. A one-to-one is the meeting where someone tells you something difficult. A permanent transcript changes what people are willing to say, and the cost of that is invisible until it has already happened. Notes you write yourself are a reasonable answer here even if they are worse notes.",
+        "You can, and I would think carefully first. A one-to-one is the meeting where someone tells you something difficult. A permanent transcript changes what people are willing to say, and the cost of that is invisible until it has already happened. Notes you write yourself are a reasonable answer here even if they are worse notes.",
     },
   ],
   sources: [
@@ -103,7 +103,7 @@ export const aiMeetingNotetakersCompared: Article = {
   ],
   content: `<p>Every review of this category compares transcription accuracy. Accuracy is table stakes now, and it is not what you will regret choosing badly on. What you will regret is a bot with your company's name on it sitting in a client call nobody warned the client about, or a year of one-to-ones sitting in a vendor's archive you never audited.</p>
 
-<p>We have not run these tools across a controlled set of two hundred meetings, and we would be sceptical of anyone claiming they have — meeting audio is not reproducible, so nobody is really testing the same thing twice. What follows is what the vendors document, what the pricing pages say as of publication, and the parts of the decision that reviews consistently leave out.</p>
+<p>I have not run these tools across a controlled set of two hundred meetings, and I would be sceptical of anyone claiming they have — meeting audio is not reproducible, so nobody is really testing the same thing twice. What follows is what the vendors document, what the pricing pages say as of publication, and the parts of the decision that reviews consistently leave out.</p>
 
 <h2>The split that matters: a bot in the call, or not</h2>
 
@@ -193,7 +193,7 @@ export const aiMeetingNotetakersCompared: Article = {
 
 <p>Search for a decision you half-remember. This is the feature you will use for years and it is the one nobody tests during a trial, because on day one the archive is empty and everything is easy to find.</p>
 
-<h2>What we would pick</h2>
+<h2>What I would pick</h2>
 
 <ul>
 <li><strong>You want an archive of everything and you are watching cost:</strong> Fathom's free tier does the recording and storage job outright, and you can add paid summaries later if you find you want them.</li>
@@ -202,5 +202,5 @@ export const aiMeetingNotetakersCompared: Article = {
 <li><strong>Your calls are covered by client confidentiality terms:</strong> read those terms before you shortlist anything. That constraint decides this for you, and it decides it faster than any trial will.</li>
 </ul>
 
-<p>The honest summary is that the transcription is a solved problem and the judgement is not. These tools are very good at recording what was said and consistently overconfident about what it meant. Treat the output as a draft written by an attentive person who did not know which parts mattered — because that is precisely what it is. If you are assembling a wider set of AI tools around your working week, our notes on <a href="/articles/ai-voice-tools-what-works">where speech tools hold up and where they fall over</a> cover the same trade in a different setting.</p>`,
+<p>The honest summary is that the transcription is a solved problem and the judgement is not. These tools are very good at recording what was said and consistently overconfident about what it meant. Treat the output as a draft written by an attentive person who did not know which parts mattered — because that is precisely what it is. If you are assembling a wider set of AI tools around your working week, my notes on <a href="/articles/ai-voice-tools-what-works">where speech tools hold up and where they fall over</a> cover the same trade in a different setting.</p>`,
 };

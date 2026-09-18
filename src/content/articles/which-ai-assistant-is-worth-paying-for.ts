@@ -32,7 +32,7 @@ export const whichAiAssistantIsWorthPayingFor: Article = {
   alternatives: [
     { name: "ChatGPT", url: "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus", note: "Plus at $20 a month. The broadest feature set of the three, and the one most third-party guides assume you are using." },
     { name: "Claude", url: "https://claude.com/pricing", note: "Pro at $20 monthly, or $17 a month billed annually. Strongest on long documents, writing and code; Claude Code is included in Pro." },
-    { name: "Google AI Pro", url: "https://gemini.google/us/subscriptions/", note: "$19.99 a month with 5TB of storage across Gmail, Drive and Photos. Worth more than it looks if you already pay Google for space." },
+    { name: "Google AI Pro", url: "https://gemini.google/me/subscriptions/", note: "$19.99 a month with 5TB of storage across Gmail, Drive and Photos. Worth more than it looks if you already pay Google for space." },
     { name: "Free tiers", note: "All three publish a usable free plan. If you open an assistant twice a week, that is the correct plan and the honest answer." },
   ],
   faqs: [
@@ -44,7 +44,7 @@ export const whichAiAssistantIsWorthPayingFor: Article = {
     {
       question: "Is it worth paying for two of them?",
       answer:
-        "Occasionally, and less often than people who pay for two will tell you. The case for it is real when two jobs are genuinely different — say, long-document work in one and image or voice generation in the other. The case against is that a second subscription mostly buys you a second habit, and the assistant you use less is the one you stop checking for accuracy. If you do run two, set a date to cancel one and see whether you notice. We wrote about that discipline in more detail in our account of the <a href=\"/articles/auditing-small-team-software-spend\">software we pay for and what we cancelled</a>.",
+        "Occasionally, and less often than people who pay for two will tell you. The case for it is real when two jobs are genuinely different — say, long-document work in one and image or voice generation in the other. The case against is that a second subscription mostly buys you a second habit, and the assistant you use less is the one you stop checking for accuracy. If you do run two, set a date to cancel one and see whether you notice. I wrote about that discipline in more detail in my account of the <a href=\"/articles/auditing-small-team-software-spend\">software I pay for and what I cancelled</a>.",
     },
     {
       question: "Does the storage in Google's plan really count?",
@@ -54,7 +54,7 @@ export const whichAiAssistantIsWorthPayingFor: Article = {
     {
       question: "Which one is best for writing code?",
       answer:
-        "We have a whole piece on that, because the answer has more moving parts than a pricing table can hold. The short version is that Claude Pro includes Claude Code, which changes what the subscription is for — it stops being a chat window and becomes something that edits files in your project. If coding is the main reason you are paying, read <a href=\"/articles/chatgpt-vs-claude-for-coding\">our comparison of the two for coding</a> before you pick, and treat the general-purpose comparison here as secondary.",
+        "I have a whole piece on that, because the answer has more moving parts than a pricing table can hold. The short version is that Claude Pro includes Claude Code, which changes what the subscription is for — it stops being a chat window and becomes something that edits files in your project. If coding is the main reason you are paying, read <a href=\"/articles/chatgpt-vs-claude-for-coding\">my comparison of the two for coding</a> before you pick, and treat the general-purpose comparison here as secondary.",
     },
   ],
   sources: [
@@ -83,7 +83,7 @@ export const whichAiAssistantIsWorthPayingFor: Article = {
       checkedAt: "2026-09-07",
     },
     {
-      title: "Everything new in our Google AI subscriptions",
+      title: "Everything new in my Google AI subscriptions",
       publisher: "Google",
       url: "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
       checkedAt: "2026-09-07",
@@ -140,15 +140,15 @@ export const whichAiAssistantIsWorthPayingFor: Article = {
 
 <p>All three publish a free plan, and they are not demos. For someone who opens an assistant a few times a week to draft an email or check a fact, the free plan is genuinely the right answer, and a subscription would be money spent on capability you never reach.</p>
 
-<p>The useful thing about the free tiers is that they let you run the comparison properly. Take one real task from your week — not a puzzle, not a benchmark question, the actual thing — and give it to all three. The differences show up immediately on real work and almost never on test prompts. Where the answers matter enough to check, the same habits apply as with any tool that produces confident text: our piece on <a href="/articles/ai-research-tools-and-your-sources">AI research tools and your sources</a> covers what to verify and how.</p>
+<p>The useful thing about the free tiers is that they let you run the comparison properly. Take one real task from your week — not a puzzle, not a benchmark question, the actual thing — and give it to all three. The differences show up immediately on real work and almost never on test prompts. Where the answers matter enough to check, the same habits apply as with any tool that produces confident text: my piece on <a href="/articles/ai-research-tools-and-your-sources">AI research tools and your sources</a> covers what to verify and how.</p>
 
 <h2>The cost nobody puts in the comparison</h2>
 
-<p>The subscription is $20. The real cost is that you now have a habit, and habits attract other subscriptions. We have watched teams end up paying for two assistants, a writing tool built on one of them, and a meeting notetaker built on another — four bills, three of which are wrappers around the model in the first bill.</p>
+<p>The subscription is $20. The real cost is that you now have a habit, and habits attract other subscriptions. I have watched teams end up paying for two assistants, a writing tool built on one of them, and a meeting notetaker built on another — four bills, three of which are wrappers around the model in the first bill.</p>
 
 <p>Before you add the second AI subscription, check whether the one you have already does the job. It usually does, slightly worse, for free.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <p>Start free for two weeks with a real task, not a trial task. Then pay for one, monthly rather than annually, so that a change of mind costs you one month rather than a year. Put a reminder in the calendar for ninety days out asking one question: what did this replace? If the answer is nothing, cancel it.</p>
 

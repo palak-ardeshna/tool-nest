@@ -122,7 +122,7 @@ export const choosingABackgroundJobQueue: Article = {
   ],
   content: `<p>The first background job almost every application needs is sending an email. Someone signs up, you call the mail provider inside the request handler, and for a while nothing goes wrong. Then the provider has a slow morning, your sign-up route starts taking eleven seconds, and a few of those requests time out after the account was created but before the welcome email went. Now you have users in a state your code does not have a name for.</p>
 
-<p>That is the moment people go looking for a queue, and the search results are unhelpful in a specific way: they compare features. Retries, cron, priorities, dead letters — every serious option has all of them. We have not run these at scale against each other, and no honest comparison could in an afternoon. What we can do is point at the constraint that actually decides this, because it is usually already decided.</p>
+<p>That is the moment people go looking for a queue, and the search results are unhelpful in a specific way: they compare features. Retries, cron, priorities, dead letters — every serious option has all of them. I have not run these at scale against each other, and no honest comparison could in an afternoon. What I can do is point at the constraint that actually decides this, because it is usually already decided.</p>
 
 <h2>The question is not which library</h2>
 
@@ -146,7 +146,7 @@ export const choosingABackgroundJobQueue: Article = {
 
 <p><strong>BullMQ</strong> if you have Redis. It is the established Node queue, and its feature set is broader at the edges: delayed jobs, repeatable jobs on a cron specification, parent-child dependencies, LIFO and FIFO ordering, per-worker concurrency, and automatic recovery from process crashes. A paid Pro tier adds groups, batches, observables and extra telemetry. If Redis is already in your stack for sessions or caching, this costs you nothing new to run.</p>
 
-<p>Our advice is to resist adding Redis solely to get a queue. A second stateful service means a second thing to size, secure, back up and wake up for, and the throughput advantage it buys you is not the problem you were trying to solve.</p>
+<p>My advice is to resist adding Redis solely to get a queue. A second stateful service means a second thing to size, secure, back up and wake up for, and the throughput advantage it buys you is not the problem you were trying to solve.</p>
 
 <h2>If you are on serverless, you are buying a process</h2>
 
@@ -169,7 +169,7 @@ export const choosingABackgroundJobQueue: Article = {
 
 <p>Neither shows up in a comparison that counts jobs per month. Both show up in the first incident, alongside whatever your <a href="/articles/error-tracking-for-small-teams">error tracking</a> did or did not capture from inside the worker.</p>
 
-<h2>What we would pick</h2>
+<h2>What I would pick</h2>
 
 <p>On a long-lived process with Postgres already there: pg-boss, and nothing else. On a long-lived process with Redis already there: BullMQ. On serverless with simple deferred work: QStash, because paying for a workflow engine to send an email later is buying a category of product you do not need. On serverless with multi-step work that has to survive partial failure: Inngest or Trigger.dev, and pick on the timeout — if any task might run longer than a function invocation allows, Trigger.dev's no-timeout position is a real difference rather than marketing.</p>
 

@@ -96,7 +96,7 @@ export const webAnalyticsWithoutGoogleAnalytics: Article = {
       checkedAt: "2026-09-06",
     },
   ],
-  content: `<p>Ask a small team what they use analytics for and the answer, once you strip out the aspiration, is nearly always the same three things. Which pages are people finding. Where did they come from. Did anyone do the thing we wanted them to do.</p>
+  content: `<p>Ask a small team what they use analytics for and the answer, once you strip out the aspiration, is nearly always the same three things. Which pages are people finding. Where did they come from. Did anyone do the thing I wanted them to do.</p>
 
 <p>That is a modest job. It does not need a product built for enterprises buying media at scale, and it certainly does not need a tool you have to relearn every time you open it. The interesting question is not whether the alternatives can answer those three questions — they all can — but what you give up by leaving, and whether you were using any of it.</p>
 
@@ -150,7 +150,7 @@ export const webAnalyticsWithoutGoogleAnalytics: Article = {
 <li><strong>Continuity of history.</strong> Nothing imports GA4 data cleanly. Accept the gap, export a monthly summary before you leave, and move on.</li>
 </ul>
 
-<p>What you gain is subtler and easier to underrate: a tool people voluntarily open. We have watched teams go from checking analytics when somebody asks a question to checking it in the Monday meeting, purely because the answer is now on the first screen. That change is worth more than any feature on the list above. It is the same pattern behind a <a href="/articles/weekly-publishing-workflow">weekly publishing workflow</a> that survives contact with a busy week — the tool that gets used is the one with the least friction, not the one with the most capability.</p>
+<p>What you gain is subtler and easier to underrate: a tool people voluntarily open. I have watched teams go from checking analytics when somebody asks a question to checking it in the Monday meeting, purely because the answer is now on the first screen. That change is worth more than any feature on the list above. It is the same pattern behind a <a href="/articles/weekly-publishing-workflow">weekly publishing workflow</a> that survives contact with a busy week — the tool that gets used is the one with the least friction, not the one with the most capability.</p>
 
 <h2>Switching without losing anything</h2>
 
@@ -165,7 +165,7 @@ export const webAnalyticsWithoutGoogleAnalytics: Article = {
 
 <p>If you self-host, add one more step: check where the database lives and whether it is included in the backups you already run. An analytics database quietly growing on a server nobody backs up is a small tragedy waiting for a disk failure, and it is exactly the sort of thing a <a href="/articles/deploying-a-nextjs-app-four-routes">deployment setup you chose for other reasons</a> tends to leave out.</p>
 
-<h2>What we would do</h2>
+<h2>What I would do</h2>
 
 <p>If you do not buy traffic, move to a light tool and stop paying attention to numbers you were not using. If you do buy traffic, keep GA4 for the campaign attribution and add a simple tool beside it for everyone else, because the people who need to know which article did well should not have to build an exploration to find out.</p>
 

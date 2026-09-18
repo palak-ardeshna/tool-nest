@@ -23,13 +23,13 @@ const channels = [
     title: "Tips and suggestions",
     email: siteConfig.email,
     description:
-      "Tell us about a tool worth testing or a comparison you wish existed. We read everything, though we cannot reply to all of it.",
+      "Tell me about a tool worth testing or a comparison you wish existed. I read everything, though I cannot reply to all of it.",
   },
   {
     title: "Advertising and partnerships",
     email: siteConfig.email,
     description:
-      "We sell display advertising. We do not sell reviews, rankings, or placement inside articles.",
+      "I sell display advertising. I do not sell reviews, rankings, or placement inside articles.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function ContactPage() {
     <Container width="reading" className="py-10 lg:py-14">
       <PageHeader
         title="Contact"
-        description="We aim to reply to editorial mail within two working days."
+        description="I aim to reply to editorial mail within two working days."
         crumbs={crumbs}
       />
 
@@ -59,8 +59,8 @@ export default function ContactPage() {
 
       <p className="mt-8 text-sm leading-relaxed text-muted">
         For privacy requests — access, correction or deletion of your data — email the address above
-        with &ldquo;Privacy request&rdquo; in the subject line. See our privacy policy for what we
-        collect and how long we keep it.
+        with &ldquo;Privacy request&rdquo; in the subject line. See my privacy policy for what I
+        collect and how long I keep it.
       </p>
 
       <JsonLd data={breadcrumbSchema(crumbs)} />
