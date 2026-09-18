@@ -6,7 +6,7 @@ export const objectStorageForASmallAppS3R2OrB2: Article = {
   excerpt:
     "The three buckets most small apps end up choosing between look identical from your code and cost wildly different amounts once users start downloading. We priced a realistic month on each — storage, requests and the egress line that decides it — and explain when S3's ecosystem is still worth paying for.",
   category: "developer-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Cloud Storage", "AWS", "Cloudflare", "Developer Tools", "Comparisons"],
   publishedAt: "2026-09-14",
   image: "/images/articles/object-storage-for-a-small-app-s3-r2-or-b2.webp",

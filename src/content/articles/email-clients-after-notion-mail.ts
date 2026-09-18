@@ -6,7 +6,7 @@ export const emailClientsAfterNotionMail: Article = {
   excerpt:
     "Notion Mail switches off on 22 September 2026, and four things in it do not live in Gmail. We list what to export by the 21st, then compare Superhuman, Spark, Shortwave, Thunderbird and the clients you already have on price, provider support and the AI features that were the reason you tried Notion Mail in the first place.",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Email", "Software", "Notion", "Comparisons"],
   publishedAt: "2026-09-14",
   image: "/images/articles/email-clients-after-notion-mail.webp",

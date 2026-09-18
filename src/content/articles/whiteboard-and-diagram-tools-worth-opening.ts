@@ -6,7 +6,7 @@ export const whiteboardAndDiagramToolsWorthOpening: Article = {
   excerpt:
     "Most diagrams are drawn once, pasted into a document and never edited again, which changes what a diagram tool needs to be. We compared the six we actually open — two free canvases, one free diagram editor and three paid whiteboards — on what the free tiers allow, what a seat costs, and which one to use for a sketch versus a system.",
   category: "software",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Diagrams", "Whiteboards", "Design", "Software", "Comparisons"],
   publishedAt: "2026-09-14",
   image: "/images/articles/whiteboard-and-diagram-tools-worth-opening.webp",

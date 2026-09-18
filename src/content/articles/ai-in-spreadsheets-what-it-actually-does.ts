@@ -6,7 +6,7 @@ export const aiInSpreadsheetsWhatItActuallyDoes: Article = {
   excerpt:
     "Excel's COPILOT function is withdrawn from today, Google Sheets has an AI function that reads the web, and Claude now sits in a side pane and edits your formulas. We tested what each one is for, where each vendor tells you not to use it, and the one rule that keeps AI out of the cells that matter.",
   category: "ai-tools",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["AI Tools", "Spreadsheets", "Excel", "Google Sheets", "Comparisons"],
   publishedAt: "2026-09-14",
   image: "/images/articles/ai-in-spreadsheets-what-it-actually-does.webp",

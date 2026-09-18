@@ -6,7 +6,7 @@ export const websiteBlockersThatActuallyHold: Article = {
   excerpt:
     "A blocker you can switch off in two clicks is a suggestion, not a blocker. We compared Freedom, Cold Turkey, Opal and the limits built into your phone and laptop on the only thing that matters — how hard they are to get around at 3pm — and on what the paid tiers really buy.",
   category: "productivity",
-  author: "toolnest-editorial",
+  author: "parth-patel",
   tags: ["Productivity", "Focus", "Distraction", "Comparisons"],
   publishedAt: "2026-09-14",
   image: "/images/articles/website-blockers-that-actually-hold.webp",
