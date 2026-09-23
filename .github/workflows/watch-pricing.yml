@@ -1,0 +1,52 @@
+# Weekly check of the vendor pricing pages the articles cite. When a price
+# changes it opens an issue, and GitHub emails it to the repo owner. That is
+# the whole alert — no n8n, no database. See scripts/watch-pricing.ts.
+#
+# The last reading lives in the Actions cache, not in the repo: committing it
+# would push to main and trigger a deploy every week. If the cache is evicted
+# (7 days unused — the weekly run keeps it warm), the next run just records a
+# fresh baseline.
+name: Watch pricing pages
+
+on:
+  schedule:
+    - cron: "0 3 * * 1" # Mondays 03:00 UTC = 08:30 IST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      # Cache keys are immutable, so each run saves under a new key and
+      # restores the newest one by prefix.
+      - uses: actions/cache/restore@v4
+        with:
+          path: pricing-state.json
+          key: pricing-state-${{ github.run_id }}
+          restore-keys: pricing-state-
+
+      - run: npx tsx scripts/watch-pricing.ts pricing-state.json pricing-report.md
+
+      - uses: actions/cache/save@v4
+        with:
+          path: pricing-state.json
+          key: pricing-state-${{ github.run_id }}
+
+      - name: Open an issue if anything changed
+        if: hashFiles('pricing-report.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "Pricing changed — week of $(date -u +%F)" --body-file pricing-report.md

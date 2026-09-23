@@ -4,6 +4,7 @@ import test from "node:test";
 import { groupSections } from "../src/lib/content";
 import { coverStyle, MOTIF_COUNT } from "../src/lib/cover-art";
 import { readingMinutes } from "../src/lib/format";
+import { extractPrices, newPrices, pricingUrls } from "../scripts/watch-pricing";
 
 const section = (n: number) => `<h2>Section ${n}</h2><p>Body ${n}</p>`;
 
@@ -47,4 +48,16 @@ test("cover art spreads motifs and palettes across a realistic slug set", () => 
   const counts = new Map<number, number>();
   for (const { motif } of styles) counts.set(motif, (counts.get(motif) ?? 0) + 1);
   assert.ok(Math.max(...counts.values()) <= 20, "one motif dominates the grid");
+});
+
+test("pricing watcher reads price tokens, not page noise", () => {
+  const html = `<script>var t="$99"</script><p>Pro <b>$20</b>/mo, Team&nbsp;$ 40, €18, again $20</p>`;
+  assert.deepEqual(extractPrices(html), ["$20", "$40", "€18"]);
+  assert.deepEqual(newPrices(["$20", "$40"], ["$25", "$40"]), ["$25"]);
+  assert.deepEqual(
+    pricingUrls([
+      `url: "https://a.com/pricing", url: "https://a.com/docs", url: "https://b.com/plans.html", url: "https://c.org/simple-plans"`,
+    ]),
+    ["https://a.com/pricing", "https://b.com/plans.html"],
+  );
 });
