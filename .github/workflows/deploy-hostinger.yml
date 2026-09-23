@@ -7,6 +7,11 @@
 # One-time setup (repo → Settings → Secrets and variables → Actions):
 #   HOSTINGER_API_TOKEN  hPanel → API (under Dev tools) → Generate token
 #
+# A future `publishedAt` only keeps an article out of the build; it never
+# releases it. Pages are prerendered with `dynamicParams = false`, so a dated
+# article stays a 404 until something rebuilds the site. The nightly schedule
+# below is that something.
+#
 # API reference: https://docs.hostinger.com/api-reference/endpoints/hosting/nodejs/start-node-js-build
 name: Deploy to Hostinger
 
@@ -14,6 +19,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # 01:30 UTC = 07:00 IST. Releases anything whose publishedAt has come round.
+  # GitHub disables cron on a repo with no activity for 60 days — if scheduled
+  # deploys stop, push a commit to switch them back on.
+  schedule:
+    - cron: "30 1 * * *"
 
 # Two pushes in quick succession queue up instead of racing each other.
 concurrency:
@@ -27,7 +37,62 @@ env:
   ARCHIVE: app.zip
 
 jobs:
+  # A nightly build that ships nothing is a pointless redeploy: it costs runner
+  # time and briefly strands the edge on every run. Compare what the repo would
+  # publish today against what the live sitemap already lists, and stop early
+  # when they agree. Push and manual runs always deploy.
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.due.outputs.deploy }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Is anything due?
+        id: due
+        run: |
+          set -uo pipefail
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "${{ github.event_name }} run — deploying"
+            echo "deploy=true" >>"$GITHUB_OUTPUT"; exit 0
+          fi
+
+          repo=$(node -e '
+            const fs = require("fs");
+            const dir = "src/content/articles";
+            const now = Date.now();
+            let n = 0;
+            for (const f of fs.readdirSync(dir)) {
+              if (!f.endsWith(".ts") || f === "index.ts") continue;
+              const m = fs.readFileSync(dir + "/" + f, "utf8").match(/publishedAt:\s*"([0-9-]+)"/);
+              if (m && Date.parse(m[1]) <= now) n++;
+            }
+            console.log(n);
+          ')
+
+          live=$(curl -sS --max-time 30 "https://$HOSTINGER_DOMAIN/sitemap.xml" \
+            | grep -o "<loc>https://$HOSTINGER_DOMAIN/articles/" | wc -l | tr -d " ")
+
+          echo "repo would publish: $repo | live sitemap lists: ${live:-unknown}"
+
+          # Unreachable or empty sitemap: deploy rather than silently never
+          # publishing. A wasted build is cheaper than an article that never ships.
+          if ! [ "${live:-0}" -gt 0 ] 2>/dev/null; then
+            echo "::warning::could not read the live sitemap — deploying anyway"
+            echo "deploy=true" >>"$GITHUB_OUTPUT"; exit 0
+          fi
+
+          if [ "$repo" -eq "$live" ]; then
+            echo "nothing due — skipping deploy"
+            echo "deploy=false" >>"$GITHUB_OUTPUT"
+          else
+            echo "counts differ — deploying"
+            echo "deploy=true" >>"$GITHUB_OUTPUT"
+          fi
+
   deploy:
+    needs: check
+    if: needs.check.outputs.deploy == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
