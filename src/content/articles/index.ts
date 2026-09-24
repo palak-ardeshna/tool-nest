@@ -62,9 +62,13 @@ import { windows10SupportHasEndedWhatEachOptionCosts } from "@/content/articles/
 import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
 import { softwareYouCanStillBuyOnce } from "@/content/articles/software-you-can-still-buy-once";
 import { leavingCursorWhatMovesAndWhatDoesnt } from "@/content/articles/leaving-cursor-what-moves-and-what-doesnt";
+import { deployingNextjsToHostingerFromGithubActions } from "@/content/articles/deploying-nextjs-to-hostinger-from-github-actions";
+import { geminiFlashPricingDoublesInJanuary } from "@/content/articles/gemini-flash-pricing-doubles-in-january";
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  deployingNextjsToHostingerFromGithubActions,
+  geminiFlashPricingDoublesInJanuary,
   windows10SupportHasEndedWhatEachOptionCosts,
   shouldYouLetAnAiAgentUseYourBrowser,
   softwareYouCanStillBuyOnce,
