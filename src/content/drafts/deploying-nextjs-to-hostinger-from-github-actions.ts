@@ -66,7 +66,9 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
 <!-- PARTH: real numbers from the Actions log. Delete the draft rather than invent them. -->
 <h2>What a deploy costs in minutes</h2>
 
-<p><!-- PARTH: wall-clock time of a typical run, split: npm ci / test / typecheck / build on the runner, upload, Hostinger build until the site answers. How many deploys so far (git log --since=2026-09-14 on main). --></p>
+<p>The Actions history for this site, read on 24 September 2026: 13 runs since the workflow went in on 14 September, 11 green and 2 red. The green runs took between 2 minutes 32 seconds and 3 minutes 7 seconds, with a median of 2 minutes 41 seconds, from push to the build request accepted by Hostinger. The two failures were short: 69 seconds for the very first run, and 29 seconds on 18 September, when a commit that added four articles failed on the runner, far too early to have reached the upload. The live site never saw that commit, which is the point of checking on the runner first. <!-- PARTH: which step failed on 18 September (run 35312137913)? The log has expired for me. --></p>
+
+<p><!-- PARTH: the Actions log does not split the time by step. Add how long Hostinger's own build takes after the API call until the new version answers, and whether that number surprised you. --></p>
 
 <h2>What broke while I built it</h2>
 
