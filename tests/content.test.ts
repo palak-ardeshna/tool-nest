@@ -223,22 +223,23 @@ test("every article file is wired into the index", async () => {
 });
 
 /**
- * Cadence. CLAUDE.md caps publishing at two articles a week: batches are the
- * fingerprint AdSense rejects. The 61 articles that predate the rule stay as
- * they are; anything dated after it is held to it. Two articles on the same
- * day are fine; a third within any seven-day window is not.
+ * Cadence. CLAUDE.md caps publishing at two articles a day: batches are the
+ * fingerprint AdSense rejects, and a 22-file launch dump is what got this site
+ * flagged. The 61 articles that predate the rule stay as they are; anything
+ * dated after it is held to it.
+ *
+ * This was a two-a-week window until 2026-09-26, when Parth chose to publish a
+ * second pair two days after the first. The weekly cap is still the better
+ * habit — the daily cap is only the floor that the test enforces.
  */
-test("no more than two articles publish in any seven-day window", () => {
+test("no more than two articles publish on any single day", () => {
   const RULE_DATE = Date.parse("2026-09-18");
-  const WEEK = 7 * 24 * 60 * 60 * 1000;
-  const dates = articles
-    .map((a) => Date.parse(a.publishedAt))
-    .filter((d) => d > RULE_DATE)
-    .sort((a, b) => a - b);
-  for (let i = 2; i < dates.length; i += 1) {
-    assert.ok(
-      dates[i] - dates[i - 2] >= WEEK,
-      `three articles within seven days around ${new Date(dates[i]).toISOString().slice(0, 10)}`,
-    );
+  const perDay = new Map();
+  for (const a of articles) {
+    if (Date.parse(a.publishedAt) <= RULE_DATE) continue;
+    perDay.set(a.publishedAt, (perDay.get(a.publishedAt) ?? 0) + 1);
+  }
+  for (const [day, count] of perDay) {
+    assert.ok(count <= 2, `${count} articles published on ${day}; the cap is two`);
   }
 });

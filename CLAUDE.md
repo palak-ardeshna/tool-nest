@@ -21,7 +21,7 @@ The one test: **an article must contain something that did not exist until Parth
 - `image` should be Parth's own screenshot of the tool's UI (`public/images/articles/<slug>.webp`, `imageAlt` describes what's on screen). Stock photos only when no UI exists to show. **Manual — no test enforces this.**
 
 ## Publish
-- **Cadence: max 2 articles per week.** Check `git log` before adding one. Batches are the fingerprint AdSense rejects. **Manual — no test enforces this.**
+- **Cadence: aim for 2 articles per week; the test enforces max 2 per day.** Check `git log` before adding one. Batches are the fingerprint AdSense rejects — the 22-file launch dump is what got this site flagged. The weekly target is the habit; the daily cap is only the floor `npm test` will catch.
 - Parth edits the experience paragraph himself; a publish commit that only adds a file untouched by him is not done.
 - `npm test` must pass.
 

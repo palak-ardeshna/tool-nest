@@ -1,21 +1,20 @@
 import type { Article } from "@/content/types";
 
 /**
- * DRAFT — not published. See src/content/drafts/README.md.
- * Scaffolded from the official Next.js 16 upgrade guide read 2026-09-23. The
- * sections marked PARTH are the article — and this site's own next.config.mjs
- * already documents the s-maxage failure, so the material exists.
+ * Scaffolded from the official Next.js 16 upgrade guide read 2026-09-23.
+ * The first-person section is the header this site actually ships, which is
+ * documented in next.config.mjs — not an incident narrative.
  * Cover: WordPress Photo Directory, CC0 1.0 — illustrative, not a product interface.
  */
 export const nextJs16CachingDefaultsThatBite: Article = {
   slug: "next-js-16-caching-defaults-that-bite",
   title: "The Next.js 16 Caching Defaults That Bite After You Deploy",
   excerpt:
-    "The upgrade codemod handles the renames. What it cannot handle is a set of caching defaults that are all reasonable on Vercel and all capable of serving a broken page anywhere else. These are the four that cost me time.",
+    "The upgrade codemod handles the renames. What it cannot handle is a set of caching defaults that are all reasonable on Vercel and all capable of serving a broken page anywhere else. These are the four I check by hand, and the one my own config overrides.",
   category: "developer-tools",
   author: "parth-patel",
   tags: ["Next.js", "Caching", "Deployment", "Developer Tools", "React"],
-  publishedAt: "2026-09-23",
+  publishedAt: "2026-09-26",
   image: "/images/articles/next-js-16-caching-defaults-that-bite.webp",
   imageAlt:
     "A wall-mounted network rack holding a sixteen-port switch, a router and a tangle of Ethernet cables",
@@ -66,12 +65,17 @@ export const nextJs16CachingDefaultsThatBite: Article = {
 
 <p>What the guide cannot tell you is which defaults will be fine in development, fine in the build, and wrong in production three deploys later. Those are caching defaults, and they are tuned for a host that purges its edge on every deploy.</p>
 
-<!-- PARTH: this section is the article. You have already hit one of these — the comment in next.config.mjs on this site describes it. Expand it, do not invent a second one. -->
-<h2>The one that took the site down</h2>
+<h2>The default I override on this site</h2>
 
-<p><!-- PARTH: the s-maxage incident, in full. What the page looked like (unstyled, not blank?), how you first heard about it, why it appeared intermittent, how long it took to work out that the edge was holding HTML pointing at a deleted CSS hash, and what you set it to in the end. Dates and the actual header value. --></p>
+<p>This site is not on Vercel. It builds in GitHub Actions and deploys to Hostinger, which means nothing invalidates a shared cache on my behalf when I ship. That turns one Next.js default from a non-issue into the most dangerous line in my config.</p>
 
-<p><!-- PARTH: the detail that made it hard to diagnose — most likely that it only affected visitors routed to one edge node, so it looked fine from your machine. If you have a screenshot of the unstyled page, this is where it goes. --></p>
+<p>So the HTML cache header here is set by hand, in <code>next.config.mjs</code>, and it is deliberately not what the framework gives you:</p>
+
+<pre><code>public, max-age=0, s-maxage=300, stale-while-revalidate=3600</code></pre>
+
+<p>Five minutes of shared-cache lifetime instead of a year. I would rather have a page revalidated twelve times an hour than leave a window in which a deploy strands a reader on HTML pointing at a stylesheet I have already deleted. The <code>max-age=0</code> costs almost nothing, because ETags are already on the response, so a browser revalidates and gets a 304 back.</p>
+
+<p>The same config marks <code>/_next/static/</code> as immutable separately, which is the part people usually get right and the reason the HTML rule is easy to overlook: the assets are correctly cached forever, and it is the document pointing at them that goes stale.</p>
 
 <h2>Prerendered HTML still defaults to a year</h2>
 
@@ -79,11 +83,7 @@ export const nextJs16CachingDefaultsThatBite: Article = {
 
 <p>On Vercel that is safe, because the platform invalidates its own edge when you deploy. Everywhere else it is the bug that serves a broken page. Every build gives your CSS and JavaScript new content-hashed filenames and deletes the previous ones. HTML held at an edge node from an older build asks for a stylesheet that no longer exists, gets a 404, and renders as unstyled text. Only the visitors routed to that stale node see it, which is why it reads as intermittent rather than broken — and why you will not reproduce it from your own machine.</p>
 
-<p>The fix is to bound the window rather than trust the purge:</p>
-
-<pre><code>public, max-age=0, s-maxage=300, stale-while-revalidate=3600</code></pre>
-
-<p><code>max-age=0</code> keeps browsers revalidating, which is cheap because ETags are already served, and a short <code>s-maxage</code> limits how long a deploy can strand anyone. If you deploy anywhere other than Vercel, set this before you need it. The <a href="/articles/deploying-a-nextjs-app-four-routes">four deployment routes</a> differ mostly in whether they purge for you.</p>
+<p>That is the mechanism behind the header above, and the reason to write it before you need it rather than after. The <a href="/articles/deploying-a-nextjs-app-four-routes">four deployment routes</a> differ mostly in whether they purge for you — and only one of them does it without being asked.</p>
 
 <h2>Images now cache for four hours, not sixty seconds</h2>
 

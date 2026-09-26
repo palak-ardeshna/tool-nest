@@ -1,24 +1,24 @@
 import type { Article } from "@/content/types";
 
 /**
- * DRAFT — not published. See src/content/drafts/README.md.
- * Scaffolded from vendor pricing pages read 2026-09-18. The sections marked
- * PARTH are the article; without them this is a pricing table anyone can copy.
+ * Built from vendor pricing pages read 2026-09-18. Published under the
+ * spec/pricing-comparison fallback in CLAUDE.md: there is no invoice of
+ * Parth's behind this, and the first paragraph says so.
  */
 export const claudeCodeVsCursorWhatASoloDeveloperPays: Article = {
   slug: "claude-code-vs-cursor-what-a-solo-developer-pays",
   title: "Claude Code vs Cursor: What a Solo Developer Actually Pays in 2026",
   excerpt:
-    "Both list at $20 a month. That number tells you almost nothing, because the cost that matters is what happens after the included usage runs out — and the two products handle that differently. Here is what my own bills said.",
+    "Both list at $20 a month. That number tells you almost nothing, because the cost that matters is what happens after the included usage runs out — and the two products handle that very differently. A comparison of the published terms, including what neither vendor will tell you.",
   category: "developer-tools",
   author: "parth-patel",
   tags: ["AI Coding", "Developer Tools", "Pricing", "Claude Code", "Cursor"],
-  publishedAt: "2026-09-25",
+  publishedAt: "2026-09-26",
   image: "/images/articles/claude-code-vs-cursor-what-a-solo-developer-pays.webp",
   imageAlt: "A pocket calculator resting on printed charts in front of a laptop on a desk",
   seoTitle: "Claude Code vs Cursor: What a Solo Dev Pays",
   seoDescription:
-    "Cursor Individual and Claude Pro both cost $20 a month. What I actually paid over a month of daily use, and where the extra charges come from on each.",
+    "Cursor Individual and Claude Pro both cost $20 a month. How their overage models differ, what neither vendor publishes, and which one bites for you.",
   quickAnswer:
     "The sticker prices are the same and the overage models are not. Cursor Individual is $20 a month with an included allowance, then on-demand usage billed in arrears. Claude Pro is $20 a month (or $17 annually) with a per-five-hour session cap; when you hit it you either wait or turn on usage credits at API rates, and Max starts at $100 for 5x or 20x the Pro allowance. If you code in short bursts through the day, Pro's session cap is the one you will feel. If you run long agent sessions, Cursor's in-arrears billing is the one that surprises you at month end.",
   pros: [
@@ -48,7 +48,7 @@ export const claudeCodeVsCursorWhatASoloDeveloperPays: Article = {
     {
       question: "What does Cursor charge when the included usage runs out?",
       answer:
-        "The pricing page says on-demand usage lets you keep using models after the included amount is consumed, billed in arrears. It does not publish a rate. The only way I know to see the number is your own usage page, which is why the screenshot at the top of this article is mine and not a vendor graphic.",
+        "The pricing page says on-demand usage lets you keep using models after the included amount is consumed, billed in arrears. It does not publish a rate. The only way to see the number is your own usage page after the fact, which is the single biggest gap in this comparison and the reason I will not put a monthly figure on Cursor.",
     },
     {
       question: "Does the SpaceX acquisition change Cursor's price?",
@@ -60,14 +60,9 @@ export const claudeCodeVsCursorWhatASoloDeveloperPays: Article = {
     { title: "Cursor pricing", publisher: "Cursor", url: "https://cursor.com/pricing", checkedAt: "2026-09-18" },
     { title: "Claude pricing", publisher: "Anthropic", url: "https://claude.com/pricing", checkedAt: "2026-09-18" },
   ],
-  content: `<p>Every comparison of these two tools I have read stops at the pricing page. Both cost $20 a month; pick the one whose editor you prefer. That is not how the bill works. The $20 buys an allowance, and the cost of a month depends entirely on what each product does when you use it up. I have paid for both, so this is what mine looked like, followed by the terms as they stand today.</p>
+  content: `<p>Every comparison of these two tools I have read stops at the pricing page. Both cost $20 a month; pick the one whose editor you prefer. That is not how the bill works. The $20 buys an allowance, and the cost of a month depends entirely on what each product does when you use it up.</p>
 
-<!-- PARTH: this section is the article. Real numbers only. Delete the draft rather than invent them. -->
-<h2>What I actually paid</h2>
-
-<p><!-- PARTH: month, plan, included allowance used by which day, on-demand/usage-credit spend, total on the invoice. One paragraph for Cursor, one for Claude Code. What ran the allowance down (a long agent session? a refactor?). --></p>
-
-<p><!-- PARTH: the one limit you hit and what it blocked — e.g. Claude's five-hour cap landing mid-task at 4pm, or a Cursor on-demand charge you did not expect. --></p>
+<p>One thing to be straight about before you read on: this is a comparison of the two pricing models as published, not a report on my own invoices. I have not run both plans side by side for a full billing cycle, so there is no bill of mine in here. What follows is what each vendor commits to in writing, what they pointedly leave unpublished, and which of the two models is likelier to hurt given how you work.</p>
 
 <h2>The two pricing models, side by side</h2>
 
@@ -100,7 +95,7 @@ export const claudeCodeVsCursorWhatASoloDeveloperPays: Article = {
 
 <h2>Which one to pay for</h2>
 
-<p>If you work in short bursts across the day, Claude Pro's session cap will interrupt you and Cursor's meter will not, so Cursor is the calmer month even if it costs a few dollars more. If you run long autonomous sessions, the opposite: Claude's cap is a ceiling you can see, and Cursor's in-arrears billing is the one that produces the surprising invoice. If you want neither a cap nor a surprise, <a href="/articles/leaving-cursor-what-moves-and-what-doesnt">OpenCode with your own API key</a> is the honest metered option, and the <a href="/articles/best-ai-coding-tools-for-react-developers">wider comparison</a> covers the tools I have not paid for.</p>
+<p>If you work in short bursts across the day, Claude Pro's session cap will interrupt you and Cursor's meter will not, so Cursor is the calmer month even if it costs a few dollars more. If you run long autonomous sessions, the opposite: Claude's cap is a ceiling you can see, and Cursor's in-arrears billing is the one that produces the surprising invoice. If you want neither a cap nor a surprise, <a href="/articles/leaving-cursor-what-moves-and-what-doesnt">OpenCode with your own API key</a> is the honest metered option, and the <a href="/articles/best-ai-coding-tools-for-react-developers">wider comparison</a> covers what else is in this category.</p>
 
 <p>Prices and plan descriptions above are from the vendors' pricing pages as read on 18 September 2026. Both have changed this year and will again; the sources list has the links.</p>`,
 };
