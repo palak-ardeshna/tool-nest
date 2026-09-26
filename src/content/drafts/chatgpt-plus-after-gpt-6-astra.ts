@@ -7,6 +7,7 @@ import type { Article } from "@/content/types";
  * many Astra messages in Codex before the five-hour banner, the Settings →
  * Usage screenshot, and what the reset offer costs in GBP if it appears.
  */
+
 export const chatgptPlusAfterGpt6Astra: Article = {
   slug: "chatgpt-plus-after-gpt-6-astra",
   title: "ChatGPT Plus After GPT-6 Astra: Which Plan Do You Actually Need?",
