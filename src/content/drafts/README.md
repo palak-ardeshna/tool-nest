@@ -1,6 +1,6 @@
 # Drafts
 
-Articles waiting for Parth's hands-on paragraph. Nothing here is wired into
+Articles waiting for Palak's hands-on paragraph. Nothing here is wired into
 `src/content/articles/index.ts`, so nothing here can go live by accident.
 
 To publish one:
