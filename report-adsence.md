@@ -43,9 +43,19 @@ They quoted this line from our author/About text:
 >
 > Google Search probably won't index or rank this type of content.
 
-### My last question (no reply yet)
+### My last question
 
 > If I now make significant changes to the site's content, rewrite the articles with genuine human input and improve the overall content quality, can I submit the site for AdSense review again? Or, after being rejected twice, is it better not to apply again?
+
+### Reply
+
+> You can apply any time you like, unless they limit the timeframe.
+>
+> But over 90% of sites are rejected, and almost all that have an overdone theme such as IT/tech.
+>
+> If you think your visitors would appreciate rewritten articles, then go ahead. But don't do anything if the only motivation is the hope of Adsense.
+
+**Takeaway:** There's no ban on reapplying. The odds are low for any IT/tech site, though. Write for readers, and treat AdSense as a side effect.
 
 ---
 
