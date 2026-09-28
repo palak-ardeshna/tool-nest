@@ -10,11 +10,12 @@ import type { Author } from "@/content/types";
  */
 export const authors: Author[] = [
   {
-    slug: "parth-patel",
-    name: "Parth Patel",
-    role: "Founder and editor",
+    slug: "palak-patel",
+    name: "Palak Patel",
+    role: "IT engineer, developer and researcher",
     bio:
-      "Parth runs ToolNest and is responsible for everything published here. He researches each article from vendor documentation, changelogs, pricing pages and published reporting, drafts with AI assistance, then checks and edits every claim before it goes live. Where he has not used a tool himself, the article says so.",
+      "Palak is an IT engineer, developer and researcher, and runs ToolNest. He uses the software he writes about in his own development work and says so when he has not. Each article is checked against vendor documentation, changelogs and pricing pages; drafts may start with AI assistance, but he checks and edits every claim before it goes live.",
     email: siteConfig.email,
+    linkedin: "https://www.linkedin.com/in/palak-patel-031a52403/",
   },
 ];

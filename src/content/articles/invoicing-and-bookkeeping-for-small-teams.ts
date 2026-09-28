@@ -6,7 +6,7 @@ export const invoicingAndBookkeepingForSmallTeams: Article = {
   excerpt:
     "The category nobody enjoys evaluating. Here is what actually matters when you are three people, and what only matters when you are thirty.",
   category: "software",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Business Tools", "Software", "Remote Work"],
   publishedAt: "2026-08-19",
   image: "/images/articles/invoicing-and-bookkeeping-for-small-teams.webp",

@@ -6,7 +6,7 @@ export const figmaAlternativesWorthConsidering: Article = {
   excerpt:
     "Not because Figma is bad — it is not — but because pricing, offline work and file ownership are real constraints, and three alternatives now clear the bar.",
   category: "software",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Design Software", "Software", "Comparisons"],
   publishedAt: "2026-08-19",
   image: "/images/articles/figma-alternatives-worth-considering.webp",

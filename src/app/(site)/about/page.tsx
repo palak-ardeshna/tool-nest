@@ -27,7 +27,7 @@ export default function AboutPage() {
 
       <div className="prose">
         <p>
-          ToolNest is my site. I am <Link href="/authors/parth-patel">Parth Patel</Link>, and I
+          ToolNest is my site. I am <Link href="/authors/palak-patel">Palak Patel</Link>, and I
           research, write, edit and publish everything here: explainers, comparisons and practical
           how-tos about the software people use to get work done — AI tools, productivity apps,
           automation platforms and developer tooling. Editorial responsibility for all of it is mine;

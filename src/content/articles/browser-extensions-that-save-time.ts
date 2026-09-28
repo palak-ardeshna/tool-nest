@@ -6,7 +6,7 @@ export const browserExtensionsThatSaveTime: Article = {
   excerpt:
     "No password managers, no ad blockers, nothing you have already installed. Ten categories of extension that remove a repeated action, the four categories that quietly create work, and a rule for telling them apart before you install.",
   category: "productivity",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Productivity", "Browser", "Workflows"],
   publishedAt: "2026-08-19",
   image: "/images/articles/browser-extensions-that-save-time.webp",

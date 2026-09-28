@@ -14,6 +14,7 @@ export type Author = {
   email?: string;
   twitter?: string;
   website?: string;
+  linkedin?: string;
 };
 
 export type Category = {
@@ -73,6 +74,8 @@ export type Article = {
   /** Path under /public. Falls back to generated cover art when omitted. */
   image?: string;
   imageAlt?: string;
+  /** Keep the page live but out of search: robots noindex and no sitemap entry. */
+  noIndex?: boolean;
 };
 
 /** An article with its category and author resolved, plus derived fields. */

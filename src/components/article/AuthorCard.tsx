@@ -49,6 +49,16 @@ export function AuthorCard({ author, heading = "Written by" }: AuthorCardProps) 
                 Website
               </a>
             ) : null}
+            {author.linkedin ? (
+              <a
+                href={author.linkedin}
+                rel="noopener noreferrer me"
+                target="_blank"
+                className="text-accent hover:underline"
+              >
+                LinkedIn
+              </a>
+            ) : null}
             {author.twitter ? (
               <a
                 href={`https://x.com/${author.twitter.replace(/^@/, "")}`}

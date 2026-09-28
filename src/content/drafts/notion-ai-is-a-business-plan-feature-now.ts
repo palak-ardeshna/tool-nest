@@ -12,7 +12,7 @@ export const notionAiIsABusinessPlanFeatureNow: Article = {
   excerpt:
     "On Plus you get a trial of Notion AI. The agent that actually does multi-step work sits on Business, at $20 per user per month, and custom agents bill separately in credits. For a team of four that is a different bill than it was.",
   category: "productivity",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Notion", "Productivity", "Pricing", "AI Tools", "Small Teams"],
   publishedAt: "2026-09-23",
   image: "/images/articles/notion-ai-is-a-business-plan-feature-now.webp",

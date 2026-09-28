@@ -6,7 +6,7 @@ export const softwareYouCanStillBuyOnce: Article = {
   excerpt:
     "After a year of subscription price rises, a one-off licence is worth more than it used to be. Here are the office, design, writing, audio and video applications you can still pay for once, what 'perpetual' means for each of them, and where the free-forever option has quietly replaced the paid one.",
   category: "software",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Buying Advice", "Subscriptions", "Software", "Pricing"],
   publishedAt: "2026-09-17",
   image: "/images/articles/software-you-can-still-buy-once.webp",

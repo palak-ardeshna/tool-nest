@@ -6,7 +6,7 @@ export const aiResearchToolsAndYourSources: Article = {
   excerpt:
     "Every research assistant promises to read the literature for you. The question worth asking is what happens to a citation on the way into a summary — and whether the paper still says what the summary claims it says.",
   category: "research",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["AI Research", "AI Tools", "How-To"],
   publishedAt: "2026-08-19",
   image: "/images/articles/ai-research-tools-and-your-sources.webp",

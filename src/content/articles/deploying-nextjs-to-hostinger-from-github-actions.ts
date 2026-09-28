@@ -10,7 +10,7 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
   excerpt:
     "Hostinger's Node.js hosting has no GitHub integration, but it has an API. This is the workflow that deploys this site on every push, what the second version checks that the first did not, and how long a deploy takes.",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Next.js", "Deployment", "Hostinger", "GitHub Actions", "Developer Tools"],
   publishedAt: "2026-09-24",
   image: "/images/articles/deploying-nextjs-to-hostinger-from-github-actions.webp",

@@ -11,7 +11,7 @@ export const geminiFlashPricingDoublesInJanuary: Article = {
   excerpt:
     "Three of the current Flash models carry a promotional rate that expires at the end of the year, and the pricing page says so in the same row as the price. If you are costing a project on today's number, you are costing it on a number with a deadline.",
   category: "ai-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Gemini", "AI Tools", "Pricing", "APIs", "Google"],
   publishedAt: "2026-09-24",
   image: "/images/articles/gemini-flash-pricing-doubles-in-january.webp",

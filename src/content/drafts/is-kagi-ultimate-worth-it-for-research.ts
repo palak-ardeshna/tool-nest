@@ -13,7 +13,7 @@ export const isKagiUltimateWorthItForResearch: Article = {
   excerpt:
     "Professional at $10 already gives you unlimited searches. Ultimate costs $25 and adds Research mode and the flagship models. Whether that is worth $15 more depends on one thing, and it is not the search results.",
   category: "research",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Kagi", "Research", "Search Engines", "Pricing", "AI Tools"],
   publishedAt: "2026-09-23",
   image: "/images/articles/is-kagi-ultimate-worth-it-for-research.webp",

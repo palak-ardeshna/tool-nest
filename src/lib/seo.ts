@@ -139,6 +139,7 @@ export function articleSchema(article: ResolvedArticle) {
       "@type": "Person",
       name: article.author.name,
       url: absoluteUrl(`/authors/${article.author.slug}`),
+      ...(article.author.linkedin ? { sameAs: [article.author.linkedin] } : {}),
     },
     publisher: { "@id": absoluteUrl("/#organization") },
   };

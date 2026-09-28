@@ -6,7 +6,7 @@ export const errorTrackingForSmallTeams: Article = {
   excerpt:
     "Sentry is priced by event volume, and event volume is not something you control on a bad day. Here is how the alternatives differ, what self-hosting really costs, and the four things to set up before you need any of them.",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Developer Tools", "Monitoring", "Self-hosting", "Comparisons"],
   publishedAt: "2026-09-02",
   featured: true,

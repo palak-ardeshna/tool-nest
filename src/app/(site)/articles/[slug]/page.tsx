@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: PageProps) {
     publishedTime: isoDate(article.publishedAtDate),
     modifiedTime: isoDate(article.contentUpdatedAtDate ?? article.publishedAtDate),
     authors: [article.author.name],
+    noIndex: article.noIndex,
   });
 }
 

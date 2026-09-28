@@ -6,7 +6,7 @@ export const timeBlockingAfterSixMonths: Article = {
   excerpt:
     "The version in the productivity books assigns every hour and collapses the first time something unexpected happens. A much looser version — two or three blocks a day and slack for everything else — is the one people are still running months later.",
   category: "productivity",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Time Management", "Productivity", "Workflows"],
   publishedAt: "2026-08-19",
   image: "/images/articles/time-blocking-after-six-months.webp",

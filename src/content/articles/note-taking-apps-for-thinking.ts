@@ -6,7 +6,7 @@ export const noteTakingAppsForThinking: Article = {
   excerpt:
     "Most note apps optimise for capture. Very few help you find the thought again six months later. Here is what separates them.",
   category: "productivity",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Note Taking", "Productivity", "Software"],
   publishedAt: "2026-08-19",
   image: "/images/articles/note-taking-apps-for-thinking.webp",

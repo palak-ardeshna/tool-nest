@@ -6,7 +6,7 @@ export const leavingCursorWhatMovesAndWhatDoesnt: Article = {
   excerpt:
     "SpaceX closed its $60 billion purchase of Cursor in August, and a lot of developers are quietly working out their exit. This is the migration checklist: which rules files each tool reads, where the MCP configuration lives, what happens to keybindings and extensions, and which questions about your code's privacy to answer before you cancel.",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["AI Coding", "Developer Tools", "Migration", "Privacy"],
   publishedAt: "2026-09-17",
   image: "/images/articles/leaving-cursor-what-moves-and-what-doesnt.webp",

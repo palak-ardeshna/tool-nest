@@ -14,7 +14,7 @@ export const chatgptPlusAfterGpt6Astra: Article = {
   excerpt:
     "Astra arrived on Plus on 3 September, but only in Work and Codex, with an allowance OpenAI puts at five to forty-five messages per five hours. Before you pay for Pro, here is what each option gets you and what the $200 tier's pause changes.",
   category: "ai-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["AI Tools", "ChatGPT", "GPT-6 Astra", "Codex", "Subscriptions"],
   publishedAt: "2026-09-19",
   image: "/images/articles/chatgpt-plus-after-gpt-6-astra.webp",

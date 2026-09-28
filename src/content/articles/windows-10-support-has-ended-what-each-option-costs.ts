@@ -6,7 +6,7 @@ export const windows10SupportHasEndedWhatEachOptionCosts: Article = {
   excerpt:
     "Your Windows 10 PC still works, but it stopped getting free security fixes in October 2025. Here is what Microsoft's extended updates cost for households and businesses, what Windows 11 requires, and what it takes to put ChromeOS Flex or Linux Mint on the machine you already own.",
   category: "software",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Windows", "Security", "Buying Advice", "Linux"],
   publishedAt: "2026-09-17",
   image: "/images/articles/windows-10-support-has-ended-what-each-option-costs.webp",

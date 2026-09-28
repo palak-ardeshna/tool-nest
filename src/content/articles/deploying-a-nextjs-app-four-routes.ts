@@ -6,7 +6,7 @@ export const deployingANextjsAppFourRoutes: Article = {
   excerpt:
     "Managed platform, container on a VPS, Kubernetes, or static export. What each one costs you in setup and in ongoing ownership, the failure each one hides, and the constraint that should actually decide it.",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Deployment Tools", "Developer Tools", "Comparisons"],
   publishedAt: "2026-08-19",
   image: "/images/articles/deploying-a-nextjs-app-four-routes.webp",

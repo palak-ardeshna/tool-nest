@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
-    ...allArticles.map((article) => ({
+    ...allArticles.filter((article) => !article.noIndex).map((article) => ({
       url: absoluteUrl(`/articles/${article.slug}`),
       lastModified: article.contentUpdatedAtDate ?? article.publishedAtDate,
       changeFrequency: "monthly" as const,

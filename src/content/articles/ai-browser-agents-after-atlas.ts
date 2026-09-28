@@ -6,7 +6,7 @@ export const aiBrowserAgentsAfterAtlas: Article = {
   excerpt:
     "OpenAI switched off its Atlas browser in August, less than a year after launching it, and the idea moved into extensions and modes inside the browser you already use. Here is how the four that remain describe themselves on the tasks people actually want done, and on the question the vendors' own safety pages keep raising: what happens when a web page gives your agent instructions.",
   category: "ai-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["AI Tools", "Browsers", "Agents", "Comparisons"],
   publishedAt: "2026-09-14",
   image: "/images/articles/ai-browser-agents-after-atlas.webp",

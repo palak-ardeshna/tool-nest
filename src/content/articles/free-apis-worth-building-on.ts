@@ -6,7 +6,7 @@ export const freeApisWorthBuildingOn: Article = {
   excerpt:
     "Free tiers disappear, rate limits change and terms get rewritten. Here is how to judge whether an API is safe to build on, and a few that pass.",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["APIs", "Developer Tools", "Software"],
   publishedAt: "2026-08-19",
   image: "/images/articles/free-apis-worth-building-on.webp",

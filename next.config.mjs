@@ -31,6 +31,11 @@ const nextConfig = {
     // Uploaded media is served from /public/uploads, so no remote patterns are
     // needed. Add them here if the CMS ever points at an external CDN.
   },
+  async redirects() {
+    return [
+      { source: "/authors/parth-patel", destination: "/authors/palak-patel", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

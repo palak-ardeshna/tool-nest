@@ -6,7 +6,7 @@ export const appLaunchersRaycastAlfredAndPowertoys: Article = {
   excerpt:
     "A launcher is the keystroke between thinking of something and doing it. I compared Raycast, Alfred and Microsoft's PowerToys Command Palette on what the free versions do, what the paid tiers actually add, and whether the built-in Spotlight and Start menu have caught up enough to skip the category.",
   category: "productivity",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Productivity", "Launchers", "macOS", "Windows", "Comparisons"],
   publishedAt: "2026-09-14",
   image: "/images/articles/app-launchers-raycast-alfred-and-powertoys.webp",

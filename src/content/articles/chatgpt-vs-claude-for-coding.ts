@@ -6,7 +6,7 @@ export const chatgptVsClaudeForCoding: Article = {
   excerpt:
     "The two assistants differ less in raw capability than in how they behave when a task exceeds what they can see. Here is what the vendors document, what independent benchmarks measure, and how to run the comparison on your own codebase in an afternoon.",
   category: "ai-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["AI Coding", "ChatGPT", "Claude", "Comparisons"],
   publishedAt: "2026-08-19",
   contentUpdatedAt: "2026-08-19",

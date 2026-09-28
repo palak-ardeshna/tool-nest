@@ -6,7 +6,7 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
   excerpt:
     "ChatGPT agent, Claude in Chrome, Perplexity's Comet and Google's auto browse will click, type and buy on your behalf. Before you hand one your logged-in browser, here is what each can access, what each vendor says it will ask before doing, and the attack every one of them is still vulnerable to.",
   category: "ai-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["AI Agents", "Browsers", "Security", "Comparisons"],
   publishedAt: "2026-09-17",
   image: "/images/articles/should-you-let-an-ai-agent-use-your-browser.webp",

@@ -6,7 +6,7 @@ export const aiVideoToolsWorthTheSubscription: Article = {
   excerpt:
     "Most of this market is one feature repackaged with a different subscription page. Three capabilities genuinely change what a small team can produce — and the pricing model matters more than any of them.",
   category: "ai-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["AI Video", "Reviews", "Software"],
   publishedAt: "2026-08-19",
   image: "/images/articles/ai-video-tools-worth-the-subscription.webp",

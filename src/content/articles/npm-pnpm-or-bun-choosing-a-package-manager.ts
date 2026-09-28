@@ -6,7 +6,7 @@ export const npmPnpmOrBunChoosingAPackageManager: Article = {
   excerpt:
     "The three serious options for installing JavaScript dependencies now differ less on speed than on what they refuse to do. I compared npm, pnpm and Bun on disk use, lockfiles, monorepos and the supply-chain defaults that matter after a year of poisoned packages, and on the one change to Node itself that affects all three.",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Node.js", "Package Managers", "Developer Tools", "Comparisons"],
   publishedAt: "2026-09-14",
   image: "/images/articles/npm-pnpm-or-bun-choosing-a-package-manager.webp",

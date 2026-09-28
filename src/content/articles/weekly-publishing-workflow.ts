@@ -6,7 +6,7 @@ export const weeklyPublishingWorkflow: Article = {
   excerpt:
     "Publishing weekly is a queueing problem, not a writing problem. Five stages, two checkpoints, one buffer — and the reason a three-week pipeline ships more than a one-week sprint.",
   category: "productivity",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Workflows", "Productivity", "Remote Work"],
   publishedAt: "2026-08-19",
   image: "/images/articles/weekly-publishing-workflow.webp",

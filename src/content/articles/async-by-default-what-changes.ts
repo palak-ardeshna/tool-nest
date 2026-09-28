@@ -6,7 +6,7 @@ export const asyncByDefaultWhatChanges: Article = {
   excerpt:
     "Going async is usually described as fewer meetings. In practice it is a writing problem, a decision-making problem, and only incidentally a calendar problem.",
   category: "productivity",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Remote Work", "Workflows", "Productivity"],
   publishedAt: "2026-08-19",
   image: "/images/articles/async-by-default-what-changes.webp",

@@ -6,7 +6,7 @@ export const aiImageGeneratorsTested: Article = {
   excerpt:
     "Aesthetic comparisons of AI image generators age badly and rarely predict your work. Five prompts, run yourself, eliminate most of the market in under an hour — and licensing decides the rest.",
   category: "ai-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["AI Image", "Design", "Buying Guides"],
   publishedAt: "2026-08-19",
   contentUpdatedAt: "2026-08-19",

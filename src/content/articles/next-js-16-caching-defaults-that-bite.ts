@@ -12,7 +12,7 @@ export const nextJs16CachingDefaultsThatBite: Article = {
   excerpt:
     "The upgrade codemod handles the renames. What it cannot handle is a set of caching defaults that are all reasonable on Vercel and all capable of serving a broken page anywhere else. These are the four I check by hand, and the one my own config overrides.",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Next.js", "Caching", "Deployment", "Developer Tools", "React"],
   publishedAt: "2026-09-26",
   image: "/images/articles/next-js-16-caching-defaults-that-bite.webp",

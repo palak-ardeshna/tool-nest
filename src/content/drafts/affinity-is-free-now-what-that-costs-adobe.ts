@@ -13,7 +13,7 @@ export const affinityIsFreeNowWhatThatCostsAdobe: Article = {
   excerpt:
     "Canva made the whole Affinity suite free for individuals. Adobe's full suite is $69.99 a month after the introductory period. That gap is large enough to be worth an afternoon of your time finding out what does not come across.",
   category: "software",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Design", "Affinity", "Adobe", "Software", "Pricing"],
   publishedAt: "2026-09-23",
   image: "/images/articles/affinity-is-free-now-what-that-costs-adobe.webp",

@@ -9,7 +9,7 @@ export const sendingEmailFromYourApp: Article = {
   imageAlt:
     "Photograph: an open laptop in a darkened room, its screen the only light, showing a long list of messages in an email client",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Developer Tools", "Email", "DNS", "Deliverability"],
   publishedAt: "2026-09-06",
   contentUpdatedAt: "2026-09-06",

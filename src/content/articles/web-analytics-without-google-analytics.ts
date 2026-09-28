@@ -9,7 +9,7 @@ export const webAnalyticsWithoutGoogleAnalytics: Article = {
   imageAlt:
     "Photograph: a laptop screen at an angle showing a web analytics report, with a visitors-over-time line chart above a new-versus-returning pie chart",
   category: "software",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Software", "Analytics", "Privacy", "Small Teams"],
   publishedAt: "2026-09-06",
   contentUpdatedAt: "2026-09-06",

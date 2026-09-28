@@ -9,7 +9,7 @@ export const backupsForASmallTeam: Article = {
   imageAlt:
     "Photograph: a dozen bare hard drives laid face down and packed edge to edge, their green and blue controller boards and barcode labels showing",
   category: "software",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Software", "Backups", "Security", "Small Teams"],
   publishedAt: "2026-09-04",
   contentUpdatedAt: "2026-09-04",

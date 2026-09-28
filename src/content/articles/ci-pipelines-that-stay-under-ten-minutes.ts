@@ -9,7 +9,7 @@ export const ciPipelinesThatStayUnderTenMinutes: Article = {
   imageAlt:
     "Photograph: two hands typing on a laptop at a pale desk, the screen filled with a syntax-highlighted code editor and a row of open file tabs",
   category: "developer-tools",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Developer Tools", "CI/CD", "GitHub Actions", "Performance"],
   publishedAt: "2026-09-04",
   contentUpdatedAt: "2026-09-04",

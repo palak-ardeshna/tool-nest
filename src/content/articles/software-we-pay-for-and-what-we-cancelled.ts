@@ -6,7 +6,7 @@ export const softwareWePayForAndWhatWeCancelled: Article = {
   excerpt:
     "Most subscription waste is not extravagance — it is tools that quietly stopped being used while the invoice kept arriving. Here is a repeatable audit, the single question that sorts the list fastest, and how to handle the tool somebody loves.",
   category: "software",
-  author: "parth-patel",
+  author: "palak-patel",
   tags: ["Software", "Productivity", "Business Tools"],
   publishedAt: "2026-08-19",
   contentUpdatedAt: "2026-08-19",
