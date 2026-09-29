@@ -18,11 +18,21 @@ The one test: **an article must contain something that did not exist until Palak
 - Link to the strongest existing article in the same cluster.
 
 ## Image
-- `image` should be Palak's own screenshot of the tool's UI (`public/images/articles/<slug>.webp`, `imageAlt` describes what's on screen). Stock photos only when no UI exists to show. **Manual — no test enforces this.**
+- `image` is Palak's own screenshot of the tool's UI, or his own photo (`public/images/articles/<slug>.webp`, `imageAlt` describes what's on screen). **No stock photos, no AI-generated images.** The test checks the path and `humanReview.imageSource`, but only Palak can make that declaration true.
+
+## Human review — enforced for articles published after 2026-09-29
+Every new article needs a `humanReview` block, and `npm test` fails without it:
+- `experience`: Palak's own paragraph of at least 60 words, first person, with at least one number from his own use. It must appear word for word in `content`.
+- `reviewedAt`: the day Palak read the final text end to end. It must be on or before `publishedAt`.
+- `imageSource`: `"own-screenshot"` or `"own-photo"`.
+
+**Claude never writes, fills in or suggests text for `humanReview`, and never writes the experience paragraph.** Claude leaves `humanReview` out, leaves a visible `<!-- PALAK: your experience paragraph -->` gap in `content`, and hands over a failing test. Filling it in is how Palak's review happens; if AI fills it, the check is worthless.
+
+**No copied content.** Nothing is pasted from vendor pages, other sites or other articles. A short quote goes in quotation marks with its source in `sources`. The test blocks any 10-word run shared with another article on this site. Checking against the web is manual: before publishing, Palak runs the body through a plagiarism checker (for example Quetext or Grammarly's free check).
 
 ## Publish
 - **Cadence: aim for 2 articles per week; the test enforces max 2 per day.** Check `git log` before adding one. Batches are the fingerprint AdSense rejects — the 22-file launch dump is what got this site flagged. The weekly target is the habit; the daily cap is only the floor `npm test` will catch.
-- Palak edits the experience paragraph himself; a publish commit that only adds a file untouched by him is not done.
+- Palak writes the experience paragraph and signs `humanReview` himself; a publish commit without both is not done.
 - `npm test` must pass.
 
 ## Existing corpus

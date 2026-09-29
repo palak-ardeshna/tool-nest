@@ -245,3 +245,44 @@ test("no more than two articles publish on any single day", () => {
     assert.ok(count <= 2, `${count} articles published on ${day}; the cap is two`);
   }
 });
+
+/**
+ * The human-review rule (CLAUDE.md). Articles after this date must carry
+ * Palak's own sign-off, his own words inside the body, his own cover image,
+ * and no text lifted from another article on the site.
+ */
+const HUMAN_RULE_DATE = Date.parse("2026-09-29");
+const plain = (html: string) => html.replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ").replace(/\s+/g, " ").trim();
+const newArticles = articles.filter((a) => Date.parse(a.publishedAt) > HUMAN_RULE_DATE);
+
+test("new articles carry Palak's sign-off, his own paragraph and his own image", () => {
+  for (const a of newArticles) {
+    const r = a.humanReview;
+    assert.ok(r, `${a.slug}: no humanReview — Palak has not signed this off`);
+    assert.ok(Date.parse(r.reviewedAt) <= Date.parse(a.publishedAt), `${a.slug}: reviewed after it was published`);
+    const words = r.experience.trim().split(/\s+/).length;
+    assert.ok(words >= 60, `${a.slug}: experience paragraph is ${words} words; write at least 60`);
+    assert.match(r.experience, /\b(I|my|me)\b/, `${a.slug}: experience paragraph is not first-person`);
+    assert.match(r.experience, /\d/, `${a.slug}: experience paragraph has no number from your own use`);
+    assert.ok(plain(a.content).includes(plain(r.experience)), `${a.slug}: experience paragraph is not in the article body word for word`);
+    assert.equal(a.image, `/images/articles/${a.slug}.webp`, `${a.slug}: cover must be your own capture at /images/articles/<slug>.webp`);
+    assert.ok(["own-screenshot", "own-photo"].includes(r.imageSource), `${a.slug}: cover is not your own screenshot or photo`);
+  }
+});
+
+test("new articles copy no passage from another article", () => {
+  const SHINGLE = 10; // ponytail: catches copying inside the site only; check against the web by hand before publishing
+  const shingles = (html: string) => {
+    const w = plain(html).toLowerCase().split(" ");
+    return new Set(w.slice(0, -SHINGLE + 1).map((_, i) => w.slice(i, i + SHINGLE).join(" ")));
+  };
+  const all = articles.map((a) => ({ slug: a.slug, s: shingles(a.content) }));
+  for (const a of newArticles) {
+    const mine = shingles(a.content);
+    for (const other of all) {
+      if (other.slug === a.slug) continue;
+      const hit = [...mine].find((s) => other.s.has(s));
+      assert.equal(hit, undefined, `${a.slug}: "${hit}…" also appears in ${other.slug}`);
+    }
+  }
+});

@@ -76,6 +76,20 @@ export type Article = {
   imageAlt?: string;
   /** Keep the page live but out of search: robots noindex and no sitemap entry. */
   noIndex?: boolean;
+  /**
+   * Palak's sign-off, typed by Palak and never by an AI. Required on every
+   * article published after 2026-09-29; `npm test` fails without it.
+   */
+  humanReview?: HumanReview;
+};
+
+export type HumanReview = {
+  /** ISO date Palak read the final text end to end. */
+  reviewedAt: string;
+  /** Palak's own paragraph: what he did with the tool and what happened, with a number. Must appear word for word in `content`. */
+  experience: string;
+  /** Where the cover image came from. Only Palak's own capture passes. */
+  imageSource: "own-screenshot" | "own-photo";
 };
 
 /** An article with its category and author resolved, plus derived fields. */
