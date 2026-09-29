@@ -54,4 +54,4 @@ The 2026-09-28 reviewers rejected the site because it *read* AI-written: long-wi
 - `npm test` must pass.
 
 ## Existing corpus
-On 2026-09-29, 59 of the 60 pre-rule articles were deleted because Palak had not used those tools himself (see `article-audit.csv`). The one survivor, `website-blockers-that-actually-hold`, is frozen like everything else. Do not bring the deleted articles back from git history. If one of those topics is worth covering, write a new article under this rule.
+On 2026-09-29, 59 of the 60 pre-rule articles were deleted because Palak had not used those tools himself (see `article-audit.csv`). On the same day Palak removed the remaining 5 and moved the site to one section, `ai-for-professionals` (AI tools set up for real work, e.g. Claude connectors for a doctor or CA). Do not bring the deleted articles back from git history. If one of those topics is worth covering, write a new article under this rule.

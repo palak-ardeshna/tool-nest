@@ -11,21 +11,9 @@ import type { Category } from "@/content/types";
  */
 export const categories: Category[] = [
   {
-    slug: "ai-tools",
-    name: "AI Tools",
+    slug: "ai-for-professionals",
+    name: "AI for Professionals",
     description:
-      "AI models and services I use: pricing changes, limits, and what they cost in practice.",
-  },
-  {
-    slug: "productivity",
-    name: "Productivity",
-    description:
-      "Tools for keeping working hours free of distractions, tried on my own working days.",
-  },
-  {
-    slug: "developer-tools",
-    name: "Developer Tools",
-    description:
-      "Deployment, frameworks and AI coding tools on a real Next.js site: what broke, what it cost, and the fix.",
+      "Setting up and using AI tools for everyday work, from connecting your inbox to the jobs I hand it each day.",
   },
 ];
