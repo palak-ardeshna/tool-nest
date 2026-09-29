@@ -99,13 +99,13 @@ export const affinityIsFreeNowWhatThatCostsAdobe: Article = {
 
 <h2>Who should switch today</h2>
 
-<p>If you pay $22.99 a month for a single Adobe app you open a few times a month, the arithmetic is not subtle: that is $275 a year for occasional use, against free. Try the equivalent Affinity app on a real job this week. The same logic applies to the <a href="/articles/software-you-can-still-buy-once">software you can still buy once</a> — the recurring bill is the thing to attack first, because it is the one that charges you whether you open the app or not.</p>
+<p>If you pay $22.99 a month for a single Adobe app you open a few times a month, the arithmetic is not subtle: that is $275 a year for occasional use, against free. Try the equivalent Affinity app on a real job this week. The same logic applies to the software you can still buy once — the recurring bill is the thing to attack first, because it is the one that charges you whether you open the app or not.</p>
 
 <p>If your work depends on a specific plug-in, a shared team library, or handing layered files to people who are not switching with you, stay where you are and stop rechecking. That is a real dependency, not inertia.</p>
 
 <h2>The part worth being sceptical about</h2>
 
-<p>A free product with a paid parent is a pricing decision, and pricing decisions get revisited. Canva has committed publicly to keeping the suite free, and that commitment is worth exactly what every such commitment has been worth in this industry — which is to say, treat your files as the thing you own and the application as the thing you borrow. Keep your work in formats you can get out. That is good practice whichever of these you pay for, and it is the reason the <a href="/articles/figma-alternatives-worth-considering">Figma alternatives worth considering</a> question keeps coming back around.</p>
+<p>A free product with a paid parent is a pricing decision, and pricing decisions get revisited. Canva has committed publicly to keeping the suite free, and that commitment is worth exactly what every such commitment has been worth in this industry — which is to say, treat your files as the thing you own and the application as the thing you borrow. Keep your work in formats you can get out. That is good practice whichever of these you pay for, and it is the reason the Figma alternatives worth considering question keeps coming back around.</p>
 
 <p>Prices above are from the Affinity and Adobe pricing pages as read on 23 September 2026. Adobe's introductory rates in particular change often; the sources list has both links.</p>`,
 };

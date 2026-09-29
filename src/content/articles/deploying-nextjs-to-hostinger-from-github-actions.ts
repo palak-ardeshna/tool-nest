@@ -59,7 +59,7 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
     { title: "API reference overview", publisher: "Hostinger", url: "https://docs.hostinger.com/api-reference/overview", checkedAt: "2026-09-18" },
     { title: "Start Node.js build", publisher: "Hostinger", url: "https://docs.hostinger.com/api-reference/endpoints/hosting/nodejs/start-node-js-build", checkedAt: "2026-09-18" },
   ],
-  content: `<p>This site runs on Hostinger's Node.js hosting, and that hosting has no GitHub integration. What it has is a public API that does everything hPanel's upload button does. A workflow file that calls it has deployed every commit to this site since 14 September 2026, and every number below comes from that workflow's own run history, not from a test setup. I covered the hosted options in <a href="/articles/deploying-a-nextjs-app-four-routes">Deploying a Next.js app: four routes</a>; this is the fifth, for when the hosting is already paid for.</p>
+  content: `<p>This site runs on Hostinger's Node.js hosting, and that hosting has no GitHub integration. What it has is a public API that does everything hPanel's upload button does. A workflow file that calls it has deployed every commit to this site since 14 September 2026, and every number below comes from that workflow's own run history, not from a test setup. This is the route for when the hosting is already paid for.</p>
 
 <h2>What a deploy costs in minutes</h2>
 
@@ -95,7 +95,7 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
 <li>Poll the build every 15 seconds, for up to 20 minutes, until it reports <code>completed</code> or <code>failed</code>, then print the last 80 lines of Hostinger's build log.</li>
 </ol>
 
-<p>After a completed build the workflow clears Hostinger's edge cache, so the new version shows up straight away rather than after the cache expires.</p>
+<p>After a completed build the workflow clears Hostinger's <a href="/articles/next-js-16-caching-defaults-that-bite">edge cache</a>, so the new version shows up straight away rather than after the cache expires.</p>
 
 <h2>Two guards that are easy to leave out</h2>
 
@@ -105,7 +105,7 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
 
 <h2>Should you do this?</h2>
 
-<p>If you are choosing hosting from scratch for a Next.js site, no. Vercel or Cloudflare Pages give you push-to-deploy and preview URLs without a workflow file, and the <a href="/articles/deploying-a-nextjs-app-four-routes">four-routes article</a> compares them. If you already have a Hostinger plan with Node.js hosting and want the site to deploy itself, yes. The working version was in place the same day the first one failed, and since then a deploy has been a push and about two and a half minutes. Just don't poll the build status in a tight loop: the API allows 90 requests a minute, and a 15-second interval stays far below that.</p>
+<p>If you are choosing hosting from scratch for a Next.js site, no. Vercel or Cloudflare Pages give you push-to-deploy and preview URLs without a workflow file. If you already have a Hostinger plan with Node.js hosting and want the site to deploy itself, yes. The working version was in place the same day the first one failed, and since then a deploy has been a push and about two and a half minutes. Just don't poll the build status in a tight loop: the API allows 90 requests a minute, and a 15-second interval stays far below that.</p>
 
 <p>Endpoint paths and limits above are from Hostinger's API reference as read on 18 September 2026. Run times are from this site's GitHub Actions history as read on 24 September 2026.</p>`,
 };

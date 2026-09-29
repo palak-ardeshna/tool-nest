@@ -75,7 +75,7 @@ export const chatgptPlusAfterGpt6Astra: Article = {
     { title: "Pricing", publisher: "Anthropic", url: "https://claude.com/pricing", checkedAt: "2026-09-19" },
     { title: "Google AI Plus, Pro and Ultra subscriptions (United Kingdom)", publisher: "Google", url: "https://gemini.google/gb/subscriptions/?hl=en-GB", checkedAt: "2026-09-19" },
   ],
-  content: `<p>GPT-6 Astra reached ChatGPT on 3 September 2026 and the question in my inbox since has been the same one: is Plus still the right plan, or is it time to pay for Pro? Two weeks in I can answer it, partly from OpenAI's own numbers, which it now publishes in more detail than it used to, and partly from my own Plus account. When I wrote about <a href="/articles/which-ai-assistant-is-worth-paying-for">which assistant is worth paying for</a> on 7 September, Astra had been out for four days and nobody had a usage figure. Now there is one, and it is smaller than the launch suggested.</p>
+  content: `<p>GPT-6 Astra reached ChatGPT on 3 September 2026 and the question in my inbox since has been the same one: is Plus still the right plan, or is it time to pay for Pro? Two weeks in I can answer it, partly from OpenAI's own numbers, which it now publishes in more detail than it used to, and partly from my own Plus account. When I wrote about which assistant is worth paying for on 7 September, Astra had been out for four days and nobody had a usage figure. Now there is one, and it is smaller than the launch suggested.</p>
 
 <h2>The decision, in one table</h2>
 
@@ -88,7 +88,7 @@ export const chatgptPlusAfterGpt6Astra: Article = {
 <tr><td>Hit the weekly wall one week in four</td><td>Buy an instant reset that week</td><td>$20 plus a price shown at checkout</td><td>Both windows restored now; your weekly clock restarts from your next request</td></tr>
 <tr><td>Hit the five-hour wall most days</td><td>Upgrade to Pro $100</td><td>$100 a month</td><td>5x the Plus allowance, and GPT-6 Pro in Chat</td></tr>
 <tr><td>Want the 20x tier</td><td>You cannot, today</td><td>$200 a month</td><td>New sign-ups and upgrades paused since 10 September</td></tr>
-<tr><td>Mostly want an agent on your code</td><td>Consider Claude Pro instead</td><td>$20 monthly, $17 annual</td><td>Claude Code is included; see <a href="/articles/chatgpt-vs-claude-for-coding">my coding comparison</a></td></tr>
+<tr><td>Mostly want an agent on your code</td><td>Consider Claude Pro instead</td><td>$20 monthly, $17 annual</td><td>Claude Code is included; see my coding comparison</td></tr>
 </tbody>
 </table>
 

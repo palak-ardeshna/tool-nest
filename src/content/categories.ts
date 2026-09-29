@@ -17,22 +17,10 @@ export const categories: Category[] = [
       "Guides and comparisons covering AI tools for writing, images, video, voice, coding and research — how to evaluate them, where they genuinely help, and where the marketing runs ahead of the product.",
   },
   {
-    slug: "software",
-    name: "Software",
-    description:
-      "Reviews and buying advice for the applications that make up a working day, from design and developer software to invoicing, plus how to decide what is worth paying for.",
-  },
-  {
     slug: "productivity",
     name: "Productivity",
     description:
       "Workflows, note-taking, time management and automation — practical systems that survive a busy week, and an honest account of the ones that do not.",
-  },
-  {
-    slug: "research",
-    name: "Research",
-    description:
-      "Web research done properly: finding what people actually search for, which search engines are worth switching to, and how to check a claim before you publish it.",
   },
   {
     slug: "developer-tools",

@@ -97,9 +97,9 @@ export const geminiFlashPricingDoublesInJanuary: Article = {
 
 <h2>Where a doubling actually hurts</h2>
 
-<p>Input and output do not rise by the same amount in practice, because most workloads are lopsided. A summarising job reads a lot and writes a little, so it lives on the input price. An agent that plans, calls tools and explains itself writes far more than it reads, and it lives on the output price — which is the one going from $3.75 to $7.50.</p>
+<p>Input and output do not rise by the same amount in practice, because most workloads are lopsided. A summarising job reads a lot and writes a little, so it lives on the input price. <a href="/articles/claude-code-vs-cursor-what-a-solo-developer-pays">An agent</a> that plans, calls tools and explains itself writes far more than it reads, and it lives on the output price — which is the one going from $3.75 to $7.50.</p>
 
-<p>That is the number to check against your own billing page. If your output volume is small, January is a non-event. If you are running something that talks to itself a lot, it is the whole cost of the project changing on a date you did not choose. The same asymmetry shows up when <a href="/articles/running-ai-models-on-your-own-hardware">running models on your own hardware</a> starts to look reasonable: the break-even is set by output tokens, not by how clever the model is.</p>
+<p>That is the number to check against your own billing page. If your output volume is small, January is a non-event. If you are running something that talks to itself a lot, it is the whole cost of the project changing on a date you did not choose. The same asymmetry shows up when running models on your own hardware starts to look reasonable: the break-even is set by output tokens, not by how clever the model is.</p>
 
 <h2>What to do before January</h2>
 

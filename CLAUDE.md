@@ -26,4 +26,4 @@ The one test: **an article must contain something that did not exist until Palak
 - `npm test` must pass.
 
 ## Existing corpus
-The 61 pre-rule articles stay as they are (frozen, see top). Do not rewrite them to fit this rule unless Palak asks for a specific one.
+On 2026-09-29, 59 of the 60 pre-rule articles were deleted because Palak had not used those tools himself (see `article-audit.csv`). The one survivor, `website-blockers-that-actually-hold`, is frozen like everything else. Do not bring the deleted articles back from git history. If one of those topics is worth covering, write a new article under this rule.

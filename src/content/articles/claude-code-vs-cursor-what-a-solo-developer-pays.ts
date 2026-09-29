@@ -53,7 +53,7 @@ export const claudeCodeVsCursorWhatASoloDeveloperPays: Article = {
     {
       question: "Does the SpaceX acquisition change Cursor's price?",
       answer:
-        "Not the sticker. Individual is still $20 and Teams $40 as of 18 September 2026. What changed is the bundle: Grok models and a Grok Bot now appear in every paid plan's feature list. If you left Cursor over the deal, the migration checklist is in <a href=\"/articles/leaving-cursor-what-moves-and-what-doesnt\">Leaving Cursor: what moves and what does not</a>.",
+        "Not the sticker. Individual is still $20 and Teams $40 as of 18 September 2026. What changed is the bundle: Grok models and a Grok Bot now appear in every paid plan's feature list.",
     },
   ],
   sources: [
@@ -95,7 +95,7 @@ export const claudeCodeVsCursorWhatASoloDeveloperPays: Article = {
 
 <h2>Which one to pay for</h2>
 
-<p>If you work in short bursts across the day, Claude Pro's session cap will interrupt you and Cursor's meter will not, so Cursor is the calmer month even if it costs a few dollars more. If you run long autonomous sessions, the opposite: Claude's cap is a ceiling you can see, and Cursor's in-arrears billing is the one that produces the surprising invoice. If you want neither a cap nor a surprise, <a href="/articles/leaving-cursor-what-moves-and-what-doesnt">OpenCode with your own API key</a> is the honest metered option, and the <a href="/articles/best-ai-coding-tools-for-react-developers">wider comparison</a> covers what else is in this category.</p>
+<p>If you work in short bursts across the day, Claude Pro's session cap will interrupt you and Cursor's meter will not, so Cursor is the calmer month even if it costs a few dollars more. If you run long autonomous sessions, the opposite: Claude's cap is a ceiling you can see, and Cursor's in-arrears billing is the one that produces the surprising invoice. If you want neither a cap nor a surprise, OpenCode with <a href="/articles/gemini-flash-pricing-doubles-in-january">your own API key</a> is the honest metered option.</p>
 
 <p>Prices and plan descriptions above are from the vendors' pricing pages as read on 18 September 2026. Both have changed this year and will again; the sources list has the links.</p>`,
 };

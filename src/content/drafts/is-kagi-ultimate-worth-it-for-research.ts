@@ -99,13 +99,13 @@ export const isKagiUltimateWorthItForResearch: Article = {
 
 <p>An assistant with access to a flagship model is not the same thing as that model's own product. The interface is someone else's, the context window is whatever the host allows, and features arrive late or not at all. For short research questions — check this claim, find the primary source, summarise these three pages — none of that matters and the bundle is excellent value. For long, stateful work, it does, and you will feel the ceiling before you can articulate it.</p>
 
-<p>This is the same trade covered in <a href="/articles/ai-research-tools-and-your-sources">AI research tools and your sources</a>: the convenience of one interface against the depth of the dedicated one. Neither answer is wrong, but choosing on price alone gets it wrong reliably.</p>
+<p>This is the same trade covered in AI research tools and your sources: the convenience of one interface against the depth of the dedicated one. Neither answer is wrong, but choosing on price alone gets it wrong reliably.</p>
 
 <h2>What to do</h2>
 
 <p>Start on Professional. It is the plan whose limits you will not meet, and it includes an assistant. Run it for a month, look at your search count, and notice whether you are opening a separate model subscription alongside it. If you are, Ultimate is cheaper than what you are already doing. If you are not, you have saved $15 a month by not guessing.</p>
 
-<p>And before any of this, run the free trial against the searches you actually make, not against test queries — the habit you are trying to change is a daily one, and 100 searches is barely a week of it. If the results do not feel different on your own work, no tier is worth paying for, and <a href="/articles/search-engines-beyond-google">the other engines beyond Google</a> are free to try too.</p>
+<p>And before any of this, run the free trial against the searches you actually make, not against test queries — the habit you are trying to change is a daily one, and 100 searches is barely a week of it. If the results do not feel different on your own work, no tier is worth paying for, and the other engines beyond Google are free to try too.</p>
 
 <p>Plans and prices above are from Kagi's pricing page as read on 23 September 2026.</p>`,
 };

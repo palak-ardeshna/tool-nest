@@ -103,7 +103,7 @@ export const notionAiIsABusinessPlanFeatureNow: Article = {
 
 <p>Notion has always been priced as a team product with a generous single-player tier, and that has not changed. What has changed is that the AI conversation now pushes teams towards the $20 tier by design, which narrows the gap between Notion and the tools it used to undercut.</p>
 
-<p>If the agent does work you would otherwise do, $20 a seat is straightforward value and the decision is easy. If you mainly want a place to think and write, the AI tier is beside the point, and the comparison you actually want is the one in <a href="/articles/note-taking-apps-for-thinking">note-taking apps for thinking</a> — where the relevant question is whether the tool gets out of the way, not what its agent can draft. The same applies if the real job is structured records rather than documents; that is <a href="/articles/when-a-spreadsheet-becomes-a-database">when a spreadsheet becomes a database</a>, and no agent fixes it.</p>
+<p>If the agent does work you would otherwise do, $20 a seat is straightforward value and the decision is easy. If you mainly want a place to think and write, the AI tier is beside the point, and the comparison you actually want is the one in note-taking apps for thinking — where the relevant question is whether the tool gets out of the way, not what its agent can draft. The same applies if the real job is structured records rather than documents; that is when a spreadsheet becomes a database, and no agent fixes it.</p>
 
 <p>Plan names and prices above are from Notion's pricing page as read on 23 September 2026.</p>`,
 };

@@ -67,7 +67,7 @@ export const nextJs16CachingDefaultsThatBite: Article = {
 
 <h2>The default I override on this site</h2>
 
-<p>This site is not on Vercel. It builds in GitHub Actions and deploys to Hostinger, which means nothing invalidates a shared cache on my behalf when I ship. That turns one Next.js default from a non-issue into the most dangerous line in my config.</p>
+<p>This site is not on Vercel. It builds in GitHub Actions and <a href="/articles/deploying-nextjs-to-hostinger-from-github-actions">deploys to Hostinger</a>, which means nothing invalidates a shared cache on my behalf when I ship. That turns one Next.js default from a non-issue into the most dangerous line in my config.</p>
 
 <p>So the HTML cache header here is set by hand, in <code>next.config.mjs</code>, and it is deliberately not what the framework gives you:</p>
 
@@ -83,7 +83,7 @@ export const nextJs16CachingDefaultsThatBite: Article = {
 
 <p>On Vercel that is safe, because the platform invalidates its own edge when you deploy. Everywhere else it is the bug that serves a broken page. Every build gives your CSS and JavaScript new content-hashed filenames and deletes the previous ones. HTML held at an edge node from an older build asks for a stylesheet that no longer exists, gets a 404, and renders as unstyled text. Only the visitors routed to that stale node see it, which is why it reads as intermittent rather than broken — and why you will not reproduce it from your own machine.</p>
 
-<p>That is the mechanism behind the header above, and the reason to write it before you need it rather than after. The <a href="/articles/deploying-a-nextjs-app-four-routes">four deployment routes</a> differ mostly in whether they purge for you — and only one of them does it without being asked.</p>
+<p>That is the mechanism behind the header above, and the reason to write it before you need it rather than after. Hosts differ mostly in whether they purge for you — Vercel does it without being asked.</p>
 
 <h2>Images now cache for four hours, not sixty seconds</h2>
 
@@ -101,7 +101,7 @@ export const nextJs16CachingDefaultsThatBite: Article = {
 
 <h2>What to check before you call the upgrade done</h2>
 
-<p>Run the codemod, then look at four things by hand: your HTML cache-control header if you are not on Vercel, whether anything depended on images updating quickly, every <code>revalidateTag</code> call, and whether a plugin is injecting a webpack config that will now fail the build. The build output no longer prints size or First Load JS, so if that number was part of your <a href="/articles/ci-pipelines-that-stay-under-ten-minutes">CI checks</a>, it needs replacing with a Lighthouse run.</p>
+<p>Run the codemod, then look at four things by hand: your HTML cache-control header if you are not on Vercel, whether anything depended on images updating quickly, every <code>revalidateTag</code> call, and whether a plugin is injecting a webpack config that will now fail the build. The build output no longer prints size or First Load JS, so if that number was part of your CI checks, it needs replacing with a Lighthouse run.</p>
 
 <p>Details above are from the official Next.js 16 upgrade guide as read on 23 September 2026, against Next.js 16.3.1.</p>`,
 };
