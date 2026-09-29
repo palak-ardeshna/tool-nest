@@ -17,9 +17,6 @@ export const chatgptPlusAfterGpt6Astra: Article = {
   author: "palak-patel",
   tags: ["AI Tools", "ChatGPT", "GPT-6 Astra", "Codex", "Subscriptions"],
   publishedAt: "2026-09-19",
-  image: "/images/articles/chatgpt-plus-after-gpt-6-astra.webp",
-  imageAlt:
-    "Photograph: an Android phone on a grey desk showing the ChatGPT listing in the Play Store, the OpenAI logo beside an Update button",
   seoTitle: "ChatGPT Plus After GPT-6 Astra: Which Plan?",
   seoDescription:
     "Plus gets Astra only in Work and Codex, at 5–45 messages per five hours. What the $100 and paused $200 Pro tiers, paid resets and rivals give you instead.",

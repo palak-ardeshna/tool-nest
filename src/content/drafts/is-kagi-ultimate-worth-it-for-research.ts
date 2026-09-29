@@ -5,7 +5,6 @@ import type { Article } from "@/content/types";
  * Scaffolded from the Kagi pricing page read 2026-09-23. The sections marked
  * PARTH are the article; without them this is Kagi's plan table with opinions
  * attached.
- * Cover: StockSnap “Books Oldbooks”, CC0 1.0 — illustrative, not a product interface.
  */
 export const isKagiUltimateWorthItForResearch: Article = {
   slug: "is-kagi-ultimate-worth-it-for-research",
@@ -16,9 +15,6 @@ export const isKagiUltimateWorthItForResearch: Article = {
   author: "palak-patel",
   tags: ["Kagi", "Research", "Search Engines", "Pricing", "AI Tools"],
   publishedAt: "2026-09-23",
-  image: "/images/articles/is-kagi-ultimate-worth-it-for-research.webp",
-  imageAlt:
-    "A stack of worn cloth-bound books on a table in front of a full bookshelf",
   seoTitle: "Is Kagi Ultimate Worth $25 for Research?",
   seoDescription:
     "Kagi Professional is $10 with unlimited searches. Ultimate is $25 and adds Research mode and flagship models. When the extra $15 pays for itself.",

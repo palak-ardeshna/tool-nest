@@ -8,7 +8,7 @@ The one test: **an article must contain something that did not exist until Palak
 
 ## Before drafting — do not start without
 1. **Demand signal.** Name the exact query this targets and one proof people search it (autocomplete, People-also-ask, a competing article). Prefer `X vs Y`, `best X for [use case]`, `is X worth it (year)`, `X after [product change]`. Reject generic top-10 topics.
-2. **A real data point Palak can supply.** One of: a number from his own run (time, cost, count, error), his own screenshot, a limit he hit, or a judgement that narrows/contradicts the vendor's claim. **If he has not used the tool and cannot get one: do not write the article yet, or write it honestly as a spec/pricing comparison and say so in the first paragraph.** Never fabricate first-person experience.
+2. **A real data point Palak can supply.** One of: a number from his own run (time, cost, count, error), a limit he hit, or a judgement that narrows/contradicts the vendor's claim. **If he has not used the tool and cannot get one: do not write the article yet, or write it honestly as a spec/pricing comparison and say so in the first paragraph.** Never fabricate first-person experience.
 
 ## Draft
 - AI may scaffold `quickAnswer`, `pros`/`cons`, `alternatives`, `faqs`, `sources` from vendor docs. `content` must include at least one paragraph that could only come from using the tool, plus at least one real downside (not a softened positive).
@@ -18,8 +18,7 @@ The one test: **an article must contain something that did not exist until Palak
 - Link to the strongest existing article in the same cluster.
 
 ## Image
-- **Default: no image.** The site shows its own generated cover art. On 2026-09-29 the stock covers were removed from every article.
-- Add `image` only when Palak sends his own screenshot or photo (`public/images/articles/<slug>.webp`, 1600×900, `imageAlt` describes what's on screen, `humanReview.imageSource` set). **Never use stock photos or AI-generated images**; leave `image` out instead.
+- **Articles never have an image**, not even Palak's screenshots (Palak's decision, 2026-09-29). Leave `image` and `imageAlt` out; the site shows its generated cover art. The test fails on any article with an image. Drafts that still carry one must drop it before publishing.
 
 ## Layout — every article is built differently
 One template repeated on every page is a scaled-content fingerprint. Pick the shape from the article type, and never reuse the previous article's block set (the test fails if you do):
@@ -35,9 +34,8 @@ Also vary the headings, the opening (a number, a problem, a question, or what ha
 Every new article needs a `humanReview` block, and `npm test` fails without it:
 - `experience`: a paragraph of at least 60 words built only from Palak's facts, first person, with at least one number from his own use. It must appear word for word in `content`.
 - `reviewedAt`: the day Palak confirmed the facts in chat and said to publish. It must be on or before `publishedAt`.
-- `imageSource`: `"own-screenshot"` or `"own-photo"`.
 
-**Palak does not write prose; Claude writes the whole article, but only from Palak's real facts.** Before drafting, Claude asks Palak for his facts: what he used the tool for, one number from his own use, one real downside, and a screenshot. Palak may answer in Gujarati or in short notes. Claude turns those facts into the `experience` paragraph and the article. **Claude never invents a fact, number, date or experience Palak did not give.** If Palak has not used the tool, the article is an honest spec/pricing comparison that says so in its first paragraph, with no first-person experience claims. Claude fills in `humanReview` only after Palak confirms in chat that the facts are true and says to publish; `reviewedAt` is the date of that confirmation.
+**Palak does not write prose; Claude writes the whole article, but only from Palak's real facts.** Before drafting, Claude asks Palak for his facts: what he used the tool for, one number from his own use, and one real downside. Palak may answer in Gujarati or in short notes. Claude turns those facts into the `experience` paragraph and the article. **Claude never invents a fact, number, date or experience Palak did not give.** If Palak has not used the tool, the article is an honest spec/pricing comparison that says so in its first paragraph, with no first-person experience claims. Claude fills in `humanReview` only after Palak confirms in chat that the facts are true and says to publish; `reviewedAt` is the date of that confirmation.
 
 **No copied content.** Nothing is pasted from vendor pages, other sites or other articles. A short quote goes in quotation marks with its source in `sources`. The test blocks any 10-word run shared with another article on this site. Checking against the web is manual: before publishing, Palak runs the body through a plagiarism checker (for example Quetext or Grammarly's free check).
 

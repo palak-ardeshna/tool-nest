@@ -5,7 +5,6 @@ import type { Article } from "@/content/types";
  * Scaffolded from the Affinity and Adobe pricing pages read 2026-09-23. The
  * sections marked PARTH are the article; without them this is two price lists
  * side by side.
- * Cover: StockSnap “Paint Supplies”, CC0 1.0 — illustrative, not a product interface.
  */
 export const affinityIsFreeNowWhatThatCostsAdobe: Article = {
   slug: "affinity-is-free-now-what-that-costs-adobe",
@@ -16,9 +15,6 @@ export const affinityIsFreeNowWhatThatCostsAdobe: Article = {
   author: "palak-patel",
   tags: ["Design", "Affinity", "Adobe", "Software", "Pricing"],
   publishedAt: "2026-09-23",
-  image: "/images/articles/affinity-is-free-now-what-that-costs-adobe.webp",
-  imageAlt:
-    "A paint palette holding mixed blue, red and yellow paint, with two brushes and open paint tubes beside it",
   seoTitle: "Affinity Is Free Now. Adobe Costs $69.99",
   seoDescription:
     "Affinity is free for individuals under Canva. Creative Cloud Pro is $69.99 a month after the intro. What actually transfers, and what does not.",

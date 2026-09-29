@@ -255,7 +255,7 @@ const HUMAN_RULE_DATE = Date.parse("2026-09-29");
 const plain = (html: string) => html.replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ").replace(/\s+/g, " ").trim();
 const newArticles = articles.filter((a) => Date.parse(a.publishedAt) > HUMAN_RULE_DATE);
 
-test("new articles carry Palak's sign-off, his own paragraph, and only his own image if any", () => {
+test("new articles carry Palak's sign-off and his own paragraph", () => {
   for (const a of newArticles) {
     const r = a.humanReview;
     assert.ok(r, `${a.slug}: no humanReview — Palak has not signed this off`);
@@ -265,11 +265,6 @@ test("new articles carry Palak's sign-off, his own paragraph, and only his own i
     assert.match(r.experience, /\b(I|my|me)\b/, `${a.slug}: experience paragraph is not first-person`);
     assert.match(r.experience, /\d/, `${a.slug}: experience paragraph has no number from your own use`);
     assert.ok(plain(a.content).includes(plain(r.experience)), `${a.slug}: experience paragraph is not in the article body word for word`);
-    // No image is fine (generated cover art shows). An image must be Palak's own capture.
-    if (a.image) {
-      assert.equal(a.image, `/images/articles/${a.slug}.webp`, `${a.slug}: cover must be at /images/articles/<slug>.webp`);
-      assert.ok(r.imageSource && ["own-screenshot", "own-photo"].includes(r.imageSource), `${a.slug}: cover is not your own screenshot or photo; drop the image instead`);
-    }
   }
 });
 
@@ -348,4 +343,9 @@ test("a new article does not copy the previous article's layout", () => {
     const prev = byDate[i - 1];
     assert.notEqual(layout(a), layout(prev), `${a.slug}: same layout as ${prev.slug} (${layout(a)}); change which blocks it uses`);
   });
+});
+
+/** Articles never carry an image; the generated cover art is the only cover (Palak, 2026-09-29). */
+test("no article has an image", () => {
+  for (const a of articles) assert.equal(a.image, undefined, `${a.slug}: articles never have an image; remove it`);
 });

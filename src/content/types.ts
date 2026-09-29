@@ -88,8 +88,6 @@ export type HumanReview = {
   reviewedAt: string;
   /** Paragraph built only from facts Palak supplied: what he did with the tool and what happened, with a number. Must appear word for word in `content`. */
   experience: string;
-  /** Where the cover image came from, if the article has one. Stock or AI images are never used; leave `image` out instead. */
-  imageSource?: "own-screenshot" | "own-photo";
 };
 
 /** An article with its category and author resolved, plus derived fields. */

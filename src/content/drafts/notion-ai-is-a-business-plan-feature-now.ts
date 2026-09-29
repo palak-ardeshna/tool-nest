@@ -4,7 +4,6 @@ import type { Article } from "@/content/types";
  * DRAFT — not published. See src/content/drafts/README.md.
  * Scaffolded from the Notion pricing page read 2026-09-23. The sections marked
  * PARTH are the article; without them this is Notion's own plan table restated.
- * Cover: StockSnap “Writing Drawing”, CC0 1.0 — illustrative, not a product interface.
  */
 export const notionAiIsABusinessPlanFeatureNow: Article = {
   slug: "notion-ai-is-a-business-plan-feature-now",
@@ -15,9 +14,6 @@ export const notionAiIsABusinessPlanFeatureNow: Article = {
   author: "palak-patel",
   tags: ["Notion", "Productivity", "Pricing", "AI Tools", "Small Teams"],
   publishedAt: "2026-09-23",
-  image: "/images/articles/notion-ai-is-a-business-plan-feature-now.webp",
-  imageAlt:
-    "A person in a knitted jumper sketching page layouts in pencil on paper, beside a mug and a closed notebook",
   seoTitle: "Notion AI Is a Business Plan Feature Now",
   seoDescription:
     "Notion Plus is $10 a user and gets an AI trial. The full agent needs Business at $20 a user, plus credits for custom agents. The real cost.",
