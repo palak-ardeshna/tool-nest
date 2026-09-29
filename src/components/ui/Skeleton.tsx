@@ -8,7 +8,6 @@ export function Skeleton({ className }: { className?: string }) {
 function ArticleCardSkeleton() {
   return (
     <div className="overflow-hidden rounded-card border border-line bg-white">
-      <Skeleton className="aspect-[16/9] rounded-none" />
       <div className="space-y-3 p-5">
         <Skeleton className="h-4 w-24" />
         <Skeleton className="h-5 w-full" />
