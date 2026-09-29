@@ -293,6 +293,9 @@ test("new articles copy no passage from another article", () => {
  */
 const aiTellsStrict =
   /\b(crucial|robust|leverag\w*|elevate|streamlin\w*|comprehensive guide|in today's|fast-paced|digital age|whether you're|look no further|unleash|harness(ing)? the power|cutting-edge|pivotal|foster(ing)?|meticulous\w*|intricate|bustling|vibrant|nestled|treasure trove|paradigm|boasts|underscor\w*|showcas\w*|it's important to note|key takeaways?|let's dive|buckle up|a must-have|stands out as|in the world of|when it comes to|at the end of the day|as an ai|i hope this helps|great question|certainly!)\b/i;
+/** The strongest humanizer (blader/humanizer) patterns: §1 not-X-but-Y, §2 closers, §4 staged openers, §22 residue. */
+const humanizerTells =
+  /\b(it'?s not (just |only |merely )?[^.;]{1,60}[,;] it'?s|not (just|only|merely) [^.;]{1,60}, but|that is the real win|that distinction matters|read that again|let that sink in|here'?s the thing|here'?s what you need to know|let'?s (dive|explore|break this down)|without further ado|the real question is|at its core|i hope this helps|let me know if)\b/i;
 const aiAdmission = /\b(AI[- ]assist(ed|ance)|(drafted|written|generated|created) (with|by|using) (an? )?(AI|LLM|ChatGPT|Claude|model))\b/i;
 
 test("new articles avoid the wording AdSense reviewers read as AI", () => {
@@ -300,6 +303,8 @@ test("new articles avoid the wording AdSense reviewers read as AI", () => {
     const prose = renderedText(a);
     const tell = prose.match(aiTellsStrict);
     assert.equal(tell, null, `${a.slug}: AI-sounding phrase "${tell?.[0]}"`);
+    const staged = plain(prose).match(humanizerTells);
+    assert.equal(staged, null, `${a.slug}: humanizer pattern "${staged?.[0]}"; run /humanizer on it`);
     const words = plain(a.content).split(" ").length;
     const dashes = (a.content.match(/—/g) ?? []).length;
     assert.ok(dashes <= Math.ceil(words / 400), `${a.slug}: ${dashes} em dashes in ${words} words; use commas or full stops`);

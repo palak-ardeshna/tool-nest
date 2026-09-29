@@ -45,6 +45,7 @@ The 2026-09-28 reviewers rejected the site because it *read* AI-written: long-wi
 - **Few em dashes:** at most 1 per 400 words. Use commas and full stops.
 - **Never describe how the site uses AI**, on any page, bio or article ("AI-assisted", "drafted with AI"…); the test blocks it. **Never claim the opposite either** ("written without AI", "100% human"), because that would be false. Describe what Palak did: used, measured, checked.
 - Short sentences, short paragraphs, specific numbers and dates. Cut any sentence that would fit in any other article.
+- **Run the humanizer skill on every draft** (`.claude/skills/humanizer`, blader/humanizer v3.1.0, MIT) in file mode before publishing: prose only, never code, numbers, links or Palak's facts. It must not add any fact Palak did not give. The test enforces its strongest patterns (§1 "not X but Y", §2 one-line closers, §4 staged openers, §22 chatbot residue).
 - Anything Palak posts publicly (forum replies, emails to Google) follows the same rules: short, plain, specific.
 
 ## Publish
