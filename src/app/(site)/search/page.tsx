@@ -36,7 +36,7 @@ export default async function SearchPage({ searchParams }: PageProps) {
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Search" }]} className="mb-6" />
 
       <header className="max-w-2xl">
-        <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Search</h1>
+        <h1 className="text-balance font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Search</h1>
         <p className="mt-3 text-base leading-relaxed text-muted">
           Find a tool, a comparison or a how-to guide.
         </p>

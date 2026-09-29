@@ -54,7 +54,7 @@ export default async function CategoryPage({ params }: PageProps) {
       <Breadcrumbs items={crumbs} className="mb-6" />
 
       <header className="mb-8 max-w-2xl">
-        <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+        <h1 className="text-balance font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           {category.name}
         </h1>
         <p className="mt-3 text-base leading-relaxed text-muted">{category.description}</p>

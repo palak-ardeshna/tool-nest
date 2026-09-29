@@ -5,19 +5,19 @@ export function Alternatives({ items }: { items: Alternative[] }) {
 
   return (
     <section aria-labelledby="alternatives">
-      <h2 id="alternatives" className="text-2xl font-bold tracking-tight text-ink">
-        Alternatives worth considering
+      <h2 id="alternatives" className="font-serif text-2xl font-semibold tracking-tight text-ink">
+        Other options
       </h2>
-      <ul className="mt-4 divide-y divide-line rounded-card border border-line bg-white">
+      <ul className="mt-2 divide-y divide-line">
         {items.map((item) => (
-          <li key={item.name} className="p-4 sm:p-5">
-            <p className="font-bold text-ink">
+          <li key={item.name} className="py-4">
+            <p className="font-semibold text-ink">
               {item.url ? (
                 <a
                   href={item.url}
                   rel="nofollow noopener noreferrer"
                   target="_blank"
-                  className="text-accent hover:text-accent-dark hover:underline"
+                  className="text-accent underline underline-offset-2 hover:text-accent-dark"
                 >
                   {item.name}
                 </a>
@@ -26,7 +26,7 @@ export function Alternatives({ items }: { items: Alternative[] }) {
               )}
             </p>
             {item.note ? (
-              <p className="mt-1 text-[15px] leading-relaxed text-muted">{item.note}</p>
+              <p className="mt-1 leading-relaxed text-muted">{item.note}</p>
             ) : null}
           </li>
         ))}

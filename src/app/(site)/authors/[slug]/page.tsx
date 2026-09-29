@@ -51,9 +51,9 @@ export default async function AuthorPage({ params }: PageProps) {
         <AuthorCard author={author} heading="Profile" />
       </div>
 
-      <h2 className="mb-2 text-sm font-semibold text-ink">
+      <p className="mb-2 text-sm font-semibold text-ink">
         Articles by {author.name.split(" ")[0]}
-      </h2>
+      </p>
       <ArticleList
         articles={articles}
         emptyTitle="Nothing published yet"

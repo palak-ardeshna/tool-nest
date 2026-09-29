@@ -18,8 +18,8 @@ export function Footer() {
       <Container className="py-10 lg:py-12">
         <div className="grid gap-8 sm:grid-cols-[1.4fr_repeat(3,1fr)]">
           <p className="max-w-xs text-sm leading-relaxed text-muted">
-            <span className="font-semibold text-ink">{siteConfig.name}</span> is written by Palak
-            Patel. Funded by advertising, no affiliate links.
+            <span className="font-semibold text-ink">{siteConfig.name}</span> is run by Palak Patel.
+            Funded by advertising, no affiliate links.
           </p>
 
           {groups.map((group) => (

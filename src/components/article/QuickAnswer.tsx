@@ -1,16 +1,10 @@
 export function QuickAnswer({ text }: { text: string }) {
   return (
-    <section
-      aria-labelledby="quick-answer"
-      className="rounded-card border border-accent/20 bg-accent-light p-5 sm:p-6"
-    >
-      <h2
-        id="quick-answer"
-        className="text-xs font-bold uppercase tracking-[0.16em] text-accent-dark"
-      >
-        Quick answer
+    <section aria-labelledby="quick-answer" className="border-l-2 border-accent pl-5">
+      <h2 id="quick-answer" className="text-sm font-semibold text-ink">
+        Short answer
       </h2>
-      <p className="mt-2.5 text-[15px] leading-relaxed text-ink sm:text-base">{text}</p>
+      <p className="mt-1.5 font-serif text-lg leading-relaxed text-ink">{text}</p>
     </section>
   );
 }

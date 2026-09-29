@@ -13,21 +13,21 @@ export function Sources({ items }: { items: Source[] }) {
 
   return (
     <section aria-labelledby="sources">
-      <h2 id="sources" className="text-2xl font-bold tracking-tight text-ink">
+      <h2 id="sources" className="font-serif text-2xl font-semibold tracking-tight text-ink">
         Sources
       </h2>
-      <p className="mt-2 text-[15px] leading-relaxed text-muted">
+      <p className="mt-2 text-sm leading-relaxed text-muted">
         Everything factual in this article traces back to one of these. Vendors change pricing and
         limits without changing the URL, so each entry records the date I last read it.
       </p>
-      <ol className="mt-4 divide-y divide-line rounded-card border border-line bg-white">
+      <ol className="mt-3 divide-y divide-line border-y border-line">
         {items.map((item) => (
-          <li key={item.url} className="p-4 sm:p-5">
+          <li key={item.url} className="py-3">
             <a
               href={item.url}
               rel="nofollow noopener noreferrer"
               target="_blank"
-              className="font-semibold text-accent hover:text-accent-dark hover:underline"
+              className="text-accent underline underline-offset-2 hover:text-accent-dark"
             >
               {item.title}
             </a>

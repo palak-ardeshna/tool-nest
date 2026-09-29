@@ -9,8 +9,8 @@ type AuthorCardProps = {
 
 export function AuthorCard({ author, heading = "Written by" }: AuthorCardProps) {
   return (
-    <section className="rounded-card border border-line bg-surface p-5 sm:p-6">
-      <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted">{heading}</p>
+    <section className="border-t border-line pt-6">
+      <p className="text-sm text-muted">{heading}</p>
       <div className="mt-3 flex gap-4">
         {author.avatar ? (
           <Image
@@ -29,7 +29,7 @@ export function AuthorCard({ author, heading = "Written by" }: AuthorCardProps) 
           </span>
         )}
         <div className="min-w-0">
-          <h2 className="font-bold text-ink">
+          <h2 className="font-serif text-lg font-semibold text-ink">
             <Link href={`/authors/${author.slug}`} className="hover:text-accent">
               {author.name}
             </Link>

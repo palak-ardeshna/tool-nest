@@ -19,18 +19,16 @@ export const metadata = buildMetadata({
 export default function HomePage() {
   return (
     <Container width="reading" className="py-12 sm:py-16">
-      <h1 className="font-serif text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
+      <h1 className="text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
         {siteConfig.tagline}
       </h1>
       <p className="mt-4 text-lg leading-relaxed text-muted">
         I&apos;m <Link href="/about" className="text-ink underline underline-offset-2">Palak Patel</Link>,
-        an IT engineer and developer. I write about the software I work with: what it costs, where
+        an IT engineer and developer. ToolNest covers the software I work with: what it costs, where
         it broke, and the sources behind every claim, with the date I checked them.
       </p>
 
-      <h2 className="mt-12 pb-2 text-sm font-semibold text-ink">
-        Articles
-      </h2>
+      <p className="mt-12 pb-2 text-sm font-semibold text-ink">Articles</p>
       <ArticleList articles={allArticles} />
     </Container>
   );

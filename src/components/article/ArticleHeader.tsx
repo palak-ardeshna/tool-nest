@@ -12,7 +12,7 @@ export function ArticleHeader({ article }: { article: ResolvedArticle }) {
         {article.category.name}
       </Link>
 
-      <h1 className="mt-2 font-serif text-3xl font-semibold leading-[1.15] tracking-tight text-ink sm:text-[40px]">
+      <h1 className="mt-2 text-balance font-serif text-3xl font-semibold leading-[1.15] tracking-tight text-ink sm:text-[40px]">
         {article.title}
       </h1>
 

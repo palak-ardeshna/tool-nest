@@ -5,12 +5,12 @@ export function Faq({ items }: { items: FaqItem[] }) {
 
   return (
     <section aria-labelledby="faq">
-      <h2 id="faq" className="text-2xl font-bold tracking-tight text-ink">
-        Frequently asked questions
+      <h2 id="faq" className="font-serif text-2xl font-semibold tracking-tight text-ink">
+        Questions
       </h2>
-      <div className="mt-4 divide-y divide-line rounded-card border border-line bg-white">
+      <div className="mt-2 divide-y divide-line border-y border-line">
         {items.map((item) => (
-          <details key={item.question} className="group p-4 sm:p-5">
+          <details key={item.question} className="group py-4">
             <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-semibold text-ink marker:content-['']">
               {item.question}
               <span
@@ -20,7 +20,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
                 +
               </span>
             </summary>
-            <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{item.answer}</p>
+            <p className="mt-2.5 leading-relaxed text-muted">{item.answer}</p>
           </details>
         ))}
       </div>

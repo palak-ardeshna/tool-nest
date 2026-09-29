@@ -72,7 +72,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
               width: 44,
               height: 44,
               borderRadius: 12,
-              background: "#4F46E5",
+              background: "#1F4D46",
               color: "#fff",
               display: "flex",
               alignItems: "center",
@@ -83,7 +83,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
           >
             T
           </div>
-          <div style={{ fontSize: 26, fontWeight: 800, color: "#111827" }}>{siteConfig.name}</div>
+          <div style={{ fontSize: 26, fontWeight: 800, color: "#1C1C1A" }}>{siteConfig.name}</div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", maxWidth: 900 }}>
@@ -103,7 +103,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
             style={{
               fontSize: title.length > 70 ? 52 : 62,
               fontWeight: 800,
-              color: "#111827",
+              color: "#1C1C1A",
               lineHeight: 1.12,
             }}
           >

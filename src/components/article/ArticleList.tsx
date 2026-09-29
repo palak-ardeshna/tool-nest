@@ -35,13 +35,13 @@ export function ArticleList({
               {article.category.name}
             </Link>
             <span aria-hidden> · </span>
-            {article.readingMinutes} min read
+            <span className="whitespace-nowrap">{article.readingMinutes} min read</span>
           </p>
-          <h3 className="mt-1 font-serif text-xl font-semibold leading-snug text-ink">
+          <h2 className="mt-1 font-serif text-xl font-semibold leading-snug text-ink">
             <Link href={`/articles/${article.slug}`} className="hover:underline">
               {article.title}
             </Link>
-          </h3>
+          </h2>
           <p className="mt-1.5 leading-relaxed text-muted">{article.excerpt}</p>
         </li>
       ))}

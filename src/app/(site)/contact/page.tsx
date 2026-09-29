@@ -58,7 +58,7 @@ export default function ContactPage() {
       </div>
 
       <p className="mt-8 text-sm leading-relaxed text-muted">
-        For privacy requests — access, correction or deletion of your data — email the address above
+        For privacy requests (access, correction or deletion of your data), email the address above
         with &ldquo;Privacy request&rdquo; in the subject line. See my privacy policy for what I
         collect and how long I keep it.
       </p>

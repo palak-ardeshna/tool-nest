@@ -14,18 +14,18 @@ export const categories: Category[] = [
     slug: "ai-tools",
     name: "AI Tools",
     description:
-      "Guides and comparisons covering AI tools for writing, images, video, voice, coding and research — how to evaluate them, where they genuinely help, and where the marketing runs ahead of the product.",
+      "AI models and services I use: pricing changes, limits, and what they cost in practice.",
   },
   {
     slug: "productivity",
     name: "Productivity",
     description:
-      "Workflows, note-taking, time management and automation — practical systems that survive a busy week, and an honest account of the ones that do not.",
+      "Tools for keeping working hours free of distractions, tried on my own working days.",
   },
   {
     slug: "developer-tools",
     name: "Developer Tools",
     description:
-      "APIs, databases, deployment and terminal tooling: what to set up before you need it, what to reach for when something is slow, and where the fix is in your own code instead.",
+      "Deployment, frameworks and AI coding tools on a real Next.js site: what broke, what it cost, and the fix.",
   },
 ];
