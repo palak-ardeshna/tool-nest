@@ -1,29 +1,37 @@
 import Link from "next/link";
-import { footerNav, siteConfig } from "@/config/site";
+import { footerLinks, siteConfig } from "@/config/site";
+import { topLevelCategories } from "@/content";
 import { Container } from "@/components/ui/Container";
-import { Logo } from "@/components/ui/Logo";
+
+const groups = [
+  {
+    title: "Sections",
+    links: topLevelCategories.map((c) => ({ label: c.name, href: `/category/${c.slug}` })),
+  },
+  { title: "Publication", links: footerLinks.publication },
+  { title: "Legal", links: footerLinks.legal },
+];
 
 export function Footer() {
   return (
-    <footer className="mt-20 border-t border-line bg-surface">
-      <Container className="py-12 lg:py-16">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
-          <div className="max-w-xs">
-            <Logo />
-            <p className="mt-3 text-sm leading-relaxed text-muted">{siteConfig.description}</p>
-          </div>
+    <footer className="mt-20 border-t border-line">
+      <Container className="py-10 lg:py-12">
+        <div className="grid gap-8 sm:grid-cols-[1.4fr_repeat(3,1fr)]">
+          <p className="max-w-xs text-sm leading-relaxed text-muted">
+            <span className="font-semibold text-ink">{siteConfig.name}</span> is written by Palak
+            Patel. Funded by advertising, no affiliate links.
+          </p>
 
-          {footerNav.map((group) => (
+          {groups.map((group) => (
             <nav key={group.title} aria-label={group.title}>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-ink">{group.title}</h2>
-              <ul className="mt-2 space-y-0.5">
+              <h2 className="text-sm font-semibold text-ink">{group.title}</h2>
+              <ul className="mt-2">
                 {group.links.map((link) => (
                   <li key={link.href}>
-                    {/* inline-block + py-1.5 gives each link a 24px+ touch target
-                        without changing the visual rhythm of the column. */}
+                    {/* py-1.5 keeps each link a 24px+ touch target. */}
                     <Link
                       href={link.href}
-                      className="inline-block py-1.5 text-sm text-muted transition-colors hover:text-accent"
+                      className="inline-block py-1.5 text-sm text-muted hover:text-ink hover:underline"
                     >
                       {link.label}
                     </Link>
@@ -34,18 +42,9 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-          </p>
-          <p>
-            ToolNest is funded by advertising and carries no affiliate links. See the{" "}
-            <Link href="/disclaimer" className="underline underline-offset-2 hover:text-accent">
-              disclaimer
-            </Link>
-            .
-          </p>
-        </div>
+        <p className="mt-10 border-t border-line pt-6 text-xs text-muted">
+          &copy; {new Date().getFullYear()} {siteConfig.name}
+        </p>
       </Container>
     </footer>
   );

@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SearchBar } from "@/components/search/SearchBar";
 import { SearchFilters } from "@/components/search/SearchFilters";
-import { ArticleGrid } from "@/components/article/ArticleGrid";
+import { ArticleList } from "@/components/article/ArticleList";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { SearchTracker } from "@/components/search/SearchTracker";
 import { topLevelCategories } from "@/content";
@@ -32,11 +32,11 @@ export default async function SearchPage({ searchParams }: PageProps) {
   ]);
 
   return (
-    <Container className="py-10 lg:py-14">
+    <Container width="reading" className="py-10 lg:py-14">
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Search" }]} className="mb-6" />
 
       <header className="max-w-2xl">
-        <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Search</h1>
+        <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Search</h1>
         <p className="mt-3 text-base leading-relaxed text-muted">
           Find a tool, a comparison or a how-to guide.
         </p>
@@ -58,7 +58,7 @@ export default async function SearchPage({ searchParams }: PageProps) {
             <p className="mb-6 text-sm text-muted" aria-live="polite">
               {total} {total === 1 ? "result" : "results"} for &ldquo;{query}&rdquo;
             </p>
-            <ArticleGrid
+            <ArticleList
               articles={articles}
               emptyTitle="No matches"
               emptyDescription="Nothing matched that search. Try a broader term, or browse by topic."

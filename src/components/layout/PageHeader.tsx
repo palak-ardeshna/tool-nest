@@ -15,7 +15,7 @@ export function PageHeader({
   return (
     <header className="mb-10">
       <Breadcrumbs items={crumbs} className="mb-6" />
-      <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">{title}</h1>
+      <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">{title}</h1>
       {description ? (
         <p className="mt-3 text-base leading-relaxed text-muted sm:text-lg">{description}</p>
       ) : null}

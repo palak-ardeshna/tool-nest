@@ -1,44 +1,37 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { Hero } from "@/components/home/Hero";
-import { FeaturedArticles } from "@/components/home/FeaturedArticles";
-import { LatestArticles } from "@/components/home/LatestArticles";
-import { PopularTopics } from "@/components/home/PopularTopics";
-import { DiscoverySection } from "@/components/home/DiscoverySection";
-import { getFeaturedArticles, getLatestArticles } from "@/lib/articles";
-import { allArticles, topLevelCategories } from "@/content";
+import { ArticleList } from "@/components/article/ArticleList";
+import { allArticles } from "@/lib/articles";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
 export const metadata = buildMetadata({
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  title: `${siteConfig.name}: ${siteConfig.tagline}`,
   description: siteConfig.description,
   path: "/",
 });
 
+/**
+ * A short introduction and a dated list. The site is small and written by one
+ * person, so the homepage says so instead of wrapping a handful of articles in
+ * featured, latest and topic grids built for a large magazine.
+ */
 export default function HomePage() {
-  const featured = getFeaturedArticles(4);
-  const categories = topLevelCategories;
-  const total = allArticles.length;
-
-  const featuredSlugs = new Set(featured.map((article) => article.slug));
-  const latest = getLatestArticles(10)
-    .filter((article) => !featuredSlugs.has(article.slug))
-    .slice(0, 6);
-
   return (
-    <>
-      <Hero articleCount={total} />
+    <Container width="reading" className="py-12 sm:py-16">
+      <h1 className="font-serif text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
+        {siteConfig.tagline}
+      </h1>
+      <p className="mt-4 text-lg leading-relaxed text-muted">
+        I&apos;m <Link href="/about" className="text-ink underline underline-offset-2">Palak Patel</Link>,
+        an IT engineer and developer. I write about the software I work with: what it costs, where
+        it broke, and the sources behind every claim, with the date I checked them.
+      </p>
 
-      <Container className="space-y-16 py-14 sm:space-y-20 sm:py-16">
-        <FeaturedArticles articles={featured} />
-        <LatestArticles articles={latest} />
-      </Container>
-
-      <DiscoverySection categories={categories} articleCount={total} />
-
-      <Container className="py-14 sm:py-16">
-        <PopularTopics categories={categories} />
-      </Container>
-    </>
+      <h2 className="mt-12 pb-2 text-sm font-semibold text-ink">
+        Articles
+      </h2>
+      <ArticleList articles={allArticles} />
+    </Container>
   );
 }

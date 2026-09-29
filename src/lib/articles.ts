@@ -6,22 +6,6 @@ import type { ResolvedArticle, ResolvedCategory } from "@/types";
  * async, no database, no caching layer, because there is nothing to cache.
  */
 
-export function getLatestArticles(take = 9, skip = 0): ResolvedArticle[] {
-  return allArticles.slice(skip, skip + take);
-}
-
-/**
- * Editor-picked articles for the homepage, topped up with the newest posts so
- * the homepage is never short.
- */
-export function getFeaturedArticles(take = 4): ResolvedArticle[] {
-  const featured = allArticles.filter((article) => article.featured);
-  if (featured.length >= take) return featured.slice(0, take);
-
-  const filler = allArticles.filter((article) => !article.featured);
-  return [...featured, ...filler].slice(0, take);
-}
-
 export function getArticlesInSection(
   category: ResolvedCategory,
   take?: number,
@@ -59,25 +43,6 @@ export function getRelatedArticles(article: ResolvedArticle, take = 3): Resolved
     );
 
   return scored.slice(0, take).map((entry) => entry.article);
-}
-
-/**
- * Sidebar reading list. A leaf category is often too thin to fill a sidebar on
- * its own, so widen to the whole parent section when the article has one.
- */
-export function getMoreInSection(article: ResolvedArticle, take = 4): ResolvedArticle[] {
-  const section = article.category.parentCategory?.slug ?? article.category.slug;
-  const slugs = new Set([
-    section,
-    ...allArticles
-      .map((candidate) => candidate.category)
-      .filter((category) => category.parent === section)
-      .map((category) => category.slug),
-  ]);
-
-  return allArticles
-    .filter((candidate) => candidate.slug !== article.slug && slugs.has(candidate.category.slug))
-    .slice(0, take);
 }
 
 export { allArticles };

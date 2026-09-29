@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { ArticleGrid } from "@/components/article/ArticleGrid";
+import { ArticleList } from "@/components/article/ArticleList";
 import { JsonLd } from "@/components/JsonLd";
 import { getArticlesInSection } from "@/lib/articles";
 import { getCategory, resolvedCategories } from "@/content";
@@ -50,11 +50,11 @@ export default async function CategoryPage({ params }: PageProps) {
   crumbs.push({ label: category.name });
 
   return (
-    <Container className="py-10 lg:py-14">
+    <Container width="reading" className="py-10 lg:py-14">
       <Breadcrumbs items={crumbs} className="mb-6" />
 
       <header className="mb-8 max-w-2xl">
-        <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+        <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           {category.name}
         </h1>
         <p className="mt-3 text-base leading-relaxed text-muted">{category.description}</p>
@@ -69,7 +69,7 @@ export default async function CategoryPage({ params }: PageProps) {
             <Link
               key={child.slug}
               href={`/category/${child.slug}`}
-              className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium text-ink transition-colors hover:border-accent/40 hover:bg-accent-light hover:text-accent-dark"
+              className="text-sm text-muted underline underline-offset-2 hover:text-ink"
             >
               {child.name}
             </Link>
@@ -77,10 +77,10 @@ export default async function CategoryPage({ params }: PageProps) {
         </nav>
       ) : null}
 
-      <ArticleGrid
+      <ArticleList
         articles={articles}
         emptyTitle={`No ${category.name} articles yet`}
-        emptyDescription="We publish here as soon as the testing is done. In the meantime, browse the rest of the archive."
+        emptyDescription="Nothing is published in this section yet."
       />
 
       <JsonLd data={breadcrumbSchema(crumbs)} />

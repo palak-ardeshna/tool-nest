@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { ArticleGrid } from "@/components/article/ArticleGrid";
+import { ArticleList } from "@/components/article/ArticleList";
 import { JsonLd } from "@/components/JsonLd";
 import { allArticles } from "@/lib/articles";
 import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
@@ -8,7 +8,7 @@ import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "All articles",
   description:
-    "Every guide, comparison and review published on ToolNest — AI tools, software, productivity and developer tooling.",
+    "Every article published on ToolNest, newest first.",
   path: "/articles",
 });
 
@@ -25,25 +25,22 @@ export const metadata = buildMetadata({
  */
 export default function ArticlesPage() {
   // Every article, not a page of them: this is the archive the footer and the
-  // breadcrumb promise, and the only page that links to the whole back
-  // catalogue. `getLatestArticles()` defaults to nine, which quietly dropped
-  // everything older off the site's own index.
+  // breadcrumb promise, and the only page that links to the whole back catalogue.
   const articles = allArticles;
   const crumbs = [{ label: "Home", href: "/" }, { label: "All articles" }];
 
   return (
-    <Container className="py-10 lg:py-14">
+    <Container width="reading" className="py-10 lg:py-14">
       <Breadcrumbs items={crumbs} className="mb-6" />
 
       <header className="mb-10 max-w-2xl">
-        <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">All articles</h1>
+        <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">All articles</h1>
         <p className="mt-3 text-base leading-relaxed text-muted">
-          Everything we have published, newest first. {articles.length}{" "}
-          {articles.length === 1 ? "article" : "articles"} and counting.
+          Everything published on ToolNest, newest first.
         </p>
       </header>
 
-      <ArticleGrid articles={articles} />
+      <ArticleList articles={articles} />
 
       <JsonLd data={breadcrumbSchema(crumbs)} />
     </Container>

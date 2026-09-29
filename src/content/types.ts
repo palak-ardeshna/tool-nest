@@ -61,7 +61,6 @@ export type Article = {
   publishedAt: string;
   /** ISO date of the last editorial review, shown as "Updated". */
   contentUpdatedAt?: string;
-  featured?: boolean;
   seoTitle?: string;
   seoDescription?: string;
   quickAnswer?: string;

@@ -25,7 +25,7 @@ export function ArticleMeta({
     <div className={cn("flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted", className)}>
       <span>
         By{" "}
-        <Link href={`/authors/${author.slug}`} className="font-semibold text-ink hover:text-accent">
+        <Link href={`/authors/${author.slug}`} className="text-ink underline-offset-2 hover:underline">
           {author.name}
         </Link>
       </span>
@@ -38,7 +38,7 @@ export function ArticleMeta({
       {showUpdated ? (
         <>
           <span aria-hidden>&middot;</span>
-          <span className="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-0.5 text-xs font-semibold text-success">
+          <span>
             Updated <time dateTime={isoDate(updatedAt)}>{formatDate(updatedAt)}</time>
           </span>
         </>

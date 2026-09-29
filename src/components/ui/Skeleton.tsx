@@ -4,25 +4,16 @@ export function Skeleton({ className }: { className?: string }) {
   return <div className={cn("animate-pulse rounded-md bg-surface", className)} />;
 }
 
-/** Matches ArticleCard's box so loading states do not shift layout. */
-function ArticleCardSkeleton() {
+/** Matches ArticleList's rows so loading states do not shift layout. */
+export function ArticleListSkeleton({ count = 5 }: { count?: number }) {
   return (
-    <div className="overflow-hidden rounded-card border border-line bg-white">
-      <div className="space-y-3 p-5">
-        <Skeleton className="h-4 w-24" />
-        <Skeleton className="h-5 w-full" />
-        <Skeleton className="h-5 w-2/3" />
-        <Skeleton className="h-4 w-1/2" />
-      </div>
-    </div>
-  );
-}
-
-export function ArticleGridSkeleton({ count = 6 }: { count?: number }) {
-  return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="divide-y divide-line border-t border-line">
       {Array.from({ length: count }, (_, i) => (
-        <ArticleCardSkeleton key={i} />
+        <div key={i} className="space-y-2.5 py-5">
+          <Skeleton className="h-4 w-40" />
+          <Skeleton className="h-6 w-3/4" />
+          <Skeleton className="h-4 w-full" />
+        </div>
       ))}
     </div>
   );

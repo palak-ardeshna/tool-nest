@@ -17,7 +17,7 @@ export default function GlobalError({
 
   return (
     <Container width="reading" className="py-20 text-center lg:py-28">
-      <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+      <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
         Something went wrong
       </h1>
       <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-muted">

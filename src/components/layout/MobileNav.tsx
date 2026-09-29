@@ -26,7 +26,7 @@ export function MobileNav() {
   }, [open]);
 
   return (
-    <div className="lg:hidden">
+    <div className="sm:hidden">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -60,12 +60,6 @@ export function MobileNav() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/articles" className="border-b border-line py-3.5 text-base font-semibold text-ink">
-              All Articles
-            </Link>
-            <Link href="/about" className="py-3.5 text-base font-semibold text-muted">
-              About ToolNest
-            </Link>
           </nav>
         </div>
       ) : null}

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { ArticleGrid } from "@/components/article/ArticleGrid";
+import { ArticleList } from "@/components/article/ArticleList";
 import { AuthorCard } from "@/components/article/AuthorCard";
 import { JsonLd } from "@/components/JsonLd";
 import { authors, getAuthor } from "@/content";
@@ -44,17 +44,17 @@ export default async function AuthorPage({ params }: PageProps) {
   ];
 
   return (
-    <Container className="py-10 lg:py-14">
+    <Container width="reading" className="py-10 lg:py-14">
       <PageHeader title={author.name} description={author.role} crumbs={crumbs} />
 
-      <div className="mb-10 max-w-2xl">
+      <div className="mb-10">
         <AuthorCard author={author} heading="Profile" />
       </div>
 
-      <h2 className="mb-6 text-2xl font-bold tracking-tight text-ink">
+      <h2 className="mb-2 text-sm font-semibold text-ink">
         Articles by {author.name.split(" ")[0]}
       </h2>
-      <ArticleGrid
+      <ArticleList
         articles={articles}
         emptyTitle="Nothing published yet"
         emptyDescription="This author has no published articles right now."
