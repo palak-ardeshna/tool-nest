@@ -255,7 +255,7 @@ const HUMAN_RULE_DATE = Date.parse("2026-09-29");
 const plain = (html: string) => html.replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ").replace(/\s+/g, " ").trim();
 const newArticles = articles.filter((a) => Date.parse(a.publishedAt) > HUMAN_RULE_DATE);
 
-test("new articles carry Palak's sign-off, his own paragraph and his own image", () => {
+test("new articles carry Palak's sign-off, his own paragraph, and only his own image if any", () => {
   for (const a of newArticles) {
     const r = a.humanReview;
     assert.ok(r, `${a.slug}: no humanReview — Palak has not signed this off`);
@@ -265,8 +265,11 @@ test("new articles carry Palak's sign-off, his own paragraph and his own image",
     assert.match(r.experience, /\b(I|my|me)\b/, `${a.slug}: experience paragraph is not first-person`);
     assert.match(r.experience, /\d/, `${a.slug}: experience paragraph has no number from your own use`);
     assert.ok(plain(a.content).includes(plain(r.experience)), `${a.slug}: experience paragraph is not in the article body word for word`);
-    assert.equal(a.image, `/images/articles/${a.slug}.webp`, `${a.slug}: cover must be your own capture at /images/articles/<slug>.webp`);
-    assert.ok(["own-screenshot", "own-photo"].includes(r.imageSource), `${a.slug}: cover is not your own screenshot or photo`);
+    // No image is fine (generated cover art shows). An image must be Palak's own capture.
+    if (a.image) {
+      assert.equal(a.image, `/images/articles/${a.slug}.webp`, `${a.slug}: cover must be at /images/articles/<slug>.webp`);
+      assert.ok(r.imageSource && ["own-screenshot", "own-photo"].includes(r.imageSource), `${a.slug}: cover is not your own screenshot or photo; drop the image instead`);
+    }
   }
 });
 
@@ -285,4 +288,64 @@ test("new articles copy no passage from another article", () => {
       assert.equal(hit, undefined, `${a.slug}: "${hit}…" also appears in ${other.slug}`);
     }
   }
+});
+
+/**
+ * The AdSense report (2026-09-28): reviewers judged the site AI-generated from
+ * its wording and from the About page advertising AI drafting. New articles
+ * get a stricter word list than the frozen ones, and no page may describe how
+ * AI was used to write the site.
+ */
+const aiTellsStrict =
+  /\b(crucial|robust|leverag\w*|elevate|streamlin\w*|comprehensive guide|in today's|fast-paced|digital age|whether you're|look no further|unleash|harness(ing)? the power|cutting-edge|pivotal|foster(ing)?|meticulous\w*|intricate|bustling|vibrant|nestled|treasure trove|paradigm|boasts|underscor\w*|showcas\w*|it's important to note|key takeaways?|let's dive|buckle up|a must-have|stands out as|in the world of|when it comes to|at the end of the day|as an ai|i hope this helps|great question|certainly!)\b/i;
+const aiAdmission = /\b(AI[- ]assist(ed|ance)|(drafted|written|generated|created) (with|by|using) (an? )?(AI|LLM|ChatGPT|Claude|model))\b/i;
+
+test("new articles avoid the wording AdSense reviewers read as AI", () => {
+  for (const a of newArticles) {
+    const prose = renderedText(a);
+    const tell = prose.match(aiTellsStrict);
+    assert.equal(tell, null, `${a.slug}: AI-sounding phrase "${tell?.[0]}"`);
+    const words = plain(a.content).split(" ").length;
+    const dashes = (a.content.match(/—/g) ?? []).length;
+    assert.ok(dashes <= Math.ceil(words / 400), `${a.slug}: ${dashes} em dashes in ${words} words; use commas or full stops`);
+  }
+});
+
+test("no page tells readers the site is drafted with AI", async () => {
+  const { readFileSync, readdirSync } = await import("node:fs");
+  const pagesDir = path.join(process.cwd(), "src/app/(site)");
+  const pages = readdirSync(pagesDir, { recursive: true, encoding: "utf8" })
+    .filter((f) => f.endsWith(".tsx"))
+    .map((f) => ({ name: f, text: readFileSync(path.join(pagesDir, f), "utf8") }));
+  const texts = [
+    ...pages,
+    ...authors.map((a) => ({ name: `author ${a.slug}`, text: a.bio ?? "" })),
+    ...articles.map((a) => ({ name: a.slug, text: renderedText(a) })),
+  ];
+  for (const { name, text } of texts) {
+    const hit = text.match(aiAdmission);
+    assert.equal(hit, null, `${name}: "${hit?.[0]}" — describe what you did, not which tool drafted it`);
+  }
+});
+
+/**
+ * One template repeated on every page is a scaled-content fingerprint. A new
+ * article may not use the same set of blocks as the article published before it.
+ */
+test("a new article does not copy the previous article's layout", () => {
+  const layout = (a: (typeof articles)[number]) =>
+    [
+      a.quickAnswer && "answer",
+      (a.pros?.length || a.cons?.length) && "pros-cons",
+      a.alternatives?.length && "alternatives",
+      a.faqs?.length && "faq",
+      /<table/.test(a.content) && "table",
+      /<ol/.test(a.content) && "steps",
+    ].filter(Boolean).join("+");
+  const byDate = [...articles].sort((x, y) => Date.parse(x.publishedAt) - Date.parse(y.publishedAt) || x.slug.localeCompare(y.slug));
+  byDate.forEach((a, i) => {
+    if (i === 0 || !newArticles.includes(a)) return;
+    const prev = byDate[i - 1];
+    assert.notEqual(layout(a), layout(prev), `${a.slug}: same layout as ${prev.slug} (${layout(a)}); change which blocks it uses`);
+  });
 });

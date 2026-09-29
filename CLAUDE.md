@@ -18,21 +18,40 @@ The one test: **an article must contain something that did not exist until Palak
 - Link to the strongest existing article in the same cluster.
 
 ## Image
-- `image` is Palak's own screenshot of the tool's UI, or his own photo (`public/images/articles/<slug>.webp`, `imageAlt` describes what's on screen). **No stock photos, no AI-generated images.** The test checks the path and `humanReview.imageSource`, but only Palak can make that declaration true.
+- **Default: no image.** The site shows its own generated cover art. On 2026-09-29 the stock covers were removed from every article.
+- Add `image` only when Palak sends his own screenshot or photo (`public/images/articles/<slug>.webp`, 1600×900, `imageAlt` describes what's on screen, `humanReview.imageSource` set). **Never use stock photos or AI-generated images**; leave `image` out instead.
+
+## Layout — every article is built differently
+One template repeated on every page is a scaled-content fingerprint. Pick the shape from the article type, and never reuse the previous article's block set (the test fails if you do):
+- **X vs Y:** decision table first, then `quickAnswer`, then `alternatives`. No pros/cons.
+- **How-to / setup log:** numbered steps (`<ol>`) with what broke, plus pros/cons of the approach. No FAQ.
+- **Price or policy change:** the old/new numbers table and one worked example of the bill, plus FAQ. No alternatives.
+- **Explainer / gotcha:** plain sections with no quick answer and no pros/cons; FAQ optional.
+- **Roundup:** comparison table, pros/cons, alternatives. No FAQ.
+- **Short take (300–500 words):** one finding and one number, `sources` only.
+Also vary the headings, the opening (a number, a problem, a question, or what happened) and the length. `sources` stays on every article.
 
 ## Human review — enforced for articles published after 2026-09-29
 Every new article needs a `humanReview` block, and `npm test` fails without it:
-- `experience`: Palak's own paragraph of at least 60 words, first person, with at least one number from his own use. It must appear word for word in `content`.
-- `reviewedAt`: the day Palak read the final text end to end. It must be on or before `publishedAt`.
+- `experience`: a paragraph of at least 60 words built only from Palak's facts, first person, with at least one number from his own use. It must appear word for word in `content`.
+- `reviewedAt`: the day Palak confirmed the facts in chat and said to publish. It must be on or before `publishedAt`.
 - `imageSource`: `"own-screenshot"` or `"own-photo"`.
 
-**Claude never writes, fills in or suggests text for `humanReview`, and never writes the experience paragraph.** Claude leaves `humanReview` out, leaves a visible `<!-- PALAK: your experience paragraph -->` gap in `content`, and hands over a failing test. Filling it in is how Palak's review happens; if AI fills it, the check is worthless.
+**Palak does not write prose; Claude writes the whole article, but only from Palak's real facts.** Before drafting, Claude asks Palak for his facts: what he used the tool for, one number from his own use, one real downside, and a screenshot. Palak may answer in Gujarati or in short notes. Claude turns those facts into the `experience` paragraph and the article. **Claude never invents a fact, number, date or experience Palak did not give.** If Palak has not used the tool, the article is an honest spec/pricing comparison that says so in its first paragraph, with no first-person experience claims. Claude fills in `humanReview` only after Palak confirms in chat that the facts are true and says to publish; `reviewedAt` is the date of that confirmation.
 
 **No copied content.** Nothing is pasted from vendor pages, other sites or other articles. A short quote goes in quotation marks with its source in `sources`. The test blocks any 10-word run shared with another article on this site. Checking against the web is manual: before publishing, Palak runs the body through a plagiarism checker (for example Quetext or Grammarly's free check).
 
+## Wording — what the AdSense report flagged (enforced for articles after 2026-09-29)
+The 2026-09-28 reviewers rejected the site because it *read* AI-written: long-winded, generic, and with an About page that advertised AI drafting (`report-adsence.md`). So:
+- **No AI-sounding words.** `aiTellsStrict` in `tests/content.test.ts` bans phrases like "crucial", "robust", "leverage", "in today's", "whether you're", "comprehensive guide", "key takeaways". Add a phrase there when you spot a new one; don't just reword around it.
+- **Few em dashes:** at most 1 per 400 words. Use commas and full stops.
+- **Never describe how the site uses AI**, on any page, bio or article ("AI-assisted", "drafted with AI"…); the test blocks it. **Never claim the opposite either** ("written without AI", "100% human"), because that would be false. Describe what Palak did: used, measured, checked.
+- Short sentences, short paragraphs, specific numbers and dates. Cut any sentence that would fit in any other article.
+- Anything Palak posts publicly (forum replies, emails to Google) follows the same rules: short, plain, specific.
+
 ## Publish
 - **Cadence: aim for 2 articles per week; the test enforces max 2 per day.** Check `git log` before adding one. Batches are the fingerprint AdSense rejects — the 22-file launch dump is what got this site flagged. The weekly target is the habit; the daily cap is only the floor `npm test` will catch.
-- Palak writes the experience paragraph and signs `humanReview` himself; a publish commit without both is not done.
+- The experience paragraph is built only from facts Palak gave, and `humanReview` is filled in only after he confirms them; a publish commit without both is not done.
 - `npm test` must pass.
 
 ## Existing corpus

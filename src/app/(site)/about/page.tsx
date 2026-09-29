@@ -36,10 +36,9 @@ export default function AboutPage() {
 
         <h2>How the articles are made</h2>
         <p>
-          Most articles are built from vendor documentation, changelogs, pricing pages and published
-          reporting, plus my own use of the tools where I have it. I draft with AI assistance and
-          then read, check and edit every claim myself before it goes live; nothing is published
-          straight from a model. Where I have not used a tool, the article says so rather than
+          Articles start from my own use of the tools: what I ran, what it cost and what broke,
+          with my own screenshots. Vendor documentation, changelogs and pricing pages fill in the
+          rest, and I check every claim before it goes live. Where I have not used a tool, the article says so rather than
           implying otherwise. Every article ends with its primary sources and the date I last read
           each one, so you can check my work and see how stale it might be. Software changes fast:
           confirm current pricing and limits with the vendor before you buy.

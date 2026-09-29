@@ -3,7 +3,6 @@ import type { Article } from "@/content/types";
 /**
  * A pricing comparison, stated as such in the first paragraph: no usage of
  * ours behind it. Prices from the Gemini API pricing page read 2026-09-24.
- * Cover: StockSnap/Wikimedia, CC0 1.0 — illustrative, not a product interface.
  */
 export const geminiFlashPricingDoublesInJanuary: Article = {
   slug: "gemini-flash-pricing-doubles-in-january",
@@ -14,14 +13,11 @@ export const geminiFlashPricingDoublesInJanuary: Article = {
   author: "palak-patel",
   tags: ["Gemini", "AI Tools", "Pricing", "APIs", "Google"],
   publishedAt: "2026-09-24",
-  image: "/images/articles/gemini-flash-pricing-doubles-in-january.webp",
-  imageAlt:
-    "A Hewlett-Packard HP-12C financial calculator photographed head-on, with figures on its display",
   seoTitle: "Gemini Flash Pricing Doubles in January",
   seoDescription:
     "Gemini 3.8, 3.7 and 3.6 Flash bill at $0.75 in and $3.75 out per million until 31 December 2026, then double. What that does to a real budget.",
   quickAnswer:
-    "Gemini 3.8 Flash, 3.7 Flash and 3.6 Flash all bill at $0.75 per million input tokens and $3.75 per million output through 31 December 2026, and $1.50 / $7.50 after that — a straight doubling on a fixed date. The odd part is that Gemini 3.5 Flash, the older model, already costs $1.50 / $9.00, so the newest Flash is currently the cheapest and will still be no worse than the one it replaced. If you want a rate with no expiry attached, 3.5 Flash-Lite is $0.30 / $2.50. Budget on the post-January number and treat the discount as a windfall, not a baseline.",
+    "Gemini 3.8 Flash, 3.7 Flash and 3.6 Flash all bill at $0.75 per million input tokens and $3.75 per million output through 31 December 2026, and $1.50 / $7.50 after that. A straight doubling on a fixed date. The odd part is that Gemini 3.5 Flash, the older model, already costs $1.50 / $9.00, so the newest Flash is currently the cheapest and will still be no worse than the one it replaced. If you want a rate with no expiry attached, 3.5 Flash-Lite is $0.30 / $2.50. Budget on the post-January number and treat the discount as a windfall, not a baseline.",
   pros: [
     "The three newest Flash models are all at the same promotional rate, so moving between them costs nothing",
     "The expiry date is published rather than buried in a footnote you find later",
@@ -54,7 +50,7 @@ export const geminiFlashPricingDoublesInJanuary: Article = {
     {
       question: "Should I switch away from Gemini before January?",
       answer:
-        "Only if your own numbers say so. A doubling sounds alarming and may be a rounding error on your bill, or it may be the largest line on it — that depends entirely on your output token volume, which is why the worked example above is an example and not a recommendation. Work out what your last full month would have cost at the new rate before you move anything.",
+        "Only if your own numbers say so. A doubling sounds alarming and may be a rounding error on your bill, or it may be the largest line on it. That depends entirely on your output token volume, which is why the worked example above is an example and not a recommendation. Work out what your last full month would have cost at the new rate before you move anything.",
     },
   ],
   sources: [
@@ -97,13 +93,13 @@ export const geminiFlashPricingDoublesInJanuary: Article = {
 
 <h2>Where a doubling actually hurts</h2>
 
-<p>Input and output do not rise by the same amount in practice, because most workloads are lopsided. A summarising job reads a lot and writes a little, so it lives on the input price. <a href="/articles/claude-code-vs-cursor-what-a-solo-developer-pays">An agent</a> that plans, calls tools and explains itself writes far more than it reads, and it lives on the output price — which is the one going from $3.75 to $7.50.</p>
+<p>Input and output do not rise by the same amount in practice, because most workloads are lopsided. A summarising job reads a lot and writes a little, so it lives on the input price. <a href="/articles/claude-code-vs-cursor-what-a-solo-developer-pays">An agent</a> that plans, calls tools and explains itself writes far more than it reads, and it lives on the output price. That is the one going from $3.75 to $7.50.</p>
 
 <p>That is the number to check against your own billing page. If your output volume is small, January is a non-event. If you are running something that talks to itself a lot, it is the whole cost of the project changing on a date you did not choose. The same asymmetry shows up when running models on your own hardware starts to look reasonable: the break-even is set by output tokens, not by how clever the model is.</p>
 
 <h2>What to do before January</h2>
 
-<p>Take your last full month of usage and multiply it by the post-expiry rate. That is the only calculation that matters, and it takes five minutes. If the answer is small, do nothing and enjoy the discount until it ends. If the answer is large, you have three months to test 3.5 Flash-Lite at $0.30 / $2.50 on the same work and find out whether the cheap model was good enough all along — which, for the routine half of most pipelines, it usually is.</p>
+<p>Take your last full month of usage and multiply it by the post-expiry rate. That is the only calculation that matters, and it takes five minutes. If the answer is small, do nothing and enjoy the discount until it ends. If the answer is large, you have three months to test 3.5 Flash-Lite at $0.30 / $2.50 on the same work and find out whether the cheap model was good enough all along. For the routine half of most pipelines, it usually is.</p>
 
 <p>What you should not do is budget the project at $0.75 and put the date out of your mind. The page tells you what happens next. Prices above are from Google's Gemini API pricing page as read on 24 September 2026.</p>`,
 };

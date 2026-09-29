@@ -77,19 +77,19 @@ export type Article = {
   /** Keep the page live but out of search: robots noindex and no sitemap entry. */
   noIndex?: boolean;
   /**
-   * Palak's sign-off, typed by Palak and never by an AI. Required on every
+   * Palak's sign-off. Filled in only after Palak confirms the facts in chat; never invented. Required on every
    * article published after 2026-09-29; `npm test` fails without it.
    */
   humanReview?: HumanReview;
 };
 
 export type HumanReview = {
-  /** ISO date Palak read the final text end to end. */
+  /** ISO date Palak confirmed the facts in chat and said to publish. */
   reviewedAt: string;
-  /** Palak's own paragraph: what he did with the tool and what happened, with a number. Must appear word for word in `content`. */
+  /** Paragraph built only from facts Palak supplied: what he did with the tool and what happened, with a number. Must appear word for word in `content`. */
   experience: string;
-  /** Where the cover image came from. Only Palak's own capture passes. */
-  imageSource: "own-screenshot" | "own-photo";
+  /** Where the cover image came from, if the article has one. Stock or AI images are never used; leave `image` out instead. */
+  imageSource?: "own-screenshot" | "own-photo";
 };
 
 /** An article with its category and author resolved, plus derived fields. */

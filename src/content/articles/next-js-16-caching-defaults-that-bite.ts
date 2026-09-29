@@ -4,7 +4,6 @@ import type { Article } from "@/content/types";
  * Scaffolded from the official Next.js 16 upgrade guide read 2026-09-23.
  * The first-person section is the header this site actually ships, which is
  * documented in next.config.mjs — not an incident narrative.
- * Cover: WordPress Photo Directory, CC0 1.0 — illustrative, not a product interface.
  */
 export const nextJs16CachingDefaultsThatBite: Article = {
   slug: "next-js-16-caching-defaults-that-bite",
@@ -15,9 +14,6 @@ export const nextJs16CachingDefaultsThatBite: Article = {
   author: "palak-patel",
   tags: ["Next.js", "Caching", "Deployment", "Developer Tools", "React"],
   publishedAt: "2026-09-26",
-  image: "/images/articles/next-js-16-caching-defaults-that-bite.webp",
-  imageAlt:
-    "A wall-mounted network rack holding a sixteen-port switch, a router and a tangle of Ethernet cables",
   seoTitle: "Next.js 16: Caching Defaults That Bite",
   seoDescription:
     "Next.js 16 changed image cache TTL, revalidateTag's signature and PPR. Plus the year-long s-maxage default that serves unstyled pages off a stale edge.",
@@ -45,7 +41,7 @@ export const nextJs16CachingDefaultsThatBite: Article = {
     {
       question: "Does the upgrade codemod cover the breaking changes?",
       answer:
-        "The mechanical ones. It updates the config for Turbopack, migrates next lint to the ESLint CLI, renames middleware to proxy, and strips unstable_ prefixes. It does not run every migration — if you still have synchronous params, cookies or headers from the version 15 compatibility window, the guide tells you to run the async request API codemod separately.",
+        "The mechanical ones. It updates the config for Turbopack, migrates next lint to the ESLint CLI, renames middleware to proxy, and strips unstable_ prefixes. It does not run every migration. If you still have synchronous params, cookies or headers from the version 15 compatibility window, the guide tells you to run the async request API codemod separately.",
     },
     {
       question: "Why did my build start failing with a webpack error I did not write?",
@@ -81,13 +77,13 @@ export const nextJs16CachingDefaultsThatBite: Article = {
 
 <p>This one is not in the upgrade guide, because it is not new in 16. It is simply the default that most people never look at: Next.js serves prerendered pages with a shared-cache lifetime of <code>s-maxage=31536000</code>.</p>
 
-<p>On Vercel that is safe, because the platform invalidates its own edge when you deploy. Everywhere else it is the bug that serves a broken page. Every build gives your CSS and JavaScript new content-hashed filenames and deletes the previous ones. HTML held at an edge node from an older build asks for a stylesheet that no longer exists, gets a 404, and renders as unstyled text. Only the visitors routed to that stale node see it, which is why it reads as intermittent rather than broken — and why you will not reproduce it from your own machine.</p>
+<p>On Vercel that is safe, because the platform invalidates its own edge when you deploy. Everywhere else it is the bug that serves a broken page. Every build gives your CSS and JavaScript new content-hashed filenames and deletes the previous ones. HTML held at an edge node from an older build asks for a stylesheet that no longer exists, gets a 404, and renders as unstyled text. Only the visitors routed to that stale node see it, which is why it reads as intermittent rather than broken, and why you will not reproduce it from your own machine.</p>
 
-<p>That is the mechanism behind the header above, and the reason to write it before you need it rather than after. Hosts differ mostly in whether they purge for you — Vercel does it without being asked.</p>
+<p>That is the mechanism behind the header above, and the reason to write it before you need it rather than after. Hosts differ mostly in whether they purge for you. Vercel does it without being asked.</p>
 
 <h2>Images now cache for four hours, not sixty seconds</h2>
 
-<p>The default for <code>images.minimumCacheTTL</code> moved from 60 seconds to 14400 — four hours. The reasoning is sound: upstream images that arrive without a cache-control header were being revalidated every minute, burning CPU for no benefit.</p>
+<p>The default for <code>images.minimumCacheTTL</code> moved from 60 seconds to 14400, which is four hours. The reasoning is sound: upstream images that arrive without a cache-control header were being revalidated every minute, burning CPU for no benefit.</p>
 
 <p>It is still a change in behaviour you can see. Replace an image at the same URL and it may take four hours to appear. Three other image defaults moved at the same time and are easier to miss: <code>images.qualities</code> now allows only 75, so a quality prop of 80 is coerced down; the value 16 is gone from <code>imageSizes</code>; and redirects are capped at 3 instead of unlimited. Local images with query strings now need an explicit <code>localPatterns.search</code> entry or they stop resolving.</p>
 

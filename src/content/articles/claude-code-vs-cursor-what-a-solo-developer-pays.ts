@@ -9,13 +9,11 @@ export const claudeCodeVsCursorWhatASoloDeveloperPays: Article = {
   slug: "claude-code-vs-cursor-what-a-solo-developer-pays",
   title: "Claude Code vs Cursor: What a Solo Developer Actually Pays in 2026",
   excerpt:
-    "Both list at $20 a month. That number tells you almost nothing, because the cost that matters is what happens after the included usage runs out — and the two products handle that very differently. A comparison of the published terms, including what neither vendor will tell you.",
+    "Both list at $20 a month. That number tells you almost nothing, because the cost that matters is what happens after the included usage runs out, and the two products handle that very differently. A comparison of the published terms, including what neither vendor will tell you.",
   category: "developer-tools",
   author: "palak-patel",
   tags: ["AI Coding", "Developer Tools", "Pricing", "Claude Code", "Cursor"],
   publishedAt: "2026-09-26",
-  image: "/images/articles/claude-code-vs-cursor-what-a-solo-developer-pays.webp",
-  imageAlt: "A pocket calculator resting on printed charts in front of a laptop on a desk",
   seoTitle: "Claude Code vs Cursor: What a Solo Dev Pays",
   seoDescription:
     "Cursor Individual and Claude Pro both cost $20 a month. How their overage models differ, what neither vendor publishes, and which one bites for you.",

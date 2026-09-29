@@ -38,7 +38,7 @@ export default function DisclaimerPage() {
         <h2>How my articles are researched</h2>
         <p>
           My articles are researched from vendor documentation, changelogs, pricing pages and
-          published reporting, drafted with AI assistance and reviewed by a person before
+          published reporting, plus my own use of the tools, and I check every claim before
           publication. They are not laboratory benchmarks, and I do not claim to have run
           controlled tests on the tools I write about. Where a figure comes from a vendor, treat it
           as a vendor claim. Full detail on my process is on the{" "}

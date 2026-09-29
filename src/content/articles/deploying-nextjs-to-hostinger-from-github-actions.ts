@@ -13,8 +13,6 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
   author: "palak-patel",
   tags: ["Next.js", "Deployment", "Hostinger", "GitHub Actions", "Developer Tools"],
   publishedAt: "2026-09-24",
-  image: "/images/articles/deploying-nextjs-to-hostinger-from-github-actions.webp",
-  imageAlt: "Blue network cables plugged into rows of ports on a rack switch with yellow link lights",
   seoTitle: "Deploy Next.js to Hostinger from GitHub Actions",
   seoDescription:
     "How I deploy a Next.js site to Hostinger Node.js hosting on every push using its public API: zip, upload, start build. Real run times, failures and fixes.",
@@ -23,7 +21,7 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
   pros: [
     "No third-party deploy service; the whole pipeline is one workflow file and one secret",
     "Tests, typecheck and build run on the runner, so a broken commit never reaches the host",
-    "git archive uploads tracked files only — no node_modules, no .next, small zip",
+    "git archive uploads tracked files only: no node_modules, no .next, small zip",
     "A concurrency group queues fast successive pushes instead of racing them",
   ],
   cons: [
