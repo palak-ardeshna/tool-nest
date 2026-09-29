@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { ResolvedArticle } from "@/types";
 import { Badge } from "@/components/ui/Badge";
-import { ArticleCover } from "@/components/article/ArticleCover";
 import { formatDate, isoDate } from "@/lib/format";
 import { cn } from "@/lib/cn";
 
@@ -50,19 +49,6 @@ export function ArticleCard({
         className,
       )}
     >
-      <Link href={href} tabIndex={-1} aria-hidden className="block">
-        <ArticleCover
-          src={article.image}
-          alt={article.imageAlt}
-          seed={article.slug}
-          priority={priority}
-          sizes={
-            isFeature
-              ? "(max-width: 1024px) 100vw, 640px"
-              : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
-          }
-        />
-      </Link>
 
       <div className={cn("flex flex-1 flex-col p-5", isFeature && "sm:p-7")}>
         <Badge href={`/category/${article.category.slug}`} className="self-start">

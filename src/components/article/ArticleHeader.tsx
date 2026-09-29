@@ -1,7 +1,6 @@
 import type { ResolvedArticle } from "@/types";
 import { Badge } from "@/components/ui/Badge";
 import { ArticleMeta } from "@/components/article/ArticleMeta";
-import { ArticleCover } from "@/components/article/ArticleCover";
 
 export function ArticleHeader({ article }: { article: ResolvedArticle }) {
   return (
@@ -20,15 +19,6 @@ export function ArticleHeader({ article }: { article: ResolvedArticle }) {
         publishedAt={article.publishedAt}
         updatedAt={article.contentUpdatedAt}
         readingMinutes={article.readingMinutes}
-      />
-
-      <ArticleCover
-        className="mt-8 rounded-card border border-line"
-        src={article.image}
-        alt={article.imageAlt}
-        seed={article.slug}
-        priority
-        sizes="(max-width: 1024px) 100vw, 720px"
       />
     </header>
   );
