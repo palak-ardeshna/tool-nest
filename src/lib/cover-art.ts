@@ -1,8 +1,7 @@
 /**
  * Deterministic palette + motif selection for generated article covers.
  *
- * Shared by the on-page cover ([ArticleCover]) and the per-article Open Graph
- * image, so a shared article looks like the card that linked to it.
+ * Used only by the per-article Open Graph image; pages show no cover.
  */
 
 export type CoverPalette = {

@@ -56,7 +56,6 @@ export default async function AuthorPage({ params }: PageProps) {
       </h2>
       <ArticleGrid
         articles={articles}
-        priorityCount={3}
         emptyTitle="Nothing published yet"
         emptyDescription="This author has no published articles right now."
       />

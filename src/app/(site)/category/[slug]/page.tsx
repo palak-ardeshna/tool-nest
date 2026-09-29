@@ -79,7 +79,6 @@ export default async function CategoryPage({ params }: PageProps) {
 
       <ArticleGrid
         articles={articles}
-        priorityCount={3}
         emptyTitle={`No ${category.name} articles yet`}
         emptyDescription="We publish here as soon as the testing is done. In the meantime, browse the rest of the archive."
       />

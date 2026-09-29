@@ -6,16 +6,14 @@ import { cn } from "@/lib/cn";
 
 type ArticleCardProps = {
   article: ResolvedArticle;
-  /** `feature` is the large lead card, `compact` drops the cover entirely. */
+  /** `feature` is the large lead card, `compact` is a plain title row. */
   variant?: "default" | "feature" | "compact";
-  priority?: boolean;
   className?: string;
 };
 
 export function ArticleCard({
   article,
   variant = "default",
-  priority = false,
   className,
 }: ArticleCardProps) {
   const href = `/articles/${article.slug}`;

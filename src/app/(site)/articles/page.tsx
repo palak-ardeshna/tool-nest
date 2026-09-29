@@ -43,7 +43,7 @@ export default function ArticlesPage() {
         </p>
       </header>
 
-      <ArticleGrid articles={articles} priorityCount={3} />
+      <ArticleGrid articles={articles} />
 
       <JsonLd data={breadcrumbSchema(crumbs)} />
     </Container>

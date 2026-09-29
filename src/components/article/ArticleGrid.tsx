@@ -7,13 +7,11 @@ export function ArticleGrid({
   columns = 3,
   emptyTitle = "No articles yet",
   emptyDescription = "New guides and comparisons are published here every week.",
-  priorityCount = 0,
 }: {
   articles: ResolvedArticle[];
   columns?: 2 | 3;
   emptyTitle?: string;
   emptyDescription?: string;
-  priorityCount?: number;
 }) {
   if (!articles.length) {
     return (
@@ -34,8 +32,8 @@ export function ArticleGrid({
           : "grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
       }
     >
-      {articles.map((article, index) => (
-        <ArticleCard key={article.slug} article={article} priority={index < priorityCount} />
+      {articles.map((article) => (
+        <ArticleCard key={article.slug} article={article} />
       ))}
     </div>
   );
