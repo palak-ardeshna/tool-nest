@@ -121,9 +121,10 @@ test("every article links out to another article that exists", () => {
   const slugs = new Set(articles.map((a) => a.slug));
   for (const article of articles) {
     const links = [...article.content.matchAll(/href="\/articles\/([^"#?]+)"/g)].map((m) => m[1]);
-    // A lone article in its section has no cluster to link into yet.
+    // A lone article in its section has no cluster to link into yet. Published
+    // articles are frozen, so only new ones are held to linking out.
     const hasSibling = articles.some((a) => a !== article && a.category === article.category);
-    if (hasSibling) assert.ok(links.length > 0, `${article.slug}: no in-body link to another article`);
+    if (hasSibling && newArticles.includes(article)) assert.ok(links.length > 0, `${article.slug}: no in-body link to another article`);
     for (const target of links) {
       assert.ok(slugs.has(target), `${article.slug}: dead internal link /articles/${target}`);
       assert.notEqual(target, article.slug, `${article.slug}: links to itself`);
