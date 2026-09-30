@@ -27,12 +27,11 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
 <p>I used Perplexity Comet for four kinds of jobs: researching and comparing prices, filling in online forms, working in my Gmail, and booking. One task took Comet somewhere between 5 and 15 minutes, which was slower than doing it by hand. It kept stopping to ask me to confirm, and it got a task wrong, so I had to redo it. I was never easy about letting it into my Gmail or near a login. On bookings I stopped before the payment step and did not let it pay.</p>
 
 <h2>What slowed it down</h2>
-<p>Three things, in my use. It was slower than my own hands. It kept stopping to ask me to confirm the next step, so I could not leave it alone for long. And it got a task wrong, which meant doing that task twice: once by Comet, once by me.</p>
-<p>The confirmations are a sensible default for an agent that can click buttons in your accounts. They still cost you time, and you should expect them if you plan to hand it a job and walk away.</p>
+<p>The confirmation prompts meant I could not hand Comet a job and leave it alone for long. It also got a task wrong, so I did that task twice, once through Comet and once myself.</p>
+<p>Confirmations are a sensible default for an agent that can click buttons in your accounts. Plan for them if you expect to walk away while it works.</p>
 
-<h2>Why I stopped before paying</h2>
-<p>An agent in your browser reads web pages as instructions it might follow. Brave's security team showed this against Comet in a report dated 20 August 2025: a hidden instruction inside a Reddit comment made Comet pull the user's email address and a one-time code from Gmail and post them back to the attacker, after the user only asked it to summarise the page. Brave added after publishing that Perplexity had still not fully fixed that kind of attack.</p>
-<p>That is why I kept payments to myself. The agent can get you to the checkout page. Your card details stay with you.</p>
+<h2>What a web page can make it do</h2>
+<p>An agent in your browser reads web pages and may follow instructions it finds there. Brave's security team showed this against Comet in a report dated 20 August 2025. A hidden instruction in a Reddit comment made Comet pull the user's email address and a one-time code from Gmail and post them back to the attacker, after the user had only asked it to summarise the page. Brave added after publishing that Perplexity had still not fully fixed that kind of attack.</p>
 
 <h2>How I would set it up now</h2>
 <p>Give the agent a browser profile that is not signed in to your bank, your main email or your password manager. Use it for research and drafts, where a wrong answer costs you a few minutes. If you need an assistant inside your mail, a connector with approval before every send is a calmer setup; my <a href="/articles/connect-gmail-calendar-drive-to-claude-pro">Claude Pro Gmail setup</a> uses one.</p>

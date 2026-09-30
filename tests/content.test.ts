@@ -254,13 +254,14 @@ test("no more than two articles publish on any single day", () => {
  */
 const HUMAN_RULE_DATE = Date.parse("2026-09-29");
 const plain = (html: string) => html.replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ").replace(/\s+/g, " ").trim();
-const newArticles = articles.filter((a) => Date.parse(a.publishedAt) > HUMAN_RULE_DATE);
+/** A rewrite on an older URL counts as new: publishedAt keeps the URL's first date. */
+const newArticles = articles.filter((a) => Date.parse(a.contentUpdatedAt ?? a.publishedAt) > HUMAN_RULE_DATE);
 
 test("new articles carry Palak's sign-off and his own paragraph", () => {
   for (const a of newArticles) {
     const r = a.humanReview;
     assert.ok(r, `${a.slug}: no humanReview — Palak has not signed this off`);
-    assert.ok(Date.parse(r.reviewedAt) <= Date.parse(a.publishedAt), `${a.slug}: reviewed after it was published`);
+    assert.ok(Date.parse(r.reviewedAt) <= Date.parse(a.contentUpdatedAt ?? a.publishedAt), `${a.slug}: reviewed after it was published`);
     const words = r.experience.trim().split(/\s+/).length;
     assert.ok(words >= 60, `${a.slug}: experience paragraph is ${words} words; write at least 60`);
     assert.match(r.experience, /\b(I|my|me)\b/, `${a.slug}: experience paragraph is not first-person`);
