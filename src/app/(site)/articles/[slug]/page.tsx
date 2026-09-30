@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { allArticles, getRelatedArticles } from "@/lib/articles";
+import { allArticles } from "@/lib/articles";
 import { getArticle } from "@/content";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -62,15 +62,19 @@ export default async function ArticlePage({ params }: PageProps) {
   const article = getArticle(slug);
   if (!article) notFound();
 
-  const related = getRelatedArticles(article, 3);
+  // Every other article, newest first, for the sidebar.
+  const others = allArticles
+    .filter((other) => other.slug !== article.slug)
+    .sort((a, b) => b.publishedAtDate.getTime() - a.publishedAtDate.getTime())
+    .slice(0, 8);
   const crumbs = buildCrumbs(article);
 
   return (
     <>
-      <Container width="reading" className="py-8 lg:py-12">
-        <Breadcrumbs items={crumbs} className="mb-6" />
+      <Container className="py-8 lg:grid lg:grid-cols-[minmax(0,720px)_260px] lg:justify-center lg:gap-16 lg:py-12">
+        <article className="min-w-0">
+          <Breadcrumbs items={crumbs} className="mb-6" />
 
-        <article>
           <ArticleHeader article={article} />
 
           <div className="mt-10 space-y-10">
@@ -88,7 +92,9 @@ export default async function ArticlePage({ params }: PageProps) {
           </div>
         </article>
 
-        <RelatedArticles articles={related} fromSlug={article.slug} />
+        <aside className="lg:sticky lg:top-24 lg:self-start">
+          <RelatedArticles articles={others} fromSlug={article.slug} />
+        </aside>
       </Container>
 
       <ArticleTracker

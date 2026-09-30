@@ -12,9 +12,9 @@ export function RelatedArticles({
   if (!articles.length) return null;
 
   return (
-    <section aria-labelledby="related" className="mt-14 border-t border-line pt-8">
+    <section aria-labelledby="related" className="mt-14 border-t border-line pt-8 lg:mt-0 lg:border-t-0 lg:pt-0">
       <h2 id="related" className="text-sm font-semibold text-ink">
-        Keep reading
+        More articles
       </h2>
       <ul className="mt-2 divide-y divide-line">
         {articles.map((article) => (
@@ -23,7 +23,7 @@ export function RelatedArticles({
               href={`/articles/${article.slug}`}
               event="related_article_click"
               params={{ from_article: fromSlug, to_article: article.slug }}
-              className="font-serif text-lg font-semibold leading-snug text-ink hover:underline"
+              className="font-serif text-lg font-semibold lg:text-base leading-snug text-ink hover:underline"
             >
               {article.title}
             </TrackedLink>
