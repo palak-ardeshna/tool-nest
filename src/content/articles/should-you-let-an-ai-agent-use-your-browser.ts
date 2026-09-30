@@ -17,7 +17,10 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
   author: "palak-patel",
   tags: ["Perplexity Comet", "AI Agents", "Browsers", "Security"],
   publishedAt: "2026-09-17",
-  contentUpdatedAt: "2026-09-18",
+  contentUpdatedAt: "2026-09-30",
+  seoTitle: "Should an AI Agent Use Your Browser? Comet Test",
+  seoDescription:
+    "I used Perplexity Comet for prices, forms, Gmail and a booking. It was slow, asked to confirm constantly, and I stopped it before it paid.",
   content: `
 <p>Should an AI agent drive your browser? After using Perplexity Comet for real jobs, my answer is yes for research, no for anything behind a login.</p>
 
@@ -32,8 +35,13 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
 <p>That is why I kept payments to myself. The agent can get you to the checkout page. Your card details stay with you.</p>
 
 <h2>How I would set it up now</h2>
-<p>Give the agent a browser profile that is not signed in to your bank, your main email or your password manager. Use it for research and drafts, where a wrong answer costs you a few minutes. If you need an assistant inside your mail, a connector with approval before every send is a calmer setup; I wrote up <a href="/articles/connect-gmail-calendar-drive-to-claude-pro">how I connected Gmail and Calendar to Claude Pro</a>.</p>
+<p>Give the agent a browser profile that is not signed in to your bank, your main email or your password manager. Use it for research and drafts, where a wrong answer costs you a few minutes. If you need an assistant inside your mail, a connector with approval before every send is a calmer setup; my <a href="/articles/connect-gmail-calendar-drive-to-claude-pro">Claude Pro Gmail setup</a> uses one.</p>
 `,
+  humanReview: {
+    reviewedAt: "2026-09-30",
+    experience:
+      "I used Perplexity Comet for four kinds of jobs: researching and comparing prices, filling in online forms, working in my Gmail, and booking. One task took Comet somewhere between 5 and 15 minutes, which was slower than doing it by hand. It kept stopping to ask me to confirm, and it got a task wrong, so I had to redo it. I was never easy about letting it into my Gmail or near a login. On bookings I stopped before the payment step and did not let it pay.",
+  },
   faqs: [
     {
       question: "Is Comet faster than doing the task yourself?",
