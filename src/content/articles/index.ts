@@ -1,6 +1,7 @@
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
+import { aiResearchToolsAndYourSources } from "@/content/articles/ai-research-tools-and-your-sources";
 import { aiBrowserAgentsAfterAtlas } from "@/content/articles/ai-browser-agents-after-atlas";
 import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notetakers-compared";
 import { chatgptVsClaudeForCoding } from "@/content/articles/chatgpt-vs-claude-for-coding";
@@ -19,4 +20,5 @@ export const articles: Article[] = [
   whichAiAssistantIsWorthPayingFor,
   chatgptVsClaudeForCoding,
   aiAppBuildersBeforeYouHireADeveloper,
+  aiResearchToolsAndYourSources,
 ];
