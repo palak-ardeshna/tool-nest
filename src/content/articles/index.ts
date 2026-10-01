@@ -4,6 +4,7 @@ import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-
 import { aiResearchToolsAndYourSources } from "@/content/articles/ai-research-tools-and-your-sources";
 import { aiBrowserAgentsAfterAtlas } from "@/content/articles/ai-browser-agents-after-atlas";
 import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notetakers-compared";
+import { appLaunchersRaycastAlfredAndPowertoys } from "@/content/articles/app-launchers-raycast-alfred-and-powertoys";
 import { chatgptVsClaudeForCoding } from "@/content/articles/chatgpt-vs-claude-for-coding";
 import { claudeOpus55VsFable51 } from "@/content/articles/claude-opus-5-5-vs-fable-5-1";
 import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect-gmail-calendar-drive-to-claude-pro";
@@ -23,4 +24,5 @@ export const articles: Article[] = [
   aiAppBuildersBeforeYouHireADeveloper,
   aiResearchToolsAndYourSources,
   passwordManagersAfterThePriceRises,
+  appLaunchersRaycastAlfredAndPowertoys,
 ];

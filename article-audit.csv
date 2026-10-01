@@ -43,7 +43,7 @@ gemini-flash-pricing-doubles-in-january,Gemini Flash Is Half Price Until 31 Dece
 deploying-nextjs-to-hostinger-from-github-actions,Deploying Next.js to Hostinger from GitHub Actions: The API Route Nobody Documents,2026-09-24,developer-tools,post-rule,Y,,keep
 claude-code-vs-cursor-what-a-solo-developer-pays,Claude Code vs Cursor: What a Solo Developer Actually Pays in 2026,2026-09-26,developer-tools,post-rule,Y,,keep
 next-js-16-caching-defaults-that-bite,The Next.js 16 Caching Defaults That Bite After You Deploy,2026-09-26,developer-tools,post-rule,Y,,keep
-app-launchers-raycast-alfred-and-powertoys,"App Launchers: Raycast, Alfred and PowerToys Command Palette",2026-09-14,productivity,pre-rule,"Y (Palak, 2026-09-30)",not checked,deleted 2026-09-29
+app-launchers-raycast-alfred-and-powertoys,"App Launchers: Raycast, Alfred and PowerToys Command Palette",2026-09-14,productivity,pre-rule,"Y (Palak, 2026-09-30)",not checked,rewritten 2026-10-01
 should-you-let-an-ai-agent-use-your-browser,"Should You Let an AI Agent Use Your Browser? What They Can Reach, and What Can Go Wrong",2026-09-17,ai-tools,pre-rule,"Y (Palak, 2026-09-30)",not checked,rewritten 2026-09-30
 feature-flags-config-file-or-platform,"Feature Flags: When a Config File Is Enough, and When to Buy a Platform",2026-09-11,developer-tools,pre-rule,"Y (Palak, 2026-09-30)",not checked,deleted 2026-09-29
 scheduling-links-and-when-to-skip-them,"Scheduling Links: When to Send One, and When to Just Offer Three Times",2026-09-09,productivity,pre-rule,N,not checked,deleted 2026-09-29
