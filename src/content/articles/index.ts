@@ -5,6 +5,7 @@ import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notet
 import { claudeOpus55VsFable51 } from "@/content/articles/claude-opus-5-5-vs-fable-5-1";
 import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect-gmail-calendar-drive-to-claude-pro";
 import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
+import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
@@ -13,4 +14,5 @@ export const articles: Article[] = [
   shouldYouLetAnAiAgentUseYourBrowser,
   aiMeetingNotetakersCompared,
   aiBrowserAgentsAfterAtlas,
+  whichAiAssistantIsWorthPayingFor,
 ];
