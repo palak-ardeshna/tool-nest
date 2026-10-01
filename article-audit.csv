@@ -49,7 +49,7 @@ feature-flags-config-file-or-platform,"Feature Flags: When a Config File Is Enou
 scheduling-links-and-when-to-skip-them,"Scheduling Links: When to Send One, and When to Just Offer Three Times",2026-09-09,productivity,pre-rule,N,not checked,deleted 2026-09-29
 read-it-later-apps-after-pocket,"Read-It-Later Apps After Pocket: What to Use, and Whether You Need One at All",2026-09-11,productivity,pre-rule,"Y (Palak, 2026-09-30)",not checked,deleted 2026-09-29
 search-engines-beyond-google,"Search Engines Beyond Google: Which Ones Have Their Own Index, and Why It Matters",2026-09-12,research,pre-rule,N,not checked,deleted 2026-09-29
-ai-app-builders-before-you-hire-a-developer,"AI App Builders: What Lovable, Bolt and v0 Give You Before You Hire a Developer",2026-09-12,ai-tools,pre-rule,"Y (Palak, 2026-09-30)",not checked,deleted 2026-09-29
+ai-app-builders-before-you-hire-a-developer,"AI App Builders: What Lovable, Bolt and v0 Give You Before You Hire a Developer",2026-09-12,ai-tools,pre-rule,"Y (Palak, 2026-09-30)",not checked,rewritten 2026-10-01
 leaving-cursor-what-moves-and-what-doesnt,"Leaving Cursor After the SpaceX Deal: What Moves to Windsurf, Claude Code or OpenCode, and What Does Not",2026-09-17,developer-tools,pre-rule,"Y (Palak, 2026-09-30)",not checked,deleted 2026-09-29
 object-storage-for-a-small-app-s3-r2-or-b2,"Object Storage for a Small App: S3, Cloudflare R2 or Backblaze B2",2026-09-14,developer-tools,pre-rule,"Y (Palak, 2026-09-30)",not checked,deleted 2026-09-29
 website-blockers-that-actually-hold,"Website Blockers That Actually Hold: Freedom, Cold Turkey, Opal and the Built-Ins",2026-09-14,productivity,pre-rule,Y,,keep
