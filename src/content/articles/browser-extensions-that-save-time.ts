@@ -11,7 +11,7 @@ import type { Article } from "@/content/types";
  */
 export const browserExtensionsThatSaveTime: Article = {
   slug: "browser-extensions-that-save-time",
-  title: "Which Browser Extensions Are Worth Keeping",
+  title: "I Removed 10 Extensions and Kept 2",
   excerpt:
     "The memory use is what made me look. What survived the clear-out was a content blocker and one developer tool, and I have not missed anything I took off.",
   category: "ai-for-professionals",

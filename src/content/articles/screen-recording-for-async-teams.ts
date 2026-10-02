@@ -14,7 +14,7 @@ import type { Article } from "@/content/types";
  */
 export const screenRecordingForAsyncTeams: Article = {
   slug: "screen-recording-for-async-teams",
-  title: "Screen Recording for an Async Team",
+  title: "I Recorded a 10-Minute How-To. Nobody Watched It",
   excerpt:
     "A screen recording was supposed to save me writing out the steps. It took longer than typing them, the clip ran about 10 minutes, and the reply never came.",
   category: "ai-for-professionals",
