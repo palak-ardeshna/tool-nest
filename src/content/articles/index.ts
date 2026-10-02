@@ -1,10 +1,19 @@
+import { aiInSpreadsheetsWhatItActuallyDoes } from "@/content/articles/ai-in-spreadsheets-what-it-actually-does";
+import { emailClientsAfterNotionMail } from "@/content/articles/email-clients-after-notion-mail";
+import { leavingCursorWhatMovesAndWhatDoesnt } from "@/content/articles/leaving-cursor-what-moves-and-what-doesnt";
+import { objectStorageForASmallAppS3R2OrB2 } from "@/content/articles/object-storage-for-a-small-app-s3-r2-or-b2";
+import { websiteBlockersThatActuallyHold } from "@/content/articles/website-blockers-that-actually-hold";
+import { whiteboardAndDiagramToolsWorthOpening } from "@/content/articles/whiteboard-and-diagram-tools-worth-opening";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
 import { aiResearchToolsAndYourSources } from "@/content/articles/ai-research-tools-and-your-sources";
+import { aiVoiceToolsWhatWorks } from "@/content/articles/ai-voice-tools-what-works";
 import { aiVideoToolsWorthTheSubscription } from "@/content/articles/ai-video-tools-worth-the-subscription";
 import { auditingSmallTeamSoftwareSpend } from "@/content/articles/auditing-small-team-software-spend";
+import { authenticationBuildOrBuy } from "@/content/articles/authentication-build-or-buy";
 import { automateRepetitiveWorkWithoutCode } from "@/content/articles/automate-repetitive-work-without-code";
+import { errorTrackingForSmallTeams } from "@/content/articles/error-tracking-for-small-teams";
 import { figmaAlternativesWorthConsidering } from "@/content/articles/figma-alternatives-worth-considering";
 import { freeApisWorthBuildingOn } from "@/content/articles/free-apis-worth-building-on";
 import { freeVsPaidAiWritingTools } from "@/content/articles/free-vs-paid-ai-writing-tools";
@@ -26,6 +35,7 @@ import { deployingNextjsToHostingerFromGithubActions } from "@/content/articles/
 import { featureFlagsConfigFileOrPlatform } from "@/content/articles/feature-flags-config-file-or-platform";
 import { geminiFlashPricingDoublesInJanuary } from "@/content/articles/gemini-flash-pricing-doubles-in-january";
 import { nextJs16CachingDefaultsThatBite } from "@/content/articles/next-js-16-caching-defaults-that-bite";
+import { officeSuitesAfterThe2026PriceRises } from "@/content/articles/office-suites-after-the-2026-price-rises";
 import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
 import { postgresToolsWorthUsing } from "@/content/articles/postgres-tools-worth-using";
 import { readItLaterAppsAfterPocket } from "@/content/articles/read-it-later-apps-after-pocket";
@@ -37,7 +47,9 @@ import { terminalSetupsThatAreActuallyFaster } from "@/content/articles/terminal
 import { what2000SearchImpressionsActuallyPaid } from "@/content/articles/what-2000-search-impressions-actually-paid";
 import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
 import { softwareYouCanStillBuyOnce } from "@/content/articles/software-you-can-still-buy-once";
+import { taskManagersCompared } from "@/content/articles/task-managers-compared";
 import { timeBlockingThatSurvivesARealWeek } from "@/content/articles/time-blocking-that-survives-a-real-week";
+import { whichBrowserAfterArc } from "@/content/articles/which-browser-after-arc";
 import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
 
 /** Every article in the publication. Add a file above, then a line here. */
@@ -48,16 +60,21 @@ export const articles: Article[] = [
   aiMeetingNotetakersCompared,
   aiBrowserAgentsAfterAtlas,
   whichAiAssistantIsWorthPayingFor,
+  whichBrowserAfterArc,
   chatgptVsClaudeForCoding,
   aiAppBuildersBeforeYouHireADeveloper,
   aiResearchToolsAndYourSources,
   aiVideoToolsWorthTheSubscription,
+  aiVoiceToolsWhatWorks,
   auditingSmallTeamSoftwareSpend,
+  authenticationBuildOrBuy,
   automateRepetitiveWorkWithoutCode,
+  errorTrackingForSmallTeams,
   figmaAlternativesWorthConsidering,
   freeApisWorthBuildingOn,
   freeVsPaidAiWritingTools,
   howToChooseAnAiImageGenerator,
+  officeSuitesAfterThe2026PriceRises,
   passwordManagersAfterThePriceRises,
   appLaunchersRaycastAlfredAndPowertoys,
   bestAiCodingToolsForReactDevelopers,
@@ -80,5 +97,12 @@ export const articles: Article[] = [
   claudeConnectorsForACharteredAccountant,
   what2000SearchImpressionsActuallyPaid,
   browserExtensionsThatSaveTime,
+  taskManagersCompared,
   timeBlockingThatSurvivesARealWeek,
+  aiInSpreadsheetsWhatItActuallyDoes,
+  emailClientsAfterNotionMail,
+  leavingCursorWhatMovesAndWhatDoesnt,
+  objectStorageForASmallAppS3R2OrB2,
+  websiteBlockersThatActuallyHold,
+  whiteboardAndDiagramToolsWorthOpening,
 ];
