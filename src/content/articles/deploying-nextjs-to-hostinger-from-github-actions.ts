@@ -25,7 +25,7 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
   content: `
 <p>A Next.js build is not one file you drop on a server. It is around a thousand of them, most of them small, many with hashed names that change every time you build. How you move that set of files is the entire deployment, and it is the part most guides treat as an afterthought.</p>
 
-<p>I run a Hostinger VPS with Node on it, and I started by having GitHub Actions push the build up over FTP. That was the mistake. The failure was not a clean one where the job stops and tells you: it would finish, and the site would be left half updated, with some files from the new build and some from the old. A page would load with markup from one version asking for assets from another. Moving to copying over SSH with rsync is what ended it, because rsync sends only what changed rather than opening a connection per file for all of them.</p>
+<p>I run a Hostinger VPS with Node on it, and I started by having GitHub Actions push the build up over FTP. With a build output of around 1,000 files, that was the mistake. The failure was not a clean one where the job stops and tells you: it would finish, and the site would be left half updated, with some files from the new build and some from the old. A page would load with markup from one version asking for assets from another. Moving to copying over SSH with rsync is what ended it, because rsync sends only what changed rather than opening a connection per file for all of them.</p>
 
 <h2>Why FTP and a Next.js build are a bad pair</h2>
 <ol>
@@ -55,6 +55,6 @@ export const deployingNextjsToHostingerFromGithubActions: Article = {
   humanReview: {
     reviewedAt: "2026-10-02",
     experience:
-      "I run a Hostinger VPS with Node on it, and I started by having GitHub Actions push the build up over FTP. That was the mistake. The failure was not a clean one where the job stops and tells you: it would finish, and the site would be left half updated, with some files from the new build and some from the old. A page would load with markup from one version asking for assets from another. Moving to copying over SSH with rsync is what ended it, because rsync sends only what changed rather than opening a connection per file for all of them.",
+      "I run a Hostinger VPS with Node on it, and I started by having GitHub Actions push the build up over FTP. With a build output of around 1,000 files, that was the mistake. The failure was not a clean one where the job stops and tells you: it would finish, and the site would be left half updated, with some files from the new build and some from the old. A page would load with markup from one version asking for assets from another. Moving to copying over SSH with rsync is what ended it, because rsync sends only what changed rather than opening a connection per file for all of them.",
   },
 };

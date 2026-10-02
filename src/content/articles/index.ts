@@ -15,6 +15,7 @@ import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-th
 import { deployingNextjsToHostingerFromGithubActions } from "@/content/articles/deploying-nextjs-to-hostinger-from-github-actions";
 import { featureFlagsConfigFileOrPlatform } from "@/content/articles/feature-flags-config-file-or-platform";
 import { geminiFlashPricingDoublesInJanuary } from "@/content/articles/gemini-flash-pricing-doubles-in-january";
+import { nextJs16CachingDefaultsThatBite } from "@/content/articles/next-js-16-caching-defaults-that-bite";
 import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
 import { postgresToolsWorthUsing } from "@/content/articles/postgres-tools-worth-using";
 import { readItLaterAppsAfterPocket } from "@/content/articles/read-it-later-apps-after-pocket";
@@ -55,4 +56,5 @@ export const articles: Article[] = [
   postgresToolsWorthUsing,
   terminalSetupsThatAreActuallyFaster,
   deployingNextjsToHostingerFromGithubActions,
+  nextJs16CachingDefaultsThatBite,
 ];
