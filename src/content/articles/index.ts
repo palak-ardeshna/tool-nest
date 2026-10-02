@@ -11,6 +11,7 @@ import { claudeOpus55VsFable51 } from "@/content/articles/claude-opus-5-5-vs-fab
 import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect-gmail-calendar-drive-to-claude-pro";
 import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
 import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
+import { readItLaterAppsAfterPocket } from "@/content/articles/read-it-later-apps-after-pocket";
 import { runningAiModelsOnYourOwnHardware } from "@/content/articles/running-ai-models-on-your-own-hardware";
 import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recording-for-async-teams";
 import { sendingEmailFromYourApp } from "@/content/articles/sending-email-from-your-app";
@@ -37,4 +38,5 @@ export const articles: Article[] = [
   screenRecordingForAsyncTeams,
   whenASpreadsheetBecomesADatabase,
   sendingEmailFromYourApp,
+  readItLaterAppsAfterPocket,
 ];
