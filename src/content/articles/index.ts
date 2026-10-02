@@ -12,6 +12,7 @@ import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect
 import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
 import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
 import { runningAiModelsOnYourOwnHardware } from "@/content/articles/running-ai-models-on-your-own-hardware";
+import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recording-for-async-teams";
 import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
 import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
 
@@ -31,4 +32,5 @@ export const articles: Article[] = [
   bestAiCodingToolsForReactDevelopers,
   runningAiModelsOnYourOwnHardware,
   pdfToolsBeyondTheBrowser,
+  screenRecordingForAsyncTeams,
 ];
