@@ -7,6 +7,7 @@ import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notet
 import { appLaunchersRaycastAlfredAndPowertoys } from "@/content/articles/app-launchers-raycast-alfred-and-powertoys";
 import { bestAiCodingToolsForReactDevelopers } from "@/content/articles/best-ai-coding-tools-for-react-developers";
 import { chatgptVsClaudeForCoding } from "@/content/articles/chatgpt-vs-claude-for-coding";
+import { checkingAClaimBeforeYouPublish } from "@/content/articles/checking-a-claim-before-you-publish";
 import { claudeOpus55VsFable51 } from "@/content/articles/claude-opus-5-5-vs-fable-5-1";
 import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect-gmail-calendar-drive-to-claude-pro";
 import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
@@ -41,4 +42,5 @@ export const articles: Article[] = [
   sendingEmailFromYourApp,
   readItLaterAppsAfterPocket,
   featureFlagsConfigFileOrPlatform,
+  checkingAClaimBeforeYouPublish,
 ];
