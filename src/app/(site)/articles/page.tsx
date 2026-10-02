@@ -2,7 +2,8 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ArticleList } from "@/components/article/ArticleList";
 import { JsonLd } from "@/components/JsonLd";
-import { allArticles } from "@/lib/articles";
+import { Pagination } from "@/components/article/Pagination";
+import { pageCount, pageSlice } from "@/lib/pagination";
 import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -13,20 +14,16 @@ export const metadata = buildMetadata({
 });
 
 /**
- * The full archive on one static page.
+ * Page 1 of the archive.
  *
- * Pagination was removed rather than fixed. It created two problems for one
- * benefit nobody was getting at this size: page 2 canonicalised to page 1 while
- * staying indexable, and an out-of-range `?page=` rendered not-found content
- * under HTTP 200 — a soft 404 that `notFound()` cannot fix, because the status
- * is already committed by the time a streamed page can call it. Reinstate it
- * when the archive is long enough to need it, as a real `/articles/page/[n]`
- * segment that can 404 properly.
+ * Pagination is a real `/articles/page/[n]` segment, not a `?page=` parameter:
+ * the pages that exist are built, `dynamicParams = false` makes anything else a
+ * genuine 404 rather than not-found content under HTTP 200, and each page
+ * carries its own canonical instead of pointing at page 1. Those two faults are
+ * why the earlier query-string pagination was removed.
  */
 export default function ArticlesPage() {
-  // Every article, not a page of them: this is the archive the footer and the
-  // breadcrumb promise, and the only page that links to the whole back catalogue.
-  const articles = allArticles;
+  const articles = pageSlice(1);
   const crumbs = [{ label: "Home", href: "/" }, { label: "All articles" }];
 
   return (
@@ -41,6 +38,7 @@ export default function ArticlesPage() {
       </header>
 
       <ArticleList articles={articles} />
+      <Pagination page={1} total={pageCount()} />
 
       <JsonLd data={breadcrumbSchema(crumbs)} />
     </Container>

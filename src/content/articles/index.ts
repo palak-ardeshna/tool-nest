@@ -21,6 +21,7 @@ import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recordin
 import { sendingEmailFromYourApp } from "@/content/articles/sending-email-from-your-app";
 import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
 import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
+import { softwareYouCanStillBuyOnce } from "@/content/articles/software-you-can-still-buy-once";
 import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
 
 /** Every article in the publication. Add a file above, then a line here. */
@@ -47,4 +48,5 @@ export const articles: Article[] = [
   checkingAClaimBeforeYouPublish,
   geminiFlashPricingDoublesInJanuary,
   ciPipelinesThatStayUnderTenMinutes,
+  softwareYouCanStillBuyOnce,
 ];

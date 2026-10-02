@@ -178,24 +178,33 @@ test("rendered page titles fit in a search result", () => {
 });
 
 /**
- * /articles is the only page linking the whole back catalogue, and the helper
- * it reads through defaults to nine. Listing a slice there silently drops the
- * older half of the site out of its own index.
+ * /articles is the entry to the whole back catalogue. It is paginated, so the
+ * guarantee is no longer "page 1 shows everything" but "the pages together show
+ * everything, and nothing is stranded on a page that is never built". A
+ * getLatestArticles() slice would silently drop the older half of the site.
  */
-test("the archive page lists every published article", async () => {
+test("the archive pages together list every published article", async () => {
   const { allArticles } = await import("../src/content");
-  assert.equal(
-    allArticles.length,
-    articles.filter((a) => Date.parse(a.publishedAt) <= Date.now()).length,
-    "allArticles should expose every published article",
-  );
+  const published = articles.filter((a) => Date.parse(a.publishedAt) <= Date.now()).length;
+  assert.equal(allArticles.length, published, "allArticles should expose every published article");
+
+  const { PER_PAGE, pageCount, pageSlice } = await import("../src/lib/pagination");
+  const seen = new Set<string>();
+  for (let n = 1; n <= pageCount(); n++) {
+    const slice = pageSlice(n);
+    assert.ok(slice.length > 0, `page ${n} is built but empty`);
+    assert.ok(slice.length <= PER_PAGE, `page ${n} shows more than ${PER_PAGE} articles`);
+    for (const a of slice) seen.add(a.slug);
+  }
+  assert.equal(seen.size, allArticles.length, "some articles are not reachable from any archive page");
+
   const source = await import("node:fs").then((fs) =>
     fs.readFileSync("src/app/(site)/articles/page.tsx", "utf8"),
   );
   assert.match(
     source,
-    /const articles = allArticles;/,
-    "/articles must render allArticles, not a getLatestArticles() slice",
+    /pageSlice\(1\)/,
+    "/articles must render page 1 of the paginated archive, not a getLatestArticles() slice",
   );
 });
 

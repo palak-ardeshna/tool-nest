@@ -3,6 +3,7 @@ import { allArticles } from "@/lib/articles";
 import { resolvedCategories } from "@/content";
 import { authors } from "@/content";
 import { absoluteUrl } from "@/lib/seo";
+import { pageCount } from "@/lib/pagination";
 
 type ChangeFrequency = MetadataRoute.Sitemap[number]["changeFrequency"];
 
@@ -25,6 +26,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: newest,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
+    })),
+    // Page 2 onward: page 1 is already in staticRoutes as /articles.
+    ...Array.from({ length: pageCount() - 1 }, (_, i) => ({
+      url: absoluteUrl(`/articles/page/${i + 2}`),
+      lastModified: newest,
+      changeFrequency: "daily" as const,
+      priority: 0.5,
     })),
     ...resolvedCategories.map((category) => ({
       url: absoluteUrl(`/category/${category.slug}`),
