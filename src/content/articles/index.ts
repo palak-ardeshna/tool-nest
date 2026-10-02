@@ -8,10 +8,12 @@ import { appLaunchersRaycastAlfredAndPowertoys } from "@/content/articles/app-la
 import { bestAiCodingToolsForReactDevelopers } from "@/content/articles/best-ai-coding-tools-for-react-developers";
 import { chatgptVsClaudeForCoding } from "@/content/articles/chatgpt-vs-claude-for-coding";
 import { checkingAClaimBeforeYouPublish } from "@/content/articles/checking-a-claim-before-you-publish";
+import { ciPipelinesThatStayUnderTenMinutes } from "@/content/articles/ci-pipelines-that-stay-under-ten-minutes";
 import { claudeOpus55VsFable51 } from "@/content/articles/claude-opus-5-5-vs-fable-5-1";
 import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect-gmail-calendar-drive-to-claude-pro";
 import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
 import { featureFlagsConfigFileOrPlatform } from "@/content/articles/feature-flags-config-file-or-platform";
+import { geminiFlashPricingDoublesInJanuary } from "@/content/articles/gemini-flash-pricing-doubles-in-january";
 import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
 import { readItLaterAppsAfterPocket } from "@/content/articles/read-it-later-apps-after-pocket";
 import { runningAiModelsOnYourOwnHardware } from "@/content/articles/running-ai-models-on-your-own-hardware";
@@ -43,4 +45,6 @@ export const articles: Article[] = [
   readItLaterAppsAfterPocket,
   featureFlagsConfigFileOrPlatform,
   checkingAClaimBeforeYouPublish,
+  geminiFlashPricingDoublesInJanuary,
+  ciPipelinesThatStayUnderTenMinutes,
 ];
