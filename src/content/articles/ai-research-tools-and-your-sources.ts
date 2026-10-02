@@ -11,7 +11,7 @@ import type { Article } from "@/content/types";
  */
 export const aiResearchToolsAndYourSources: Article = {
   slug: "ai-research-tools-and-your-sources",
-  title: "I Opened All 5 Links an AI Cited. Two Did Not Hold Up",
+  title: "Checking the Sources an AI Research Tool Cites",
   excerpt:
     "A research answer for a client came back with 5 citations. One page did not contain the claim, another quoted a price the vendor had already changed. Here is what a citation actually proves.",
   category: "ai-for-professionals",

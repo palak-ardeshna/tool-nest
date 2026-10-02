@@ -11,7 +11,7 @@ import type { Article } from "@/content/types";
  */
 export const softwareYouCanStillBuyOnce: Article = {
   slug: "software-you-can-still-buy-once",
-  title: "I Still Own the App. The Useful Part Became a Subscription",
+  title: "Software You Can Still Buy Once",
   excerpt:
     "The warning about buying software outright is that updates stop. That is not what happened to me. The licence held, the program still runs, and the features worth having moved to a paid cloud tier.",
   category: "ai-for-professionals",

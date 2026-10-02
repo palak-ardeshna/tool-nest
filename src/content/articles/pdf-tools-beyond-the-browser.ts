@@ -13,7 +13,7 @@ import type { Article } from "@/content/types";
  */
 export const pdfToolsBeyondTheBrowser: Article = {
   slug: "pdf-tools-beyond-the-browser",
-  title: "A Free Web PDF Tool Merged 20 Files in 5 Minutes, Then Stopped Me",
+  title: "Free PDF Tools and Where They Stop You",
   excerpt:
     "iLovePDF handled a merge of more than 20 files in about 5 minutes and pulled tables out cleanly. Then the free tier hit its limit mid-job, which is worth knowing before you put a client's file in it.",
   category: "ai-for-professionals",

@@ -13,7 +13,7 @@ import type { Article } from "@/content/types";
  */
 export const readItLaterAppsAfterPocket: Article = {
   slug: "read-it-later-apps-after-pocket",
-  title: "I Never Replaced Pocket. I Just Have 30 Tabs Open",
+  title: "Read-It-Later Apps After Pocket Shut Down",
   excerpt:
     "The honest answer to what replaced Pocket, for me, is nothing. One of those tabs had been open about 3 months, and the pricing page in it was already wrong.",
   category: "ai-for-professionals",

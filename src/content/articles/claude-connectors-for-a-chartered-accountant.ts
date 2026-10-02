@@ -12,7 +12,7 @@ import type { Article } from "@/content/types";
  */
 export const claudeConnectorsForACharteredAccountant: Article = {
   slug: "claude-connectors-for-a-chartered-accountant",
-  title: "It Found Three of the Five Emails I Needed",
+  title: "Claude Connectors for a Chartered Accountant",
   excerpt:
     "I connected Gmail, Drive and Calendar for a chartered accountant with about 5 years of mail. The searching is the point, and incomplete searching is the thing nobody warns you about.",
   category: "ai-for-professionals",

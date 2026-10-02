@@ -13,7 +13,7 @@ import type { Article } from "@/content/types";
  */
 export const postgresToolsWorthUsing: Article = {
   slug: "postgres-tools-worth-using",
-  title: "The Web Console Gave Up Around 100,000 Rows",
+  title: "Postgres Tools: psql and the Web Console",
   excerpt:
     "A hosted provider's console is the fastest way to look at a table, until the table gets big. Mine started crawling and crashing at about 100,000 rows, and psql did not care.",
   category: "ai-for-professionals",

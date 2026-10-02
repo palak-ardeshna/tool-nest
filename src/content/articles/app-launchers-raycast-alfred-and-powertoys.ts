@@ -12,7 +12,7 @@ import type { Article } from "@/content/types";
  */
 export const appLaunchersRaycastAlfredAndPowertoys: Article = {
   slug: "app-launchers-raycast-alfred-and-powertoys",
-  title: "My Launcher Finds Apps and Loses Files",
+  title: "App Launchers and What Their File Search Misses",
   excerpt:
     "Ulauncher opens anything I have installed in one keystroke. Ask it for a file outside my home folder and it finds nothing. I gave up after about 5 tries.",
   category: "ai-for-professionals",

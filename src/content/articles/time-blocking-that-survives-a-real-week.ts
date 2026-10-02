@@ -12,7 +12,7 @@ import type { Article } from "@/content/types";
  */
 export const timeBlockingThatSurvivesARealWeek: Article = {
   slug: "time-blocking-that-survives-a-real-week",
-  title: "Seven or Eight of My Ten Blocks Overrun. I Still Do It",
+  title: "Time Blocking When Your Estimates Are Wrong",
   excerpt:
     "If time blocking is supposed to make the day predictable, mine fails most of the time. It is still worth doing, for a reason that has nothing to do with the estimates being right.",
   category: "ai-for-professionals",

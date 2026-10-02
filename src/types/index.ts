@@ -4,6 +4,7 @@ export type {
   Author,
   Category,
   Faq,
+  HumanReview,
   ResolvedArticle,
   ResolvedCategory,
   Source,

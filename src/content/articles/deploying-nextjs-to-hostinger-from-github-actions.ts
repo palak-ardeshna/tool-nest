@@ -11,7 +11,7 @@ import type { Article } from "@/content/types";
  */
 export const deployingNextjsToHostingerFromGithubActions: Article = {
   slug: "deploying-nextjs-to-hostinger-from-github-actions",
-  title: "FTP Left My Site Half Updated. 1,000 Files Will Do That",
+  title: "Deploying Next.js to Hostinger From GitHub Actions",
   excerpt:
     "A Next.js build is around a thousand files. Uploading that over FTP from GitHub Actions did not fail cleanly, it finished and left the site in a state that was neither the old version nor the new one.",
   category: "ai-for-professionals",

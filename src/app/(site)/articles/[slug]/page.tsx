@@ -9,6 +9,7 @@ import { QuickAnswer } from "@/components/article/QuickAnswer";
 import { ProsCons } from "@/components/article/ProsCons";
 import { Alternatives } from "@/components/article/Alternatives";
 import { Faq } from "@/components/article/Faq";
+import { HandsOn } from "@/components/article/HandsOn";
 import { Sources } from "@/components/article/Sources";
 import { AuthorCard } from "@/components/article/AuthorCard";
 import { RelatedArticles } from "@/components/article/RelatedArticles";
@@ -87,6 +88,7 @@ export default async function ArticlePage({ params }: PageProps) {
             <ProsCons pros={article.pros ?? []} cons={article.cons ?? []} />
             <Alternatives items={article.alternatives ?? []} />
             <Faq items={article.faqs ?? []} />
+            <HandsOn review={article.humanReview} author={article.author} />
             <Sources items={article.sources ?? []} />
             <AuthorCard author={article.author} />
           </div>

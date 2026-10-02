@@ -13,7 +13,7 @@ import type { Article } from "@/content/types";
  */
 export const checkingAClaimBeforeYouPublish: Article = {
   slug: "checking-a-claim-before-you-publish",
-  title: "The Claims That Get Through Are About Features, Not Prices",
+  title: "How I Check a Claim Before Publishing It",
   excerpt:
     "Nobody repeats a wrong price for long, because someone gets overcharged and complains. A wrong capability spreads for years. Here is the order I check things in, and what it costs me.",
   category: "ai-for-professionals",

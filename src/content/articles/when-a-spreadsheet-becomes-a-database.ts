@@ -12,7 +12,7 @@ import type { Article } from "@/content/types";
  */
 export const whenASpreadsheetBecomesADatabase: Article = {
   slug: "when-a-spreadsheet-becomes-a-database",
-  title: "The Spreadsheet Changed My Numbers Without Telling Me",
+  title: "When a Spreadsheet Should Become a Database",
   excerpt:
     "A sheet holding invoices and stock quietly reformatted amounts and dates, so the totals stopped being true. It also took about 30 seconds to open. That is the point a database stops being overkill.",
   category: "ai-for-professionals",

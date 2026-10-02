@@ -13,7 +13,7 @@ import type { Article } from "@/content/types";
  */
 export const nextJs16CachingDefaultsThatBite: Article = {
   slug: "next-js-16-caching-defaults-that-bite",
-  title: "Next.js Does Not Cache Your Fetch. The Build Does",
+  title: "Next.js 16 Caching Defaults That Bite",
   excerpt:
     "Every article says Next.js caches fetch by default. On 16.3.1 it does not, caching is opt-in. You still get stale data, for a different reason, and that is why the usual fix does not work.",
   category: "ai-for-professionals",

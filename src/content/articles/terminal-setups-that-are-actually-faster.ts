@@ -13,7 +13,7 @@ import type { Article } from "@/content/types";
  */
 export const terminalSetupsThatAreActuallyFaster: Article = {
   slug: "terminal-setups-that-are-actually-faster",
-  title: "I Have 20 Aliases. I Use 5",
+  title: "A Faster Terminal Without Installing Anything",
   excerpt:
     "The terminal advice online is a list of things to install. I am on plain bash with the terminal my desktop came with, and the part that actually saved me time was 5 aliases.",
   category: "ai-for-professionals",

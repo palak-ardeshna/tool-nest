@@ -13,7 +13,7 @@ import type { Article } from "@/content/types";
  */
 export const claudeCodeVsCursorWhatASoloDeveloperPays: Article = {
   slug: "claude-code-vs-cursor-what-a-solo-developer-pays",
-  title: "I Moved From Cursor's Free Tier to a Plan I Pay For",
+  title: "Claude Code vs Cursor: What a Solo Developer Pays",
   excerpt:
     "The same change took about 5 minutes with Claude Code and about 15 with Cursor. That is not a fair fight: I was on Cursor's free tier and a Claude plan I pay for, and the comparison has to say so.",
   category: "ai-for-professionals",

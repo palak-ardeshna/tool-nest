@@ -12,7 +12,7 @@ import type { Article } from "@/content/types";
  */
 export const bestAiCodingToolsForReactDevelopers: Article = {
   slug: "best-ai-coding-tools-for-react-developers",
-  title: "One AI Tool, My React Code: What It Got Wrong Twice",
+  title: "AI Coding Tools on React: Where They Go Wrong",
   excerpt:
     "A state bug on this site took roughly 1 hour with Claude Pro, and I rewrote only a few of its lines. Both of its real mistakes were the same kind of mistake.",
   category: "ai-for-professionals",

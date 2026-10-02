@@ -365,3 +365,27 @@ test("a new article does not copy the previous article's layout", () => {
 test("no article has an image", () => {
   for (const a of articles) assert.equal(a.image, undefined, `${a.slug}: articles never have an image; remove it`);
 });
+
+/**
+ * Title variety.
+ *
+ * Every article title here is true, but for a while they were all true the same
+ * way: a number and a reversal, over and over — "I Removed 10 Extensions and
+ * Kept 2", "2,070 Impressions Bought Me 25 Clicks", "Three of the Five Emails I
+ * Needed". Read one at a time each is fine. Read as an archive listing, thirty
+ * of them are a template, and a template is the scaled-content fingerprint the
+ * 2026-09-28 reviewers said the whole site had. The first-person titles are
+ * worth keeping; they just cannot be the only shape on the page. A third is the
+ * ceiling, which leaves room for the ones that earn it.
+ */
+test("article titles are not all the same shape", () => {
+  const firstPersonOrNumberLed = articles.filter((article) =>
+    /^(I|My|It|We|[\d,]+)\b/.test(article.title),
+  );
+  const ceiling = Math.ceil(articles.length / 3);
+  assert.ok(
+    firstPersonOrNumberLed.length <= ceiling,
+    `${firstPersonOrNumberLed.length} of ${articles.length} titles open with I/My/It/a number ` +
+      `(ceiling ${ceiling}): ${firstPersonOrNumberLed.map((a) => a.slug).join(", ")}`,
+  );
+});

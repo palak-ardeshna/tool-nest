@@ -12,7 +12,7 @@ import type { Article } from "@/content/types";
  */
 export const runningAiModelsOnYourOwnHardware: Article = {
   slug: "running-ai-models-on-your-own-hardware",
-  title: "A 4 GB Laptop GPU Runs a Local Model. It Does Not Replace One",
+  title: "Running AI Models on a 4 GB Laptop GPU",
   excerpt:
     "Ollama runs on my laptop's entry-level NVIDIA card and answers from a 3B model. The answers are worse than the hosted plans, and the machine heats up while I sit there doing nothing else.",
   category: "ai-for-professionals",

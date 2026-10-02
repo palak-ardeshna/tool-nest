@@ -11,7 +11,7 @@ import type { Article } from "@/content/types";
  */
 export const ciPipelinesThatStayUnderTenMinutes: Article = {
   slug: "ci-pipelines-that-stay-under-ten-minutes",
-  title: "Over 10 Minutes to About 4, Without Removing a Single Check",
+  title: "Getting a CI Pipeline Under Ten Minutes",
   excerpt:
     "My pipeline runs lint, type-check, tests, build and deploy. It used to take over 10 minutes. Two changes brought it to about 4, and neither of them was dropping a step.",
   category: "ai-for-professionals",

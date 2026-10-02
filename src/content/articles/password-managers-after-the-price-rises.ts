@@ -11,7 +11,7 @@ import type { Article } from "@/content/types";
  */
 export const passwordManagersAfterThePriceRises: Article = {
   slug: "password-managers-after-the-price-rises",
-  title: "Four Years on a Free Password Manager, and One I Still Pay For",
+  title: "Free and Paid Password Managers: What You Get",
   excerpt:
     "Chrome's manager has held my logins for more than four years and costs nothing. Bitwarden Premium is $19.80 a year. Here is what the money buys, and the one thing the free one keeps getting wrong.",
   category: "ai-for-professionals",

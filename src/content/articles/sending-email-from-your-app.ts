@@ -13,7 +13,7 @@ import type { Article } from "@/content/types";
  */
 export const sendingEmailFromYourApp: Article = {
   slug: "sending-email-from-your-app",
-  title: "Gmail Junked My App's Email. The Fix Was the From Address",
+  title: "Why Gmail Junks Email Sent From Your App",
   excerpt:
     "Other providers delivered it. Gmail sent it to spam. The cause was not SPF or DKIM, it was a no-reply address that did not exist as a mailbox, and the DNS wait to prove it was about 4 hours.",
   category: "ai-for-professionals",
