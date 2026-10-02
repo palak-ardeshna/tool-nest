@@ -2,6 +2,8 @@ import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
 import { aiResearchToolsAndYourSources } from "@/content/articles/ai-research-tools-and-your-sources";
+import { aiVideoToolsWorthTheSubscription } from "@/content/articles/ai-video-tools-worth-the-subscription";
+import { freeVsPaidAiWritingTools } from "@/content/articles/free-vs-paid-ai-writing-tools";
 import { aiBrowserAgentsAfterAtlas } from "@/content/articles/ai-browser-agents-after-atlas";
 import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notetakers-compared";
 import { appLaunchersRaycastAlfredAndPowertoys } from "@/content/articles/app-launchers-raycast-alfred-and-powertoys";
@@ -44,6 +46,8 @@ export const articles: Article[] = [
   chatgptVsClaudeForCoding,
   aiAppBuildersBeforeYouHireADeveloper,
   aiResearchToolsAndYourSources,
+  aiVideoToolsWorthTheSubscription,
+  freeVsPaidAiWritingTools,
   passwordManagersAfterThePriceRises,
   appLaunchersRaycastAlfredAndPowertoys,
   bestAiCodingToolsForReactDevelopers,

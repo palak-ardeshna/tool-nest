@@ -30,6 +30,22 @@ export function ArticleList({
         <li key={article.slug} className="py-5">
           <p className="text-sm text-muted">
             <time dateTime={isoDate(article.publishedAt)}>{formatDate(article.publishedAt)}</time>
+            {/* An article rewritten on its original URL keeps its first publication
+                date, so without this the listing dates a rewrite to the day the URL
+                went live and the new work reads as old. The article page already
+                says this; the archive is where someone scans. */}
+            {article.contentUpdatedAtDate &&
+            article.contentUpdatedAtDate.getTime() - article.publishedAtDate.getTime() > 864e5 ? (
+              <>
+                <span aria-hidden> · </span>
+                <span className="whitespace-nowrap">
+                  updated{" "}
+                  <time dateTime={isoDate(article.contentUpdatedAtDate)}>
+                    {formatDate(article.contentUpdatedAtDate)}
+                  </time>
+                </span>
+              </>
+            ) : null}
             <span aria-hidden> · </span>
             <Link href={`/category/${article.category.slug}`} className="hover:text-ink hover:underline">
               {article.category.name}
