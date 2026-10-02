@@ -26,10 +26,10 @@ export const automateRepetitiveWorkWithoutCode: Article = {
   content: `
 <p>I used n8n to move data from one place to another. Each workflow took me 1 to 2 hours to set up, and the job it replaced was 15 to 30 minutes of my own time. I built several of them. Today only one or two are still running. The rest I stopped using, which means the setup time on those never came back to me at all.</p>
 
-<p>That is not an argument against automating things. It is the arithmetic I wish I had done before I started, because it would have told me which of those workflows to build and which to leave alone.</p>
+<p>Here is the arithmetic I wish I had done before I started, because it would have told me which of those workflows to build and which to leave alone.</p>
 
 <h2>The arithmetic I skipped</h2>
-<p>Put the two numbers next to each other and the answer is uncomfortable.</p>
+<p>Put the two numbers next to each other and the answer gets uncomfortable.</p>
 <table>
 <thead><tr><th></th><th>My numbers</th></tr></thead>
 <tbody>
@@ -40,18 +40,18 @@ export const automateRepetitiveWorkWithoutCode: Article = {
 <tr><td>Still running today</td><td>One or two</td></tr>
 </tbody>
 </table>
-<p>Three to eight runs does not sound like much. It is the number that decides everything, though, because the question stops being "can this be automated" and becomes "will I actually run this three to eight more times".</p>
+<p>Three to eight runs does not sound like much, and it decides everything, because the question stops being "can this be automated" and becomes "will I actually run this three to eight more times".</p>
 <p>For one or two of mine the answer was yes, and those are the ones still going. For the rest the answer turned out to be no, and I had already spent the two hours by the time I found out. A workflow I ran twice and abandoned cost me more than doing the job by hand would have, every time.</p>
 
 <h2>Why I kept getting it wrong</h2>
-<p>The job that annoys you is not the same as the job you do often, and I kept automating the first one.</p>
+<p>I kept automating the job that annoyed me, when the job I did often was the one worth the time.</p>
 <p>A 20 minute task that irritates me feels like it must be worth removing. But irritation is about the experience of the task, not its frequency. The tasks worth automating are the dull ones I do every week without noticing, and those do not nag me into building anything.</p>
 <p>I was also wrong about build time in the same direction every time, which is a habit I have written about before in <a href="/articles/time-blocking-that-survives-a-real-week">how my time blocks overrun</a>. I estimated an hour and it was closer to two, because the first version works and then you spend the second hour on the parts that only show up with real data: a field that is sometimes empty, a date in the wrong format, an error that needs somewhere to go.</p>
 
 <h2>What "no code" does and does not cover</h2>
 <p>n8n's own documentation is clear about one half of this. For n8n Cloud it lists setup as "No installation needed", technical expertise "None required", and maintenance "Handled by n8n". For self-hosted it lists setup as "Requires setup (npm, Docker, or server)", expertise "Required for installation and configuration", and maintenance "Your responsibility". Read on 2 October 2026.</p>
 <p>All of that is about getting n8n running. None of it is about building the workflow, and the workflow is where my 1 to 2 hours went. "No installation needed" is true and does not mean the automation builds itself. You still have to know what the data looks like at each step, what happens when a step fails, and what the thing should do when the input is not what you promised it would be.</p>
-<p>That is the part no platform removes, because it is not setup. It is the actual description of the work, and somebody has to write it down.</p>
+<p>No platform removes that part, because it is the description of the work itself, and somebody has to write it down.</p>
 
 <h2>What I would do differently</h2>
 <p>Count the runs first. Write down how often you genuinely did this task in the last month, not how often it felt like you did. If the honest answer is fewer than about four times, do it by hand again and see whether it comes back.</p>
