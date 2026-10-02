@@ -14,6 +14,7 @@ import { passwordManagersAfterThePriceRises } from "@/content/articles/password-
 import { runningAiModelsOnYourOwnHardware } from "@/content/articles/running-ai-models-on-your-own-hardware";
 import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recording-for-async-teams";
 import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
+import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
 import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
 
 /** Every article in the publication. Add a file above, then a line here. */
@@ -33,4 +34,5 @@ export const articles: Article[] = [
   runningAiModelsOnYourOwnHardware,
   pdfToolsBeyondTheBrowser,
   screenRecordingForAsyncTeams,
+  whenASpreadsheetBecomesADatabase,
 ];
