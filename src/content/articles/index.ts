@@ -3,7 +3,10 @@ import type { Article } from "@/content/types";
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
 import { aiResearchToolsAndYourSources } from "@/content/articles/ai-research-tools-and-your-sources";
 import { aiVideoToolsWorthTheSubscription } from "@/content/articles/ai-video-tools-worth-the-subscription";
+import { automateRepetitiveWorkWithoutCode } from "@/content/articles/automate-repetitive-work-without-code";
+import { freeApisWorthBuildingOn } from "@/content/articles/free-apis-worth-building-on";
 import { freeVsPaidAiWritingTools } from "@/content/articles/free-vs-paid-ai-writing-tools";
+import { howToChooseAnAiImageGenerator } from "@/content/articles/how-to-choose-an-ai-image-generator";
 import { aiBrowserAgentsAfterAtlas } from "@/content/articles/ai-browser-agents-after-atlas";
 import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notetakers-compared";
 import { appLaunchersRaycastAlfredAndPowertoys } from "@/content/articles/app-launchers-raycast-alfred-and-powertoys";
@@ -47,7 +50,10 @@ export const articles: Article[] = [
   aiAppBuildersBeforeYouHireADeveloper,
   aiResearchToolsAndYourSources,
   aiVideoToolsWorthTheSubscription,
+  automateRepetitiveWorkWithoutCode,
+  freeApisWorthBuildingOn,
   freeVsPaidAiWritingTools,
+  howToChooseAnAiImageGenerator,
   passwordManagersAfterThePriceRises,
   appLaunchersRaycastAlfredAndPowertoys,
   bestAiCodingToolsForReactDevelopers,
