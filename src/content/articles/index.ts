@@ -7,6 +7,7 @@ import { aiMeetingNotetakersCompared } from "@/content/articles/ai-meeting-notet
 import { appLaunchersRaycastAlfredAndPowertoys } from "@/content/articles/app-launchers-raycast-alfred-and-powertoys";
 import { bestAiCodingToolsForReactDevelopers } from "@/content/articles/best-ai-coding-tools-for-react-developers";
 import { chatgptVsClaudeForCoding } from "@/content/articles/chatgpt-vs-claude-for-coding";
+import { browserExtensionsThatSaveTime } from "@/content/articles/browser-extensions-that-save-time";
 import { checkingAClaimBeforeYouPublish } from "@/content/articles/checking-a-claim-before-you-publish";
 import { ciPipelinesThatStayUnderTenMinutes } from "@/content/articles/ci-pipelines-that-stay-under-ten-minutes";
 import { claudeCodeVsCursorWhatASoloDeveloperPays } from "@/content/articles/claude-code-vs-cursor-what-a-solo-developer-pays";
@@ -29,6 +30,7 @@ import { terminalSetupsThatAreActuallyFaster } from "@/content/articles/terminal
 import { what2000SearchImpressionsActuallyPaid } from "@/content/articles/what-2000-search-impressions-actually-paid";
 import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
 import { softwareYouCanStillBuyOnce } from "@/content/articles/software-you-can-still-buy-once";
+import { timeBlockingThatSurvivesARealWeek } from "@/content/articles/time-blocking-that-survives-a-real-week";
 import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
 
 /** Every article in the publication. Add a file above, then a line here. */
@@ -63,4 +65,6 @@ export const articles: Article[] = [
   claudeCodeVsCursorWhatASoloDeveloperPays,
   claudeConnectorsForACharteredAccountant,
   what2000SearchImpressionsActuallyPaid,
+  browserExtensionsThatSaveTime,
+  timeBlockingThatSurvivesARealWeek,
 ];
