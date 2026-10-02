@@ -12,14 +12,17 @@ import { ciPipelinesThatStayUnderTenMinutes } from "@/content/articles/ci-pipeli
 import { claudeOpus55VsFable51 } from "@/content/articles/claude-opus-5-5-vs-fable-5-1";
 import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect-gmail-calendar-drive-to-claude-pro";
 import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
+import { deployingNextjsToHostingerFromGithubActions } from "@/content/articles/deploying-nextjs-to-hostinger-from-github-actions";
 import { featureFlagsConfigFileOrPlatform } from "@/content/articles/feature-flags-config-file-or-platform";
 import { geminiFlashPricingDoublesInJanuary } from "@/content/articles/gemini-flash-pricing-doubles-in-january";
 import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
+import { postgresToolsWorthUsing } from "@/content/articles/postgres-tools-worth-using";
 import { readItLaterAppsAfterPocket } from "@/content/articles/read-it-later-apps-after-pocket";
 import { runningAiModelsOnYourOwnHardware } from "@/content/articles/running-ai-models-on-your-own-hardware";
 import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recording-for-async-teams";
 import { sendingEmailFromYourApp } from "@/content/articles/sending-email-from-your-app";
 import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
+import { terminalSetupsThatAreActuallyFaster } from "@/content/articles/terminal-setups-that-are-actually-faster";
 import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
 import { softwareYouCanStillBuyOnce } from "@/content/articles/software-you-can-still-buy-once";
 import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
@@ -49,4 +52,7 @@ export const articles: Article[] = [
   geminiFlashPricingDoublesInJanuary,
   ciPipelinesThatStayUnderTenMinutes,
   softwareYouCanStillBuyOnce,
+  postgresToolsWorthUsing,
+  terminalSetupsThatAreActuallyFaster,
+  deployingNextjsToHostingerFromGithubActions,
 ];
