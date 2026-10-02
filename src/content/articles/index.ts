@@ -9,6 +9,8 @@ import { bestAiCodingToolsForReactDevelopers } from "@/content/articles/best-ai-
 import { chatgptVsClaudeForCoding } from "@/content/articles/chatgpt-vs-claude-for-coding";
 import { checkingAClaimBeforeYouPublish } from "@/content/articles/checking-a-claim-before-you-publish";
 import { ciPipelinesThatStayUnderTenMinutes } from "@/content/articles/ci-pipelines-that-stay-under-ten-minutes";
+import { claudeCodeVsCursorWhatASoloDeveloperPays } from "@/content/articles/claude-code-vs-cursor-what-a-solo-developer-pays";
+import { claudeConnectorsForACharteredAccountant } from "@/content/articles/claude-connectors-for-a-chartered-accountant";
 import { claudeOpus55VsFable51 } from "@/content/articles/claude-opus-5-5-vs-fable-5-1";
 import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect-gmail-calendar-drive-to-claude-pro";
 import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
@@ -24,6 +26,7 @@ import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recordin
 import { sendingEmailFromYourApp } from "@/content/articles/sending-email-from-your-app";
 import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
 import { terminalSetupsThatAreActuallyFaster } from "@/content/articles/terminal-setups-that-are-actually-faster";
+import { what2000SearchImpressionsActuallyPaid } from "@/content/articles/what-2000-search-impressions-actually-paid";
 import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
 import { softwareYouCanStillBuyOnce } from "@/content/articles/software-you-can-still-buy-once";
 import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
@@ -57,4 +60,7 @@ export const articles: Article[] = [
   terminalSetupsThatAreActuallyFaster,
   deployingNextjsToHostingerFromGithubActions,
   nextJs16CachingDefaultsThatBite,
+  claudeCodeVsCursorWhatASoloDeveloperPays,
+  claudeConnectorsForACharteredAccountant,
+  what2000SearchImpressionsActuallyPaid,
 ];
