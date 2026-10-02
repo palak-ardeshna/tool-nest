@@ -13,6 +13,7 @@ import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-th
 import { passwordManagersAfterThePriceRises } from "@/content/articles/password-managers-after-the-price-rises";
 import { runningAiModelsOnYourOwnHardware } from "@/content/articles/running-ai-models-on-your-own-hardware";
 import { screenRecordingForAsyncTeams } from "@/content/articles/screen-recording-for-async-teams";
+import { sendingEmailFromYourApp } from "@/content/articles/sending-email-from-your-app";
 import { shouldYouLetAnAiAgentUseYourBrowser } from "@/content/articles/should-you-let-an-ai-agent-use-your-browser";
 import { whenASpreadsheetBecomesADatabase } from "@/content/articles/when-a-spreadsheet-becomes-a-database";
 import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-assistant-is-worth-paying-for";
@@ -35,4 +36,5 @@ export const articles: Article[] = [
   pdfToolsBeyondTheBrowser,
   screenRecordingForAsyncTeams,
   whenASpreadsheetBecomesADatabase,
+  sendingEmailFromYourApp,
 ];
