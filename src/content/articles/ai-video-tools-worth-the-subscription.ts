@@ -20,7 +20,7 @@ export const aiVideoToolsWorthTheSubscription: Article = {
   author: "palak-patel",
   tags: ["CapCut", "Canva", "Veo", "AI Video", "Video Editing"],
   publishedAt: "2026-08-19",
-  contentUpdatedAt: "2026-08-21",
+  contentUpdatedAt: "2026-08-28",
   seoTitle: "CapCut vs Canva: What I Paid and Dropped",
   seoDescription:
     "I made 10 to 25 clips in CapCut and Canva. Cutting one long video took over 30 minutes in CapCut, so I kept the generator instead.",

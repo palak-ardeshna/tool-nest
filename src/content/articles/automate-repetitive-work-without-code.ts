@@ -19,7 +19,7 @@ export const automateRepetitiveWorkWithoutCode: Article = {
   author: "palak-patel",
   tags: ["n8n", "Automation", "No-Code", "Workflows"],
   publishedAt: "2026-08-19",
-  contentUpdatedAt: "2026-08-25",
+  contentUpdatedAt: "2026-08-28",
   seoTitle: "n8n: What Automation Actually Cost Me",
   seoDescription:
     "Each n8n workflow took me 1 to 2 hours to build to replace a 15 to 30 minute job. Most of what I built is switched off now. The payback arithmetic.",

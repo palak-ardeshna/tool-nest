@@ -19,7 +19,7 @@ export const freeApisWorthBuildingOn: Article = {
   author: "palak-patel",
   tags: ["GitHub API", "Rate Limits", "APIs", "Next.js"],
   publishedAt: "2026-08-19",
-  contentUpdatedAt: "2026-08-24",
+  contentUpdatedAt: "2026-08-26",
   seoTitle: "GitHub API Rate Limits: A Token Is Not Enough",
   seoDescription:
     "I had a token set and GitHub still rate limited my site. The block took 15 to 30 minutes. Moving the call to build time is what ended it.",

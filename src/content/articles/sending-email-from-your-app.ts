@@ -20,7 +20,7 @@ export const sendingEmailFromYourApp: Article = {
   author: "palak-patel",
   tags: ["Email", "Deliverability", "Gmail", "DNS", "SMTP"],
   publishedAt: "2026-09-06",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-14",
   seoTitle: "Why Gmail Junked My App's Email",
   seoDescription:
     "Mail from my site reached some inboxes but not Gmail. The cause was a no-reply From address that did not exist as a mailbox.",

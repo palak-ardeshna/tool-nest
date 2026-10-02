@@ -21,7 +21,7 @@ export const howToChooseAnAiImageGenerator: Article = {
   author: "palak-patel",
   tags: ["Image Generation", "Gemini", "ChatGPT", "DALL-E", "Design"],
   publishedAt: "2026-08-19",
-  contentUpdatedAt: "2026-08-23",
+  contentUpdatedAt: "2026-08-26",
   seoTitle: "AI Image Generators: Why I Stopped Using Them",
   seoDescription:
     "One usable image took 3 to 5 tries and 5 to 10 minutes. Text came out misspelt and the style never repeated, so this site generates its own covers.",

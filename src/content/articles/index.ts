@@ -3,7 +3,9 @@ import type { Article } from "@/content/types";
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
 import { aiResearchToolsAndYourSources } from "@/content/articles/ai-research-tools-and-your-sources";
 import { aiVideoToolsWorthTheSubscription } from "@/content/articles/ai-video-tools-worth-the-subscription";
+import { auditingSmallTeamSoftwareSpend } from "@/content/articles/auditing-small-team-software-spend";
 import { automateRepetitiveWorkWithoutCode } from "@/content/articles/automate-repetitive-work-without-code";
+import { figmaAlternativesWorthConsidering } from "@/content/articles/figma-alternatives-worth-considering";
 import { freeApisWorthBuildingOn } from "@/content/articles/free-apis-worth-building-on";
 import { freeVsPaidAiWritingTools } from "@/content/articles/free-vs-paid-ai-writing-tools";
 import { howToChooseAnAiImageGenerator } from "@/content/articles/how-to-choose-an-ai-image-generator";
@@ -50,7 +52,9 @@ export const articles: Article[] = [
   aiAppBuildersBeforeYouHireADeveloper,
   aiResearchToolsAndYourSources,
   aiVideoToolsWorthTheSubscription,
+  auditingSmallTeamSoftwareSpend,
   automateRepetitiveWorkWithoutCode,
+  figmaAlternativesWorthConsidering,
   freeApisWorthBuildingOn,
   freeVsPaidAiWritingTools,
   howToChooseAnAiImageGenerator,

@@ -19,7 +19,7 @@ export const chatgptVsClaudeForCoding: Article = {
   author: "palak-patel",
   tags: ["ChatGPT", "Claude", "Coding", "Next.js", "Debugging"],
   publishedAt: "2026-08-19",
-  contentUpdatedAt: "2026-10-01",
+  contentUpdatedAt: "2026-08-28",
   seoTitle: "ChatGPT vs Claude for Coding: What I Open First",
   seoDescription:
     "A paid Claude Pro plan and a free ChatGPT account, both used on the same Next.js code. Which one I open for code, and where each one fails me.",

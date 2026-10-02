@@ -20,7 +20,7 @@ export const terminalSetupsThatAreActuallyFaster: Article = {
   author: "palak-patel",
   tags: ["Terminal", "bash", "Linux", "Aliases", "Dotfiles"],
   publishedAt: "2026-08-21",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-08-31",
   seoTitle: "A Faster Terminal Without Installing Anything",
   seoDescription:
     "Plain bash, the terminal that came with the desktop, a hand-written prompt and about 20 aliases of which 5 get used. What actually saved time.",

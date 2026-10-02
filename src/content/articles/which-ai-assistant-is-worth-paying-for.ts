@@ -17,7 +17,7 @@ export const whichAiAssistantIsWorthPayingFor: Article = {
   author: "palak-patel",
   tags: ["Claude Pro", "Google AI Pro", "Gemini", "Pricing", "India"],
   publishedAt: "2026-09-07",
-  contentUpdatedAt: "2026-10-01",
+  contentUpdatedAt: "2026-09-14",
   seoTitle: "Claude Pro vs Google AI Pro: Which to Pay For",
   seoDescription:
     "Claude Pro at $20 a month for client code, Google AI Pro free on a student offer. How often each one ran out on me, and which I would keep.",

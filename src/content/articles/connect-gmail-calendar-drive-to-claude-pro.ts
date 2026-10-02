@@ -53,7 +53,7 @@ export const connectGmailCalendarDriveToClaudePro: Article = {
 <p>I only use the first two. I ask for a summary of my emails, and I ask what is on my calendar.</p>
 
 <h2>If your inbox holds client or patient details</h2>
-<p>If you are a doctor, a CA or anyone whose day runs on email and appointments, this setup is the first step before Claude can help with that work. Check your professional rules on patient or client data before you let any AI tool read your mail.</p>
+<p>If you are a doctor, a CA or anyone whose day runs on email and appointments, this setup is the first step before Claude can help with that work. What that looks like once it is connected is in <a href="/articles/claude-connectors-for-a-chartered-accountant">what the connectors found for a chartered accountant</a>. Check your professional rules on patient or client data before you let any AI tool read your mail.</p>
 
 <h2>Taking the access back</h2>
 <p>In Claude, go to <code>Customize</code>, then <code>Connectors</code>, find the Google connector and click <strong>Disconnect</strong>. You can also remove Claude from the connections page in your Google account settings.</p>

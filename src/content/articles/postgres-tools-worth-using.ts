@@ -20,7 +20,7 @@ export const postgresToolsWorthUsing: Article = {
   author: "palak-patel",
   tags: ["Postgres", "psql", "Databases", "Migrations", "Tooling"],
   publishedAt: "2026-08-20",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-08-30",
   seoTitle: "Postgres Tools: psql vs the Web Console",
   seoDescription:
     "A hosted Postgres console crawled and crashed at about 100,000 rows. Where the browser tool is the right one, and where psql is the only thing that holds.",

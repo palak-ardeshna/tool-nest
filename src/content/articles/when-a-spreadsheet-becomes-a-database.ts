@@ -19,7 +19,7 @@ export const whenASpreadsheetBecomesADatabase: Article = {
   author: "palak-patel",
   tags: ["Spreadsheets", "Firebase", "Firestore", "Accounts", "Data"],
   publishedAt: "2026-09-07",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-15",
   seoTitle: "When a Spreadsheet Should Become a Database",
   seoDescription:
     "A sheet of invoices and stock reformatted its own numbers and dates and took 30 seconds to open. What moving it to Firebase fixed, and what it cost.",

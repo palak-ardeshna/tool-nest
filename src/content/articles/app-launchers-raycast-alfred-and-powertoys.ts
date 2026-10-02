@@ -19,7 +19,7 @@ export const appLaunchersRaycastAlfredAndPowertoys: Article = {
   author: "palak-patel",
   tags: ["Ulauncher", "Linux", "Launchers", "File search"],
   publishedAt: "2026-09-14",
-  contentUpdatedAt: "2026-10-01",
+  contentUpdatedAt: "2026-09-21",
   seoTitle: "Launcher File Search: Where Ulauncher Stops",
   seoDescription:
     "Ulauncher on Linux opens apps in one keystroke and found none of my files outside the home folder. What a launcher is actually good at.",

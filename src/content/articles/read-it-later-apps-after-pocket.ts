@@ -20,7 +20,7 @@ export const readItLaterAppsAfterPocket: Article = {
   author: "palak-patel",
   tags: ["Pocket", "Bookmarks", "Reading", "Browser", "Habits"],
   publishedAt: "2026-09-11",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-20",
   seoTitle: "After Pocket: What I Actually Use Instead",
   seoDescription:
     "I did not move to another read-it-later app. I keep 30 to 50 tabs open, and the one I returned to after 3 months had stale pricing in it.",

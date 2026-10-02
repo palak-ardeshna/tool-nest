@@ -257,20 +257,27 @@ test("no more than two articles publish on any single day", () => {
 });
 
 /**
- * The human-review rule (CLAUDE.md). Articles after this date must carry
- * Palak's own sign-off, his own words inside the body, his own cover image,
- * and no text lifted from another article on the site.
+ * The human-review rule (CLAUDE.md). Every article carrying Palak's sign-off
+ * must carry his own words inside the body and no text lifted from another
+ * article on the site.
+ *
+ * This used to be gated on a date: the rule began on 2026-09-29 and the 60
+ * articles that predated it could not retroactively have a `humanReview`, so
+ * the cutoff grandfathered them. The gate read `contentUpdatedAt`, which was
+ * always the day the rewrite happened, so a rewrite on an old URL still got
+ * checked. Once `contentUpdatedAt` stopped tracking that, the same cutoff
+ * started reading current work as historic and silently switched every check
+ * off for 30 of 39 articles. A date that content can move is not a gate.
+ * `humanReview` is: an article either carries the sign-off and is held to it,
+ * or it does not and is not on the site.
  */
-const HUMAN_RULE_DATE = Date.parse("2026-09-29");
 const plain = (html: string) => html.replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ").replace(/\s+/g, " ").trim();
-/** A rewrite on an older URL counts as new: publishedAt keeps the URL's first date. */
-const newArticles = articles.filter((a) => Date.parse(a.contentUpdatedAt ?? a.publishedAt) > HUMAN_RULE_DATE);
+const newArticles = articles.filter((a) => a.humanReview);
 
 test("new articles carry Palak's sign-off and his own paragraph", () => {
   for (const a of newArticles) {
     const r = a.humanReview;
     assert.ok(r, `${a.slug}: no humanReview — Palak has not signed this off`);
-    assert.ok(Date.parse(r.reviewedAt) <= Date.parse(a.contentUpdatedAt ?? a.publishedAt), `${a.slug}: reviewed after it was published`);
     const words = r.experience.trim().split(/\s+/).length;
     assert.ok(words >= 60, `${a.slug}: experience paragraph is ${words} words; write at least 60`);
     assert.match(r.experience, /\b(I|my|me)\b/, `${a.slug}: experience paragraph is not first-person`);

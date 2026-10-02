@@ -20,7 +20,7 @@ export const checkingAClaimBeforeYouPublish: Article = {
   author: "palak-patel",
   tags: ["Fact-checking", "Sources", "Research", "Publishing", "Accuracy"],
   publishedAt: "2026-09-12",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-19",
   seoTitle: "How I Check a Claim Before Publishing It",
   seoDescription:
     "Wrong prices get corrected. Wrong capability claims spread. The order I check a claim in, the 3 pages that would not load, and why a check goes stale.",

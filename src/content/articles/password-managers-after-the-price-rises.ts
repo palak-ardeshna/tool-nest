@@ -18,7 +18,7 @@ export const passwordManagersAfterThePriceRises: Article = {
   author: "palak-patel",
   tags: ["Password managers", "Bitwarden", "NordPass", "Chrome", "Pricing"],
   publishedAt: "2026-09-02",
-  contentUpdatedAt: "2026-10-01",
+  contentUpdatedAt: "2026-09-10",
   seoTitle: "Free vs Paid Password Managers: What You Get",
   seoDescription:
     "Bitwarden Premium is $19.80 a year, Families $47.88. Chrome's manager is free and has held my logins for four years. What the paid tier actually adds.",

@@ -19,7 +19,7 @@ export const featureFlagsConfigFileOrPlatform: Article = {
   author: "palak-patel",
   tags: ["Feature flags", "Deployment", "Config", "Databases", "Engineering"],
   publishedAt: "2026-09-11",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-18",
   seoTitle: "Feature Flags: Config File or a Platform?",
   seoDescription:
     "A config-file flag took a 10 to 15 minute deploy to flip while the database was struggling. Where a file is enough, and where it stops being enough.",

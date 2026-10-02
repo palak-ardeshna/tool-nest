@@ -17,7 +17,7 @@ export const aiMeetingNotetakersCompared: Article = {
   author: "palak-patel",
   tags: ["Fireflies", "Google Meet", "Meeting Notes", "Hindi", "Gujarati"],
   publishedAt: "2026-09-02",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-11",
   seoTitle: "AI Notetakers in Hindi: Fireflies vs Meet",
   seoDescription:
     "Fireflies and Google Meet's Take notes on two 30 minute calls: wrong speakers, and Hindi and Gujarati lost. What each vendor says it supports.",

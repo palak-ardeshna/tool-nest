@@ -18,7 +18,7 @@ export const aiBrowserAgentsAfterAtlas: Article = {
   author: "palak-patel",
   tags: ["Gemini", "Chrome", "AI Browsers", "Atlas"],
   publishedAt: "2026-09-14",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-22",
   seoTitle: "AI Browsers After Atlas: Gemini in Chrome",
   seoDescription:
     "Gemini's side panel in Chrome summarised pages in 20 to 30 seconds but could not act on them. Where auto browse fits, and who can get it.",

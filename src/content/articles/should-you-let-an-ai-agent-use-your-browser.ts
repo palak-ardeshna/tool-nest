@@ -19,7 +19,7 @@ export const shouldYouLetAnAiAgentUseYourBrowser: Article = {
   author: "palak-patel",
   tags: ["Perplexity Comet", "AI Agents", "Browsers", "Security"],
   publishedAt: "2026-09-17",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-27",
   seoTitle: "Should an AI Agent Use Your Browser? Comet Test",
   seoDescription:
     "I used Perplexity Comet for prices, forms, Gmail and a booking. It was slow, asked to confirm constantly, and I stopped it before it paid.",

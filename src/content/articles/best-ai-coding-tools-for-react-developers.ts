@@ -19,7 +19,7 @@ export const bestAiCodingToolsForReactDevelopers: Article = {
   author: "palak-patel",
   tags: ["React", "Next.js", "Claude", "Tailwind", "Server Components"],
   publishedAt: "2026-08-11",
-  contentUpdatedAt: "2026-10-01",
+  contentUpdatedAt: "2026-08-20",
   seoTitle: "AI on React Code: Where It Goes Wrong",
   seoDescription:
     "Claude Pro on this site's React code: a state bug closed in roughly 1 hour, a few lines rewritten, and two structural mistakes worth knowing about.",

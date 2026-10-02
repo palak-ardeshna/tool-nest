@@ -20,7 +20,7 @@ export const freeVsPaidAiWritingTools: Article = {
   author: "palak-patel",
   tags: ["Grammarly", "Writing Tools", "Free Tier", "Proofreading"],
   publishedAt: "2026-08-19",
-  contentUpdatedAt: "2026-08-22",
+  contentUpdatedAt: "2026-08-27",
   seoTitle: "Grammarly Free: The Limits Not in the Plans",
   seoDescription:
     "Grammarly's free tier stopped me at about 1,000 words per check and 5 checks a day. The plans page states neither limit. What to expect.",

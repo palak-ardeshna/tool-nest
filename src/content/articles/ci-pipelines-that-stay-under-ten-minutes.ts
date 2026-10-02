@@ -18,7 +18,7 @@ export const ciPipelinesThatStayUnderTenMinutes: Article = {
   author: "palak-patel",
   tags: ["CI", "GitHub Actions", "Build", "Deployment", "Caching"],
   publishedAt: "2026-09-04",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-14",
   seoTitle: "Getting a CI Pipeline Under Ten Minutes",
   seoDescription:
     "A pipeline running lint, type-check, tests, build and deploy went from over 10 minutes to about 4, by running jobs in parallel and caching dependencies.",

@@ -21,7 +21,7 @@ export const screenRecordingForAsyncTeams: Article = {
   author: "palak-patel",
   tags: ["Screen recording", "SimpleScreenRecorder", "Linux", "Async work", "Documentation"],
   publishedAt: "2026-09-06",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-16",
   seoTitle: "Screen Recording: Why My How-To Went Unwatched",
   seoDescription:
     "A 10-minute screen recording took longer to make than writing the steps, and the teammate never replied. What a video costs the person receiving it.",

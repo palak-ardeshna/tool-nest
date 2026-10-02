@@ -18,7 +18,7 @@ export const softwareYouCanStillBuyOnce: Article = {
   author: "palak-patel",
   tags: ["Subscriptions", "Licensing", "Software", "Costs", "Ownership"],
   publishedAt: "2026-09-17",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-27",
   seoTitle: "Buying Software Once: What Still Goes Wrong",
   seoDescription:
     "A one-time licence does not stop a vendor moving the valuable features to a paid cloud tier. What ownership actually protects, and what it does not.",

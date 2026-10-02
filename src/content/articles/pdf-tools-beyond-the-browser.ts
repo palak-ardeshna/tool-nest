@@ -20,7 +20,7 @@ export const pdfToolsBeyondTheBrowser: Article = {
   author: "palak-patel",
   tags: ["PDF", "iLovePDF", "Free tools", "Documents", "Privacy"],
   publishedAt: "2026-09-09",
-  contentUpdatedAt: "2026-10-02",
+  contentUpdatedAt: "2026-09-19",
   seoTitle: "Free PDF Tools: Where iLovePDF Stops You",
   seoDescription:
     "A merge of 20-plus files in about 5 minutes, clean table extraction, and the free-tier limit that stopped the job partway.",

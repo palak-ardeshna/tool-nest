@@ -19,7 +19,7 @@ export const aiAppBuildersBeforeYouHireADeveloper: Article = {
   author: "palak-patel",
   tags: ["Lovable", "Bolt", "v0", "App builders", "Pricing"],
   publishedAt: "2026-09-12",
-  contentUpdatedAt: "2026-10-01",
+  contentUpdatedAt: "2026-09-20",
   seoTitle: "Lovable vs Bolt vs v0: Free Tier Limits Compared",
   seoDescription:
     "Published free-tier limits and paid prices for Lovable, Bolt and v0, read on 1 October 2026, and the cheaper route I used for a landing page instead.",

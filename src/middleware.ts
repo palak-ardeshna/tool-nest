@@ -1,13 +1,13 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 /**
- * The 31 article URLs removed in the 2026-09-29 audit (see `article-audit.csv`).
+ * The 29 article URLs removed in the 2026-09-29 audit (see `article-audit.csv`).
  *
  * These were indexed before they were deleted, so Googlebot keeps asking for
  * them. A 404 says "maybe this comes back" and the URLs sit in Search Console
  * as coverage errors for months; a 410 says the page is deliberately gone and
  * drops it from the index faster. They are not redirected, because redirecting
- * 31 dead URLs onto an unrelated live article is a soft 404 and reads as
+ * 29 dead URLs onto an unrelated live article is a soft 404 and reads as
  * manipulation. Where an audited topic was rewritten it kept its original slug
  * and is live, so it never reaches this list.
  */
@@ -15,14 +15,12 @@ const GONE = new Set([
   "ai-in-spreadsheets-what-it-actually-does",
   "ai-voice-tools-what-works",
   "async-by-default-what-changes",
-  "auditing-small-team-software-spend",
   "authentication-build-or-buy",
   "backups-for-a-small-team",
   "choosing-a-background-job-queue",
   "deploying-a-nextjs-app-four-routes",
   "email-clients-after-notion-mail",
   "error-tracking-for-small-teams",
-  "figma-alternatives-worth-considering",
   "invoicing-and-bookkeeping-for-small-teams",
   "keyword-research-without-a-subscription",
   "leaving-cursor-what-moves-and-what-doesnt",

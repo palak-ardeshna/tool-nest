@@ -18,7 +18,7 @@ export const aiResearchToolsAndYourSources: Article = {
   author: "palak-patel",
   tags: ["Claude", "ChatGPT", "Research", "Citations", "Client work"],
   publishedAt: "2026-08-19",
-  contentUpdatedAt: "2026-10-01",
+  contentUpdatedAt: "2026-08-29",
   seoTitle: "What an AI Citation Actually Proves",
   seoDescription:
     "Of 5 links cited in one research answer, 2 did not hold up. What a citation is made of, and the two ways it goes wrong on client work.",

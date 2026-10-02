@@ -19,7 +19,7 @@ export const runningAiModelsOnYourOwnHardware: Article = {
   author: "palak-patel",
   tags: ["Ollama", "Local models", "Linux", "NVIDIA", "Hardware"],
   publishedAt: "2026-09-04",
-  contentUpdatedAt: "2026-10-01",
+  contentUpdatedAt: "2026-09-13",
   seoTitle: "Local Models on a 4 GB Laptop GPU: What You Get",
   seoDescription:
     "Ollama on an entry NVIDIA laptop GPU with 4 GB of VRAM: small 3B models run, answers fall behind hosted plans, and the machine gets hot.",
