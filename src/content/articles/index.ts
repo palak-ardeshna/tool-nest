@@ -6,6 +6,9 @@ import { websiteBlockersThatActuallyHold } from "@/content/articles/website-bloc
 import { whiteboardAndDiagramToolsWorthOpening } from "@/content/articles/whiteboard-and-diagram-tools-worth-opening";
 import { higgsfieldFreeCreditsOneVideo } from "@/content/articles/higgsfield-free-credits-one-video";
 import { cursorCustomApiKeyWhatStopsWorking } from "@/content/articles/cursor-custom-api-key-what-stops-working";
+import { turnLongVideosIntoShortClipsWithAi } from "@/content/articles/turn-long-videos-into-short-clips-with-ai";
+import { deployingANextjsAppFourRoutes } from "@/content/articles/deploying-a-nextjs-app-four-routes";
+import { noteTakingAppsForThinking } from "@/content/articles/note-taking-apps-for-thinking";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -109,4 +112,7 @@ export const articles: Article[] = [
   objectStorageForASmallAppS3R2OrB2,
   websiteBlockersThatActuallyHold,
   whiteboardAndDiagramToolsWorthOpening,
+  turnLongVideosIntoShortClipsWithAi,
+  deployingANextjsAppFourRoutes,
+  noteTakingAppsForThinking,
 ];
