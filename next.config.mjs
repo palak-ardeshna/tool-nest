@@ -34,6 +34,14 @@ const nextConfig = {
   async redirects() {
     return [
       { source: "/authors/parth-patel", destination: "/authors/palak-patel", permanent: true },
+      // Same-topic redirect: the zero-click finding this URL covered is the
+      // published impressions article, so point the old URL there rather than
+      // 410 it. Removed from middleware's GONE set so this redirect is reached.
+      {
+        source: "/articles/writing-for-search-when-most-searches-never-click",
+        destination: "/articles/what-2000-search-impressions-actually-paid",
+        permanent: true,
+      },
     ];
   },
   async headers() {
