@@ -4,6 +4,7 @@ import { leavingCursorWhatMovesAndWhatDoesnt } from "@/content/articles/leaving-
 import { objectStorageForASmallAppS3R2OrB2 } from "@/content/articles/object-storage-for-a-small-app-s3-r2-or-b2";
 import { websiteBlockersThatActuallyHold } from "@/content/articles/website-blockers-that-actually-hold";
 import { whiteboardAndDiagramToolsWorthOpening } from "@/content/articles/whiteboard-and-diagram-tools-worth-opening";
+import { higgsfieldFreeCreditsOneVideo } from "@/content/articles/higgsfield-free-credits-one-video";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -54,6 +55,7 @@ import { whichAiAssistantIsWorthPayingFor } from "@/content/articles/which-ai-as
 
 /** Every article in the publication. Add a file above, then a line here. */
 export const articles: Article[] = [
+  higgsfieldFreeCreditsOneVideo,
   connectGmailCalendarDriveToClaudePro,
   claudeOpus55VsFable51,
   shouldYouLetAnAiAgentUseYourBrowser,
