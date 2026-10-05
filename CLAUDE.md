@@ -30,6 +30,8 @@ One template repeated on every page is a scaled-content fingerprint. Pick the sh
 - **Short take (300–500 words):** one finding and one number, `sources` only.
 Also vary the headings, the opening (a number, a problem, a question, or what happened) and the length. `sources` stays on every article.
 
+**Before writing a new article, read the last one or two published (`git log`, newest in `src/content/articles/`) and deliberately pick a different type from the one just before it** — not the same shape two in a row. Decide the type up front from the list above, confirm it differs from the previous article's, then draft. The test enforces this against the immediately previous article; the habit is to vary across the recent run, not just clear the one check.
+
 ## Human review — enforced for articles published after 2026-09-29
 Every new article needs a `humanReview` block, and `npm test` fails without it:
 - `experience`: a paragraph of at least 60 words built only from Palak's facts, first person, with at least one number from his own use. It must appear word for word in `content`.
