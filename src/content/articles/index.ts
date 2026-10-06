@@ -33,6 +33,7 @@ import { checkingAClaimBeforeYouPublish } from "@/content/articles/checking-a-cl
 import { ciPipelinesThatStayUnderTenMinutes } from "@/content/articles/ci-pipelines-that-stay-under-ten-minutes";
 import { claudeCodeVsCursorWhatASoloDeveloperPays } from "@/content/articles/claude-code-vs-cursor-what-a-solo-developer-pays";
 import { claudeConnectorsForACharteredAccountant } from "@/content/articles/claude-connectors-for-a-chartered-accountant";
+import { claudeProForADoctorBusyDayLimit } from "@/content/articles/claude-pro-for-a-doctor-busy-day-limit";
 import { claudeOpus55VsFable51 } from "@/content/articles/claude-opus-5-5-vs-fable-5-1";
 import { connectGmailCalendarDriveToClaudePro } from "@/content/articles/connect-gmail-calendar-drive-to-claude-pro";
 import { pdfToolsBeyondTheBrowser } from "@/content/articles/pdf-tools-beyond-the-browser";
@@ -102,6 +103,7 @@ export const articles: Article[] = [
   nextJs16CachingDefaultsThatBite,
   claudeCodeVsCursorWhatASoloDeveloperPays,
   claudeConnectorsForACharteredAccountant,
+  claudeProForADoctorBusyDayLimit,
   what2000SearchImpressionsActuallyPaid,
   browserExtensionsThatSaveTime,
   taskManagersCompared,
