@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Keep the sample environment file
 !.env.example
+
+.google-profile/
+.google-shots/
