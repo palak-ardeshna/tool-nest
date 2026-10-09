@@ -10,6 +10,7 @@ import { turnLongVideosIntoShortClipsWithAi } from "@/content/articles/turn-long
 import { deployingANextjsAppFourRoutes } from "@/content/articles/deploying-a-nextjs-app-four-routes";
 import { noteTakingAppsForThinking } from "@/content/articles/note-taking-apps-for-thinking";
 import { deepseekCoderOllamaSetupTime } from "@/content/articles/deepseek-coder-ollama-setup-time";
+import { higgsfieldClaudeConnectorSetupTime } from "@/content/articles/higgsfield-claude-connector-setup-time";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -121,4 +122,5 @@ export const articles: Article[] = [
   deployingANextjsAppFourRoutes,
   noteTakingAppsForThinking,
   deepseekCoderOllamaSetupTime,
+  higgsfieldClaudeConnectorSetupTime,
 ];
