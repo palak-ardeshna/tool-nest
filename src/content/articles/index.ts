@@ -9,6 +9,7 @@ import { cursorCustomApiKeyWhatStopsWorking } from "@/content/articles/cursor-cu
 import { turnLongVideosIntoShortClipsWithAi } from "@/content/articles/turn-long-videos-into-short-clips-with-ai";
 import { deployingANextjsAppFourRoutes } from "@/content/articles/deploying-a-nextjs-app-four-routes";
 import { noteTakingAppsForThinking } from "@/content/articles/note-taking-apps-for-thinking";
+import { deepseekCoderOllamaSetupTime } from "@/content/articles/deepseek-coder-ollama-setup-time";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -119,4 +120,5 @@ export const articles: Article[] = [
   turnLongVideosIntoShortClipsWithAi,
   deployingANextjsAppFourRoutes,
   noteTakingAppsForThinking,
+  deepseekCoderOllamaSetupTime,
 ];
