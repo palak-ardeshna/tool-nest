@@ -11,6 +11,7 @@ import { deployingANextjsAppFourRoutes } from "@/content/articles/deploying-a-ne
 import { noteTakingAppsForThinking } from "@/content/articles/note-taking-apps-for-thinking";
 import { deepseekCoderOllamaSetupTime } from "@/content/articles/deepseek-coder-ollama-setup-time";
 import { higgsfieldClaudeConnectorSetupTime } from "@/content/articles/higgsfield-claude-connector-setup-time";
+import { grammarlyFreePlanOneFixPerParagraph } from "@/content/articles/grammarly-free-plan-one-fix-per-paragraph";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -123,4 +124,5 @@ export const articles: Article[] = [
   noteTakingAppsForThinking,
   deepseekCoderOllamaSetupTime,
   higgsfieldClaudeConnectorSetupTime,
+  grammarlyFreePlanOneFixPerParagraph,
 ];
