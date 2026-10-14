@@ -13,6 +13,7 @@ import { deepseekCoderOllamaSetupTime } from "@/content/articles/deepseek-coder-
 import { higgsfieldClaudeConnectorSetupTime } from "@/content/articles/higgsfield-claude-connector-setup-time";
 import { grammarlyFreePlanOneFixPerParagraph } from "@/content/articles/grammarly-free-plan-one-fix-per-paragraph";
 import { claudeGmailConnectorWrongDosageDraft } from "@/content/articles/claude-gmail-connector-wrong-dosage-draft";
+import { canvaConnectorClaudeSetupLog } from "@/content/articles/canva-connector-claude-setup-log";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -127,4 +128,5 @@ export const articles: Article[] = [
   higgsfieldClaudeConnectorSetupTime,
   grammarlyFreePlanOneFixPerParagraph,
   claudeGmailConnectorWrongDosageDraft,
+  canvaConnectorClaudeSetupLog,
 ];
