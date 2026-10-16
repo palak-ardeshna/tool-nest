@@ -33,6 +33,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // One host in the index: www serves the same pages, so send it to the apex.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.toolnest.quest" }],
+        destination: "https://toolnest.quest/:path*",
+        permanent: true,
+      },
       { source: "/authors/parth-patel", destination: "/authors/palak-patel", permanent: true },
       // Same-topic redirect: the zero-click finding this URL covered is the
       // published impressions article, so point the old URL there rather than
