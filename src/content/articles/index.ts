@@ -15,6 +15,7 @@ import { grammarlyFreePlanOneFixPerParagraph } from "@/content/articles/grammarl
 import { claudeGmailConnectorWrongDosageDraft } from "@/content/articles/claude-gmail-connector-wrong-dosage-draft";
 import { canvaConnectorClaudeSetupLog } from "@/content/articles/canva-connector-claude-setup-log";
 import { customGptsRetireClaudeProjectForACa } from "@/content/articles/custom-gpts-retire-claude-project-for-a-ca";
+import { deepseekVsFreeChatgptForDailyWork } from "@/content/articles/deepseek-vs-free-chatgpt-for-daily-work";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -131,4 +132,5 @@ export const articles: Article[] = [
   claudeGmailConnectorWrongDosageDraft,
   canvaConnectorClaudeSetupLog,
   customGptsRetireClaudeProjectForACa,
+  deepseekVsFreeChatgptForDailyWork,
 ];
