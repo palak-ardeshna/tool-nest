@@ -14,6 +14,7 @@ import { higgsfieldClaudeConnectorSetupTime } from "@/content/articles/higgsfiel
 import { grammarlyFreePlanOneFixPerParagraph } from "@/content/articles/grammarly-free-plan-one-fix-per-paragraph";
 import { claudeGmailConnectorWrongDosageDraft } from "@/content/articles/claude-gmail-connector-wrong-dosage-draft";
 import { canvaConnectorClaudeSetupLog } from "@/content/articles/canva-connector-claude-setup-log";
+import { customGptsRetireClaudeProjectForACa } from "@/content/articles/custom-gpts-retire-claude-project-for-a-ca";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -129,4 +130,5 @@ export const articles: Article[] = [
   grammarlyFreePlanOneFixPerParagraph,
   claudeGmailConnectorWrongDosageDraft,
   canvaConnectorClaudeSetupLog,
+  customGptsRetireClaudeProjectForACa,
 ];
