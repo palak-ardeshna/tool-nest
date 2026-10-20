@@ -10,6 +10,10 @@ import type { Article } from "@/content/types";
  * it came together in 10 to 15 prompts over about 4 to 5 hours; one
  * feature needed several retries before it worked. Agent behaviour
  * verified via WebFetch of docs.replit.com/replitai/agent, 2026-10-17.
+ * Added 2026-10-20 at Palak's request (chat): the feature that needed the
+ * retries was the redirect URL. He set it in an environment variable to the
+ * frontend URL, the app kept using the local URL, and deleting the variable
+ * and adding it again is what made it work. No time figure was given.
  */
 export const replitAgentParentStudentApp: Article = {
   slug: "replit-agent-parent-student-app",
@@ -20,6 +24,7 @@ export const replitAgentParentStudentApp: Article = {
   author: "palak-patel",
   tags: ["Replit", "AI App Builder", "No Code", "App Development"],
   publishedAt: "2026-10-17",
+  contentUpdatedAt: "2026-10-20",
   seoTitle: "Replit Agent: Building a Parent-Student App",
   seoDescription:
     "I built a parent-student app with Replit Agent in 10 to 15 prompts over about 4 to 5 hours. What it handled alone, and the one feature I had to retry.",
@@ -36,6 +41,8 @@ export const replitAgentParentStudentApp: Article = {
 
 <h2>The one feature I had to retry</h2>
 <p>Most parts landed in a prompt or two, but one kept coming back wrong. I had to re-describe it and let the Agent try again several times before it did what I wanted. Each attempt it would rewrite that part, check it, and hand it back, and I would send it round once more. That one feature is where a good chunk of the four to five hours went.</p>
+<p>The feature was the redirect URL. I set it in an environment variable to point at the frontend, but the app kept sending people to the local URL. What fixed it was deleting that environment variable and adding it again. After that, the redirect went to the frontend.</p>
+<p>If your Replit app keeps using an old URL after you change a variable, try that before you rewrite any code.</p>
 
 <h2>Pros and cons of building it this way</h2>
 <ul>
