@@ -69,6 +69,9 @@ export default async function ArticlePage({ params }: PageProps) {
     .sort((a, b) => b.publishedAtDate.getTime() - a.publishedAtDate.getTime())
     .slice(0, 8);
   const crumbs = buildCrumbs(article);
+  // A how-to log writes its pros and cons into the body; rendering the
+  // `pros`/`cons` box under it would show the same list twice on the page.
+  const bodyHasProsCons = /<h2[^>]*>[^<]*\bpros\b/i.test(article.content);
 
   return (
     <>
@@ -85,7 +88,9 @@ export default async function ArticlePage({ params }: PageProps) {
 
             <AdSlot slotId={process.env.NEXT_PUBLIC_ADSENSE_SLOT_MOBILE} minHeight={250} />
 
-            <ProsCons pros={article.pros ?? []} cons={article.cons ?? []} />
+            {bodyHasProsCons ? null : (
+              <ProsCons pros={article.pros ?? []} cons={article.cons ?? []} />
+            )}
             <Alternatives items={article.alternatives ?? []} />
             <Faq items={article.faqs ?? []} />
             <HandsOn review={article.humanReview} author={article.author} />
