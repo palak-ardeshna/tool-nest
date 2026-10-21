@@ -17,6 +17,7 @@ import { canvaConnectorClaudeSetupLog } from "@/content/articles/canva-connector
 import { customGptsRetireClaudeProjectForACa } from "@/content/articles/custom-gpts-retire-claude-project-for-a-ca";
 import { deepseekVsFreeChatgptForDailyWork } from "@/content/articles/deepseek-vs-free-chatgpt-for-daily-work";
 import { replitAgentParentStudentApp } from "@/content/articles/replit-agent-parent-student-app";
+import { claudeUnitTestPaperRepeatedQuestions } from "@/content/articles/claude-unit-test-paper-repeated-questions";
 import type { Article } from "@/content/types";
 
 import { aiAppBuildersBeforeYouHireADeveloper } from "@/content/articles/ai-app-builders-before-you-hire-a-developer";
@@ -135,4 +136,5 @@ export const articles: Article[] = [
   customGptsRetireClaudeProjectForACa,
   deepseekVsFreeChatgptForDailyWork,
   replitAgentParentStudentApp,
+  claudeUnitTestPaperRepeatedQuestions,
 ];
