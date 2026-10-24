@@ -7,30 +7,26 @@
 The one test: **an article must contain something that did not exist until Palak did something** — used the tool, measured it, hit a limit, chose against the vendor's claim. Everything below serves that.
 
 ## Before drafting — do not start without
-1. **Demand signal.** Name the exact query this targets and one proof people search it (autocomplete, People-also-ask, a competing article). Prefer `X vs Y`, `best X for [use case]`, `is X worth it (year)`, `X after [product change]`. Reject generic top-10 topics.
+1. **Demand signal.** Name the exact query this targets and one proof people search it (autocomplete, People-also-ask, Google Trends, a competing article). Prefer the trending, practical search shapes people type (Palak, 2026-10-24): `where to get X` / `which site has X`, `is X on [platform]`, `how much does [trip/setup] cost`, `which income skill to learn`, plus `X vs Y`, `is X worth it (year)`, `X after [product change]`. Reject generic top-10 topics. A cost or `where to get` article still needs Palak's own number (what he paid, where he found it).
 2. **A real data point Palak can supply.** One of: a number from his own run (time, cost, count, error), a limit he hit, or a judgement that narrows/contradicts the vendor's claim. **If he has not used the tool and cannot get one: do not write the article yet, or write it honestly as a spec/pricing comparison and say so in the first paragraph.** Never fabricate first-person experience.
 
 ## Draft
-- AI may scaffold `quickAnswer`, `pros`/`cons`, `alternatives`, `faqs`, `sources` from vendor docs. `content` must include at least one paragraph that could only come from using the tool, plus at least one real downside (not a softened positive).
-- `quickAnswer` answers the literal query. `vs`/comparison articles put the decision table above the fold.
+- AI may scaffold `quickAnswer`, `faqs`, `sources` from vendor docs. `content` must include at least one paragraph that could only come from using the tool, plus at least one real downside (not a softened positive).
+- `quickAnswer` answers the literal query. `vs`/comparison articles put the decision table first in `content`.
 - Every fact that can go stale carries a date or version. `sources[].checkedAt` is the day it was actually read; re-verify on any update.
 - Voice: `I`/`my`, address the reader as `you`, short paragraphs, no AI-tell phrases (tests enforce these).
 - Link to the strongest existing article in the same cluster.
 
 ## Image
-- **Articles never have an image**, not even Palak's screenshots (Palak's decision, 2026-09-29). Leave `image` and `imageAlt` out; the site shows its generated cover art. The test fails on any article with an image. Drafts that still carry one must drop it before publishing.
+- **One image per article = the generated cover art** (Palak, 2026-10-24, keeping the 2026-09-29 no-upload decision). Leave `image` and `imageAlt` out; the site shows the cover. The test fails on any article with an `image`.
 
-## Layout — every article is built differently
-One template repeated on every page is a scaled-content fingerprint. Pick the shape from the article type, and never reuse the previous article's block set (the test fails if you do):
-- **X vs Y:** decision table first, then `quickAnswer`, then `alternatives`. No pros/cons.
-- **How-to / setup log:** numbered steps (`<ol>`) with what broke, plus pros/cons of the approach. No FAQ.
-- **Price or policy change:** the old/new numbers table and one worked example of the bill, plus FAQ. No alternatives.
-- **Explainer / gotcha:** plain sections with no quick answer and no pros/cons; FAQ optional.
-- **Roundup:** comparison table, pros/cons, alternatives. No FAQ.
-- **Short take (300–500 words):** one finding and one number, `sources` only.
-Also vary the headings, the opening (a number, a problem, a question, or what happened) and the length. `sources` stays on every article.
-
-**Before writing a new article, read the last one or two published (`git log`, newest in `src/content/articles/`) and deliberately pick a different type from the one just before it** — not the same shape two in a row. Decide the type up front from the list above, confirm it differs from the previous article's, then draft. The test enforces this against the immediately previous article; the habit is to vary across the recent run, not just clear the one check.
+## Layout — one fixed template for articles published from 2026-10-25
+Modelled on optionstradingwisdom.com (AdSense-approved by Sep 2024): long, India-focused, table-heavy posts with the same shape every time (Palak, 2026-10-24). Articles before 2026-10-25 are frozen and keep their old shapes. Every new article has exactly these blocks, in this order:
+1. `quickAnswer`: answers the literal query in 2–4 sentences, with the key number and its date.
+2. `content`, **at least 2,000 words**: one `<h2>` per question the reader has, **at least one `<table>`** (Palak's numbers, or dated prices in ₹), Indian context (₹ amounts, an Indian user such as a doctor, CA or teacher, GST/ITR where it applies), and the `humanReview.experience` paragraph.
+3. `faqs`: at least 3, only questions the body has not already answered.
+4. `sources`.
+No `pros`/`cons` box and no `alternatives` box. Length comes from Palak's facts, dated sources and worked ₹ examples, never padding: if the facts do not fill 2,000 words, collect more facts before drafting. `npm test` enforces the blocks, the word floor, the table and the ₹/India check.
 
 ## Human review — enforced for articles published after 2026-09-29
 Every new article needs a `humanReview` block, and `npm test` fails without it:

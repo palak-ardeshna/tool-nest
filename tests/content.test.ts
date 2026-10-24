@@ -347,25 +347,21 @@ test("no page tells readers the site is drafted with AI", async () => {
 });
 
 /**
- * One template repeated on every page is a scaled-content fingerprint. A new
- * article may not use the same set of blocks as the article published before it.
+ * From 2026-10-25 every article uses one fixed template, modelled on an
+ * AdSense-approved site (Palak, 2026-10-24): quick answer, a long body with a
+ * table and Indian context, FAQ, sources. Older articles are frozen as they are.
  */
-test("a new article does not copy the previous article's layout", () => {
-  const layout = (a: (typeof articles)[number]) =>
-    [
-      a.quickAnswer && "answer",
-      (a.pros?.length || a.cons?.length) && "pros-cons",
-      a.alternatives?.length && "alternatives",
-      a.faqs?.length && "faq",
-      /<table/.test(a.content) && "table",
-      /<ol/.test(a.content) && "steps",
-    ].filter(Boolean).join("+");
-  const byDate = [...articles].sort((x, y) => Date.parse(x.publishedAt) - Date.parse(y.publishedAt) || x.slug.localeCompare(y.slug));
-  byDate.forEach((a, i) => {
-    if (i === 0 || !newArticles.includes(a)) return;
-    const prev = byDate[i - 1];
-    assert.notEqual(layout(a), layout(prev), `${a.slug}: same layout as ${prev.slug} (${layout(a)}); change which blocks it uses`);
-  });
+const TEMPLATE_FROM = Date.parse("2026-10-25");
+test("articles from 2026-10-25 follow the fixed template", () => {
+  for (const a of articles.filter((x) => Date.parse(x.publishedAt) >= TEMPLATE_FROM)) {
+    assert.ok(a.quickAnswer, `${a.slug}: no quickAnswer`);
+    const words = plain(a.content).split(" ").length;
+    assert.ok(words >= 2000, `${a.slug}: ${words} words; the template needs at least 2,000`);
+    assert.match(a.content, /<table/, `${a.slug}: no table`);
+    assert.match(plain(a.content), /₹|\bIndia/, `${a.slug}: no ₹ amount or Indian context`);
+    assert.ok((a.faqs?.length ?? 0) >= 3, `${a.slug}: needs at least 3 FAQs`);
+    assert.ok(!a.pros?.length && !a.cons?.length && !a.alternatives?.length, `${a.slug}: the template has no pros/cons or alternatives box`);
+  }
 });
 
 /** Articles never carry an image; the generated cover art is the only cover (Palak, 2026-09-29). */

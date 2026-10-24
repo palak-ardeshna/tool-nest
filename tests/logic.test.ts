@@ -61,3 +61,10 @@ test("pricing watcher reads price tokens, not page noise", () => {
     ["https://a.com/pricing", "https://b.com/plans.html"],
   );
 });
+
+test("token cost: 1M input + 1M output on Sonnet 5.5 at ₹95 is ₹1,140", async () => {
+  const { tokenCostInr, models } = await import("../src/lib/token-cost");
+  const sonnet = models.find((m) => m.id === "claude-sonnet-5-5")!;
+  assert.equal(tokenCostInr(sonnet, 1_000_000, 1_000_000, 1, 95), 1140);
+  assert.equal(tokenCostInr(sonnet, 500, 500, 0, 95), 0);
+});

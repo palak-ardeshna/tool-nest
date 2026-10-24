@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allArticles } from "@/lib/articles";
 import { getArticle } from "@/content";
@@ -100,6 +101,12 @@ export default async function ArticlePage({ params }: PageProps) {
         </article>
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
+          <Link
+            href="/tools/token-cost"
+            className="mb-8 hidden rounded-lg border border-line p-4 text-sm text-ink hover:border-accent lg:block"
+          >
+            <strong>Tool:</strong> what Claude API calls cost in ₹
+          </Link>
           <RelatedArticles articles={others} fromSlug={article.slug} />
         </aside>
       </Container>

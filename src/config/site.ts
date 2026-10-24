@@ -15,6 +15,7 @@ export const siteConfig = {
  */
 export const primaryNav = [
   { label: "Articles", href: "/articles" },
+  { label: "Token cost ₹", href: "/tools/token-cost" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
