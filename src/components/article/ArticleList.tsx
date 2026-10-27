@@ -54,7 +54,7 @@ export function ArticleList({
             <span className="whitespace-nowrap">{article.readingMinutes} min read</span>
           </p>
           <h2 className="mt-1 font-serif text-xl font-semibold leading-snug text-ink">
-            <Link href={`/articles/${article.slug}`} className="hover:underline">
+            <Link href={`/articles/${article.slug}`} target="_blank" className="hover:underline">
               {article.title}
             </Link>
           </h2>

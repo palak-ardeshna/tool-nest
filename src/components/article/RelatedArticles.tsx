@@ -21,6 +21,7 @@ export function RelatedArticles({
           <li key={article.slug} className="py-4">
             <TrackedLink
               href={`/articles/${article.slug}`}
+              target="_blank"
               event="related_article_click"
               params={{ from_article: fromSlug, to_article: article.slug }}
               className="font-serif text-lg font-semibold lg:text-base leading-snug text-ink hover:underline"
