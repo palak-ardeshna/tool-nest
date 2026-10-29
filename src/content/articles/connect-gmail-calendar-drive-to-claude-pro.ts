@@ -15,6 +15,7 @@ export const connectGmailCalendarDriveToClaudePro: Article = {
   author: "palak-patel",
   tags: ["Claude", "Connectors", "Gmail", "Google Calendar", "Google Drive"],
   publishedAt: "2026-09-29",
+  seoTitle: "Connect Gmail & Calendar to Claude Pro: Steps",
   pros: [
     "All three Google connectors took me 5 to 15 minutes in total",
     "Email summaries and schedule checks are the two jobs I now give it every day",

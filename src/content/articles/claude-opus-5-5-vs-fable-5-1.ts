@@ -17,6 +17,7 @@ export const claudeOpus55VsFable51: Article = {
   author: "palak-patel",
   tags: ["Claude", "Claude Opus 5.5", "Claude Fable 5.1", "Claude Pro", "Usage limits"],
   publishedAt: "2026-09-30",
+  seoTitle: "Claude Opus 5.5 vs Fable 5.1: Which to Use",
   quickAnswer:
     "Start with Opus 5.5. It costs $4 per million input tokens and $20 per million output tokens on the API, against $10 and $50 for Fable 5.1. On my Pro plan I use Opus for coding and Fable for writing, research and client work. My Opus sessions ran into the usage limit after 1 to 2 hours; Fable lasted 2 to 4.",
   alternatives: [

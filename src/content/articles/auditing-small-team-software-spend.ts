@@ -20,7 +20,7 @@ export const auditingSmallTeamSoftwareSpend: Article = {
   tags: ["Subscriptions", "Software Spend", "Audit", "Pricing"],
   publishedAt: "2026-08-19",
   contentUpdatedAt: "2026-08-29",
-  seoTitle: "Auditing My Own Subscriptions: What I Cut",
+  seoTitle: "Audit Your Software Subscriptions: What to Cut",
   seoDescription:
     "More than 10 paid subscriptions, a duplicate pair and a quiet renewal price rise. I cancelled one or two. Here is the audit and why so little moved.",
   content: `

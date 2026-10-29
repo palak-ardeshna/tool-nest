@@ -177,6 +177,18 @@ test("rendered page titles fit in a search result", () => {
   }
 });
 
+// seoTitle is what Google shows, so it is the click lever. Skipping it falls
+// back to the on-page H1, which is often editorial and matches no search.
+// Mandatory for every article (CLAUDE.md "Titles and the reader's hook").
+test("every article has a seoTitle tuned for search", () => {
+  for (const article of articles) {
+    assert.ok(
+      article.seoTitle && article.seoTitle.trim().length > 0,
+      `${article.slug}: missing seoTitle — lead with the tool or query, then the result`,
+    );
+  }
+});
+
 /**
  * /articles is the entry to the whole back catalogue. It is paginated, so the
  * guarantee is no longer "page 1 shows everything" but "the pages together show

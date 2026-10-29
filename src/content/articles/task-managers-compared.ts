@@ -21,7 +21,7 @@ export const taskManagersCompared: Article = {
   tags: ["Task Managers", "Productivity", "WhatsApp", "Note-Taking"],
   publishedAt: "2026-08-19",
   contentUpdatedAt: "2026-08-28",
-  seoTitle: "Task Managers: Why I Went Back to Paper",
+  seoTitle: "Task Managers Compared: Why I Use Paper",
   seoDescription:
     "I tried 4 or 5 task manager apps and use none of them. The list kept splitting between a text file and WhatsApp, which is not a problem an app fixes.",
   content: `

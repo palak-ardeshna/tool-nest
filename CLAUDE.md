@@ -17,6 +17,17 @@ The one test: **an article must contain something that did not exist until Palak
 - Voice: `I`/`my`, address the reader as `you`, short paragraphs, no AI-tell phrases (tests enforce these).
 - Link to the strongest existing article in the same cluster.
 
+## Titles and the reader's hook — enforced for every new article (Palak, 2026-10-29)
+
+The reader arrives with a question and a worry: *"this happened to me too — did it get solved?"* Every new article earns the click and the read by answering that, not by being clever. This was missed before: `seoTitle` was skipped on some articles, and a few titles were intriguing but matched no search, so they got impressions and almost no clicks. The rule:
+
+1. **`seoTitle` is mandatory.** Never ship an article without it — the test now fails if it is missing. It is what Google shows, so it is tuned for the searcher, not for the page.
+2. **`seoTitle` leads with the thing searched, then the hook.** Tool name or the exact query shape first (`Claude Code vs Cursor`, `Free PDF Tools`, `Connect Gmail to Claude Pro`), then the specific result (`: What I Actually Pay`, `: Where iLovePDF Stops You`). A searcher must see their own words in the first half. The clever, editorial line can live in `title` (the on-page H1); `seoTitle` is the working one.
+3. **The hook = the reader's own problem, then that it resolved.** `quickAnswer` and the first paragraph name the exact pain the reader came with (the limit they hit, the cost that surprised them, the step that broke) in Palak's own first-person facts, then say plainly what happened — solved, not solved, or the trade-off. No suspense padding; the answer is up front.
+4. **Keep titles varied.** Do not turn this into one formula down the whole site (the "titles are not all the same shape" test guards this). The constant is substance: searcher's words + real result. The phrasing changes every time.
+
+Weak title smell (fix before publishing): a `seoTitle` a reader would never type into search, no tool or query word in the first half, or a hook that teases without the article's own number or result behind it.
+
 ## Image
 - **One image per article = the generated cover art** (Palak, 2026-10-24, keeping the 2026-09-29 no-upload decision). Leave `image` and `imageAlt` out; the site shows the cover. The test fails on any article with an `image`.
 

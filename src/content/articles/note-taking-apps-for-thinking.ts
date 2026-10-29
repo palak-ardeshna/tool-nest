@@ -18,7 +18,7 @@ export const noteTakingAppsForThinking: Article = {
   tags: ["Notion", "Note-Taking", "Productivity"],
   publishedAt: "2026-08-19",
   contentUpdatedAt: "2026-10-05",
-  seoTitle: "Note Apps for Thinking, Not Hoarding",
+  seoTitle: "Note-Taking Apps: What I Use to Think",
   seoDescription:
     "Notion made capturing ideas easy. After three weeks I had stopped reopening any of them. Why the note app is never the part that does your thinking.",
   content: `
